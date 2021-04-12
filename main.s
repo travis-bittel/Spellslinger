@@ -90,7 +90,7 @@ initialize:
 	strh	lr, [ip]	@ movhi
 	mov	lr, pc
 	bx	r4
-	mov	r3, #32
+	mov	r3, #16384
 	mov	r0, #3
 	ldr	r2, .L8+24
 	ldr	r1, .L8+28
@@ -106,9 +106,9 @@ initialize:
 	.word	oldButtons
 	.word	DMANow
 	.word	83886592
-	.word	playerPal
+	.word	spritesheetPal
 	.word	100728832
-	.word	playerTiles
+	.word	spritesheetTiles
 	.size	initialize, .-initialize
 	.align	2
 	.syntax unified

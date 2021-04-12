@@ -116,8 +116,13 @@ void initProjectiles();
 void spawnPlayerBolt();
 void updateProjectiles();
 void drawProjectiles();
-# 42 "game.h"
-enum {WALKER, THROWER};
+void spawnEnemy();
+int currentEncounterIsCleared();
+void startEncounter();
+void drawEnemies();
+void drawUI();
+# 79 "game.h"
+enum {WALKER, SHOOTER, WRAITH};
 
 typedef struct {
     int screenRow;
@@ -149,6 +154,74 @@ typedef struct {
     int worldCol;
     int width;
     int height;
+    int aniCounter;
+    int aniState;
+    int prevAniState;
+    int curFrame;
+    int numFrames;
+    int hide;
+
+    int state;
+    int health;
+
+    int facingDirection;
+
+    int attackStep;
+
+    int framesInAttackState;
+    int framesInIdleState;
+} Shooter;
+
+typedef struct {
+    int screenRow;
+    int screenCol;
+    int worldRow;
+    int worldCol;
+    int width;
+    int height;
+
+    int direction;
+
+    int colStep;
+
+    int active;
+
+} ShooterProjectile;
+
+typedef struct {
+    int screenRow;
+    int screenCol;
+    int worldRow;
+    int worldCol;
+    int width;
+    int height;
+    int aniCounter;
+    int aniState;
+    int prevAniState;
+    int curFrame;
+    int numFrames;
+    int hide;
+
+    int state;
+    int health;
+
+    int rowStep;
+
+    int facingDirection;
+
+    int attackStep;
+
+    int framesInAir;
+    int framesOnGround;
+} Wraith;
+
+typedef struct {
+    int screenRow;
+    int screenCol;
+    int worldRow;
+    int worldCol;
+    int width;
+    int height;
 
     int direction;
 
@@ -166,6 +239,8 @@ typedef struct {
 typedef struct {
  int startCol;
  int state;
+    int numStartingEnemies;
+    int numAdditionalEnemies;
     EnemySpawn startingEnemies[10];
     EnemySpawn additionalEnemies[10];
 } Encounter;
@@ -979,10 +1054,21 @@ extern long double strtold (const char *restrict, char **restrict);
 # 336 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 3
 
 # 4 "game.c" 2
+# 1 "spritesheet.h" 1
+# 22 "spritesheet.h"
+
+# 22 "spritesheet.h"
+extern const unsigned short spritesheetTiles[16384];
 
 
-# 5 "game.c"
+extern const unsigned short spritesheetMap[1024];
+
+
+extern const unsigned short spritesheetPal[256];
+# 5 "game.c" 2
+
 extern void goToLose();
+extern void goToWin();
 
 enum
 {
@@ -999,11 +1085,19 @@ ANISPRITE player;
 
 Encounter encounters[2];
 
-Walker walkers[1];
+Walker walkers[5];
+
+Shooter shooters[5];
+
+Wraith wraiths[5];
 
 PlayerBolt playerBolts[5];
 
-enum {ENEMYSTATE_INACTIVE, ENEMYSTATE_MOVING, ENEMYSTATE_ATTACKING, ENEMYSTATE_SHOOTING};
+ShooterProjectile shooterProjectiles[5];
+
+enum {ENEMYSTATE_INACTIVE, ENEMYSTATE_MOVING, ENEMYSTATE_ATTACKING, ENEMYSTATE_IDLE};
+
+enum {ENCOUNTER_NOT_STARTED, ENCOUNTER_ACTIVE, ENCOUNTER_COMPLETE};
 
 int currentEncounter = 0;
 
@@ -1018,52 +1112,75 @@ int playerManaStep = 0;
 
 int playerFacingDirection = 1;
 
+enum {BOLT, SHIELD, LEVITATE};
+int spellsUnlocked = 2;
+
+int shieldTicks = 0;
+
+int globalCooldown = 0;
+int boltCooldown = 0;
+int shieldCooldown = 0;
+
+int levitateManaConsumptionStep = 0;
+int levitateHeightStep = 0;
+
+int playerMovementStep = 0;
+
+void startEncounter() {
+    player.worldCol = encounters[currentEncounter].startCol + 1;
+    hOff = encounters[currentEncounter].startCol;
 
 
-
-
-int spellsUnlocked = 0;
-
-
-void initGame() {
-    initEnemies();
-    initProjectiles();
-
-    encounters[0].startCol = 0;
-    encounters[0].state = 1;
-
-    encounters[1].startCol = 240;
-    encounters[1].state = 0;
-
-    player.worldCol = 20;
-    player.worldRow = 217;
-    player.width = 8;
-    player.height = 8;
-}
-
-void initEnemies() {
-
-    for (int i = 0; i < 1; i++) {
-        walkers[i].health = 10;
-        walkers[i].state = ENEMYSTATE_MOVING;
-        walkers[i].width = 8;
-        walkers[i].height = 8;
-        walkers[i].worldCol = 200;
-        walkers[i].worldRow = 217;
-        walkers[i].attackStep = 0;
-        walkers[i].colStep = 0;
+    for (int i = 0; i < encounters[currentEncounter].numStartingEnemies; i++) {
+        EnemySpawn spawn = encounters[currentEncounter].startingEnemies[i];
+        spawnEnemy(spawn.type, spawn.spawnCol);
     }
 }
 
-void initProjectiles() {
+void damagePlayer(int amount, int pierceShield) {
+    if (!pierceShield && shieldTicks > 0) {
+
+        shadowOAM[1].attr0 = (player.screenRow - 8) | (0 << 14);
+        shadowOAM[1].attr1 = player.screenCol | (0 << 14);
+        shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (5));
+
+        currentPlayerMana += 2;
+        if (currentPlayerMana > 10) {
+            currentPlayerMana = 10;
+        }
+
+        shieldTicks += 15;
+        return;
+    }
+    currentPlayerHealth -= amount;
+    if (currentPlayerHealth <= 0) {
+        goToLose();
+    }
+}
+
+
+int playerIsWithinRange(int col, int width, int range) {
+
+    if (collision(col - range, player.worldRow, width + (2 * range), 10, player.worldCol, player.worldRow, player.width, player.height)) {
+        return 0;
+    }
+    if (col - player.worldCol > 0) {
+        return -1;
+    } else {
+        return 1;
+    }
+}
+
+int currentEncounterIsCleared() {
 
     for (int i = 0; i < 5; i++) {
-        playerBolts[i].active = 0;
-        playerBolts[i].height = 8;
-        playerBolts[i].width = 8;
-        playerBolts[i].colStep = 0;
+        if (!walkers[i].state == ENEMYSTATE_INACTIVE) {
+            return 0;
+        }
     }
+    return 1;
 }
+
 
 
 void spawnPlayerBolt() {
@@ -1083,32 +1200,262 @@ void spawnPlayerBolt() {
     }
 }
 
+void spawnShooterProjectile(Shooter* shooter) {
+    for (int i = 0; i < 5; i++) {
+        if (!shooterProjectiles[i].active) {
+            shooterProjectiles[i].active = 1;
+            shooterProjectiles[i].colStep = 0;
+            shooterProjectiles[i].worldRow = shooter->worldRow + shooter->height / 2;
+            shooterProjectiles[i].direction = shooter->facingDirection;
+            if (shooter->facingDirection == -1) {
+                shooterProjectiles[i].worldCol = shooter->worldCol - shooterProjectiles[i].width;
+            } else {
+                shooterProjectiles[i].worldCol = shooter->worldCol + shooter->width;
+            }
+            break;
+        }
+    }
+}
+
+void spawnEnemy(int type, int col) {
+    switch (type) {
+        case WALKER:
+            for (int i = 0; i < 5; i++) {
+                if (walkers[i].state == ENEMYSTATE_INACTIVE) {
+                    walkers[i].state = ENEMYSTATE_MOVING;
+                    walkers[i].health = 10;
+                    walkers[i].worldCol = encounters[currentEncounter].startCol + col;
+                    walkers[i].attackStep = 0;
+                    walkers[i].colStep = 0;
+                    walkers[i].hide = 0;
+                    break;
+                }
+            }
+            break;
+        case SHOOTER:
+            for (int i = 0; i < 5; i++) {
+                if (shooters[i].state == ENEMYSTATE_INACTIVE) {
+                    shooters[i].state = ENEMYSTATE_IDLE;
+                    shooters[i].health = 15;
+                    shooters[i].worldCol = encounters[currentEncounter].startCol + col;
+                    shooters[i].attackStep = 0;
+                    shooters[i].hide = 0;
+                    shooters[i].facingDirection = 1;
+                    break;
+                }
+            }
+            break;
+        case WRAITH:
+            for (int i = 0; i < 5; i++) {
+                if (shooters[i].state == ENEMYSTATE_INACTIVE) {
+                    shooters[i].state = ENEMYSTATE_IDLE;
+                    shooters[i].health = 15;
+                    shooters[i].worldCol = encounters[currentEncounter].startCol + col;
+                    shooters[i].attackStep = 0;
+                    shooters[i].hide = 0;
+                    shooters[i].facingDirection = 1;
+                    break;
+                }
+            }
+            break;
+    }
+}
+
+
+
+void initGame() {
+    initEnemies();
+    initProjectiles();
+
+    encounters[0].startCol = 0;
+    encounters[0].state = 1;
+    encounters[0].startingEnemies[0].spawnCol = 80;
+    encounters[0].startingEnemies[0].type = SHOOTER;
+    encounters[0].numStartingEnemies = 1;
+
+    encounters[1].startCol = 240;
+    encounters[1].state = 0;
+    encounters[1].startingEnemies[0].spawnCol = 80;
+    encounters[1].startingEnemies[0].type = WALKER;
+    encounters[1].startingEnemies[1].spawnCol = 120;
+    encounters[1].startingEnemies[1].type = WALKER;
+    encounters[1].startingEnemies[2].spawnCol = 40;
+    encounters[1].startingEnemies[2].type = WALKER;
+    encounters[1].numStartingEnemies = 3;
+
+    player.worldCol = 20;
+    player.width = 8;
+    player.height = 16;
+    player.worldRow = 225 - player.height;
+    currentPlayerHealth = 10;
+    currentPlayerMana = 10;
+
+    startEncounter();
+}
+
+void initEnemies() {
+
+    for (int i = 0; i < 5; i++) {
+        walkers[i].health = 10;
+        walkers[i].state = ENEMYSTATE_INACTIVE;
+        walkers[i].width = 8;
+        walkers[i].height = 16;
+        walkers[i].worldCol = 200;
+        walkers[i].worldRow = 225 - walkers[i].height;
+        walkers[i].attackStep = 0;
+        walkers[i].colStep = 0;
+    }
+
+    for (int i = 0; i < 5; i++) {
+        shooters[i].health = 15;
+        shooters[i].state = ENEMYSTATE_INACTIVE;
+        shooters[i].width = 8;
+        shooters[i].height = 16;
+        shooters[i].worldCol = 200;
+        shooters[i].worldRow = 225 - shooters[i].height;
+        shooters[i].attackStep = 0;
+    }
+}
+
+void initProjectiles() {
+
+    for (int i = 0; i < 5; i++) {
+        playerBolts[i].active = 0;
+        playerBolts[i].height = 8;
+        playerBolts[i].width = 8;
+        playerBolts[i].colStep = 0;
+    }
+
+    for (int i = 0; i < 5; i++) {
+        shooterProjectiles[i].active = 0;
+        shooterProjectiles[i].height = 8;
+        shooterProjectiles[i].width = 8;
+        shooterProjectiles[i].colStep = 0;
+    }
+}
+
+
 
 void updateGame() {
+    if (globalCooldown > 0) {
+        globalCooldown--;
+    }
+    if (boltCooldown > 0) {
+        boltCooldown--;
+    }
+    if (shieldCooldown > 0) {
+        shieldCooldown--;
+    }
+    if (shieldTicks > 0) {
+        shieldTicks--;
+    }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4)))) {
         playerFacingDirection = 1;
 
-        if (player.worldCol + player.width + 1 < encounters[currentEncounter + 1].startCol) {
-            player.worldCol++;
+        if (player.worldCol + player.width + 1 < encounters[currentEncounter].startCol + 240) {
+            if (playerMovementStep < 0) {
+                playerMovementStep = 0;
+            }
+            if (player.worldRow + player.height < 225) {
+                playerMovementStep += 4;
+            } else {
+                playerMovementStep += 8;
+            }
+            if (playerMovementStep >= 10) {
+                player.worldCol++;
+                playerMovementStep -= 10;
+            }
+        } else {
+            if (encounters[currentEncounter].state == ENCOUNTER_COMPLETE) {
+
+                currentEncounter++;
+                if (currentEncounter >= 2) {
+                    goToWin();
+                } else {
+                    startEncounter();
+                }
+            }
         }
     }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5)))) {
         playerFacingDirection = -1;
 
+
         if (player.worldCol - 1 >= encounters[currentEncounter].startCol) {
-            player.worldCol--;
+            if (playerMovementStep > 0) {
+                playerMovementStep = 0;
+            }
+            if (player.worldRow + player.height < 225) {
+                playerMovementStep -= 4;
+            } else {
+                playerMovementStep -= 8;
+            }
+            if (playerMovementStep <= -10) {
+                player.worldCol--;
+                playerMovementStep += 10;
+            }
         }
     }
 
 
-    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0))))) {
+    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && globalCooldown <= 0 && boltCooldown <= 0 && currentPlayerMana > 0) {
         if (currentPlayerMana <= 0) {
             return;
         }
         spawnPlayerBolt();
         currentPlayerMana -= 2;
+        globalCooldown = 20;
+        boltCooldown = 0;
         if (currentPlayerMana <= 0) {
-            playerManaStep -= 90;
+            playerManaStep -= 45;
+        }
+    }
+    if ((!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1)))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
+        shieldTicks = 20;
+        shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
+
+        currentPlayerMana -= 2;
+        globalCooldown = 20;
+        shieldCooldown = 60;
+        if (currentPlayerMana <= 0) {
+            playerManaStep -= 45;
+        }
+    }
+
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))) && spellsUnlocked >= LEVITATE && currentPlayerMana > 0) {
+        if (levitateHeightStep < 0) {
+            levitateHeightStep = 0;
+        }
+        playerManaStep = 0;
+        if (player.worldRow + player.height > 225 - 12) {
+            levitateHeightStep++;
+        }
+        if (levitateHeightStep >= 2) {
+            player.worldRow--;
+            levitateHeightStep = 0;
+        }
+        levitateManaConsumptionStep++;
+        if (levitateManaConsumptionStep >= 30) {
+            currentPlayerMana--;
+            levitateManaConsumptionStep = 0;
+        }
+        if (currentPlayerMana <= 0) {
+            playerManaStep -= 45;
+        }
+    } else {
+        if (player.worldRow + player.height < 225) {
+            levitateHeightStep--;
+            if (levitateHeightStep < 0 && abs(levitateHeightStep) >= 3) {
+                player.worldRow++;
+                levitateHeightStep = 0;
+            }
+        }
+    }
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))) && spellsUnlocked >= LEVITATE && player.worldRow + player.height < 225) {
+        levitateHeightStep -= 3;
+        if (levitateHeightStep < 0 && abs(levitateHeightStep) >= 3) {
+            player.worldRow++;
+            levitateHeightStep = 0;
         }
     }
 
@@ -1129,17 +1476,16 @@ void updateGame() {
 
 void updateEnemies() {
 
-    for (int i = 0; i < 1; i++) {
+    for (int i = 0; i < 5; i++) {
         int temp = playerIsWithinRange(walkers[i].worldCol, walkers[i].width, 6);
-
         switch (walkers[i].state) {
             case ENEMYSTATE_ATTACKING:
                 if (temp != 0) {
                     walkers[i].state = ENEMYSTATE_MOVING;
                 } else {
                     walkers[i].attackStep++;
-                    if (walkers[i].attackStep > 60) {
-                        damagePlayer(3);
+                    if (walkers[i].attackStep > 20) {
+                        damagePlayer(3, 0);
                         walkers[i].attackStep = 0;
                     }
                 }
@@ -1147,12 +1493,12 @@ void updateEnemies() {
             case ENEMYSTATE_MOVING:
 
                 if (temp == 0) {
-                    walkers[i].worldRow = 200;
+                    walkers[i].worldRow = 225 - walkers[i].height - 2;
                     walkers[i].state = ENEMYSTATE_ATTACKING;
-                    walkers[i].attackStep = -20;
+                    walkers[i].attackStep = -10;
 
                 } else if (temp == -1) {
-                    walkers[i].worldRow = 217;
+                    walkers[i].worldRow = 225 - walkers[i].height;
                     walkers[i].colStep -= 4;
                     if (walkers[i].colStep <= 0) {
                         walkers[i].worldCol--;
@@ -1169,12 +1515,40 @@ void updateEnemies() {
                 break;
         }
     }
+
+    for (int i = 0; i < 5; i++) {
+        switch (shooters[i].state) {
+            case ENEMYSTATE_ATTACKING:
+                shooters[i].attackStep++;
+                shooters[i].framesInAttackState++;
+                shooters[i].facingDirection = playerIsWithinRange(shooters[i].worldCol, 0, 0);
+                if (shooters[i].attackStep >= 60) {
+                    spawnShooterProjectile(&shooters[i]);
+                    shooters[i].attackStep = 0;
+                }
+                if (shooters[i].framesInAttackState >= 240) {
+                    shooters[i].framesInAttackState = 0;
+                    shooters[i].state = ENEMYSTATE_IDLE;
+                }
+                break;
+            case ENEMYSTATE_IDLE:
+                shooters[i].framesInIdleState++;
+                if (shooters[i].framesInIdleState >= 120) {
+                    shooters[i].framesInIdleState = 0;
+                    shooters[i].state = ENEMYSTATE_ATTACKING;
+                    shooters[i].facingDirection = playerIsWithinRange(shooters[i].worldCol, 0, 0);
+                    spawnShooterProjectile(&shooters[i]);
+                }
+                break;
+        }
+    }
 }
 
 void updateProjectiles() {
+
     for (int i = 0; i < 5; i++) {
         if (playerBolts[i].active) {
-            playerBolts[i].colStep += playerBolts[i].direction * 25;
+            playerBolts[i].colStep += playerBolts[i].direction * 15;
             while (playerBolts[i].colStep >= 10 && playerBolts[i].direction == 1) {
                 playerBolts[i].worldCol++;
                 playerBolts[i].colStep -= 10;
@@ -1185,7 +1559,7 @@ void updateProjectiles() {
             }
 
 
-            for (int j = 0; j < 1; j++) {
+            for (int j = 0; j < 5; j++) {
                 if (walkers[j].state != ENEMYSTATE_INACTIVE && collision(playerBolts[i].worldCol, playerBolts[i].worldRow, playerBolts[i].width,
                         playerBolts[i].height, walkers[j].worldCol, walkers[j].worldRow, walkers[j].width,
                         walkers[j].height)) {
@@ -1193,6 +1567,20 @@ void updateProjectiles() {
                     playerBolts[i].active = 0;
                     if (walkers[j].health <= 0) {
                         walkers[j].state = ENEMYSTATE_INACTIVE;
+                        encounters[currentEncounter].state = 1 + currentEncounterIsCleared();
+                    }
+                }
+            }
+
+            for (int j = 0; j < 5; j++) {
+                if (shooters[j].state == ENEMYSTATE_ATTACKING && collision(playerBolts[i].worldCol, playerBolts[i].worldRow, playerBolts[i].width,
+                        playerBolts[i].height, shooters[j].worldCol, shooters[j].worldRow, shooters[j].width,
+                        shooters[j].height)) {
+                    shooters[j].health -= 4;
+                    playerBolts[i].active = 0;
+                    if (shooters[j].health <= 0) {
+                        shooters[j].state = ENEMYSTATE_INACTIVE;
+                        encounters[currentEncounter].state = 1 + currentEncounterIsCleared();
                     }
                 }
             }
@@ -1204,56 +1592,35 @@ void updateProjectiles() {
             }
         }
     }
-}
+
+    for (int i = 0; i < 5; i++) {
+        if (shooterProjectiles[i].active) {
+            shooterProjectiles[i].colStep += shooterProjectiles[i].direction * 8;
+            while (shooterProjectiles[i].colStep >= 10 && shooterProjectiles[i].direction == 1) {
+                shooterProjectiles[i].worldCol++;
+                shooterProjectiles[i].colStep -= 10;
+            }
+            while (shooterProjectiles[i].colStep <= -10 && shooterProjectiles[i].direction == -1) {
+                shooterProjectiles[i].worldCol--;
+                shooterProjectiles[i].colStep += 10;
+            }
 
 
-int playerIsWithinRange(int col, int width, int range) {
-
-    if (collision(col - range, player.worldRow, width + (2 * range), 10, player.worldCol, player.worldRow, player.width, player.height)) {
-        return 0;
-    }
-    if (col - player.worldCol > 0) {
-        return -1;
-    } else {
-        return 1;
-    }
-}
-
-int currentEncounterIsCleared() {
-
-    for (int i = 0; i < 1; i++) {
-        if (!walkers[i].state == ENEMYSTATE_INACTIVE) {
-            return 0;
+            if (collision(shooterProjectiles[i].worldCol, shooterProjectiles[i].worldRow, shooterProjectiles[i].width, shooterProjectiles[i].height,
+                    player.worldCol, player.worldRow, player.width, player.height)) {
+                damagePlayer(3, 0);
+                shooterProjectiles[i].active = 0;
+            }
+            shooterProjectiles[i].screenCol = shooterProjectiles[i].worldCol - hOff;
+            shooterProjectiles[i].screenRow = shooterProjectiles[i].worldRow - vOff;
+            if (shooterProjectiles[i].screenCol > 240 || shooterProjectiles[i].screenCol < 0) {
+                shooterProjectiles[i].active = 0;
+            }
         }
     }
-    return 1;
-}
-
-void damagePlayer(int amount) {
-    currentPlayerHealth -= amount;
-    if (currentPlayerHealth <= 0) {
-        goToLose();
-    }
 }
 
 
-void drawEnemies() {
-
-
-    for (int i = 0; i < 1; i++) {
-        if (walkers[i].state != ENEMYSTATE_INACTIVE) {
-            walkers[i].screenCol = walkers[i].worldCol - hOff;
-            walkers[i].screenRow = walkers[i].worldRow - vOff;
-
-            shadowOAM[shadowOAMIndex].attr0 = walkers[i].screenRow | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = walkers[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (1));
-        } else {
-            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
-        }
-        shadowOAMIndex++;
-    }
-}
 
 void drawGame() {
     if (state != GAME) {
@@ -1263,15 +1630,62 @@ void drawGame() {
     (*(volatile unsigned short *)0x04000010) = hOff;
     (*(volatile unsigned short *)0x04000012) = vOff;
 
-    shadowOAM[0].attr0 = player.screenRow | (0 << 14);
+
+    shadowOAM[0].attr0 = player.screenRow | (2 << 14);
     shadowOAM[0].attr1 = player.screenCol | (0 << 14);
     shadowOAM[0].attr2 = ((0) << 12) | ((0)*32 + (1));
-    shadowOAMIndex = 1;
+
+
+    if (shieldTicks > 0) {
+        shadowOAM[1].attr0 = (player.screenRow - 10) | (0 << 14);
+        shadowOAM[1].attr1 = player.screenCol | (0 << 14);
+    } else {
+        shadowOAM[1].attr0 |= (2 << 8);
+    }
+
+    shadowOAMIndex = 2;
 
     drawEnemies();
     drawProjectiles();
+    drawUI();
 
     DMANow(3, shadowOAM, ((OBJ_ATTR *)(0x7000000)), 512);
+}
+
+void drawEnemies() {
+
+    for (int i = 0; i < 5; i++) {
+        if (walkers[i].state != ENEMYSTATE_INACTIVE) {
+            walkers[i].screenCol = walkers[i].worldCol - hOff;
+            walkers[i].screenRow = walkers[i].worldRow - vOff;
+
+            shadowOAM[shadowOAMIndex].attr0 = walkers[i].screenRow | (2 << 14);
+            shadowOAM[shadowOAMIndex].attr1 = walkers[i].screenCol | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (2));
+        } else {
+            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+        }
+        shadowOAMIndex++;
+    }
+
+
+    for (int i = 0; i < 5; i++) {
+        if (shooters[i].state != ENEMYSTATE_INACTIVE) {
+            shooters[i].screenCol = shooters[i].worldCol - hOff;
+            shooters[i].screenRow = shooters[i].worldRow - vOff;
+
+            shadowOAM[shadowOAMIndex].attr0 = shooters[i].screenRow | (2 << 14);
+            shadowOAM[shadowOAMIndex].attr1 = shooters[i].screenCol | (0 << 14);
+            if (shooters[i].state == ENEMYSTATE_ATTACKING) {
+                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (7));
+            } else {
+                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (6));
+            }
+        } else {
+            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+        }
+        shadowOAMIndex++;
+    }
 }
 
 void drawProjectiles() {
@@ -1280,10 +1694,52 @@ void drawProjectiles() {
         if (playerBolts[i].active) {
             shadowOAM[shadowOAMIndex].attr0 = playerBolts[i].screenRow | (0 << 14);
             shadowOAM[shadowOAMIndex].attr1 = playerBolts[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (1));
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (3));
         } else {
             shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
         }
         shadowOAMIndex++;
+    }
+
+    for (int i = 0; i < 5; i++) {
+        if (shooterProjectiles[i].active) {
+            shadowOAM[shadowOAMIndex].attr0 = shooterProjectiles[i].screenRow | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr1 = shooterProjectiles[i].screenCol | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((1)*32 + (3));
+        } else {
+            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+        }
+        shadowOAMIndex++;
+    }
+}
+
+void drawUI() {
+
+    int col = 4;
+    int row = 4;
+    for (int i = 0; i < 10; i++) {
+        if (i < currentPlayerHealth) {
+            shadowOAM[shadowOAMIndex].attr0 = row | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr1 = col | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (5));
+        } else {
+            shadowOAM[shadowOAMIndex].attr0 |= (2 << 8);
+        }
+        shadowOAMIndex++;
+        col += 7;
+    }
+
+
+    col = 240 - 7 * 10 - 4;
+    for (int i = 0; i < 10; i++) {
+        if (i < currentPlayerMana) {
+            shadowOAM[shadowOAMIndex].attr0 = row | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr1 = col | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (4));
+        } else {
+            shadowOAM[shadowOAMIndex].attr0 |= (2 << 8);
+        }
+        shadowOAMIndex++;
+        col += 7;
     }
 }

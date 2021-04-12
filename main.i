@@ -2,6 +2,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "main.c"
+# 31 "main.c"
 # 1 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 1 3
 # 10 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 3
 # 1 "/opt/devkitpro/devkitARM/arm-none-eabi/include/machine/ieeefp.h" 1 3
@@ -810,7 +811,7 @@ extern long double _strtold_r (struct _reent *, const char *restrict, char **res
 extern long double strtold (const char *restrict, char **restrict);
 # 336 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 3
 
-# 2 "main.c" 2
+# 32 "main.c" 2
 # 1 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdio.h" 1 3
 # 36 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdio.h" 3
 # 1 "/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/9.1.0/include/stddef.h" 1 3 4
@@ -1221,7 +1222,7 @@ _putchar_unlocked(int _c)
 }
 # 797 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdio.h" 3
 
-# 3 "main.c" 2
+# 33 "main.c" 2
 # 1 "myLib.h" 1
 
 
@@ -1324,7 +1325,7 @@ void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned 
 
 
 int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, int widthB, int heightB);
-# 4 "main.c" 2
+# 34 "main.c" 2
 # 1 "start.h" 1
 # 22 "start.h"
 extern const unsigned short startTiles[1008];
@@ -1334,7 +1335,7 @@ extern const unsigned short startMap[1024];
 
 
 extern const unsigned short startPal[256];
-# 5 "main.c" 2
+# 35 "main.c" 2
 # 1 "instructions.h" 1
 # 22 "instructions.h"
 extern const unsigned short instructionsTiles[2016];
@@ -1344,7 +1345,7 @@ extern const unsigned short instructionsMap[1024];
 
 
 extern const unsigned short instructionsPal[256];
-# 6 "main.c" 2
+# 36 "main.c" 2
 # 1 "win.h" 1
 # 22 "win.h"
 extern const unsigned short winTiles[1392];
@@ -1354,7 +1355,7 @@ extern const unsigned short winMap[1024];
 
 
 extern const unsigned short winPal[256];
-# 7 "main.c" 2
+# 37 "main.c" 2
 # 1 "lose.h" 1
 # 22 "lose.h"
 extern const unsigned short loseTiles[1344];
@@ -1364,7 +1365,7 @@ extern const unsigned short loseMap[1024];
 
 
 extern const unsigned short losePal[256];
-# 8 "main.c" 2
+# 38 "main.c" 2
 # 1 "paused.h" 1
 # 22 "paused.h"
 extern const unsigned short pausedTiles[1984];
@@ -1374,7 +1375,7 @@ extern const unsigned short pausedMap[1024];
 
 
 extern const unsigned short pausedPal[256];
-# 9 "main.c" 2
+# 39 "main.c" 2
 # 1 "background.h" 1
 # 22 "background.h"
 extern const unsigned short backgroundTiles[8784];
@@ -1384,7 +1385,7 @@ extern const unsigned short backgroundMap[2048];
 
 
 extern const unsigned short backgroundPal[256];
-# 10 "main.c" 2
+# 40 "main.c" 2
 # 1 "game.h" 1
 
 void updateGame();
@@ -1398,8 +1399,13 @@ void initProjectiles();
 void spawnPlayerBolt();
 void updateProjectiles();
 void drawProjectiles();
-# 42 "game.h"
-enum {WALKER, THROWER};
+void spawnEnemy();
+int currentEncounterIsCleared();
+void startEncounter();
+void drawEnemies();
+void drawUI();
+# 71 "game.h"
+enum {WALKER, SHOOTER};
 
 typedef struct {
     int screenRow;
@@ -1431,6 +1437,71 @@ typedef struct {
     int worldCol;
     int width;
     int height;
+    int aniCounter;
+    int aniState;
+    int prevAniState;
+    int curFrame;
+    int numFrames;
+    int hide;
+
+    int state;
+    int health;
+
+    int facingDirection;
+
+    int attackStep;
+
+    int framesInAttackState;
+    int framesInIdleState;
+} Shooter;
+
+typedef struct {
+    int screenRow;
+    int screenCol;
+    int worldRow;
+    int worldCol;
+    int width;
+    int height;
+
+    int direction;
+
+    int colStep;
+
+    int active;
+
+} ShooterProjectile;
+
+typedef struct {
+    int screenRow;
+    int screenCol;
+    int worldRow;
+    int worldCol;
+    int width;
+    int height;
+    int aniCounter;
+    int aniState;
+    int prevAniState;
+    int curFrame;
+    int numFrames;
+    int hide;
+
+    int state;
+    int health;
+
+    int rowStep;
+
+    int facingDirection;
+
+    int attackStep;
+} Wraith;
+
+typedef struct {
+    int screenRow;
+    int screenCol;
+    int worldRow;
+    int worldCol;
+    int width;
+    int height;
 
     int direction;
 
@@ -1448,10 +1519,12 @@ typedef struct {
 typedef struct {
  int startCol;
  int state;
+    int numStartingEnemies;
+    int numAdditionalEnemies;
     EnemySpawn startingEnemies[10];
     EnemySpawn additionalEnemies[10];
 } Encounter;
-# 11 "main.c" 2
+# 41 "main.c" 2
 # 1 "player.h" 1
 # 22 "player.h"
 extern const unsigned short playerTiles[32];
@@ -1461,7 +1534,17 @@ extern const unsigned short playerMap[1024];
 
 
 extern const unsigned short playerPal[256];
-# 12 "main.c" 2
+# 42 "main.c" 2
+# 1 "spritesheet.h" 1
+# 22 "spritesheet.h"
+extern const unsigned short spritesheetTiles[16384];
+
+
+extern const unsigned short spritesheetMap[1024];
+
+
+extern const unsigned short spritesheetPal[256];
+# 43 "main.c" 2
 
 
 void initialize();
@@ -1545,8 +1628,8 @@ void initialize()
     oldButtons = 0;
 
 
-    DMANow(3, playerPal, ((unsigned short *)0x5000200), 512 / 2);
-    DMANow(3, playerTiles, &((charblock *)0x6000000)[4], 64 / 2);
+    DMANow(3, spritesheetPal, ((unsigned short *)0x5000200), 512 / 2);
+    DMANow(3, spritesheetTiles, &((charblock *)0x6000000)[4], 32768 / 2);
 
     goToStart();
 }

@@ -39,6 +39,7 @@
 #include "background.h"
 #include "game.h"
 #include "player.h"
+#include "spritesheet.h"
 
 // Prototypes
 void initialize();
@@ -122,8 +123,8 @@ void initialize()
     oldButtons = 0;
 
     // Spritesheet stuff
-    DMANow(3, playerPal, SPRITEPALETTE, playerPalLen / 2);
-    DMANow(3, playerTiles, &CHARBLOCK[4], playerTilesLen / 2);
+    DMANow(3, spritesheetPal, SPRITEPALETTE, spritesheetPalLen / 2);
+    DMANow(3, spritesheetTiles, &CHARBLOCK[4], spritesheetTilesLen / 2);
 
     goToStart();
 }
