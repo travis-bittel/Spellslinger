@@ -15,6 +15,8 @@ int currentEncounterIsCleared();
 void startEncounter();
 void drawEnemies();
 void drawUI();
+int playerIsAtSameElevation(int row, int range);
+void spawnShooterProjectile(int col, int row, int direction, int height, int width);
 
 #define BACKGROUND_WIDTH 512
 #define NUMBER_OF_ENCOUNTERS 2
@@ -35,7 +37,7 @@ void drawUI();
 #define BOLT_COOLDOWN 0
 
 // Shield
-#define SHIELD_MANA_COST 2
+#define SHIELD_MANA_COST 0
 #define SHIELD_MANA_REFUND 2
 #define SHIELD_DURATION 20
 #define SHIELD_COOLDOWN 60
@@ -74,7 +76,9 @@ void drawUI();
 #define WRAITH_DAMAGE 3
 #define WRAITH_ATTACK_COOLDOWN 60
 #define WRAITH_AIRBORNE_DURATION 120
-#define WRAITH_AIRBORNE_DURATION_VARIANCE 60
+#define WRAITH_GROUND_DURATION 120
+#define WRAITH_SPEED 4
+#define WRAITH_MAX_HEIGHT 10
 
 enum {WALKER, SHOOTER, WRAITH};
 
@@ -167,6 +171,8 @@ typedef struct {
 
     int framesInAir;
     int framesOnGround;
+
+    int rowVelocity; // 1 means moving up, -1 means moving down
 } Wraith;
 
 typedef struct {

@@ -107,6 +107,17 @@ int playerIsWithinRange(int col, int width, int range) {
     }
 }
 
+int playerIsAtSameElevation(int row, int range) {
+    if (abs(player.worldRow - row) <= range) {
+        return 0; // At same elevation
+    }
+    if (player.worldRow - row > 0) {
+        return 1; // Player is above
+    } else {
+        return -1; // Player is below
+    }
+}
+
 int currentEncounterIsCleared() {
     // Walkers
     for (int i = 0; i < MAX_WALKERS; i++) {
@@ -136,17 +147,17 @@ void spawnPlayerBolt() {
     }
 }
 
-void spawnShooterProjectile(Shooter* shooter) {
+void spawnShooterProjectile(int col, int row, int direction, int height, int width) {
     for (int i = 0; i < MAX_SHOOTER_PROJECTILES; i++) {
         if (!shooterProjectiles[i].active) {
             shooterProjectiles[i].active = 1;
             shooterProjectiles[i].colStep = 0;
-            shooterProjectiles[i].worldRow = shooter->worldRow + shooter->height / 2;
-            shooterProjectiles[i].direction = shooter->facingDirection;
-            if (shooter->facingDirection == -1) {
-                shooterProjectiles[i].worldCol = shooter->worldCol - shooterProjectiles[i].width;
+            shooterProjectiles[i].worldRow = row + height / 2;
+            shooterProjectiles[i].direction = direction;
+            if (direction == -1) {
+                shooterProjectiles[i].worldCol = col;
             } else {
-                shooterProjectiles[i].worldCol = shooter->worldCol + shooter->width;
+                shooterProjectiles[i].worldCol = col + width;
             }
             break;
         }
@@ -183,13 +194,13 @@ void spawnEnemy(int type, int col) {
             break;
         case WRAITH:
             for (int i = 0; i < MAX_WRAITHS; i++) {
-                if (shooters[i].state == ENEMYSTATE_INACTIVE) {
-                    shooters[i].state = ENEMYSTATE_IDLE;
-                    shooters[i].health = SHOOTER_MAX_HEALTH;
-                    shooters[i].worldCol = encounters[currentEncounter].startCol + col;
-                    shooters[i].attackStep = 0;
-                    shooters[i].hide = 0;
-                    shooters[i].facingDirection = 1;
+                if (wraiths[i].state == ENEMYSTATE_INACTIVE) {
+                    wraiths[i].state = ENEMYSTATE_IDLE;
+                    wraiths[i].health = WRAITH_MAX_HEALTH;
+                    wraiths[i].worldCol = encounters[currentEncounter].startCol + col;
+                    wraiths[i].attackStep = 0;
+                    wraiths[i].hide = 0;
+                    wraiths[i].facingDirection = 1;
                     break;
                 }
             }
@@ -206,7 +217,7 @@ void initGame() {
     encounters[0].startCol = 0;
     encounters[0].state = 1;
     encounters[0].startingEnemies[0].spawnCol = 80;
-    encounters[0].startingEnemies[0].type = SHOOTER;
+    encounters[0].startingEnemies[0].type = WRAITH;
     encounters[0].numStartingEnemies = 1;
 
     encounters[1].startCol = SCREENWIDTH;
@@ -250,6 +261,16 @@ void initEnemies() {
         shooters[i].worldCol = 200;
         shooters[i].worldRow = GROUND_LEVEL - shooters[i].height;
         shooters[i].attackStep = 0;
+    }
+    // Wraiths
+    for (int i = 0; i < MAX_SHOOTERS; i++) {
+        wraiths[i].health = SHOOTER_MAX_HEALTH;
+        wraiths[i].state = ENEMYSTATE_INACTIVE;
+        wraiths[i].width = 8;
+        wraiths[i].height = 16;
+        wraiths[i].worldCol = 200;
+        wraiths[i].worldRow = GROUND_LEVEL - wraiths[i].height;
+        wraiths[i].attackStep = 0;
     }
 }
 
@@ -459,7 +480,7 @@ void updateEnemies() {
                 shooters[i].framesInAttackState++;
                 shooters[i].facingDirection = playerIsWithinRange(shooters[i].worldCol, 0, 0);
                 if (shooters[i].attackStep >= SHOOTER_ATTACK_COOLDOWN) {
-                    spawnShooterProjectile(&shooters[i]);
+                    spawnShooterProjectile(shooters[i].worldCol, shooters[i].worldRow, shooters[i].facingDirection, shooters[i].height, shooters[i].width);
                     shooters[i].attackStep = 0;
                 }
                 if (shooters[i].framesInAttackState >= SHOOTER_ATTACK_STATE_DURATION) {
@@ -473,9 +494,55 @@ void updateEnemies() {
                     shooters[i].framesInIdleState = 0;
                     shooters[i].state = ENEMYSTATE_ATTACKING;
                     shooters[i].facingDirection = playerIsWithinRange(shooters[i].worldCol, 0, 0);
-                    spawnShooterProjectile(&shooters[i]);
+                    spawnShooterProjectile(shooters[i].worldCol, shooters[i].worldRow, shooters[i].facingDirection, shooters[i].height, shooters[i].width);
                 }
                 break;
+        }
+    }
+    // Wraiths
+    for (int i = 0; i < MAX_WRAITHS; i++) {
+        if (wraiths[i].state != ENEMYSTATE_INACTIVE) {
+            wraiths[i].attackStep++;
+            shooters[i].framesInAttackState++;
+            wraiths[i].facingDirection = playerIsWithinRange(wraiths[i].worldCol, 0, 0);
+
+            // Attacking
+            if (wraiths[i].attackStep >= WRAITH_ATTACK_COOLDOWN && playerIsAtSameElevation(wraiths[i].worldRow, 4) == 0) {
+                spawnShooterProjectile(wraiths[i].worldCol, wraiths[i].worldRow, wraiths[i].facingDirection, wraiths[i].height, wraiths[i].width);
+                wraiths[i].attackStep = 0;
+            }
+
+            // Vertical Movement
+            if (wraiths[i].worldRow >= GROUND_LEVEL - wraiths[i].height) {
+                wraiths[i].framesOnGround++;
+                if (wraiths[i].framesOnGround >= WRAITH_GROUND_DURATION) {
+                    wraiths[i].framesOnGround = 0;
+                    wraiths[i].rowVelocity = 1;
+                }
+            } else if (wraiths[i].worldRow + wraiths[i].height <= GROUND_LEVEL - WRAITH_MAX_HEIGHT) {
+                wraiths[i].framesInAir++;
+                if (wraiths[i].framesInAir >= WRAITH_AIRBORNE_DURATION) {
+                    wraiths[i].framesInAir = 0;
+                    wraiths[i].rowVelocity = -1;
+                }
+            }
+            wraiths[i].rowStep += WRAITH_SPEED * wraiths[i].rowVelocity;
+            if (wraiths[i].rowStep <= -10) {
+                wraiths[i].rowStep += 10;
+                wraiths[i].worldRow++;
+                if (wraiths[i].worldRow + wraiths[i].height >= GROUND_LEVEL) {
+                    wraiths[i].rowStep = 0;
+                    wraiths[i].rowVelocity = 0;
+                }
+            }
+            if (wraiths[i].rowStep >= 10) {
+                wraiths[i].rowStep -= 10;
+                wraiths[i].worldRow--;
+                if (wraiths[i].worldRow + wraiths[i].height <= GROUND_LEVEL - WRAITH_MAX_HEIGHT) {
+                    wraiths[i].rowStep = 0;
+                    wraiths[i].rowVelocity = 0;
+                }
+            }
         }
     }
 }
@@ -520,7 +587,20 @@ void updateProjectiles() {
                     }
                 }
             }
-
+            // Wraith Collision
+            for (int j = 0; j < MAX_SHOOTERS; j++) {
+                if (wraiths[j].state != ENEMYSTATE_INACTIVE && collision(playerBolts[i].worldCol, playerBolts[i].worldRow, playerBolts[i].width, 
+                        playerBolts[i].height, wraiths[j].worldCol, wraiths[j].worldRow, wraiths[j].width, 
+                        wraiths[j].height)) {
+                    wraiths[j].health -= PLAYER_BOLT_DAMAGE;
+                    playerBolts[i].active = 0;
+                    if (wraiths[j].health <= 0) {
+                        wraiths[j].state = ENEMYSTATE_INACTIVE;
+                        encounters[currentEncounter].state = 1 + currentEncounterIsCleared(); // +1 because of how the states are setup
+                    }
+                }
+            }
+            
             playerBolts[i].screenCol = playerBolts[i].worldCol - hOff;
             playerBolts[i].screenRow = playerBolts[i].worldRow - vOff;
             if (playerBolts[i].screenCol > SCREENWIDTH || playerBolts[i].screenCol < 0) {
@@ -613,6 +693,25 @@ void drawEnemies() {
             shadowOAM[shadowOAMIndex].attr0 = shooters[i].screenRow | ATTR0_TALL;
             shadowOAM[shadowOAMIndex].attr1 = shooters[i].screenCol | ATTR1_TINY;
             if (shooters[i].state == ENEMYSTATE_ATTACKING) {
+                shadowOAM[shadowOAMIndex].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(7, 0);
+            } else {
+                shadowOAM[shadowOAMIndex].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(6, 0);
+            }
+        } else {
+            shadowOAM[shadowOAMIndex].attr0 = ATTR0_HIDE;
+        }
+        shadowOAMIndex++;
+    } 
+
+    // Wraiths
+    for (int i = 0; i < MAX_WRAITHS; i++) {
+        if (wraiths[i].state != ENEMYSTATE_INACTIVE) {
+            wraiths[i].screenCol = wraiths[i].worldCol - hOff;
+            wraiths[i].screenRow = wraiths[i].worldRow - vOff;
+
+            shadowOAM[shadowOAMIndex].attr0 = wraiths[i].screenRow | ATTR0_TALL;
+            shadowOAM[shadowOAMIndex].attr1 = wraiths[i].screenCol | ATTR1_TINY;
+            if (wraiths[i].state == ENEMYSTATE_ATTACKING) {
                 shadowOAM[shadowOAMIndex].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(7, 0);
             } else {
                 shadowOAM[shadowOAMIndex].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(6, 0);

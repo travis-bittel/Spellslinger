@@ -1,33 +1,3 @@
-/* What I currently have working:
- * - Player Movement (Left/Right)
- * - The First Enemy Type (Chases and Attacks the Player)
- * - The First Spell (Bolt: Projectile That Damages Enemies)
- * - Mana System (Costs, Regen, and Burnout - see game.h)
- * - Player Health and Death
- * - Basics of the Encounter System
- *     - Each SCREENWIDTH wide region is an encounter with predefined enemy spawns
- *     - After the player defeats all enemies in the encounter, they can move right to enter the next encounter
- *     - The player will receive new spells upon starting certain encounters
- * 
- * Next Steps:
- * - Next Two Player Spells:
- *     - Shield: Protects the player from projectiles and melee attacks (not not beams) briefly
- *     - Levitate: The player can move up at the cost of Mana to dodge beams at ground level and
- *       more easily hit floating enemies
- * - Next Three Enemy Types:
- *     - Shooter: Stands still and fires projectiles at the player
- *     - Wraith: Floats up and down randomly, fires projectiles at the player
- *     - Beamer: Fires beams towards the player that deal damage over time
- * - Setup all of the encounters!
- * 
- * ...And After That:
- * - Final Boss Battle
- *     - Will be a combination of previously seen enemy mechanics
- * - Art and Sound
- *     - In particular, UI is the top priority
- * - Potential Other Spells and Additional Enemy Types?
-*/
-
 #include <stdlib.h>
 #include <stdio.h>
 #include "myLib.h"
