@@ -185,7 +185,7 @@ void spawnEnemy(int type, int col) {
                     shooters[i].state = ENEMYSTATE_IDLE;
                     shooters[i].health = SHOOTER_MAX_HEALTH;
                     shooters[i].worldCol = encounters[currentEncounter].startCol + col;
-                    shooters[i].attackStep = 0;
+                    shooters[i].attackStep = rand() % SHOOTER_ATTACK_COOLDOWN - 10;
                     shooters[i].hide = 0;
                     shooters[i].facingDirection = 1;
                     break;
@@ -198,7 +198,7 @@ void spawnEnemy(int type, int col) {
                     wraiths[i].state = ENEMYSTATE_IDLE;
                     wraiths[i].health = WRAITH_MAX_HEALTH;
                     wraiths[i].worldCol = encounters[currentEncounter].startCol + col;
-                    wraiths[i].attackStep = 0;
+                    wraiths[i].attackStep = rand() % WRAITH_ATTACK_COOLDOWN - 10;
                     wraiths[i].hide = 0;
                     wraiths[i].facingDirection = 1;
                     break;
@@ -214,11 +214,14 @@ void initGame() {
     initEnemies();
     initProjectiles();
 
+    // #region Encounters
     encounters[0].startCol = 0;
     encounters[0].state = 1;
-    encounters[0].startingEnemies[0].spawnCol = 80;
-    encounters[0].startingEnemies[0].type = WRAITH;
-    encounters[0].numStartingEnemies = 1;
+    encounters[0].startingEnemies[0].spawnCol = 120;
+    encounters[0].startingEnemies[0].type = WALKER;
+    encounters[0].startingEnemies[1].spawnCol = 160;
+    encounters[0].startingEnemies[1].type = WALKER;
+    encounters[0].numStartingEnemies = 2;
 
     encounters[1].startCol = SCREENWIDTH;
     encounters[1].state = 0;
@@ -226,9 +229,50 @@ void initGame() {
     encounters[1].startingEnemies[0].type = WALKER;
     encounters[1].startingEnemies[1].spawnCol = 120;
     encounters[1].startingEnemies[1].type = WALKER;
-    encounters[1].startingEnemies[2].spawnCol = 40;
+    encounters[1].startingEnemies[2].spawnCol = 160;
     encounters[1].startingEnemies[2].type = WALKER;
     encounters[1].numStartingEnemies = 3;
+
+    encounters[2].startCol = SCREENWIDTH * 2;
+    encounters[2].state = 0;
+    encounters[2].startingEnemies[0].spawnCol = 60;
+    encounters[2].startingEnemies[0].type = WALKER;
+    encounters[2].startingEnemies[1].spawnCol = 100;
+    encounters[2].startingEnemies[1].type = SHOOTER;
+    encounters[2].startingEnemies[2].spawnCol = 160;
+    encounters[2].startingEnemies[2].type = WALKER;
+    encounters[2].numStartingEnemies = 3;
+
+    encounters[3].startCol = SCREENWIDTH * 3;
+    encounters[3].state = 0;
+    encounters[3].startingEnemies[0].spawnCol = 60;
+    encounters[3].startingEnemies[0].type = SHOOTER;
+    encounters[3].startingEnemies[1].spawnCol = 140;
+    encounters[3].startingEnemies[1].type = SHOOTER;
+    encounters[3].numStartingEnemies = 2;
+
+    encounters[4].startCol = SCREENWIDTH * 4;
+    encounters[4].state = 0;
+    encounters[4].startingEnemies[0].spawnCol = 60;
+    encounters[4].startingEnemies[0].type = WALKER;
+    encounters[4].startingEnemies[1].spawnCol = 100;
+    encounters[4].startingEnemies[1].type = WALKER;
+    encounters[4].startingEnemies[2].spawnCol = 180;
+    encounters[4].startingEnemies[2].type = WRAITH;
+    encounters[4].numStartingEnemies = 3;
+
+    encounters[5].startCol = SCREENWIDTH * 4;
+    encounters[5].state = 0;
+    encounters[5].startingEnemies[0].spawnCol = 60;
+    encounters[5].startingEnemies[0].type = WRAITH;
+    encounters[5].startingEnemies[1].spawnCol = 100;
+    encounters[5].startingEnemies[1].type = WALKER;
+    encounters[5].startingEnemies[2].spawnCol = 140;
+    encounters[5].startingEnemies[2].type = WALKER;
+    encounters[5].startingEnemies[3].spawnCol = 180;
+    encounters[5].startingEnemies[3].type = WRAITH;
+    encounters[5].numStartingEnemies = 4;
+    // #endregion
 
     player.worldCol = 20;
     player.width = 8;
@@ -236,6 +280,7 @@ void initGame() {
     player.worldRow = GROUND_LEVEL - player.height;
     currentPlayerHealth = PLAYER_MAX_HEALTH;
     currentPlayerMana = PLAYER_MAX_MANA;
+    currentEncounter = 0;
 
     startEncounter();
 }
@@ -292,7 +337,7 @@ void initProjectiles() {
 }
 //#endregion
 
-//#region Update Functions
+//#region Update Functions 
 void updateGame() {
     if (globalCooldown > 0) {
         globalCooldown--;

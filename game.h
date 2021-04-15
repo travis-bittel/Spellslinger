@@ -19,7 +19,7 @@ int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
 
 #define BACKGROUND_WIDTH 512
-#define NUMBER_OF_ENCOUNTERS 2
+#define NUMBER_OF_ENCOUNTERS 6
 #define GROUND_LEVEL 225
 
 // Player Stats
@@ -31,7 +31,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 
 // Bolt
 #define MAX_PLAYER_BOLTS 5
-#define PLAYER_BOLT_DAMAGE 4
+#define PLAYER_BOLT_DAMAGE 5
 #define BOLT_MANA_COST 2
 #define PLAYER_BOLT_SPEED 15
 #define BOLT_COOLDOWN 0
@@ -39,9 +39,9 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 // Shield
 #define SHIELD_MANA_COST 0
 #define SHIELD_MANA_REFUND 2
-#define SHIELD_DURATION 20
-#define SHIELD_COOLDOWN 60
-#define SHIELD_EXTENSION_ON_HIT 15
+#define SHIELD_DURATION 15
+#define SHIELD_COOLDOWN 20
+#define SHIELD_EXTENSION_ON_HIT 5
 
 // Levitate
 #define LEVITATE_STEPS_PER_MOVE_UP 2

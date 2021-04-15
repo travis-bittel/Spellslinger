@@ -1087,7 +1087,7 @@ extern int state;
 
 ANISPRITE player;
 
-Encounter encounters[2];
+Encounter encounters[6];
 
 Walker walkers[5];
 
@@ -1153,7 +1153,7 @@ void damagePlayer(int amount, int pierceShield) {
             currentPlayerMana = 10;
         }
 
-        shieldTicks += 15;
+        shieldTicks += 5;
         return;
     }
     currentPlayerHealth -= amount;
@@ -1253,7 +1253,7 @@ void spawnEnemy(int type, int col) {
                     shooters[i].state = ENEMYSTATE_IDLE;
                     shooters[i].health = 15;
                     shooters[i].worldCol = encounters[currentEncounter].startCol + col;
-                    shooters[i].attackStep = 0;
+                    shooters[i].attackStep = rand() % 60 - 10;
                     shooters[i].hide = 0;
                     shooters[i].facingDirection = 1;
                     break;
@@ -1266,7 +1266,7 @@ void spawnEnemy(int type, int col) {
                     wraiths[i].state = ENEMYSTATE_IDLE;
                     wraiths[i].health = 15;
                     wraiths[i].worldCol = encounters[currentEncounter].startCol + col;
-                    wraiths[i].attackStep = 0;
+                    wraiths[i].attackStep = rand() % 60 - 10;
                     wraiths[i].hide = 0;
                     wraiths[i].facingDirection = 1;
                     break;
@@ -1282,11 +1282,14 @@ void initGame() {
     initEnemies();
     initProjectiles();
 
+
     encounters[0].startCol = 0;
     encounters[0].state = 1;
-    encounters[0].startingEnemies[0].spawnCol = 80;
-    encounters[0].startingEnemies[0].type = WRAITH;
-    encounters[0].numStartingEnemies = 1;
+    encounters[0].startingEnemies[0].spawnCol = 120;
+    encounters[0].startingEnemies[0].type = WALKER;
+    encounters[0].startingEnemies[1].spawnCol = 160;
+    encounters[0].startingEnemies[1].type = WALKER;
+    encounters[0].numStartingEnemies = 2;
 
     encounters[1].startCol = 240;
     encounters[1].state = 0;
@@ -1294,9 +1297,50 @@ void initGame() {
     encounters[1].startingEnemies[0].type = WALKER;
     encounters[1].startingEnemies[1].spawnCol = 120;
     encounters[1].startingEnemies[1].type = WALKER;
-    encounters[1].startingEnemies[2].spawnCol = 40;
+    encounters[1].startingEnemies[2].spawnCol = 160;
     encounters[1].startingEnemies[2].type = WALKER;
     encounters[1].numStartingEnemies = 3;
+
+    encounters[2].startCol = 240 * 2;
+    encounters[2].state = 0;
+    encounters[2].startingEnemies[0].spawnCol = 60;
+    encounters[2].startingEnemies[0].type = WALKER;
+    encounters[2].startingEnemies[1].spawnCol = 100;
+    encounters[2].startingEnemies[1].type = SHOOTER;
+    encounters[2].startingEnemies[2].spawnCol = 160;
+    encounters[2].startingEnemies[2].type = WALKER;
+    encounters[2].numStartingEnemies = 3;
+
+    encounters[3].startCol = 240 * 3;
+    encounters[3].state = 0;
+    encounters[3].startingEnemies[0].spawnCol = 60;
+    encounters[3].startingEnemies[0].type = SHOOTER;
+    encounters[3].startingEnemies[1].spawnCol = 140;
+    encounters[3].startingEnemies[1].type = SHOOTER;
+    encounters[3].numStartingEnemies = 2;
+
+    encounters[4].startCol = 240 * 4;
+    encounters[4].state = 0;
+    encounters[4].startingEnemies[0].spawnCol = 60;
+    encounters[4].startingEnemies[0].type = WALKER;
+    encounters[4].startingEnemies[1].spawnCol = 100;
+    encounters[4].startingEnemies[1].type = WALKER;
+    encounters[4].startingEnemies[2].spawnCol = 180;
+    encounters[4].startingEnemies[2].type = WRAITH;
+    encounters[4].numStartingEnemies = 3;
+
+    encounters[5].startCol = 240 * 4;
+    encounters[5].state = 0;
+    encounters[5].startingEnemies[0].spawnCol = 60;
+    encounters[5].startingEnemies[0].type = WRAITH;
+    encounters[5].startingEnemies[1].spawnCol = 100;
+    encounters[5].startingEnemies[1].type = WALKER;
+    encounters[5].startingEnemies[2].spawnCol = 140;
+    encounters[5].startingEnemies[2].type = WALKER;
+    encounters[5].startingEnemies[3].spawnCol = 180;
+    encounters[5].startingEnemies[3].type = WRAITH;
+    encounters[5].numStartingEnemies = 4;
+
 
     player.worldCol = 20;
     player.width = 8;
@@ -1304,6 +1348,7 @@ void initGame() {
     player.worldRow = 225 - player.height;
     currentPlayerHealth = 10;
     currentPlayerMana = 10;
+    currentEncounter = 0;
 
     startEncounter();
 }
@@ -1394,7 +1439,7 @@ void updateGame() {
             if (encounters[currentEncounter].state == ENCOUNTER_COMPLETE) {
 
                 currentEncounter++;
-                if (currentEncounter >= 2) {
+                if (currentEncounter >= 6) {
                     goToWin();
                 } else {
                     startEncounter();
@@ -1436,12 +1481,12 @@ void updateGame() {
         }
     }
     if ((!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1)))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
-        shieldTicks = 20;
+        shieldTicks = 15;
         shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
 
         currentPlayerMana -= 0;
         globalCooldown = 20;
-        shieldCooldown = 60;
+        shieldCooldown = 20;
         if (currentPlayerMana <= 0) {
             playerManaStep -= 45;
         }
@@ -1634,7 +1679,7 @@ void updateProjectiles() {
                 if (walkers[j].state != ENEMYSTATE_INACTIVE && collision(playerBolts[i].worldCol, playerBolts[i].worldRow, playerBolts[i].width,
                         playerBolts[i].height, walkers[j].worldCol, walkers[j].worldRow, walkers[j].width,
                         walkers[j].height)) {
-                    walkers[j].health -= 4;
+                    walkers[j].health -= 20;
                     playerBolts[i].active = 0;
                     if (walkers[j].health <= 0) {
                         walkers[j].state = ENEMYSTATE_INACTIVE;
@@ -1647,7 +1692,7 @@ void updateProjectiles() {
                 if (shooters[j].state == ENEMYSTATE_ATTACKING && collision(playerBolts[i].worldCol, playerBolts[i].worldRow, playerBolts[i].width,
                         playerBolts[i].height, shooters[j].worldCol, shooters[j].worldRow, shooters[j].width,
                         shooters[j].height)) {
-                    shooters[j].health -= 4;
+                    shooters[j].health -= 20;
                     playerBolts[i].active = 0;
                     if (shooters[j].health <= 0) {
                         shooters[j].state = ENEMYSTATE_INACTIVE;
@@ -1660,7 +1705,7 @@ void updateProjectiles() {
                 if (wraiths[j].state != ENEMYSTATE_INACTIVE && collision(playerBolts[i].worldCol, playerBolts[i].worldRow, playerBolts[i].width,
                         playerBolts[i].height, wraiths[j].worldCol, wraiths[j].worldRow, wraiths[j].width,
                         wraiths[j].height)) {
-                    wraiths[j].health -= 4;
+                    wraiths[j].health -= 20;
                     playerBolts[i].active = 0;
                     if (wraiths[j].health <= 0) {
                         wraiths[j].state = ENEMYSTATE_INACTIVE;
