@@ -1292,7 +1292,7 @@ void spawnEnemy(int type, int col) {
                     wraiths[i].state = ENEMYSTATE_IDLE;
                     wraiths[i].health = 15;
                     wraiths[i].worldCol = encounters[currentEncounter].startCol + col;
-                    wraiths[i].attackStep = rand() % 60 - 10;
+                    wraiths[i].attackStep = rand() % 90 - 10;
                     wraiths[i].hide = 0;
                     wraiths[i].facingDirection = 1;
                     break;
@@ -1505,7 +1505,7 @@ void updateGame() {
         }
         spawnPlayerBolt();
         currentPlayerMana -= 2;
-        globalCooldown = 20;
+        globalCooldown = 10;
         boltCooldown = 0;
         if (currentPlayerMana <= 0) {
             playerManaStep -= 45;
@@ -1517,7 +1517,7 @@ void updateGame() {
         shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
 
         currentPlayerMana -= 0;
-        globalCooldown = 20;
+        globalCooldown = 10;
         shieldCooldown = 20;
         if (currentPlayerMana <= 0) {
             playerManaStep -= 45;
@@ -1652,7 +1652,7 @@ void updateEnemies() {
             wraiths[i].facingDirection = playerIsWithinRange(wraiths[i].worldCol, 0, 0);
 
 
-            if (wraiths[i].attackStep >= 60) {
+            if (wraiths[i].attackStep >= 90) {
                 spawnShooterProjectile(wraiths[i].worldCol, player.worldRow, wraiths[i].facingDirection, wraiths[i].height, wraiths[i].width);
                 wraiths[i].attackStep = 0;
             }

@@ -411,13 +411,14 @@ spawnEnemy:
 	mov	lr, pc
 	bx	r3
 	mov	r1, #1
-	ldr	r3, .L76+28
+	ldr	r3, .L76+32
 	smull	r2, r3, r0, r3
 	add	r2, r3, r0
 	asr	r3, r0, #31
-	rsb	r3, r3, r2, asr #5
+	rsb	r3, r3, r2, asr #6
+	add	r3, r3, r3, lsl r1
 	rsb	r3, r3, r3, lsl #4
-	sub	r0, r0, r3, lsl #2
+	sub	r0, r0, r3, lsl r1
 	sub	r0, r0, #10
 	str	r4, [r5, #44]
 	str	r0, [r5, #64]
@@ -434,6 +435,7 @@ spawnEnemy:
 	.word	walkers
 	.word	rand
 	.word	-2004318071
+	.word	-1240768329
 	.size	spawnEnemy, .-spawnEnemy
 	.align	2
 	.global	startEncounter
@@ -940,7 +942,7 @@ updateEnemies:
 	ldr	r0, [r4, #12]
 	bl	playerIsWithinRange
 	ldr	r3, [r4, #64]
-	cmp	r3, #59
+	cmp	r3, #89
 	str	r0, [r4, #60]
 	bgt	.L171
 	ldr	r1, [r4, #20]
@@ -1693,11 +1695,12 @@ updateGame:
 	cmp	r3, #0
 	ble	.L294
 	mov	r2, #15
-	mov	r3, #20
 	mov	r1, #36
+	mov	r0, #10
+	mov	r3, #20
 	str	r2, [r4]
 	ldr	r2, .L328+28
-	str	r3, [r4, #12]
+	str	r0, [r4, #12]
 	strh	r1, [r2, #12]	@ movhi
 	str	r3, [r4, #20]
 	b	.L294
@@ -1715,7 +1718,7 @@ updateGame:
 	cmp	r2, #0
 	ble	.L292
 	bl	spawnPlayerBolt
-	mov	r2, #20
+	mov	r2, #10
 	ldr	r3, [r6]
 	sub	r3, r3, #2
 	cmp	r3, #0

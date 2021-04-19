@@ -27,7 +27,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 #define PLAYER_MAX_MANA 10
 #define PLAYER_TICKS_PER_MANA_REGEN 30
 #define PLAYER_MANA_BURNOUT 45 // Time period where mana does not regen if you deplete all of your mana
-#define GLOBAL_CAST_COOLDOWN 20
+#define GLOBAL_CAST_COOLDOWN 10
 
 // Bolt
 #define MAX_PLAYER_BOLTS 5
