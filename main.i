@@ -1404,7 +1404,8 @@ void startEncounter();
 void drawEnemies();
 void drawUI();
 int playerIsAtSameElevation(int row, int range);
-# 81 "game.h"
+void spawnShooterProjectile(int col, int row, int direction, int height, int width);
+# 83 "game.h"
 enum {WALKER, SHOOTER, WRAITH};
 
 typedef struct {
@@ -1550,6 +1551,66 @@ extern const unsigned short spritesheetMap[1024];
 
 extern const unsigned short spritesheetPal[256];
 # 13 "main.c" 2
+# 1 "bolt_instructions.h" 1
+# 22 "bolt_instructions.h"
+extern const unsigned short bolt_instructionsTiles[9488];
+
+
+extern const unsigned short bolt_instructionsMap[1024];
+
+
+extern const unsigned short bolt_instructionsPal[256];
+# 14 "main.c" 2
+# 1 "levitate_instructions.h" 1
+# 22 "levitate_instructions.h"
+extern const unsigned short levitate_instructionsTiles[9008];
+
+
+extern const unsigned short levitate_instructionsMap[1024];
+
+
+extern const unsigned short levitate_instructionsPal[256];
+# 15 "main.c" 2
+# 1 "shield_instructions.h" 1
+# 22 "shield_instructions.h"
+extern const unsigned short shield_instructionsTiles[9136];
+
+
+extern const unsigned short shield_instructionsMap[1024];
+
+
+extern const unsigned short shield_instructionsPal[256];
+# 16 "main.c" 2
+# 1 "walker_instructions.h" 1
+# 22 "walker_instructions.h"
+extern const unsigned short walker_instructionsTiles[8896];
+
+
+extern const unsigned short walker_instructionsMap[1024];
+
+
+extern const unsigned short walker_instructionsPal[256];
+# 17 "main.c" 2
+# 1 "shooter_instructions.h" 1
+# 22 "shooter_instructions.h"
+extern const unsigned short shooter_instructionsTiles[9504];
+
+
+extern const unsigned short shooter_instructionsMap[1024];
+
+
+extern const unsigned short shooter_instructionsPal[256];
+# 18 "main.c" 2
+# 1 "wraith_instructions.h" 1
+# 22 "wraith_instructions.h"
+extern const unsigned short wraith_instructionsTiles[9552];
+
+
+extern const unsigned short wraith_instructionsMap[1024];
+
+
+extern const unsigned short wraith_instructionsPal[256];
+# 19 "main.c" 2
 
 
 void initialize();
@@ -1567,6 +1628,10 @@ void goToWin();
 void win();
 void goToLose();
 void lose();
+void goToNewSpell(int spell);
+void newSpell();
+void goToNewEnemy(int enemy);
+void newEnemy();
 
 
 enum
@@ -1576,7 +1641,9 @@ enum
     GAME,
     PAUSE,
     WIN,
-    LOSE
+    LOSE,
+    NEW_SPELL,
+    NEW_ENEMY
 };
 int state;
 
@@ -1600,24 +1667,30 @@ int main()
 
         switch (state)
         {
-        case START:
-            start();
-            break;
-        case INSTRUCTIONS:
-            instructions();
-            break;
-        case GAME:
-            game();
-            break;
-        case PAUSE:
-            pause();
-            break;
-        case WIN:
-            win();
-            break;
-        case LOSE:
-            lose();
-            break;
+            case START:
+                start();
+                break;
+            case INSTRUCTIONS:
+                instructions();
+                break;
+            case GAME:
+                game();
+                break;
+            case PAUSE:
+                pause();
+                break;
+            case WIN:
+                win();
+                break;
+            case LOSE:
+                lose();
+                break;
+            case NEW_SPELL:
+                newSpell();
+                break;
+            case NEW_ENEMY:
+                newEnemy();
+                break;
         }
     }
 }
@@ -1647,6 +1720,7 @@ void goToStart() {
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
 
     state = START;
+
     DMANow(3, startPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, startTiles, &((charblock *)0x6000000)[0], 2016 / 2);
     DMANow(3, startMap, &((screenblock *)0x6000000)[16], 2048 / 2);
@@ -1676,10 +1750,89 @@ void goToInstructions() {
 void instructions() {
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
         initGame();
-        goToGame();
+
+        goToNewSpell(0);
     }
     if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2))))) {
         goToStart();
+    }
+}
+
+void goToNewSpell(int spell) {
+
+    (*(volatile unsigned short *)0x04000010) = 0;
+    (*(volatile unsigned short *)0x04000012) = 0;
+    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+
+    state = NEW_SPELL;
+
+    switch (spell) {
+        case 0:
+            DMANow(3, bolt_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, bolt_instructionsTiles, &((charblock *)0x6000000)[0], 18976 / 2);
+            DMANow(3, bolt_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+        case 1:
+            DMANow(3, shield_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, shield_instructionsTiles, &((charblock *)0x6000000)[0], 18272 / 2);
+            DMANow(3, shield_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+        case 2:
+            DMANow(3, levitate_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, levitate_instructionsTiles, &((charblock *)0x6000000)[0], 18016 / 2);
+            DMANow(3, levitate_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+        default:
+            DMANow(3, bolt_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, bolt_instructionsTiles, &((charblock *)0x6000000)[0], 18976 / 2);
+            DMANow(3, bolt_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+    }
+}
+
+void newSpell() {
+    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+        goToGame();
+        return;
+    }
+}
+
+void goToNewEnemy(int enemy) {
+
+    (*(volatile unsigned short *)0x04000010) = 0;
+    (*(volatile unsigned short *)0x04000012) = 0;
+    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+
+    state = NEW_ENEMY;
+
+    switch (enemy) {
+        case 0:
+            DMANow(3, walker_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, walker_instructionsTiles, &((charblock *)0x6000000)[0], 17792 / 2);
+            DMANow(3, walker_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+        case 1:
+            DMANow(3, shooter_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, shooter_instructionsTiles, &((charblock *)0x6000000)[0], 19008 / 2);
+            DMANow(3, shooter_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+        case 2:
+            DMANow(3, wraith_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, wraith_instructionsTiles, &((charblock *)0x6000000)[0], 19104 / 2);
+            DMANow(3, wraith_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+        default:
+            DMANow(3, bolt_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
+            DMANow(3, bolt_instructionsTiles, &((charblock *)0x6000000)[0], 18976 / 2);
+            DMANow(3, bolt_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+            break;
+    }
+}
+
+void newEnemy() {
+    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+        goToGame();
+        return;
     }
 }
 
@@ -1724,7 +1877,6 @@ void goToPause() {
 
 
 void pause() {
-
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
         goToGame();
     }

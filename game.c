@@ -5,6 +5,9 @@
 
 extern void goToLose();
 extern void goToWin();
+extern void goToInstructions();
+extern void goToNewSpell(int spell);
+extern void goToNewEnemy(int enemy);
 
 enum
 {
@@ -49,7 +52,7 @@ int playerManaStep = 0; // Used to regen mana at a rate of <1 per tick
 int playerFacingDirection = 1; // -1 = Left, 1 = Right
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = 2;
+int spellsUnlocked = -1;
 
 int shieldTicks = 0; // When >0, negate projectiles and melee attacks
 
@@ -70,6 +73,29 @@ void startEncounter() {
     for (int i = 0; i < encounters[currentEncounter].numStartingEnemies; i++) {
         EnemySpawn spawn = encounters[currentEncounter].startingEnemies[i];
         spawnEnemy(spawn.type, spawn.spawnCol);
+    }
+
+    // Show Instructions
+    if (currentEncounter == 0) { // Bolt
+        goToNewSpell(0);
+        spellsUnlocked = 0;
+    }
+    if (currentEncounter == 1) { // Walker
+        goToNewEnemy(0);
+    }
+    if (currentEncounter == 2) { // Shield
+        goToNewSpell(1);
+        spellsUnlocked = 1;
+    }
+    if (currentEncounter == 3) { // Turret
+        goToNewEnemy(1);
+    }
+    if (currentEncounter == 5) { // Wraith
+        goToNewEnemy(2);
+    }
+    if (currentEncounter == 6) { // Levitate
+        goToNewSpell(2);
+        spellsUnlocked = 2;
     }
 }
 
@@ -216,29 +242,23 @@ void initGame() {
 
     // #region Encounters
     encounters[0].startCol = 0;
-    encounters[0].state = 1;
-    encounters[0].startingEnemies[0].spawnCol = 120;
-    encounters[0].startingEnemies[0].type = WALKER;
-    encounters[0].startingEnemies[1].spawnCol = 160;
-    encounters[0].startingEnemies[1].type = WALKER;
-    encounters[0].numStartingEnemies = 2;
+    encounters[0].state = ENCOUNTER_COMPLETE;
+    encounters[0].numStartingEnemies = 0;
 
     encounters[1].startCol = SCREENWIDTH;
-    encounters[1].state = 0;
-    encounters[1].startingEnemies[0].spawnCol = 80;
+    encounters[1].state = 1;
+    encounters[1].startingEnemies[0].spawnCol = 120;
     encounters[1].startingEnemies[0].type = WALKER;
-    encounters[1].startingEnemies[1].spawnCol = 120;
+    encounters[1].startingEnemies[1].spawnCol = 160;
     encounters[1].startingEnemies[1].type = WALKER;
-    encounters[1].startingEnemies[2].spawnCol = 160;
-    encounters[1].startingEnemies[2].type = WALKER;
-    encounters[1].numStartingEnemies = 3;
+    encounters[1].numStartingEnemies = 2;
 
     encounters[2].startCol = SCREENWIDTH * 2;
     encounters[2].state = 0;
-    encounters[2].startingEnemies[0].spawnCol = 60;
+    encounters[2].startingEnemies[0].spawnCol = 80;
     encounters[2].startingEnemies[0].type = WALKER;
-    encounters[2].startingEnemies[1].spawnCol = 100;
-    encounters[2].startingEnemies[1].type = SHOOTER;
+    encounters[2].startingEnemies[1].spawnCol = 120;
+    encounters[2].startingEnemies[1].type = WALKER;
     encounters[2].startingEnemies[2].spawnCol = 160;
     encounters[2].startingEnemies[2].type = WALKER;
     encounters[2].numStartingEnemies = 3;
@@ -246,32 +266,42 @@ void initGame() {
     encounters[3].startCol = SCREENWIDTH * 3;
     encounters[3].state = 0;
     encounters[3].startingEnemies[0].spawnCol = 60;
-    encounters[3].startingEnemies[0].type = SHOOTER;
-    encounters[3].startingEnemies[1].spawnCol = 140;
+    encounters[3].startingEnemies[0].type = WALKER;
+    encounters[3].startingEnemies[1].spawnCol = 100;
     encounters[3].startingEnemies[1].type = SHOOTER;
-    encounters[3].numStartingEnemies = 2;
+    encounters[3].startingEnemies[2].spawnCol = 160;
+    encounters[3].startingEnemies[2].type = WALKER;
+    encounters[3].numStartingEnemies = 3;
 
     encounters[4].startCol = SCREENWIDTH * 4;
     encounters[4].state = 0;
     encounters[4].startingEnemies[0].spawnCol = 60;
-    encounters[4].startingEnemies[0].type = WALKER;
-    encounters[4].startingEnemies[1].spawnCol = 100;
-    encounters[4].startingEnemies[1].type = WALKER;
-    encounters[4].startingEnemies[2].spawnCol = 180;
-    encounters[4].startingEnemies[2].type = WRAITH;
-    encounters[4].numStartingEnemies = 3;
+    encounters[4].startingEnemies[0].type = SHOOTER;
+    encounters[4].startingEnemies[1].spawnCol = 140;
+    encounters[4].startingEnemies[1].type = SHOOTER;
+    encounters[4].numStartingEnemies = 2;
 
-    encounters[5].startCol = SCREENWIDTH * 4;
+    encounters[5].startCol = SCREENWIDTH * 5;
     encounters[5].state = 0;
     encounters[5].startingEnemies[0].spawnCol = 60;
-    encounters[5].startingEnemies[0].type = WRAITH;
+    encounters[5].startingEnemies[0].type = WALKER;
     encounters[5].startingEnemies[1].spawnCol = 100;
     encounters[5].startingEnemies[1].type = WALKER;
-    encounters[5].startingEnemies[2].spawnCol = 140;
-    encounters[5].startingEnemies[2].type = WALKER;
-    encounters[5].startingEnemies[3].spawnCol = 180;
-    encounters[5].startingEnemies[3].type = WRAITH;
-    encounters[5].numStartingEnemies = 4;
+    encounters[5].startingEnemies[2].spawnCol = 180;
+    encounters[5].startingEnemies[2].type = WRAITH;
+    encounters[5].numStartingEnemies = 3;
+
+    encounters[6].startCol = SCREENWIDTH * 6;
+    encounters[6].state = 0;
+    encounters[6].startingEnemies[0].spawnCol = 60;
+    encounters[6].startingEnemies[0].type = WRAITH;
+    encounters[6].startingEnemies[1].spawnCol = 100;
+    encounters[6].startingEnemies[1].type = WALKER;
+    encounters[6].startingEnemies[2].spawnCol = 140;
+    encounters[6].startingEnemies[2].type = WALKER;
+    encounters[6].startingEnemies[3].spawnCol = 180;
+    encounters[6].startingEnemies[3].type = WRAITH;
+    encounters[6].numStartingEnemies = 4;
     // #endregion
 
     player.worldCol = 20;
@@ -400,7 +430,8 @@ void updateGame() {
     }
 
     // Spells
-    if (BUTTON_PRESSED(BUTTON_A) && globalCooldown <= 0 && boltCooldown <= 0 && currentPlayerMana > 0) { // Bolt
+    // Bolt
+    if (BUTTON_PRESSED(BUTTON_A) && spellsUnlocked >= BOLT && globalCooldown <= 0 && boltCooldown <= 0 && currentPlayerMana > 0) {
         if (currentPlayerMana <= 0) {
             return;
         }
@@ -412,7 +443,8 @@ void updateGame() {
             playerManaStep -= PLAYER_MANA_BURNOUT;
         }
     }
-    if (BUTTON_PRESSED(BUTTON_B) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) { // Shield
+    // Shield
+    if (BUTTON_PRESSED(BUTTON_B) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
         shieldTicks = SHIELD_DURATION;
         shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(4, 1);
         
@@ -552,8 +584,8 @@ void updateEnemies() {
             wraiths[i].facingDirection = playerIsWithinRange(wraiths[i].worldCol, 0, 0);
 
             // Attacking
-            if (wraiths[i].attackStep >= WRAITH_ATTACK_COOLDOWN && playerIsAtSameElevation(wraiths[i].worldRow, 4) == 0) {
-                spawnShooterProjectile(wraiths[i].worldCol, wraiths[i].worldRow, wraiths[i].facingDirection, wraiths[i].height, wraiths[i].width);
+            if (wraiths[i].attackStep >= WRAITH_ATTACK_COOLDOWN) {
+                spawnShooterProjectile(wraiths[i].worldCol, player.worldRow, wraiths[i].facingDirection, wraiths[i].height, wraiths[i].width);
                 wraiths[i].attackStep = 0;
             }
 

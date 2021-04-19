@@ -10,6 +10,12 @@
 #include "game.h"
 #include "player.h"
 #include "spritesheet.h"
+#include "bolt_instructions.h"
+#include "levitate_instructions.h"
+#include "shield_instructions.h"
+#include "walker_instructions.h"
+#include "shooter_instructions.h"
+#include "wraith_instructions.h"
 
 // Prototypes
 void initialize();
@@ -27,6 +33,10 @@ void goToWin();
 void win();
 void goToLose();
 void lose();
+void goToNewSpell(int spell);
+void newSpell();
+void goToNewEnemy(int enemy);
+void newEnemy();
 
 // States
 enum
@@ -36,7 +46,9 @@ enum
     GAME,
     PAUSE,
     WIN,
-    LOSE
+    LOSE,
+    NEW_SPELL,
+    NEW_ENEMY
 };
 int state;
 
@@ -60,24 +72,30 @@ int main()
         // State Machine
         switch (state)
         {
-        case START:
-            start();
-            break;
-        case INSTRUCTIONS:
-            instructions();
-            break;
-        case GAME:
-            game();
-            break;
-        case PAUSE:
-            pause();
-            break;
-        case WIN:
-            win();
-            break;
-        case LOSE:
-            lose();
-            break;
+            case START:
+                start();
+                break;
+            case INSTRUCTIONS:
+                instructions();
+                break;
+            case GAME:
+                game();
+                break;
+            case PAUSE:
+                pause();
+                break;
+            case WIN:
+                win();
+                break;
+            case LOSE:
+                lose();
+                break;
+            case NEW_SPELL:
+                newSpell();
+                break;
+            case NEW_ENEMY:
+                newEnemy();
+                break;
         }
     }
 }
@@ -107,6 +125,7 @@ void goToStart() {
     REG_DISPCTL = MODE0 | BG0_ENABLE;
 
     state = START;
+
     DMANow(3, startPal, PALETTE, startPalLen / 2);
     DMANow(3, startTiles, &CHARBLOCK[0], startTilesLen / 2);
     DMANow(3, startMap, &SCREENBLOCK[16], startMapLen / 2);
@@ -136,10 +155,89 @@ void goToInstructions() {
 void instructions() {
     if (BUTTON_PRESSED(BUTTON_START)) {
         initGame(); // Call this here so we avoid resetting stuff when unpausing
-        goToGame();
+        //goToGame();
+        goToNewSpell(0);
     }
     if (BUTTON_PRESSED(BUTTON_SELECT)) {
         goToStart();
+    }
+}
+
+void goToNewSpell(int spell) {
+    // Reset background position and disable sprites
+    REG_BG0HOFF = 0;
+    REG_BG0VOFF = 0;
+    REG_DISPCTL = MODE0 | BG0_ENABLE;
+
+    state = NEW_SPELL;
+
+    switch (spell) {
+        case 0:
+            DMANow(3, bolt_instructionsPal, PALETTE, bolt_instructionsPalLen / 2);
+            DMANow(3, bolt_instructionsTiles, &CHARBLOCK[0], bolt_instructionsTilesLen / 2);
+            DMANow(3, bolt_instructionsMap, &SCREENBLOCK[16], bolt_instructionsMapLen / 2);
+            break;
+        case 1:
+            DMANow(3, shield_instructionsPal, PALETTE, shield_instructionsPalLen / 2);
+            DMANow(3, shield_instructionsTiles, &CHARBLOCK[0], shield_instructionsTilesLen / 2);
+            DMANow(3, shield_instructionsMap, &SCREENBLOCK[16], shield_instructionsMapLen / 2);
+            break;
+        case 2:
+            DMANow(3, levitate_instructionsPal, PALETTE, levitate_instructionsPalLen / 2);
+            DMANow(3, levitate_instructionsTiles, &CHARBLOCK[0], levitate_instructionsTilesLen / 2);
+            DMANow(3, levitate_instructionsMap, &SCREENBLOCK[16], levitate_instructionsMapLen / 2);
+            break;
+        default:
+            DMANow(3, bolt_instructionsPal, PALETTE, bolt_instructionsPalLen / 2);
+            DMANow(3, bolt_instructionsTiles, &CHARBLOCK[0], bolt_instructionsTilesLen / 2);
+            DMANow(3, bolt_instructionsMap, &SCREENBLOCK[16], bolt_instructionsMapLen / 2);
+            break;
+    }
+}
+
+void newSpell() {
+    if (BUTTON_PRESSED(BUTTON_START)) {
+        goToGame();
+        return;
+    }
+}
+
+void goToNewEnemy(int enemy) {
+    // Reset background position and disable sprites
+    REG_BG0HOFF = 0;
+    REG_BG0VOFF = 0;
+    REG_DISPCTL = MODE0 | BG0_ENABLE;
+
+    state = NEW_ENEMY;
+
+    switch (enemy) {
+        case 0:
+            DMANow(3, walker_instructionsPal, PALETTE, walker_instructionsPalLen / 2);
+            DMANow(3, walker_instructionsTiles, &CHARBLOCK[0], walker_instructionsTilesLen / 2);
+            DMANow(3, walker_instructionsMap, &SCREENBLOCK[16], walker_instructionsMapLen / 2);
+            break;
+        case 1:
+            DMANow(3, shooter_instructionsPal, PALETTE, shooter_instructionsPalLen / 2);
+            DMANow(3, shooter_instructionsTiles, &CHARBLOCK[0], shooter_instructionsTilesLen / 2);
+            DMANow(3, shooter_instructionsMap, &SCREENBLOCK[16], shooter_instructionsMapLen / 2);
+            break;
+        case 2:
+            DMANow(3, wraith_instructionsPal, PALETTE, wraith_instructionsPalLen / 2);
+            DMANow(3, wraith_instructionsTiles, &CHARBLOCK[0], wraith_instructionsTilesLen / 2);
+            DMANow(3, wraith_instructionsMap, &SCREENBLOCK[16], wraith_instructionsMapLen / 2);
+            break;
+        default:
+            DMANow(3, bolt_instructionsPal, PALETTE, bolt_instructionsPalLen / 2);
+            DMANow(3, bolt_instructionsTiles, &CHARBLOCK[0], bolt_instructionsTilesLen / 2);
+            DMANow(3, bolt_instructionsMap, &SCREENBLOCK[16], bolt_instructionsMapLen / 2);
+            break;
+    }
+}
+
+void newEnemy() {
+    if (BUTTON_PRESSED(BUTTON_START)) {
+        goToGame();
+        return;
     }
 }
 
@@ -184,7 +282,6 @@ void goToPause() {
 
 // Runs every frame of the pause state
 void pause() {
-
     if (BUTTON_PRESSED(BUTTON_START)) {
         goToGame();
     }

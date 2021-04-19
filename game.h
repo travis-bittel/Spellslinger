@@ -19,7 +19,7 @@ int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
 
 #define BACKGROUND_WIDTH 512
-#define NUMBER_OF_ENCOUNTERS 6
+#define NUMBER_OF_ENCOUNTERS 7
 #define GROUND_LEVEL 225
 
 // Player Stats
@@ -74,7 +74,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 #define MAX_WRAITHS 5
 #define WRAITH_MAX_HEALTH 15
 #define WRAITH_DAMAGE 3
-#define WRAITH_ATTACK_COOLDOWN 60
+#define WRAITH_ATTACK_COOLDOWN 90
 #define WRAITH_AIRBORNE_DURATION 120
 #define WRAITH_GROUND_DURATION 120
 #define WRAITH_SPEED 4
