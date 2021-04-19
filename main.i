@@ -1405,7 +1405,7 @@ void drawEnemies();
 void drawUI();
 int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
-# 83 "game.h"
+# 84 "game.h"
 enum {WALKER, SHOOTER, WRAITH};
 
 typedef struct {

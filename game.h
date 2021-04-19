@@ -32,13 +32,14 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 // Bolt
 #define MAX_PLAYER_BOLTS 5
 #define PLAYER_BOLT_DAMAGE 5
-#define BOLT_MANA_COST 2
+#define BOLT_MANA_COST 1
 #define PLAYER_BOLT_SPEED 15
 #define BOLT_COOLDOWN 0
 
 // Shield
-#define SHIELD_MANA_COST 0
-#define SHIELD_MANA_REFUND 2
+#define SHIELD_MANA_COST_BASE 30// /1000
+#define SHIELD_MANA_COST_GROWTH 5 // /1000
+#define SHIELD_MANA_REFUND 0
 #define SHIELD_DURATION 15
 #define SHIELD_COOLDOWN 20
 #define SHIELD_EXTENSION_ON_HIT 5

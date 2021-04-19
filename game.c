@@ -48,13 +48,14 @@ int vOff = 95;
 int currentPlayerHealth = PLAYER_MAX_HEALTH;
 int currentPlayerMana = PLAYER_MAX_MANA;
 int playerManaStep = 0; // Used to regen mana at a rate of <1 per tick
+int playerManaDrainStep = 0;
 
 int playerFacingDirection = 1; // -1 = Left, 1 = Right
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = -1;
+int spellsUnlocked = 2;
 
-int shieldTicks = 0; // When >0, negate projectiles and melee attacks
+int durationShielded = 0; // Ticks up as player holds down Shield button, increasing Mana cost
 
 int globalCooldown = 0; // Prevents all spellcasts while >0
 int boltCooldown = 0;
@@ -78,7 +79,7 @@ void startEncounter() {
     // Show Instructions
     if (currentEncounter == 0) { // Bolt
         goToNewSpell(0);
-        spellsUnlocked = 0;
+        spellsUnlocked = 2;
     }
     if (currentEncounter == 1) { // Walker
         goToNewEnemy(0);
@@ -100,7 +101,7 @@ void startEncounter() {
 }
 
 void damagePlayer(int amount, int pierceShield) {
-    if (!pierceShield && shieldTicks > 0) {
+    if (!pierceShield && durationShielded > 0) {
         // Change shield sprite to blocked version
         shadowOAM[1].attr0 = (player.screenRow - 8) | ATTR0_SQUARE;
         shadowOAM[1].attr1 = player.screenCol | ATTR1_TINY;
@@ -110,8 +111,6 @@ void damagePlayer(int amount, int pierceShield) {
         if (currentPlayerMana > PLAYER_MAX_MANA) {
             currentPlayerMana = PLAYER_MAX_MANA;
         }
-
-        shieldTicks += SHIELD_EXTENSION_ON_HIT;
         return;
     }
     currentPlayerHealth -= amount;
@@ -311,6 +310,7 @@ void initGame() {
     currentPlayerHealth = PLAYER_MAX_HEALTH;
     currentPlayerMana = PLAYER_MAX_MANA;
     currentEncounter = 0;
+    spellsUnlocked = -1;
 
     startEncounter();
 }
@@ -378,9 +378,6 @@ void updateGame() {
     if (shieldCooldown > 0) {
         shieldCooldown--;
     }
-    if (shieldTicks > 0) {
-        shieldTicks--;
-    }
     if (BUTTON_HELD(BUTTON_RIGHT)) {
         playerFacingDirection = 1;
         // Stop player from moving into next encounter's region
@@ -444,16 +441,19 @@ void updateGame() {
         }
     }
     // Shield
-    if (BUTTON_PRESSED(BUTTON_B) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
-        shieldTicks = SHIELD_DURATION;
+    if (BUTTON_HELD(BUTTON_B) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
+        durationShielded++;
         shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(4, 1);
-        
-        currentPlayerMana -= SHIELD_MANA_COST;
-        globalCooldown = GLOBAL_CAST_COOLDOWN;
-        shieldCooldown = SHIELD_COOLDOWN;
+        playerManaDrainStep += SHIELD_MANA_COST_BASE + (durationShielded * SHIELD_MANA_COST_GROWTH);
+        if (playerManaDrainStep >= 1000) {
+            playerManaDrainStep -= 1000;
+            currentPlayerMana--;
+        }
         if (currentPlayerMana <= 0) {
             playerManaStep -= PLAYER_MANA_BURNOUT;
         }
+    } else {
+        durationShielded = 0;
     }
     // Levitate
     if (BUTTON_HELD(BUTTON_UP) && spellsUnlocked >= LEVITATE && currentPlayerMana > 0) {
@@ -729,7 +729,7 @@ void drawGame() {
     shadowOAM[0].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(1, 0);
 
     // Shield
-    if (shieldTicks > 0) {
+    if (durationShielded > 0) {
         shadowOAM[1].attr0 = (player.screenRow - 10) | ATTR0_SQUARE;
         shadowOAM[1].attr1 = player.screenCol | ATTR1_TINY;
     } else {

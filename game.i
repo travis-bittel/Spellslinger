@@ -123,7 +123,7 @@ void drawEnemies();
 void drawUI();
 int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
-# 83 "game.h"
+# 84 "game.h"
 enum {WALKER, SHOOTER, WRAITH};
 
 typedef struct {
@@ -1116,13 +1116,14 @@ int vOff = 95;
 int currentPlayerHealth = 10;
 int currentPlayerMana = 10;
 int playerManaStep = 0;
+int playerManaDrainStep = 0;
 
 int playerFacingDirection = 1;
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = -1;
+int spellsUnlocked = 2;
 
-int shieldTicks = 0;
+int durationShielded = 0;
 
 int globalCooldown = 0;
 int boltCooldown = 0;
@@ -1146,7 +1147,7 @@ void startEncounter() {
 
     if (currentEncounter == 0) {
         goToNewSpell(0);
-        spellsUnlocked = 0;
+        spellsUnlocked = 2;
     }
     if (currentEncounter == 1) {
         goToNewEnemy(0);
@@ -1168,18 +1169,16 @@ void startEncounter() {
 }
 
 void damagePlayer(int amount, int pierceShield) {
-    if (!pierceShield && shieldTicks > 0) {
+    if (!pierceShield && durationShielded > 0) {
 
         shadowOAM[1].attr0 = (player.screenRow - 8) | (0 << 14);
         shadowOAM[1].attr1 = player.screenCol | (0 << 14);
         shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (5));
 
-        currentPlayerMana += 2;
+        currentPlayerMana += 0;
         if (currentPlayerMana > 10) {
             currentPlayerMana = 10;
         }
-
-        shieldTicks += 5;
         return;
     }
     currentPlayerHealth -= amount;
@@ -1379,6 +1378,7 @@ void initGame() {
     currentPlayerHealth = 10;
     currentPlayerMana = 10;
     currentEncounter = 0;
+    spellsUnlocked = -1;
 
     startEncounter();
 }
@@ -1446,9 +1446,6 @@ void updateGame() {
     if (shieldCooldown > 0) {
         shieldCooldown--;
     }
-    if (shieldTicks > 0) {
-        shieldTicks--;
-    }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4)))) {
         playerFacingDirection = 1;
 
@@ -1504,7 +1501,7 @@ void updateGame() {
             return;
         }
         spawnPlayerBolt();
-        currentPlayerMana -= 2;
+        currentPlayerMana -= 1;
         globalCooldown = 10;
         boltCooldown = 0;
         if (currentPlayerMana <= 0) {
@@ -1512,16 +1509,19 @@ void updateGame() {
         }
     }
 
-    if ((!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1)))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
-        shieldTicks = 15;
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 1))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
+        durationShielded++;
         shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
-
-        currentPlayerMana -= 0;
-        globalCooldown = 10;
-        shieldCooldown = 20;
+        playerManaDrainStep += 30 + (durationShielded * 5);
+        if (playerManaDrainStep >= 1000) {
+            playerManaDrainStep -= 1000;
+            currentPlayerMana--;
+        }
         if (currentPlayerMana <= 0) {
             playerManaStep -= 45;
         }
+    } else {
+        durationShielded = 0;
     }
 
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))) && spellsUnlocked >= LEVITATE && currentPlayerMana > 0) {
@@ -1797,7 +1797,7 @@ void drawGame() {
     shadowOAM[0].attr2 = ((0) << 12) | ((0)*32 + (1));
 
 
-    if (shieldTicks > 0) {
+    if (durationShielded > 0) {
         shadowOAM[1].attr0 = (player.screenRow - 10) | (0 << 14);
         shadowOAM[1].attr1 = player.screenCol | (0 << 14);
     } else {
