@@ -21,18 +21,18 @@ shield_instructionsPal:
 	.short	0
 	.short	21140
 	.short	5253
-	.short	5299
-	.short	31710
-	.short	4773
+	.short	5269
+	.short	27482
+	.short	7813
 	.short	3139
 	.short	7399
-	.short	26425
+	.short	32767
 	.short	2081
 	.short	30
-	.short	6342
 	.short	4196
-	.short	14798
-	.short	9480
+	.short	14765
+	.short	8456
+	.short	6310
 	.short	3171
 	.short	0
 	.short	0
@@ -477,7 +477,6 @@ shield_instructionsMap:
 	.short	175
 	.short	176
 	.short	177
-	.short	151
 	.short	178
 	.short	179
 	.short	180
@@ -498,10 +497,10 @@ shield_instructionsMap:
 	.short	195
 	.short	196
 	.short	197
+	.short	198
 	.short	62
 	.short	0
 	.short	0
-	.short	198
 	.short	199
 	.short	200
 	.short	201
@@ -509,7 +508,6 @@ shield_instructionsMap:
 	.short	203
 	.short	204
 	.short	205
-	.short	151
 	.short	206
 	.short	207
 	.short	208
@@ -530,12 +528,11 @@ shield_instructionsMap:
 	.short	223
 	.short	224
 	.short	225
-	.short	62
-	.short	0
-	.short	0
 	.short	226
 	.short	227
 	.short	228
+	.short	0
+	.short	0
 	.short	229
 	.short	230
 	.short	231
@@ -563,12 +560,11 @@ shield_instructionsMap:
 	.short	253
 	.short	254
 	.short	255
-	.short	0
-	.short	0
-	.short	62
 	.short	256
 	.short	257
 	.short	258
+	.short	0
+	.short	0
 	.short	259
 	.short	260
 	.short	261
@@ -586,7 +582,6 @@ shield_instructionsMap:
 	.short	273
 	.short	274
 	.short	275
-	.short	151
 	.short	276
 	.short	277
 	.short	278
@@ -595,14 +590,13 @@ shield_instructionsMap:
 	.short	281
 	.short	282
 	.short	283
-	.short	0
-	.short	0
-	.short	62
 	.short	284
 	.short	285
 	.short	286
 	.short	287
 	.short	288
+	.short	0
+	.short	0
 	.short	289
 	.short	290
 	.short	291
@@ -627,16 +621,14 @@ shield_instructionsMap:
 	.short	310
 	.short	311
 	.short	312
-	.short	0
-	.short	0
-	.short	2303
-	.short	62
 	.short	313
 	.short	314
 	.short	315
 	.short	316
 	.short	317
 	.short	318
+	.short	0
+	.short	0
 	.short	319
 	.short	320
 	.short	321
@@ -658,9 +650,6 @@ shield_instructionsMap:
 	.short	337
 	.short	338
 	.short	339
-	.short	62
-	.short	0
-	.short	0
 	.short	340
 	.short	341
 	.short	342
@@ -669,6 +658,9 @@ shield_instructionsMap:
 	.short	345
 	.short	346
 	.short	347
+	.short	62
+	.short	0
+	.short	0
 	.short	348
 	.short	349
 	.short	350
@@ -690,9 +682,6 @@ shield_instructionsMap:
 	.short	366
 	.short	367
 	.short	368
-	.short	62
-	.short	0
-	.short	0
 	.short	369
 	.short	370
 	.short	371
@@ -701,6 +690,10 @@ shield_instructionsMap:
 	.short	374
 	.short	375
 	.short	376
+	.short	62
+	.short	0
+	.short	0
+	.short	62
 	.short	377
 	.short	378
 	.short	379
@@ -722,9 +715,6 @@ shield_instructionsMap:
 	.short	395
 	.short	396
 	.short	397
-	.short	62
-	.short	0
-	.short	0
 	.short	398
 	.short	399
 	.short	400
@@ -732,6 +722,10 @@ shield_instructionsMap:
 	.short	402
 	.short	403
 	.short	404
+	.short	62
+	.short	0
+	.short	0
+	.short	62
 	.short	405
 	.short	406
 	.short	407
@@ -753,17 +747,17 @@ shield_instructionsMap:
 	.short	423
 	.short	424
 	.short	425
-	.short	62
-	.short	62
-	.short	0
-	.short	0
-	.short	62
 	.short	426
 	.short	427
 	.short	428
 	.short	429
 	.short	430
 	.short	431
+	.short	62
+	.short	62
+	.short	0
+	.short	0
+	.short	62
 	.short	432
 	.short	433
 	.short	434
@@ -786,15 +780,18 @@ shield_instructionsMap:
 	.short	451
 	.short	452
 	.short	453
-	.short	62
-	.short	0
-	.short	0
-	.short	62
 	.short	454
 	.short	455
 	.short	456
 	.short	457
 	.short	458
+	.short	2217
+	.short	62
+	.short	0
+	.short	0
+	.short	62
+	.short	62
+	.short	62
 	.short	459
 	.short	460
 	.short	461
@@ -818,12 +815,12 @@ shield_instructionsMap:
 	.short	479
 	.short	480
 	.short	481
-	.short	62
-	.short	0
-	.short	0
 	.short	482
 	.short	483
 	.short	484
+	.short	62
+	.short	0
+	.short	0
 	.short	485
 	.short	486
 	.short	487
@@ -844,17 +841,18 @@ shield_instructionsMap:
 	.short	502
 	.short	503
 	.short	504
+	.short	3133
 	.short	505
 	.short	506
 	.short	507
 	.short	508
-	.short	62
 	.short	509
 	.short	510
-	.short	0
-	.short	0
+	.short	62
 	.short	511
 	.short	512
+	.short	0
+	.short	0
 	.short	513
 	.short	514
 	.short	515
@@ -883,10 +881,10 @@ shield_instructionsMap:
 	.short	538
 	.short	539
 	.short	540
-	.short	0
-	.short	0
 	.short	541
 	.short	542
+	.short	0
+	.short	0
 	.short	543
 	.short	544
 	.short	545
@@ -915,6 +913,8 @@ shield_instructionsMap:
 	.short	568
 	.short	569
 	.short	570
+	.short	571
+	.short	572
 	.short	0
 	.short	0
 	.short	0
@@ -1302,7 +1302,7 @@ shield_instructionsMap:
 	.short	0
 	.short	0
 	.type	shield_instructionsTiles, %object
-	.size	shield_instructionsTiles, 18272
+	.size	shield_instructionsTiles, 18336
 shield_instructionsTiles:
 	.short	0
 	.short	0
@@ -1321,20 +1321,20 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	-10
-	.short	-12442
+	.short	-16538
 	.short	-26266
 	.short	-26983
-	.short	12
-	.short	-26170
+	.short	11
+	.short	-26954
 	.short	9
 	.short	153
 	.short	-26215
 	.short	-26215
 	.short	-2311
-	.short	-13066
+	.short	-17418
 	.short	-26215
 	.short	28662
-	.short	9
+	.short	-28663
 	.short	2457
 	.short	-26215
 	.short	-26215
@@ -1345,74 +1345,74 @@ shield_instructionsTiles:
 	.short	0
 	.short	-28672
 	.short	-26215
-	.short	144
-	.short	-820
-	.short	28623
+	.short	2457
+	.short	-1093
+	.short	28607
 	.short	26358
 	.short	26214
 	.short	-26224
-	.short	-28672
+	.short	-28663
 	.short	-26215
 	.short	-26215
 	.short	-10
-	.short	-13108
-	.short	-13105
-	.short	-13108
+	.short	-17477
+	.short	-17473
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	-10
-	.short	-52
+	.short	-69
 	.short	26214
 	.short	26214
 	.short	-26215
 	.short	-26215
-	.short	-26983
+	.short	-27031
 	.short	-26215
-	.short	8908
-	.short	11468
-	.short	8748
+	.short	8891
+	.short	11195
+	.short	8747
 	.short	8738
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
-	.short	-12289
-	.short	-52
+	.short	-16385
+	.short	-69
 	.short	26214
-	.short	-14602
+	.short	-18698
 	.short	-26215
 	.short	27033
 	.short	-26215
 	.short	-26215
 	.short	8738
 	.short	8738
-	.short	-19934
-	.short	-17477
+	.short	-7646
+	.short	-4370
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	26262
 	.short	26223
-	.short	-12436
-	.short	-12292
+	.short	-16533
+	.short	-16389
 	.short	27030
 	.short	-26218
 	.short	-26215
 	.short	-26215
 	.short	8738
 	.short	8738
-	.short	-17477
-	.short	-17477
+	.short	-4370
+	.short	-4370
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	26214
 	.short	-2458
-	.short	-13108
+	.short	-17477
 	.short	8738
 	.short	26214
 	.short	26214
@@ -1420,8 +1420,8 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	8738
 	.short	8738
-	.short	-17477
-	.short	-17477
+	.short	-4370
+	.short	-4370
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -1433,11 +1433,11 @@ shield_instructionsTiles:
 	.short	26214
 	.short	26214
 	.short	-26215
-	.short	26217
-	.short	-17477
-	.short	30651
-	.short	-17477
-	.short	30651
+	.short	26214
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	30590
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -1450,6 +1450,214 @@ shield_instructionsTiles:
 	.short	-1
 	.short	26214
 	.short	26214
+	.short	32119
+	.short	-8745
+	.short	30583
+	.short	32119
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-1
+	.short	-1
+	.short	8750
+	.short	-4370
+	.short	-1
+	.short	-69
+	.short	26214
+	.short	26214
+	.short	-8739
+	.short	-8739
+	.short	32215
+	.short	30583
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-26949
+	.short	-17482
+	.short	12014
+	.short	-4482
+	.short	-17409
+	.short	-17477
+	.short	-2449
+	.short	28671
+	.short	32221
+	.short	-6169
+	.short	-6281
+	.short	-4562
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-1025
+	.short	-17409
+	.short	-4370
+	.short	30702
+	.short	-69
+	.short	-17477
+	.short	-154
+	.short	-154
+	.short	30583
+	.short	30583
+	.short	30590
+	.short	-4489
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-17477
+	.short	30583
+	.short	30583
+	.short	-17477
+	.short	8738
+	.short	-10
+	.short	-10
+	.short	-8739
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-17477
+	.short	30583
+	.short	-10371
+	.short	8738
+	.short	8738
+	.short	-1
+	.short	-1
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-17477
+	.short	30685
+	.short	30583
+	.short	-19934
+	.short	-17477
+	.short	-1
+	.short	-1
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-26215
+	.short	-26263
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-17477
+	.short	-10377
+	.short	-8739
+	.short	-17477
+	.short	8747
+	.short	26367
+	.short	-1
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	26214
+	.short	-27034
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-16389
+	.short	30583
+	.short	30583
+	.short	-19934
+	.short	11186
+	.short	26223
+	.short	28518
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	26214
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-16449
+	.short	-8745
+	.short	30583
+	.short	8747
+	.short	-17486
+	.short	-1
+	.short	-2458
+	.short	-8739
+	.short	30589
+	.short	-8739
+	.short	-6275
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17409
+	.short	-17557
+	.short	-10377
+	.short	-10265
+	.short	-17477
+	.short	11195
+	.short	26367
+	.short	28527
+	.short	-7634
+	.short	-8841
+	.short	11186
+	.short	30590
+	.short	-26368
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-18017
+	.short	-10377
+	.short	30695
+	.short	-17477
+	.short	-17477
+	.short	26214
+	.short	26214
+	.short	32119
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17630
+	.short	-17477
+	.short	-6275
+	.short	30590
+	.short	27579
+	.short	26265
+	.short	26214
+	.short	26214
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-17477
+	.short	-17473
+	.short	-4370
+	.short	-4370
+	.short	26214
+	.short	-26218
+	.short	-27034
+	.short	-26215
 	.short	30583
 	.short	-4489
 	.short	30583
@@ -1458,225 +1666,17 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	0
 	.short	0
-	.short	-1
-	.short	-1
-	.short	8747
 	.short	-17477
-	.short	-1
-	.short	-52
-	.short	26214
-	.short	26214
-	.short	-4370
-	.short	-4370
-	.short	30583
-	.short	30583
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-26932
-	.short	-13114
-	.short	11195
-	.short	-17477
-	.short	-13057
-	.short	-13108
-	.short	-2449
-	.short	28671
-	.short	30583
-	.short	-18505
-	.short	-18569
-	.short	-17621
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-769
-	.short	-13057
-	.short	-17621
-	.short	-17477
-	.short	-52
-	.short	-13108
-	.short	-154
-	.short	-154
-	.short	30583
-	.short	30583
-	.short	-17541
-	.short	-17545
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-13108
-	.short	30583
-	.short	30583
-	.short	-13108
-	.short	8738
-	.short	-10
-	.short	-10
+	.short	-69
 	.short	-4377
 	.short	-4370
-	.short	-6281
-	.short	-4370
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-13108
-	.short	30583
-	.short	30583
-	.short	8738
-	.short	8738
-	.short	-1
-	.short	-1
-	.short	-4370
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-13108
-	.short	30702
-	.short	30583
-	.short	-15838
-	.short	-13108
-	.short	-1
-	.short	-1
-	.short	-4370
-	.short	-4370
-	.short	32494
-	.short	-4370
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-13108
-	.short	30583
-	.short	32375
-	.short	-13108
-	.short	8748
-	.short	26367
-	.short	-1
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	26214
-	.short	-27034
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-12292
-	.short	30583
-	.short	30583
-	.short	-15838
-	.short	11458
-	.short	26223
-	.short	28518
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	26214
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-12337
-	.short	30583
-	.short	30583
-	.short	8748
-	.short	-13118
-	.short	-1
-	.short	-2458
-	.short	-4370
-	.short	30590
-	.short	-4370
-	.short	-18569
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13057
-	.short	-13204
-	.short	30583
-	.short	30647
-	.short	-13108
-	.short	11468
-	.short	26367
-	.short	28527
-	.short	-19925
-	.short	30583
-	.short	11458
-	.short	30587
-	.short	-26368
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-13921
-	.short	30583
-	.short	31671
-	.short	-13108
-	.short	-13108
-	.short	26214
-	.short	26214
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13278
-	.short	-13108
-	.short	-18569
-	.short	30651
-	.short	27852
-	.short	26265
-	.short	26214
-	.short	26214
-	.short	30651
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-13105
-	.short	-17477
-	.short	-17477
-	.short	26214
-	.short	-26218
 	.short	-27034
 	.short	-26215
+	.short	-27031
+	.short	-26215
+	.short	-4482
+	.short	-4370
 	.short	30583
-	.short	-17481
-	.short	30583
-	.short	30583
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-13108
-	.short	-52
-	.short	-17477
-	.short	-17477
-	.short	-27034
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-17477
-	.short	-17477
-	.short	31607
 	.short	30583
 	.short	-26215
 	.short	-26215
@@ -1684,14 +1684,14 @@ shield_instructionsTiles:
 	.short	0
 	.short	-1
 	.short	28527
-	.short	8747
-	.short	-15838
+	.short	8750
+	.short	-19934
 	.short	-26215
 	.short	-26215
 	.short	26214
-	.short	26982
+	.short	26214
 	.short	30583
-	.short	-17481
+	.short	32487
 	.short	30583
 	.short	30583
 	.short	-26215
@@ -1700,103 +1700,103 @@ shield_instructionsTiles:
 	.short	0
 	.short	26214
 	.short	26214
-	.short	-52
-	.short	-13057
-	.short	0
+	.short	-69
+	.short	-17409
+	.short	2304
 	.short	-26368
 	.short	26214
 	.short	26214
-	.short	-18565
+	.short	30583
 	.short	30583
 	.short	30583
 	.short	30583
 	.short	-26215
 	.short	-26215
 	.short	0
-	.short	0
-	.short	-14746
+	.short	9
+	.short	-18842
 	.short	-26270
-	.short	-2308
-	.short	28594
+	.short	-2309
+	.short	28642
 	.short	0
 	.short	2448
 	.short	26214
 	.short	26214
-	.short	-17477
-	.short	-17541
-	.short	-18565
-	.short	-18565
+	.short	-6169
+	.short	-6274
+	.short	-6281
+	.short	30583
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	26214
-	.short	-12442
+	.short	-16538
 	.short	-2458
-	.short	-13930
+	.short	-18026
 	.short	0
 	.short	0
 	.short	26214
 	.short	26214
-	.short	-17477
-	.short	11195
-	.short	-18501
-	.short	11195
+	.short	-4370
+	.short	12014
+	.short	30702
+	.short	12014
 	.short	-26215
 	.short	-26215
 	.short	153
 	.short	0
-	.short	-13278
+	.short	-17630
 	.short	-2449
-	.short	-13118
-	.short	-13057
+	.short	-17486
+	.short	-17409
 	.short	0
-	.short	0
+	.short	2448
 	.short	26214
-	.short	-26215
-	.short	-15838
-	.short	-13108
-	.short	-15838
-	.short	-13108
+	.short	26214
+	.short	-19934
+	.short	-17477
+	.short	-19934
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
-	.short	-769
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-26368
-	.short	-26224
-	.short	27033
+	.short	-1025
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-26359
+	.short	-26215
+	.short	27030
 	.short	9881
-	.short	-13108
-	.short	-28516
-	.short	-13108
-	.short	2412
+	.short	-17477
+	.short	-28517
+	.short	-17477
+	.short	2411
 	.short	-26215
 	.short	0
 	.short	0
 	.short	-28672
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
-	.short	-13060
-	.short	26316
+	.short	-17413
+	.short	26299
 	.short	-26209
 	.short	-27031
-	.short	1734
-	.short	-13168
+	.short	1718
+	.short	-17520
 	.short	2400
 	.short	9728
-	.short	2304
-	.short	-14080
+	.short	-26368
+	.short	-18176
 	.short	27030
 	.short	-26218
-	.short	-26212
+	.short	-26213
 	.short	2457
 	.short	153
 	.short	0
@@ -1807,11 +1807,11 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	9
-	.short	-26224
+	.short	153
+	.short	-26215
 	.short	-26215
 	.short	-26359
-	.short	-26368
+	.short	-26359
 	.short	-26224
 	.short	-26368
 	.short	-26215
@@ -1822,7 +1822,7 @@ shield_instructionsTiles:
 	.short	0
 	.short	153
 	.short	-26224
-	.short	153
+	.short	2457
 	.short	-26368
 	.short	-28663
 	.short	-26368
@@ -1841,22 +1841,22 @@ shield_instructionsTiles:
 	.short	153
 	.short	-26215
 	.short	2457
-	.short	-26224
 	.short	-26215
-	.short	-26359
+	.short	-26215
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
-	.short	2304
+	.short	2457
 	.short	0
 	.short	2457
 	.short	0
 	.short	9
-	.short	0
-	.short	9
+	.short	-28672
+	.short	153
 	.short	-26368
 	.short	-26215
 	.short	-26215
@@ -1864,17 +1864,17 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
+	.short	153
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-28672
+	.short	0
+	.short	-28672
+	.short	0
+	.short	-28672
 	.short	9
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-28672
-	.short	0
-	.short	-28672
-	.short	0
-	.short	-28672
-	.short	0
 	.short	144
 	.short	2457
 	.short	-26215
@@ -1888,7 +1888,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26359
 	.short	-26215
-	.short	-28672
+	.short	-26368
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -1896,7 +1896,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	2304
+	.short	-26224
 	.short	-26368
 	.short	0
 	.short	0
@@ -1907,13 +1907,12 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	26265
 	.short	27033
 	.short	26214
-	.short	-27031
-	.short	-26890
+	.short	26217
+	.short	26358
 	.short	-26368
-	.short	-26359
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -1922,13 +1921,14 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	27033
-	.short	-26218
+	.short	-26215
+	.short	26262
+	.short	-26266
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	28518
-	.short	-26224
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -1955,7 +1955,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	27033
 	.short	26214
 	.short	26214
 	.short	26214
@@ -1969,7 +1969,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	27033
 	.short	26214
 	.short	26262
 	.short	-2458
@@ -1981,7 +1981,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	27030
-	.short	-27034
+	.short	26214
 	.short	27033
 	.short	26214
 	.short	26265
@@ -1991,7 +1991,7 @@ shield_instructionsTiles:
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-13105
+	.short	-17473
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -2005,9 +2005,9 @@ shield_instructionsTiles:
 	.short	28671
 	.short	-10
 	.short	-1
-	.short	-13105
-	.short	-13108
-	.short	-13108
+	.short	-17473
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -2020,10 +2020,10 @@ shield_instructionsTiles:
 	.short	-27034
 	.short	28671
 	.short	-154
-	.short	-817
-	.short	-13105
-	.short	-13108
-	.short	-13108
+	.short	-1089
+	.short	-17473
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -2036,10 +2036,10 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	26223
 	.short	-154
-	.short	-4
-	.short	-13057
-	.short	-13108
-	.short	-13108
+	.short	-5
+	.short	-17409
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -2053,43 +2053,43 @@ shield_instructionsTiles:
 	.short	26214
 	.short	28662
 	.short	-1
-	.short	-12289
-	.short	-13108
-	.short	11468
+	.short	-16385
+	.short	-17477
+	.short	11195
 	.short	-26215
-	.short	2457
 	.short	-26215
-	.short	2457
+	.short	-26215
+	.short	-26215
 	.short	-26215
 	.short	-26218
 	.short	27033
 	.short	-26215
 	.short	26265
 	.short	-26215
-	.short	-24634
+	.short	-24650
 	.short	-26215
-	.short	-26932
+	.short	-26949
 	.short	26265
-	.short	-26212
+	.short	-26261
 	.short	-154
 	.short	2457
 	.short	-26368
 	.short	153
-	.short	2448
+	.short	2457
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26266
+	.short	-27034
 	.short	26217
 	.short	26223
 	.short	-2458
-	.short	-14746
-	.short	-13060
+	.short	-18842
+	.short	31739
 	.short	2457
-	.short	0
+	.short	9
 	.short	-26224
 	.short	-26215
 	.short	-26215
@@ -2099,11 +2099,11 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	26214
-	.short	27033
+	.short	26265
 	.short	26367
 	.short	26214
-	.short	-703
-	.short	-14261
+	.short	-184
+	.short	-19321
 	.short	0
 	.short	0
 	.short	-26215
@@ -2118,9 +2118,9 @@ shield_instructionsTiles:
 	.short	-26266
 	.short	26367
 	.short	26214
-	.short	-52
+	.short	-69
 	.short	28671
-	.short	9
+	.short	153
 	.short	0
 	.short	-26215
 	.short	-26215
@@ -2139,6 +2139,21 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
 	.short	-26224
 	.short	-26215
 	.short	-26215
@@ -2152,21 +2167,6 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	0
-	.short	0
-	.short	-28528
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
@@ -2183,7 +2183,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	-26983
 	.short	0
 	.short	-28672
 	.short	-26215
@@ -2193,7 +2193,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	9
 	.short	-26215
-	.short	-26224
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -2206,7 +2206,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-28672
 	.short	-26215
-	.short	-28672
+	.short	-26368
 	.short	-26215
 	.short	-26215
 	.short	9
@@ -2221,10 +2221,10 @@ shield_instructionsTiles:
 	.short	-28519
 	.short	0
 	.short	-26215
-	.short	153
+	.short	2457
 	.short	2457
 	.short	0
-	.short	0
+	.short	-28672
 	.short	0
 	.short	153
 	.short	153
@@ -2239,10 +2239,10 @@ shield_instructionsTiles:
 	.short	-26224
 	.short	-26215
 	.short	2304
+	.short	2304
 	.short	0
 	.short	0
-	.short	0
-	.short	144
+	.short	2448
 	.short	2448
 	.short	2457
 	.short	-26224
@@ -2253,8 +2253,8 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	-26215
-	.short	9
-	.short	-26224
+	.short	2457
+	.short	-26215
 	.short	0
 	.short	0
 	.short	0
@@ -2268,7 +2268,7 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	0
-	.short	0
+	.short	153
 	.short	-28672
 	.short	0
 	.short	0
@@ -2322,7 +2322,7 @@ shield_instructionsTiles:
 	.short	-2407
 	.short	-26215
 	.short	-151
-	.short	-26215
+	.short	27033
 	.short	-2458
 	.short	26265
 	.short	-2458
@@ -2330,7 +2330,7 @@ shield_instructionsTiles:
 	.short	-2458
 	.short	26217
 	.short	26214
-	.short	-2407
+	.short	-2455
 	.short	26214
 	.short	-2458
 	.short	26367
@@ -2342,245 +2342,245 @@ shield_instructionsTiles:
 	.short	-10
 	.short	-1
 	.short	-1
-	.short	-49
-	.short	-4
+	.short	-65
+	.short	-5
 	.short	28662
 	.short	-10
 	.short	-1
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-52
+	.short	-69
 	.short	-1
-	.short	-820
-	.short	-817
+	.short	-1093
+	.short	-1089
 	.short	-1
-	.short	-13105
+	.short	-17473
 	.short	-2305
-	.short	-13105
-	.short	-52
-	.short	-13105
+	.short	-17473
+	.short	-69
+	.short	-17473
 	.short	26214
 	.short	28518
 	.short	-2449
 	.short	28671
 	.short	-2449
-	.short	28620
-	.short	-12433
-	.short	-820
-	.short	-13057
-	.short	-13057
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13105
-	.short	-13108
+	.short	28603
+	.short	-16529
+	.short	-1093
+	.short	-17409
+	.short	-17409
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17473
+	.short	-17477
 	.short	-154
 	.short	-1
 	.short	-2458
-	.short	-13057
+	.short	-17409
 	.short	-10
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	26367
 	.short	28518
-	.short	26364
+	.short	26363
 	.short	28518
-	.short	17473
+	.short	18561
 	.short	-9
-	.short	17532
-	.short	-63
-	.short	17612
-	.short	-28
-	.short	-11060
-	.short	-124
-	.short	-15156
-	.short	-3768
-	.short	-15236
-	.short	29774
+	.short	-30597
+	.short	-79
+	.short	-30533
+	.short	-40
+	.short	-14149
+	.short	-184
+	.short	-18245
+	.short	-3708
+	.short	-18309
+	.short	30861
 	.short	-2305
-	.short	-13108
-	.short	-12442
-	.short	-13108
-	.short	16895
-	.short	-13107
-	.short	18687
-	.short	-13108
-	.short	5327
-	.short	-13108
-	.short	5327
-	.short	-13108
-	.short	-11060
-	.short	-13108
-	.short	-6964
-	.short	-29492
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	11468
-	.short	-11196
-	.short	29768
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-15668
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	8908
-	.short	-15838
+	.short	-17477
+	.short	-16538
+	.short	-17477
+	.short	-32257
+	.short	-17476
+	.short	17663
+	.short	-17477
+	.short	6335
+	.short	-17477
+	.short	6335
+	.short	-17477
+	.short	-14149
+	.short	-17477
+	.short	-10053
+	.short	19387
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11195
+	.short	-17477
+	.short	11195
+	.short	6280
+	.short	8580
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-19781
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	8891
+	.short	-19934
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	18466
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
-	.short	-30942
+	.short	6338
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11195
+	.short	18210
 	.short	8738
-	.short	-31518
-	.short	8748
+	.short	18642
+	.short	8747
 	.short	9234
 	.short	8738
-	.short	9346
-	.short	8738
-	.short	-11134
-	.short	-17630
-	.short	17627
-	.short	-13108
-	.short	-15668
-	.short	-13108
-	.short	27852
-	.short	-31676
-	.short	28622
-	.short	16834
-	.short	-13107
-	.short	-29502
-	.short	11469
+	.short	9282
+	.short	11810
+	.short	6210
+	.short	-4382
+	.short	-30514
+	.short	-17477
+	.short	-19781
+	.short	-17477
+	.short	27579
+	.short	18568
+	.short	28605
+	.short	-32334
+	.short	-17476
+	.short	19378
+	.short	11196
 	.short	4642
-	.short	8750
+	.short	8749
 	.short	8738
 	.short	8738
-	.short	8936
-	.short	17549
-	.short	27030
-	.short	-13105
-	.short	-12442
-	.short	-13278
-	.short	8911
-	.short	-13118
-	.short	8748
-	.short	-13108
-	.short	-15838
-	.short	8908
-	.short	11458
+	.short	8916
+	.short	-30644
+	.short	26262
+	.short	-17473
+	.short	-16538
+	.short	-17630
+	.short	8895
+	.short	-17486
+	.short	8747
+	.short	-17477
+	.short	-19934
+	.short	8891
+	.short	11186
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	16685
-	.short	8724
-	.short	-12289
-	.short	-13060
-	.short	-820
-	.short	-13105
-	.short	-820
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-13278
-	.short	-820
-	.short	-13278
-	.short	-13108
+	.short	-32468
+	.short	8728
+	.short	-16385
+	.short	-13317
+	.short	-1093
+	.short	-13377
+	.short	-1093
+	.short	-13377
+	.short	-17477
+	.short	7099
+	.short	-17630
+	.short	7099
+	.short	-17630
+	.short	7099
 	.short	8738
-	.short	-13108
-	.short	17618
-	.short	31876
-	.short	-2232
-	.short	-16051
-	.short	-13240
-	.short	-16051
-	.short	-13244
-	.short	-12979
-	.short	-13180
-	.short	-12991
-	.short	-13180
-	.short	-12735
-	.short	-13292
-	.short	-14527
-	.short	-13292
-	.short	-12479
-	.short	11284
-	.short	-13247
-	.short	-13108
+	.short	7099
+	.short	-31550
+	.short	6984
+	.short	-1256
+	.short	-20084
+	.short	-17640
+	.short	-20084
+	.short	-17464
+	.short	-17268
+	.short	-17464
+	.short	-17279
+	.short	-17448
+	.short	-17023
+	.short	-17544
+	.short	-18559
+	.short	-17480
+	.short	-16511
+	.short	11192
+	.short	-17535
+	.short	-17477
 	.short	26367
-	.short	-12340
-	.short	28620
-	.short	-820
+	.short	-16453
+	.short	28603
+	.short	-1093
 	.short	-1
-	.short	-820
+	.short	-1093
 	.short	26367
-	.short	-13108
-	.short	26364
-	.short	-13108
+	.short	-17477
+	.short	26363
+	.short	-17477
 	.short	26223
-	.short	-13108
+	.short	-17477
 	.short	26214
-	.short	-7028
+	.short	-10165
 	.short	28671
 	.short	-154
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26265
+	.short	-26266
+	.short	-26983
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-26215
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26215
+	.short	26982
+	.short	26217
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	-27034
-	.short	26217
-	.short	-26266
-	.short	-26983
-	.short	-26263
-	.short	-26215
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	-26215
-	.short	-26215
-	.short	-26218
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26263
-	.short	26217
-	.short	-26215
-	.short	26214
-	.short	26214
-	.short	-26266
 	.short	26358
 	.short	26214
 	.short	26358
@@ -2592,11 +2592,11 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26263
+	.short	-26266
 	.short	-26215
 	.short	-26218
 	.short	-26215
-	.short	27033
+	.short	26265
 	.short	-26215
 	.short	-27034
 	.short	-26215
@@ -2633,8 +2633,8 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-28663
 	.short	-26359
-	.short	0
 	.short	9
+	.short	-28663
 	.short	0
 	.short	-26368
 	.short	0
@@ -2644,8 +2644,8 @@ shield_instructionsTiles:
 	.short	153
 	.short	-26224
 	.short	153
-	.short	-26224
-	.short	9
+	.short	-26215
+	.short	153
 	.short	-26215
 	.short	-26368
 	.short	0
@@ -2653,7 +2653,7 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	0
-	.short	9
+	.short	153
 	.short	0
 	.short	0
 	.short	2304
@@ -2662,7 +2662,7 @@ shield_instructionsTiles:
 	.short	-26368
 	.short	-26368
 	.short	-26224
-	.short	0
+	.short	-28672
 	.short	-28519
 	.short	-26215
 	.short	-26215
@@ -2671,12 +2671,12 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	-26263
 	.short	27033
 	.short	-26266
 	.short	27033
 	.short	-26266
-	.short	-26263
+	.short	26985
 	.short	-26266
 	.short	26217
 	.short	-26218
@@ -2686,45 +2686,45 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	26217
 	.short	-26218
-	.short	-26215
-	.short	-26215
-	.short	-26215
+	.short	26985
+	.short	-26218
+	.short	-26218
 	.short	-26215
 	.short	-26266
 	.short	-26215
 	.short	-26218
 	.short	-26215
+	.short	-26215
+	.short	-27034
+	.short	-26215
+	.short	26265
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26263
+	.short	-26215
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	27033
 	.short	-26215
 	.short	-27031
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26263
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-26215
+	.short	-26218
+	.short	26265
+	.short	26982
+	.short	26265
+	.short	26262
 	.short	27033
-	.short	27030
-	.short	27033
-	.short	27030
-	.short	-26215
-	.short	26217
+	.short	26214
 	.short	27033
 	.short	28662
 	.short	26265
 	.short	26214
-	.short	26265
+	.short	26214
 	.short	-2458
 	.short	26217
 	.short	-10
@@ -2735,255 +2735,255 @@ shield_instructionsTiles:
 	.short	-2458
 	.short	-1
 	.short	-2458
-	.short	-49
+	.short	-65
 	.short	-154
 	.short	-1
 	.short	-10
 	.short	-1
 	.short	-1
-	.short	-49
+	.short	-65
 	.short	-1
-	.short	-13057
-	.short	-49
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-12289
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13118
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	-15838
-	.short	8738
-	.short	8738
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-15668
-	.short	11468
-	.short	8738
-	.short	8748
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-15124
-	.short	-31716
-	.short	-15140
-	.short	18636
-	.short	9436
-	.short	20162
-	.short	10258
-	.short	7202
-	.short	10370
-	.short	-13278
-	.short	10306
-	.short	8738
-	.short	8525
-	.short	-17630
-	.short	8738
+	.short	-17409
+	.short	-65
 	.short	-17477
-	.short	-6964
-	.short	-31540
-	.short	-15155
-	.short	-15332
-	.short	-15244
-	.short	17484
-	.short	-15228
-	.short	10316
-	.short	9284
-	.short	-19390
-	.short	9294
-	.short	-31726
-	.short	-19438
-	.short	16827
+	.short	-17473
 	.short	-17477
 	.short	-17477
-	.short	-31524
-	.short	-11246
-	.short	-11123
-	.short	5346
-	.short	11908
-	.short	17451
-	.short	-17630
-	.short	16827
 	.short	-17477
-	.short	16827
-	.short	6331
-	.short	19899
-	.short	-20156
-	.short	19387
+	.short	-17473
 	.short	-17477
 	.short	-17477
-	.short	5330
-	.short	16674
-	.short	-31557
-	.short	16683
-	.short	17643
-	.short	6331
-	.short	18462
-	.short	-19235
-	.short	20097
-	.short	-17087
-	.short	19428
-	.short	-19948
-	.short	-29775
-	.short	-19928
-	.short	8891
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-16385
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-17486
-	.short	-17474
-	.short	19755
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	11195
+	.short	-17477
 	.short	8891
 	.short	-17477
+	.short	8738
+	.short	-17477
+	.short	-19934
+	.short	8738
+	.short	8738
 	.short	-17477
 	.short	-17477
-	.short	-17637
 	.short	-17477
-	.short	-17586
-	.short	-17477
-	.short	-20147
-	.short	-17477
-	.short	17550
-	.short	-17481
-	.short	-17477
-	.short	-6076
-	.short	16674
-	.short	17485
-	.short	16686
-	.short	16674
-	.short	16673
-	.short	20155
-	.short	16673
-	.short	19899
-	.short	16685
-	.short	-31525
-	.short	16674
-	.short	-20156
-	.short	16674
-	.short	-17477
-	.short	16683
-	.short	10269
-	.short	11592
-	.short	8833
-	.short	-7871
-	.short	8932
-	.short	4417
-	.short	8737
-	.short	7489
-	.short	8750
-	.short	7044
-	.short	-29151
-	.short	-5148
-	.short	-31676
-	.short	-17474
-	.short	-17477
-	.short	-17477
-	.short	11585
-	.short	-4792
-	.short	4820
-	.short	-7612
-	.short	-31676
-	.short	-11743
-	.short	-17436
-	.short	-11589
-	.short	-17644
-	.short	-9285
-	.short	-17084
-	.short	-9331
-	.short	17485
-	.short	-5144
-	.short	-17477
+	.short	-19781
 	.short	11195
-	.short	-13292
-	.short	-13240
-	.short	-13100
-	.short	-13240
-	.short	-13100
-	.short	-13176
+	.short	8738
+	.short	8747
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-18213
+	.short	18459
+	.short	-18229
+	.short	-31557
+	.short	10443
+	.short	-29262
+	.short	9234
+	.short	6946
+	.short	9282
+	.short	-17630
+	.short	9346
+	.short	8738
+	.short	8588
+	.short	-4574
+	.short	8738
+	.short	-4370
+	.short	-10053
+	.short	17595
+	.short	-18244
+	.short	-19429
+	.short	-18312
+	.short	-30645
+	.short	-18360
+	.short	9355
+	.short	10372
+	.short	-6014
+	.short	10381
+	.short	18450
+	.short	-6126
+	.short	-32274
+	.short	-4370
+	.short	-6162
+	.short	18635
+	.short	9357
+	.short	6220
+	.short	-10174
+	.short	11588
+	.short	6174
+	.short	-4574
+	.short	6366
+	.short	-4370
+	.short	17646
+	.short	5358
+	.short	-31506
+	.short	-7800
+	.short	16878
+	.short	32494
+	.short	-4370
+	.short	10306
+	.short	18466
+	.short	-14306
+	.short	6190
+	.short	6174
+	.short	-5938
+	.short	17485
+	.short	-7858
+	.short	-32316
+	.short	-4543
+	.short	-32287
+	.short	-7468
+	.short	-29459
+	.short	-7636
+	.short	12014
+	.short	-4382
+	.short	-4370
+	.short	19694
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4578
+	.short	-4370
+	.short	-4531
+	.short	-4370
+	.short	-7796
+	.short	-4370
+	.short	-30643
+	.short	-4489
+	.short	-4370
+	.short	-11128
+	.short	-32478
+	.short	-30644
+	.short	-32467
+	.short	-32478
+	.short	-32479
+	.short	-29202
+	.short	-32479
+	.short	-29458
+	.short	-32479
+	.short	17614
+	.short	-32478
+	.short	-7864
+	.short	-32478
+	.short	-4370
+	.short	-32466
+	.short	-7140
+	.short	-4988
+	.short	8769
+	.short	-11903
 	.short	8916
-	.short	-15736
-	.short	8916
-	.short	-15800
-	.short	-8684
-	.short	-9144
-	.short	-6076
-	.short	5185
-	.short	-15838
-	.short	-13108
-	.short	29826
+	.short	4481
+	.short	8737
+	.short	7297
+	.short	-7635
+	.short	7752
+	.short	19745
+	.short	-8504
+	.short	18564
+	.short	-4372
+	.short	-4370
+	.short	-4370
+	.short	11393
+	.short	19588
+	.short	4632
+	.short	16968
+	.short	18568
+	.short	17121
+	.short	-4408
+	.short	20206
+	.short	-4584
+	.short	20206
+	.short	-4984
+	.short	20044
+	.short	-30644
+	.short	7892
+	.short	-4377
+	.short	12014
+	.short	-17480
+	.short	-17532
+	.short	-17628
+	.short	-17596
+	.short	-17628
+	.short	-17596
+	.short	8740
+	.short	-19900
+	.short	11812
+	.short	-19900
+	.short	11304
+	.short	-13436
+	.short	8520
+	.short	5249
+	.short	-19934
+	.short	-17477
+	.short	30786
 	.short	28671
-	.short	-52
+	.short	-69
 	.short	28671
-	.short	-820
+	.short	-1093
 	.short	-1
-	.short	-820
+	.short	-1093
 	.short	-1
-	.short	-13108
+	.short	-17477
 	.short	-1
-	.short	-14265
-	.short	-4
-	.short	-14258
-	.short	-52
-	.short	-13108
-	.short	-13060
+	.short	-19321
+	.short	-5
+	.short	-19315
+	.short	-69
+	.short	-17477
+	.short	-17413
 	.short	26214
 	.short	26358
 	.short	26214
 	.short	26214
 	.short	26214
-	.short	26262
-	.short	26982
+	.short	26214
+	.short	26214
 	.short	-2458
 	.short	26223
 	.short	-1
 	.short	-1
 	.short	-1
-	.short	-13105
+	.short	-17473
 	.short	26367
-	.short	-13108
-	.short	-4
+	.short	-17477
+	.short	-5
 	.short	26214
 	.short	26367
 	.short	28518
@@ -3005,9 +3005,9 @@ shield_instructionsTiles:
 	.short	-26266
 	.short	-26215
 	.short	-26266
-	.short	-26983
+	.short	-26986
 	.short	26214
-	.short	-26983
+	.short	-27034
 	.short	26214
 	.short	26214
 	.short	26367
@@ -3019,8 +3019,8 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
+	.short	26214
 	.short	26217
-	.short	26265
 	.short	26214
 	.short	26214
 	.short	26214
@@ -3035,13 +3035,13 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	-26983
 	.short	-26266
 	.short	26217
 	.short	26214
-	.short	27033
+	.short	26265
 	.short	26214
-	.short	-27034
+	.short	26214
 	.short	26214
 	.short	26223
 	.short	28671
@@ -3050,18 +3050,18 @@ shield_instructionsTiles:
 	.short	28527
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	26265
 	.short	-26218
-	.short	-27034
-	.short	-26215
 	.short	26214
-	.short	-26215
-	.short	-26983
+	.short	-26218
+	.short	26214
+	.short	-26218
 	.short	-27031
 	.short	-27034
-	.short	26265
 	.short	26214
-	.short	-26218
+	.short	26214
+	.short	26214
+	.short	26214
 	.short	-2458
 	.short	26214
 	.short	-26215
@@ -3070,13 +3070,13 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	-26983
+	.short	-26215
+	.short	-27031
 	.short	-26215
 	.short	-27034
 	.short	-26215
-	.short	-26215
+	.short	-26218
 	.short	-26215
 	.short	-26218
 	.short	-26215
@@ -3109,7 +3109,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26359
 	.short	-26215
-	.short	2457
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -3131,31 +3131,31 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	27033
 	.short	-26215
 	.short	26217
 	.short	-26215
-	.short	-27031
+	.short	26214
+	.short	27033
+	.short	-27034
 	.short	26265
 	.short	-26266
-	.short	27033
+	.short	26265
 	.short	-26218
-	.short	-26215
+	.short	27033
 	.short	-26218
 	.short	26217
 	.short	-26215
 	.short	-27034
 	.short	-26215
 	.short	-26218
-	.short	-26215
-	.short	-26215
 	.short	-26218
+	.short	27030
+	.short	27030
 	.short	-26215
-	.short	-26266
+	.short	-27034
 	.short	-26215
-	.short	-26215
+	.short	26985
 	.short	-26215
 	.short	-26215
 	.short	-26983
@@ -3163,28 +3163,28 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-27034
 	.short	-26215
-	.short	-26266
+	.short	-27034
+	.short	26214
+	.short	26214
+	.short	26217
 	.short	26262
-	.short	-26218
-	.short	26217
-	.short	27030
 	.short	26214
-	.short	-26266
-	.short	-26266
 	.short	26214
-	.short	-26215
-	.short	26217
-	.short	26217
-	.short	-2410
-	.short	-26215
-	.short	-26215
-	.short	-26266
-	.short	-26266
-	.short	-26263
-	.short	26985
 	.short	-27034
+	.short	26214
+	.short	-26266
+	.short	26214
+	.short	26217
+	.short	-2458
+	.short	-26215
+	.short	-27031
+	.short	-26266
+	.short	26982
+	.short	-26266
+	.short	26214
+	.short	26214
 	.short	26265
-	.short	-27034
+	.short	26214
 	.short	26217
 	.short	26214
 	.short	26358
@@ -3193,341 +3193,341 @@ shield_instructionsTiles:
 	.short	28518
 	.short	-2458
 	.short	26217
-	.short	-778
+	.short	-1034
 	.short	26214
-	.short	-778
+	.short	-1034
 	.short	-2314
-	.short	-13057
+	.short	-17409
 	.short	-1
-	.short	-4
+	.short	-5
 	.short	-10
-	.short	-4
+	.short	-5
 	.short	-10
-	.short	-52
-	.short	-12289
-	.short	-13060
-	.short	-13057
-	.short	-13057
-	.short	-12289
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13268
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	8738
-	.short	8748
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8908
-	.short	-13278
-	.short	8908
-	.short	8738
-	.short	8908
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17630
-	.short	8738
-	.short	11186
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8908
-	.short	8738
-	.short	8748
-	.short	8882
-	.short	8908
-	.short	8882
-	.short	8738
-	.short	8738
-	.short	-17630
-	.short	8898
-	.short	-17486
-	.short	8738
-	.short	-19781
-	.short	8738
-	.short	11186
-	.short	8738
+	.short	-69
+	.short	-16385
+	.short	-17413
+	.short	-17409
+	.short	-17409
+	.short	-16385
 	.short	-17477
-	.short	-19934
-	.short	-17477
-	.short	-17630
+	.short	-17473
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
-	.short	-19781
 	.short	-17477
-	.short	-19925
-	.short	-19934
 	.short	-17477
 	.short	-17621
 	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	30587
-	.short	-17477
-	.short	-17541
-	.short	31607
-	.short	-17545
-	.short	30583
-	.short	-17481
-	.short	30583
-	.short	-17545
-	.short	30583
-	.short	-17545
-	.short	-18569
-	.short	30651
-	.short	-17545
-	.short	30587
-	.short	-17477
-	.short	30583
-	.short	-17477
-	.short	31675
-	.short	31675
-	.short	30583
-	.short	30651
-	.short	-17545
-	.short	30587
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	31607
-	.short	-17481
-	.short	30583
-	.short	-17545
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17477
-	.short	-30533
-	.short	-17477
-	.short	-30533
-	.short	-17477
-	.short	-30533
-	.short	-17477
-	.short	-30597
-	.short	-17481
-	.short	-31621
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	30651
-	.short	-18505
-	.short	30583
-	.short	-18569
-	.short	30583
-	.short	-17481
-	.short	30583
-	.short	-17477
-	.short	-18569
-	.short	-17477
-	.short	-17477
 	.short	8747
-	.short	-17481
+	.short	-17477
 	.short	8747
 	.short	-17477
 	.short	8891
 	.short	-17477
-	.short	8747
-	.short	-17477
-	.short	8747
-	.short	-17477
-	.short	-19925
+	.short	8891
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
-	.short	-15838
-	.short	-13278
+	.short	-17477
 	.short	8738
-	.short	-15838
+	.short	8747
 	.short	8738
-	.short	-13278
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8891
+	.short	-17630
+	.short	8891
+	.short	8738
+	.short	8891
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8942
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-4574
+	.short	8738
+	.short	12002
+	.short	8738
 	.short	8738
 	.short	8738
 	.short	8891
 	.short	8738
-	.short	-17477
-	.short	8738
-	.short	-17477
 	.short	8747
-	.short	-17477
-	.short	8747
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-15668
-	.short	-13108
-	.short	-13278
-	.short	8738
-	.short	-13278
+	.short	8930
+	.short	8891
+	.short	8930
 	.short	8738
 	.short	8738
-	.short	8738
-	.short	8738
+	.short	-4574
 	.short	8882
+	.short	-4370
 	.short	8738
-	.short	11186
+	.short	-4370
 	.short	8738
-	.short	-12340
+	.short	12014
+	.short	8738
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-7442
+	.short	-7646
+	.short	-4370
+	.short	-4562
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4489
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-4377
+	.short	30702
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	30583
+	.short	30590
+	.short	-4482
+	.short	30583
+	.short	-4489
+	.short	30583
+	.short	-4377
+	.short	30583
+	.short	-6281
+	.short	30583
+	.short	32375
+	.short	30583
+	.short	30702
+	.short	-4489
+	.short	30590
+	.short	-4370
+	.short	30583
+	.short	-4370
+	.short	30702
+	.short	32494
+	.short	30583
+	.short	30695
+	.short	30583
+	.short	30590
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-4489
+	.short	-4370
+	.short	32375
+	.short	-4489
+	.short	30583
+	.short	-4489
+	.short	30583
+	.short	-6281
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-4370
+	.short	17646
+	.short	-4370
+	.short	17646
+	.short	-4370
+	.short	17646
+	.short	-4370
+	.short	17534
+	.short	-6281
+	.short	18551
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-6162
+	.short	30702
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-4370
+	.short	-6281
+	.short	-4482
+	.short	-4377
+	.short	8942
+	.short	-4377
+	.short	8750
+	.short	-4377
+	.short	12014
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8750
+	.short	-4370
+	.short	-4562
+	.short	-4482
+	.short	-4370
+	.short	-6274
+	.short	-4370
+	.short	-19934
+	.short	-17630
+	.short	8738
+	.short	-19934
+	.short	8738
+	.short	-17630
+	.short	8738
+	.short	8738
+	.short	8942
+	.short	8738
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8942
+	.short	32494
+	.short	8942
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-19781
+	.short	-17477
+	.short	-17630
+	.short	8738
+	.short	-17630
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	12002
+	.short	8750
+	.short	-4370
+	.short	8750
+	.short	-16453
 	.short	-1
-	.short	-12340
-	.short	-12289
-	.short	-13108
-	.short	-769
-	.short	-13108
-	.short	-13108
-	.short	-13118
-	.short	-13108
-	.short	-13118
-	.short	-13108
-	.short	-15668
-	.short	-13108
+	.short	-16453
+	.short	-16385
+	.short	-17477
+	.short	-1025
+	.short	-17477
+	.short	-17477
+	.short	-17486
+	.short	-17477
+	.short	-17486
+	.short	-17477
+	.short	-19781
+	.short	-17477
 	.short	8738
-	.short	-13278
+	.short	-17630
 	.short	-2449
-	.short	-52
+	.short	-69
 	.short	-1
-	.short	-13108
+	.short	-17477
 	.short	-1
-	.short	-13105
-	.short	-13057
-	.short	-13060
-	.short	-12340
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11308
-	.short	-15828
-	.short	11468
-	.short	-49
-	.short	-769
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11458
-	.short	-13108
-	.short	11458
-	.short	-13118
-	.short	-12292
-	.short	-52
-	.short	-12340
-	.short	-12340
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17473
+	.short	-17409
+	.short	-17413
+	.short	-16453
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11051
+	.short	-19925
+	.short	11195
+	.short	-65
+	.short	-1025
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11186
+	.short	-17477
+	.short	11186
+	.short	-17486
+	.short	-16389
+	.short	-69
+	.short	-16453
+	.short	-16453
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-1
 	.short	26367
-	.short	-4
+	.short	-5
 	.short	-1
-	.short	-13108
+	.short	-17477
 	.short	-1
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-820
-	.short	-13108
-	.short	-820
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-17477
+	.short	-1093
 	.short	26367
 	.short	28671
 	.short	28671
@@ -3536,9 +3536,9 @@ shield_instructionsTiles:
 	.short	26223
 	.short	28671
 	.short	26214
-	.short	26364
+	.short	26363
 	.short	26223
-	.short	26364
+	.short	26363
 	.short	26223
 	.short	28671
 	.short	26214
@@ -3550,22 +3550,22 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26266
 	.short	-26215
-	.short	-26218
-	.short	-26215
-	.short	-27034
-	.short	-26215
-	.short	-27034
-	.short	-26215
-	.short	-27034
-	.short	-26215
 	.short	-26266
 	.short	-26215
+	.short	-27034
+	.short	-26215
+	.short	-27034
+	.short	-26215
+	.short	26214
+	.short	26217
+	.short	26214
+	.short	26217
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26983
+	.short	-27031
 	.short	-26215
 	.short	-27031
 	.short	-26215
@@ -3578,388 +3578,388 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	27033
 	.short	-26266
-	.short	-26215
+	.short	26985
 	.short	26214
-	.short	27033
-	.short	-26266
+	.short	26985
+	.short	26214
 	.short	27033
 	.short	26262
 	.short	26265
-	.short	26217
-	.short	-26983
-	.short	26217
+	.short	26214
 	.short	-27031
+	.short	26214
 	.short	26217
+	.short	26214
 	.short	-27034
 	.short	26214
 	.short	26265
 	.short	26214
-	.short	26262
-	.short	26265
-	.short	26265
-	.short	26265
 	.short	26214
+	.short	26265
+	.short	26265
 	.short	26217
+	.short	26214
+	.short	26214
 	.short	26214
 	.short	26214
 	.short	-2458
 	.short	-145
 	.short	-2458
-	.short	-13057
+	.short	-17409
 	.short	-154
-	.short	-12289
+	.short	-16385
 	.short	28671
 	.short	-151
 	.short	28671
 	.short	-154
 	.short	-10
 	.short	-2305
-	.short	-13066
-	.short	-2308
-	.short	-12298
-	.short	-4
-	.short	-12442
+	.short	-17418
+	.short	-2309
+	.short	-16394
+	.short	-5
+	.short	-16538
 	.short	-145
 	.short	28527
-	.short	-13066
-	.short	26364
-	.short	-12298
-	.short	-13057
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-52
-	.short	11468
-	.short	-12340
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13268
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8748
-	.short	8748
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	11298
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8748
-	.short	8738
-	.short	-15668
-	.short	8738
-	.short	8908
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-19934
-	.short	8738
-	.short	-17486
-	.short	-19934
-	.short	-17477
-	.short	-17630
+	.short	-17418
+	.short	26363
+	.short	-16394
+	.short	-17409
+	.short	-17473
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
-	.short	-17477
-	.short	8738
-	.short	-19781
-	.short	8882
+	.short	-69
+	.short	11195
+	.short	-16453
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-19781
-	.short	-17477
-	.short	8891
+	.short	-17621
 	.short	-17477
 	.short	8891
 	.short	-17477
 	.short	8747
-	.short	-17541
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
+	.short	8747
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	11042
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-18569
-	.short	31675
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	30651
-	.short	-17477
-	.short	30651
-	.short	-17477
-	.short	30587
-	.short	-17477
-	.short	30587
-	.short	30651
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30695
-	.short	30583
+	.short	11195
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-7646
+	.short	8747
+	.short	11810
+	.short	-19781
+	.short	8738
+	.short	8891
+	.short	8738
+	.short	8738
+	.short	-7646
+	.short	8738
+	.short	8930
+	.short	8930
+	.short	8738
+	.short	8738
+	.short	-7646
+	.short	8750
 	.short	-4370
-	.short	-6281
+	.short	-7646
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8930
+	.short	-4370
+	.short	-7454
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30702
+	.short	-4377
+	.short	-4370
+	.short	-4370
+	.short	-7442
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	-7442
+	.short	-4482
 	.short	-4370
 	.short	-4489
 	.short	-4370
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30590
-	.short	-6281
-	.short	30702
+	.short	-4489
+	.short	-4370
 	.short	-4377
 	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4482
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	-6281
+	.short	32494
+	.short	-4489
+	.short	-4370
+	.short	32494
+	.short	-4370
 	.short	30702
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30695
-	.short	30583
+	.short	-4370
 	.short	30702
-	.short	32375
-	.short	30702
-	.short	32487
+	.short	-4370
+	.short	30590
+	.short	-4370
+	.short	30590
+	.short	-4370
 	.short	30590
 	.short	30702
+	.short	30583
+	.short	30590
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	32215
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	-8841
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	32119
+	.short	30685
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30685
+	.short	-8841
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	32221
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	32215
+	.short	-10377
+	.short	32221
+	.short	-8841
+	.short	30685
+	.short	-8739
+	.short	30685
+	.short	32221
+	.short	-10377
+	.short	30685
+	.short	-8841
+	.short	30583
+	.short	-8745
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	32215
+	.short	30583
+	.short	32215
+	.short	30583
+	.short	32221
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	30685
+	.short	30583
+	.short	-6281
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-4489
+	.short	-4377
+	.short	30583
+	.short	-4377
+	.short	30583
+	.short	32375
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
 	.short	30583
 	.short	30583
 	.short	-6281
 	.short	30583
+	.short	30583
+	.short	30590
+	.short	-4370
+	.short	-6274
+	.short	-4370
 	.short	-4377
+	.short	-4370
+	.short	-4377
+	.short	-4370
+	.short	-4377
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-6281
+	.short	-4370
 	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	32487
-	.short	30583
-	.short	32494
-	.short	30583
-	.short	32494
-	.short	30583
-	.short	32494
-	.short	30583
-	.short	30583
-	.short	-17545
-	.short	30583
-	.short	-17477
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17477
-	.short	-17477
-	.short	30583
-	.short	-17477
-	.short	30583
-	.short	31671
-	.short	30583
-	.short	31671
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-18569
-	.short	30583
-	.short	-18569
-	.short	30583
-	.short	30583
-	.short	-18565
-	.short	-17477
-	.short	-18565
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17541
-	.short	-17477
-	.short	-18569
-	.short	-17477
-	.short	-17477
+	.short	-4370
+	.short	-4370
+	.short	8750
+	.short	8942
 	.short	8738
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	12002
+	.short	8738
+	.short	12014
+	.short	8738
+	.short	-4562
+	.short	8750
+	.short	-7634
+	.short	8750
+	.short	8738
+	.short	8942
+	.short	8738
+	.short	-4370
 	.short	8747
 	.short	8738
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	8882
 	.short	8738
-	.short	11195
+	.short	8750
+	.short	-7454
 	.short	8738
-	.short	-17621
+	.short	8930
+	.short	8738
+	.short	-4382
+	.short	8750
+	.short	-4370
+	.short	-4370
+	.short	8738
+	.short	-17486
+	.short	8738
+	.short	-17477
 	.short	8738
 	.short	-19934
-	.short	8747
 	.short	8738
-	.short	8891
+	.short	-19934
 	.short	8738
-	.short	-17486
-	.short	8748
+	.short	-17630
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
+	.short	12014
 	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17486
-	.short	8747
 	.short	-17477
 	.short	-17477
-	.short	8738
-	.short	-13118
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-13278
-	.short	8738
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11186
 	.short	8738
 	.short	8738
+	.short	-19934
 	.short	8738
-	.short	8891
-	.short	8738
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11458
-	.short	8738
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-13118
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-820
-	.short	-13268
-	.short	-52
-	.short	-13278
-	.short	-52
-	.short	-13108
-	.short	-12292
-	.short	-13108
-	.short	-13060
-	.short	-13108
-	.short	-13108
+	.short	-17486
+	.short	-17477
+	.short	-69
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-17621
+	.short	-69
+	.short	-17630
+	.short	-69
+	.short	-17477
+	.short	-16389
+	.short	-17477
+	.short	-17413
+	.short	-17477
+	.short	-17477
 	.short	28671
 	.short	-10
 	.short	-2449
@@ -3970,22 +3970,22 @@ shield_instructionsTiles:
 	.short	26223
 	.short	-1
 	.short	26367
-	.short	28620
+	.short	28603
 	.short	26367
-	.short	-4
+	.short	-5
 	.short	-2449
-	.short	-4
+	.short	-5
 	.short	-2449
-	.short	-26266
-	.short	-26215
-	.short	-26266
+	.short	-27034
+	.short	27030
+	.short	-27034
 	.short	26217
 	.short	26214
 	.short	-27034
 	.short	26214
 	.short	-26266
 	.short	26358
-	.short	-26266
+	.short	-27034
 	.short	28671
 	.short	26214
 	.short	28527
@@ -3996,17 +3996,17 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26218
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26218
+	.short	-26266
 	.short	-26215
 	.short	-26266
 	.short	-26215
-	.short	-27034
+	.short	-26266
+	.short	-26218
+	.short	-26266
 	.short	-26215
-	.short	26265
+	.short	26214
+	.short	-26215
+	.short	26262
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -4025,28 +4025,28 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26263
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	26265
-	.short	-26983
-	.short	-26215
-	.short	-26983
 	.short	26217
+	.short	-26215
+	.short	26217
+	.short	-26215
+	.short	26265
+	.short	-26215
+	.short	26217
+	.short	-26215
+	.short	26217
+	.short	-26215
+	.short	26265
+	.short	-26983
+	.short	26214
+	.short	26265
+	.short	26214
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	-2458
-	.short	26217
+	.short	26214
 	.short	-2458
 	.short	26214
 	.short	26214
@@ -4065,352 +4065,368 @@ shield_instructionsTiles:
 	.short	26367
 	.short	-2458
 	.short	26214
-	.short	-12298
+	.short	-16394
 	.short	-2458
-	.short	-13057
+	.short	-17409
 	.short	26214
-	.short	-13057
+	.short	-17409
 	.short	-2458
-	.short	-13108
-	.short	-2458
-	.short	-13060
-	.short	-12442
-	.short	11468
-	.short	-13105
-	.short	11468
-	.short	-13108
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-13268
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13118
-	.short	-15838
-	.short	-13108
-	.short	-13278
-	.short	8748
-	.short	11468
-	.short	8738
-	.short	8908
-	.short	8738
-	.short	8908
-	.short	8738
-	.short	11298
-	.short	8738
-	.short	-15838
-	.short	8748
-	.short	-13118
-	.short	8738
-	.short	11308
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17630
-	.short	8738
-	.short	-17486
-	.short	8738
-	.short	-17486
-	.short	8738
 	.short	-17477
+	.short	-2458
+	.short	-17413
+	.short	-16538
+	.short	11195
+	.short	-17473
+	.short	11195
+	.short	-17477
+	.short	-17477
+	.short	-17473
+	.short	-17477
+	.short	-17477
+	.short	-17621
+	.short	-17477
+	.short	11195
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17486
 	.short	-19934
 	.short	-17477
 	.short	-17630
-	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	-18565
-	.short	30651
-	.short	-17545
-	.short	30583
-	.short	-17481
-	.short	30583
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-23685
-	.short	-17477
-	.short	-19549
-	.short	-17477
-	.short	-17606
-	.short	15223
-	.short	-17606
-	.short	14199
-	.short	-18630
-	.short	14199
-	.short	30634
-	.short	14199
-	.short	31402
-	.short	-17477
-	.short	30583
-	.short	15018
-	.short	-21961
-	.short	-21893
-	.short	14195
-	.short	-22597
-	.short	14195
-	.short	-22661
-	.short	14199
-	.short	14203
-	.short	14199
-	.short	30583
-	.short	14199
-	.short	30583
-	.short	14199
-	.short	-4377
-	.short	-4370
-	.short	-6342
-	.short	-4370
-	.short	30634
-	.short	-4370
-	.short	-4438
-	.short	-4370
-	.short	-4438
-	.short	-4370
-	.short	-4438
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4370
-	.short	30590
-	.short	14910
-	.short	-23577
-	.short	14910
-	.short	30583
-	.short	14910
-	.short	30702
-	.short	14910
-	.short	-6274
-	.short	15022
-	.short	-6281
-	.short	15015
-	.short	-4377
-	.short	15015
-	.short	-4370
-	.short	30583
-	.short	-4370
-	.short	-4438
-	.short	-23746
-	.short	-7254
-	.short	-20754
-	.short	-7254
-	.short	-20754
-	.short	-7254
-	.short	-20754
-	.short	-7254
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4370
-	.short	30590
-	.short	-21846
-	.short	-21846
-	.short	-4550
-	.short	-23570
-	.short	-4550
-	.short	-23570
-	.short	-4550
-	.short	-23570
-	.short	-4550
-	.short	-4370
-	.short	-4374
-	.short	-4370
-	.short	-4374
-	.short	-4370
-	.short	30583
-	.short	30583
-	.short	-21961
-	.short	30522
-	.short	16110
-	.short	-6230
-	.short	16110
-	.short	-4438
-	.short	16110
-	.short	-4438
-	.short	16110
-	.short	-4438
-	.short	16110
-	.short	32314
-	.short	16110
-	.short	-4550
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-23753
-	.short	30590
-	.short	14199
-	.short	30590
-	.short	15998
-	.short	-6281
-	.short	15998
-	.short	32375
-	.short	15998
-	.short	32487
-	.short	14199
-	.short	32494
-	.short	14199
-	.short	30583
-	.short	-17477
-	.short	-21846
-	.short	15018
-	.short	-17494
-	.short	-23685
-	.short	-17494
-	.short	-17477
-	.short	-17494
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-17485
-	.short	-17477
-	.short	-18518
-	.short	-17477
-	.short	-17750
-	.short	-17477
-	.short	15019
-	.short	-17477
-	.short	-21957
-	.short	-17477
-	.short	-21893
-	.short	-17485
-	.short	-21829
-	.short	-17485
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	8738
-	.short	11195
-	.short	8738
-	.short	8891
-	.short	8738
-	.short	8738
-	.short	8738
 	.short	8747
-	.short	8738
 	.short	11195
-	.short	-17630
 	.short	8738
-	.short	-17486
+	.short	8891
 	.short	8738
-	.short	-17477
-	.short	-19925
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17486
+	.short	8891
+	.short	8738
 	.short	11042
+	.short	8738
+	.short	-19934
+	.short	8747
+	.short	-17486
+	.short	8738
+	.short	11051
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-7646
+	.short	11810
+	.short	-4382
+	.short	8738
+	.short	-4370
+	.short	12002
+	.short	-4382
+	.short	8738
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	32494
+	.short	30702
+	.short	-4370
+	.short	-6162
+	.short	32487
+	.short	-4370
+	.short	-4377
+	.short	-4370
+	.short	-4370
+	.short	-6274
+	.short	-4370
+	.short	-6274
+	.short	-4482
+	.short	-4370
+	.short	30590
+	.short	-4370
+	.short	30702
+	.short	-4377
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-4377
+	.short	30702
+	.short	32487
+	.short	30590
+	.short	30702
+	.short	-6281
+	.short	30583
+	.short	32487
+	.short	30583
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4482
+	.short	-6281
+	.short	-23682
+	.short	-6281
+	.short	-7251
+	.short	30583
+	.short	30522
+	.short	14199
+	.short	30522
+	.short	14199
+	.short	30522
+	.short	-4370
+	.short	30583
+	.short	-4482
+	.short	-10377
+	.short	-4370
+	.short	-10377
+	.short	15018
+	.short	-21961
+	.short	-21801
+	.short	14205
+	.short	-22665
+	.short	14205
+	.short	-22665
+	.short	14205
+	.short	14199
+	.short	15735
+	.short	-8745
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	30589
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8739
+	.short	-10371
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	14909
+	.short	-23587
+	.short	14909
+	.short	-10275
+	.short	14909
+	.short	-8841
+	.short	14903
+	.short	-8745
+	.short	14903
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	-10371
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8790
+	.short	-21965
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-21846
+	.short	15018
+	.short	-8749
+	.short	15069
+	.short	-8749
+	.short	13277
+	.short	-8749
+	.short	-11299
+	.short	-8749
+	.short	-8739
+	.short	32119
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	-8835
+	.short	-21955
+	.short	-8902
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	-8902
+	.short	30583
+	.short	30583
+	.short	30589
+	.short	30583
+	.short	30685
+	.short	30583
+	.short	-10371
+	.short	13117
+	.short	-10371
+	.short	15837
+	.short	-8739
+	.short	15837
+	.short	-8739
+	.short	14199
+	.short	32221
+	.short	14199
+	.short	30583
+	.short	-4370
+	.short	30695
+	.short	32494
+	.short	-4377
+	.short	-4370
+	.short	-21846
+	.short	15018
+	.short	-4550
+	.short	-23682
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4371
+	.short	-4370
+	.short	-6230
+	.short	-4370
+	.short	-5462
+	.short	-4370
+	.short	15022
+	.short	-4370
+	.short	-21954
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8750
+	.short	12014
+	.short	8738
+	.short	8942
+	.short	8738
+	.short	-7646
+	.short	8738
+	.short	8750
+	.short	-7646
+	.short	12014
+	.short	-4574
+	.short	8738
+	.short	-4382
+	.short	8942
+	.short	-4370
+	.short	-7442
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	-4382
+	.short	-4574
+	.short	-4574
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	12014
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-17486
+	.short	8738
+	.short	11042
+	.short	8738
+	.short	8738
+	.short	8750
 	.short	-17630
-	.short	-17621
-	.short	11186
+	.short	8750
+	.short	-19934
+	.short	8738
+	.short	-19934
 	.short	-17477
-	.short	8891
+	.short	-1093
 	.short	-17477
-	.short	8891
+	.short	-69
 	.short	-17477
-	.short	11195
+	.short	-1093
 	.short	-17477
-	.short	11195
+	.short	-69
 	.short	-17477
-	.short	8891
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13118
-	.short	8738
-	.short	11298
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-15838
-	.short	-13108
-	.short	-820
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	-820
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	-12340
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-820
+	.short	-16453
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1093
 	.short	-1
 	.short	-154
-	.short	-49
+	.short	-65
 	.short	-1
 	.short	-1
 	.short	28671
@@ -4425,7 +4441,7 @@ shield_instructionsTiles:
 	.short	26223
 	.short	-1
 	.short	26223
-	.short	-27034
+	.short	26214
 	.short	26367
 	.short	-27034
 	.short	26214
@@ -4440,53 +4456,53 @@ shield_instructionsTiles:
 	.short	26214
 	.short	-2305
 	.short	26223
-	.short	-26263
-	.short	-26215
-	.short	26985
-	.short	-26218
-	.short	-26263
-	.short	-26983
 	.short	-27031
-	.short	26265
 	.short	-26215
+	.short	26217
+	.short	27030
+	.short	-27031
+	.short	26217
+	.short	-27031
+	.short	26217
+	.short	-26263
 	.short	26265
 	.short	-26218
 	.short	27033
 	.short	-26266
-	.short	-26215
-	.short	-26986
 	.short	27033
-	.short	-26215
-	.short	-26215
-	.short	-26218
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26218
-	.short	-26215
-	.short	-26218
-	.short	-26215
 	.short	-27034
-	.short	-26215
-	.short	26214
-	.short	-26215
-	.short	26262
 	.short	26265
-	.short	27030
+	.short	-26218
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26263
+	.short	-26215
+	.short	-26263
+	.short	-26266
+	.short	26262
+	.short	-26266
+	.short	-26218
+	.short	-26215
 	.short	26214
-	.short	-26983
-	.short	26217
-	.short	-26983
+	.short	-26266
+	.short	26214
+	.short	-27034
+	.short	26214
+	.short	26214
+	.short	26262
+	.short	26214
+	.short	26265
+	.short	26214
+	.short	-27031
 	.short	26217
 	.short	-26218
 	.short	26217
+	.short	-26218
+	.short	26214
 	.short	-26215
-	.short	26217
-	.short	-26215
-	.short	26217
-	.short	-26986
+	.short	26214
+	.short	26214
 	.short	26214
 	.short	-2458
 	.short	26214
@@ -4502,360 +4518,376 @@ shield_instructionsTiles:
 	.short	26214
 	.short	26214
 	.short	-2458
-	.short	-27034
+	.short	26214
 	.short	-2407
 	.short	-154
-	.short	-13108
+	.short	-17477
 	.short	-10
-	.short	-13105
+	.short	-17473
 	.short	-10
-	.short	-13105
+	.short	-17473
 	.short	-10
-	.short	-13105
+	.short	-17473
 	.short	-1
-	.short	-13108
+	.short	-17477
 	.short	-1
-	.short	-13108
+	.short	-17477
 	.short	-10
-	.short	-12337
+	.short	-16449
 	.short	-10
-	.short	-13057
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-12340
-	.short	-820
-	.short	-820
-	.short	-12340
-	.short	-15828
-	.short	8908
-	.short	-13108
-	.short	8908
-	.short	-13118
-	.short	8748
-	.short	-13118
-	.short	8898
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-19934
-	.short	-19925
-	.short	-19934
-	.short	-17477
-	.short	-19934
-	.short	-17477
-	.short	-19934
-	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	8738
-	.short	-17630
-	.short	8738
-	.short	-17486
+	.short	-17409
 	.short	-17477
 	.short	-17477
 	.short	-17477
 	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-18501
-	.short	-17477
-	.short	-17477
-	.short	-17545
-	.short	-17477
-	.short	-17545
-	.short	31675
-	.short	-17481
-	.short	30651
-	.short	-17477
-	.short	-18565
-	.short	30587
-	.short	31675
-	.short	30583
-	.short	30651
-	.short	-18569
-	.short	31675
-	.short	30583
-	.short	30651
-	.short	30583
-	.short	30651
-	.short	-18569
-	.short	30651
-	.short	-17545
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	30583
-	.short	-21853
-	.short	-18569
-	.short	-21957
-	.short	-17477
-	.short	14267
-	.short	-17477
-	.short	30587
-	.short	-17477
-	.short	30587
-	.short	15291
-	.short	30587
-	.short	-21573
-	.short	30647
-	.short	-21573
-	.short	-17485
-	.short	30579
-	.short	14199
-	.short	29610
-	.short	15991
-	.short	15018
-	.short	15991
-	.short	-21849
-	.short	15987
-	.short	-21897
-	.short	16099
-	.short	-23689
-	.short	16099
-	.short	-23689
-	.short	16099
-	.short	-21897
-	.short	16110
-	.short	-21846
-	.short	-21846
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	15018
-	.short	-4377
-	.short	15022
-	.short	-4370
-	.short	15022
-	.short	-4370
-	.short	-5458
-	.short	-4370
-	.short	-5458
-	.short	-4370
-	.short	-5458
-	.short	-4370
-	.short	-5458
-	.short	-4370
-	.short	15022
-	.short	-4370
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-20754
-	.short	-4438
-	.short	-23689
-	.short	-4374
-	.short	-4489
-	.short	-21846
-	.short	-7254
-	.short	-4374
-	.short	-4370
-	.short	-4486
-	.short	-4370
-	.short	-4486
-	.short	-4370
-	.short	-4374
-	.short	-4370
-	.short	-4374
-	.short	16110
-	.short	-4374
-	.short	-20754
-	.short	16110
-	.short	-4550
-	.short	16110
-	.short	-4550
-	.short	16110
-	.short	-4550
-	.short	16110
-	.short	32314
-	.short	16110
-	.short	-18630
-	.short	16110
-	.short	-18630
-	.short	16106
-	.short	31546
-	.short	-20765
-	.short	30522
-	.short	30590
-	.short	14203
-	.short	30590
-	.short	14199
-	.short	-17545
-	.short	14199
-	.short	-17481
-	.short	14199
-	.short	-18565
-	.short	14203
-	.short	-17545
-	.short	14203
-	.short	-17545
-	.short	15226
-	.short	15287
-	.short	-22598
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	-17477
-	.short	-17606
-	.short	31675
-	.short	-17606
-	.short	30651
-	.short	-17606
-	.short	-6213
-	.short	-21829
-	.short	11187
-	.short	-21829
-	.short	11187
-	.short	-21829
-	.short	11187
-	.short	-21829
-	.short	8747
-	.short	-21957
-	.short	-19925
-	.short	14903
-	.short	-17477
-	.short	-19549
-	.short	-17477
-	.short	-17494
-	.short	-17477
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17621
-	.short	-17621
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-18565
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17621
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	8747
-	.short	-17477
-	.short	11042
 	.short	-17477
 	.short	11195
+	.short	-17477
+	.short	11195
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-16453
+	.short	-1093
+	.short	-1093
+	.short	-16453
+	.short	-19925
+	.short	8891
+	.short	-17477
+	.short	8891
+	.short	-17486
+	.short	8747
+	.short	-17486
+	.short	8882
 	.short	-17477
 	.short	8891
 	.short	-17477
+	.short	8738
+	.short	-17477
 	.short	8747
 	.short	-17477
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-7646
+	.short	-7646
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	8738
+	.short	-4382
+	.short	-4574
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30702
+	.short	-4489
+	.short	-6274
+	.short	-4489
+	.short	-4370
+	.short	-6281
+	.short	32494
+	.short	-4377
+	.short	30702
+	.short	-4370
+	.short	-6274
+	.short	30590
+	.short	32487
+	.short	30583
+	.short	30702
+	.short	30583
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	32494
+	.short	30702
+	.short	32494
+	.short	30702
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4377
+	.short	-4370
+	.short	32494
+	.short	30583
+	.short	30590
+	.short	30583
+	.short	30702
+	.short	30583
+	.short	30702
+	.short	-4489
+	.short	-6162
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	14199
+	.short	30522
+	.short	-10377
+	.short	29610
+	.short	-4370
+	.short	-21853
+	.short	-4370
+	.short	-21954
+	.short	32494
+	.short	14199
+	.short	30702
+	.short	30583
+	.short	-4370
+	.short	30583
+	.short	16110
+	.short	30583
+	.short	30583
+	.short	15735
+	.short	30583
+	.short	15831
+	.short	30579
+	.short	15741
+	.short	-11350
+	.short	15837
+	.short	15018
+	.short	15837
+	.short	-21849
+	.short	15837
+	.short	-21897
+	.short	15827
+	.short	-23689
+	.short	15827
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-21846
+	.short	-21846
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	14909
+	.short	-8739
+	.short	-9667
+	.short	-8739
+	.short	-9558
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8790
+	.short	-23587
+	.short	-8749
+	.short	-8841
+	.short	-8749
+	.short	-8739
+	.short	-8749
+	.short	-8739
+	.short	-21846
+	.short	-8790
+	.short	-8749
+	.short	-8739
+	.short	-8749
+	.short	-8739
+	.short	-8749
+	.short	-8739
+	.short	-8749
+	.short	-8739
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	32058
+	.short	15837
+	.short	-6342
+	.short	15837
+	.short	30522
+	.short	15837
+	.short	30522
+	.short	15837
+	.short	30522
+	.short	30685
+	.short	14206
+	.short	30589
+	.short	14199
+	.short	32375
+	.short	14199
+	.short	32487
+	.short	14199
+	.short	-6281
+	.short	14206
+	.short	-6281
+	.short	14206
+	.short	-4489
+	.short	14206
+	.short	-4377
+	.short	14206
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	-4370
+	.short	-4550
+	.short	32494
+	.short	30522
+	.short	30590
+	.short	-6342
+	.short	30590
+	.short	-21890
+	.short	12003
+	.short	-21778
+	.short	12003
+	.short	-21778
+	.short	12003
+	.short	-21778
+	.short	-7453
+	.short	-21890
+	.short	-7645
+	.short	-21897
+	.short	-4370
+	.short	14903
+	.short	-4370
+	.short	14903
+	.short	-4370
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	11810
+	.short	8738
+	.short	-7442
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30583
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8750
+	.short	-4370
+	.short	11810
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8750
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	8738
 	.short	-17630
+	.short	8738
+	.short	-17630
+	.short	8738
+	.short	-17630
+	.short	8738
+	.short	-17630
+	.short	8750
+	.short	8738
+	.short	8750
+	.short	8738
+	.short	8750
+	.short	8738
+	.short	8738
+	.short	8738
 	.short	-17477
+	.short	-69
 	.short	-17477
+	.short	28667
 	.short	-17477
-	.short	11195
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	8738
-	.short	8747
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	28668
-	.short	-13108
-	.short	-4
-	.short	-13108
-	.short	-4
-	.short	-13118
-	.short	-52
-	.short	-13278
-	.short	-820
-	.short	-13118
-	.short	-13108
-	.short	-13118
-	.short	-13108
+	.short	-5
+	.short	-17477
+	.short	-5
+	.short	-17486
+	.short	-69
+	.short	-17630
+	.short	-1093
+	.short	-17486
+	.short	-17477
+	.short	-17486
+	.short	-17477
 	.short	-1
 	.short	-1
 	.short	-10
@@ -4864,13 +4896,13 @@ shield_instructionsTiles:
 	.short	26367
 	.short	-1
 	.short	26223
-	.short	-4
+	.short	-5
 	.short	26223
 	.short	-1
 	.short	26223
 	.short	-1
 	.short	-2449
-	.short	-4
+	.short	-5
 	.short	-1
 	.short	-2458
 	.short	26358
@@ -4892,19 +4924,19 @@ shield_instructionsTiles:
 	.short	26265
 	.short	-26215
 	.short	26217
-	.short	-26215
-	.short	-27031
-	.short	27030
+	.short	-26263
+	.short	26217
+	.short	26214
 	.short	26214
 	.short	26265
 	.short	26214
-	.short	26265
 	.short	26262
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	26214
-	.short	-26986
+	.short	26214
+	.short	-27034
 	.short	-27031
 	.short	-26215
 	.short	26217
@@ -4914,677 +4946,123 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	26982
 	.short	-26218
-	.short	26982
-	.short	-26266
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-27034
+	.short	26214
+	.short	26214
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26263
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	26985
+	.short	26214
+	.short	26985
+	.short	26214
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	26265
+	.short	-26215
+	.short	26217
+	.short	27033
+	.short	26214
+	.short	-26215
+	.short	-26215
+	.short	-26218
+	.short	26265
+	.short	-26218
+	.short	26265
+	.short	-26218
+	.short	26214
+	.short	-26218
+	.short	26214
+	.short	-26218
+	.short	-27034
 	.short	27030
-	.short	-27034
-	.short	-26983
-	.short	-26266
-	.short	26985
 	.short	26214
 	.short	26985
-	.short	26214
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26218
-	.short	26265
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	26265
-	.short	-26218
-	.short	-27034
-	.short	-26215
-	.short	-27034
-	.short	27033
-	.short	-27034
-	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-10
-	.short	-769
+	.short	-1025
 	.short	-10
-	.short	-769
+	.short	-1025
 	.short	-10
 	.short	-1
 	.short	-2458
 	.short	-1
-	.short	26265
-	.short	28662
 	.short	26217
-	.short	26214
-	.short	-26266
-	.short	26214
-	.short	-27031
-	.short	-2455
-	.short	-817
-	.short	-13105
-	.short	-52
-	.short	-13105
-	.short	-4
-	.short	-13108
-	.short	-12289
-	.short	-13108
-	.short	-10
-	.short	-13105
-	.short	-49
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13057
-	.short	-13105
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	11458
-	.short	8738
-	.short	-17477
-	.short	-19934
-	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	8738
-	.short	-17477
-	.short	8738
-	.short	-17477
-	.short	-19934
-	.short	-17477
-	.short	-19934
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	30651
-	.short	-17477
-	.short	-18565
-	.short	-17477
-	.short	-17545
-	.short	31675
-	.short	-17477
-	.short	30651
-	.short	31671
-	.short	30651
-	.short	30651
-	.short	-18565
-	.short	30587
-	.short	-17545
-	.short	30587
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17545
-	.short	30651
-	.short	-17481
-	.short	30587
-	.short	-17477
-	.short	30583
-	.short	-18565
-	.short	30651
-	.short	-17545
-	.short	30651
-	.short	-17481
-	.short	30587
-	.short	-17477
-	.short	30587
-	.short	-17545
-	.short	-17545
-	.short	31671
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-21573
-	.short	-17606
-	.short	15287
-	.short	-21846
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-5469
-	.short	16110
-	.short	-6342
-	.short	16110
-	.short	-6281
-	.short	-4370
-	.short	-4489
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-6281
-	.short	-4370
-	.short	-4489
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4550
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	15022
-	.short	16110
-	.short	-21954
-	.short	15930
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	32494
-	.short	-4370
-	.short	32494
-	.short	-4370
-	.short	-4370
-	.short	32426
-	.short	-23689
-	.short	32426
-	.short	-23689
-	.short	-6162
-	.short	-4377
-	.short	-6162
-	.short	-4370
-	.short	-6162
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-21846
-	.short	-21846
-	.short	13107
-	.short	-21853
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	32494
-	.short	-4370
-	.short	32494
-	.short	-4377
-	.short	32494
-	.short	-4489
-	.short	32375
-	.short	-4489
-	.short	-20765
-	.short	-21846
-	.short	-20754
-	.short	13114
-	.short	30702
-	.short	30583
-	.short	30702
-	.short	-18569
-	.short	30702
-	.short	-18569
-	.short	30590
-	.short	31607
-	.short	30590
-	.short	31671
-	.short	30583
-	.short	30647
-	.short	-21846
-	.short	-21574
-	.short	-21846
-	.short	-21581
-	.short	30651
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17606
-	.short	-23685
-	.short	-21846
-	.short	-7254
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-18569
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17542
-	.short	-17477
-	.short	-17545
-	.short	-17477
-	.short	-17545
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-18565
-	.short	-17477
-	.short	30583
-	.short	-17477
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	30583
-	.short	-17477
-	.short	-17477
-	.short	-18565
-	.short	-17477
-	.short	-18565
-	.short	-17541
-	.short	-17541
-	.short	-18565
-	.short	-17541
-	.short	-18501
-	.short	-17541
-	.short	30651
-	.short	-18501
-	.short	30651
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	-19781
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17486
-	.short	8891
-	.short	-17477
-	.short	-17477
-	.short	-19781
-	.short	-17477
-	.short	-19781
-	.short	11195
-	.short	-13108
-	.short	-13108
-	.short	-13268
-	.short	-13108
-	.short	-15838
-	.short	-13108
-	.short	8738
-	.short	-820
-	.short	8738
-	.short	-13118
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	-13278
-	.short	-4
-	.short	-1
-	.short	-4
-	.short	-1
-	.short	-769
-	.short	-1
-	.short	-13108
-	.short	-1
-	.short	-13108
-	.short	26364
-	.short	-13108
-	.short	26364
-	.short	-52
-	.short	-1
-	.short	-13108
-	.short	-13105
-	.short	-2305
-	.short	28518
-	.short	-2305
-	.short	26367
-	.short	-2458
-	.short	26367
-	.short	-145
-	.short	26367
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	26367
-	.short	-1
-	.short	26367
-	.short	-1
-	.short	28671
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26223
-	.short	-2449
-	.short	-2305
-	.short	-154
-	.short	-1
 	.short	28662
-	.short	-154
-	.short	28662
-	.short	-154
-	.short	-26215
-	.short	-27034
-	.short	26982
-	.short	-26218
-	.short	26214
-	.short	-26266
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	26214
-	.short	26223
 	.short	26214
-	.short	26367
-	.short	-27034
-	.short	26223
-	.short	-27034
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26218
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-27031
-	.short	-26215
 	.short	-2458
-	.short	27033
-	.short	26358
-	.short	26265
-	.short	26367
-	.short	26265
+	.short	-1089
+	.short	-17473
+	.short	-69
+	.short	-17473
+	.short	-5
+	.short	-17477
+	.short	-16385
+	.short	-17477
 	.short	-10
-	.short	-2455
-	.short	-1
-	.short	-2458
-	.short	26367
-	.short	-2458
-	.short	26214
-	.short	26214
-	.short	-2458
-	.short	-1
-	.short	-13057
-	.short	-1
-	.short	-13057
-	.short	-10
-	.short	-13108
-	.short	-1
-	.short	-13108
-	.short	-12289
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13108
+	.short	-17473
+	.short	-65
+	.short	-17477
+	.short	-17473
+	.short	-17477
+	.short	-17409
+	.short	-17473
+	.short	-17477
 	.short	8738
-	.short	11468
-	.short	8738
-	.short	11468
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	-13278
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	8747
+	.short	-17477
+	.short	8747
+	.short	-17477
 	.short	8891
 	.short	-17477
-	.short	8738
+	.short	8891
+	.short	-17477
+	.short	8747
 	.short	-17477
 	.short	8738
 	.short	-17477
-	.short	-17630
+	.short	11186
 	.short	8738
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4574
+	.short	-4370
 	.short	8738
-	.short	8738
-	.short	11458
-	.short	8738
-	.short	8908
-	.short	-17630
-	.short	8738
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17621
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	31675
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17621
-	.short	-17477
-	.short	-17477
-	.short	30583
-	.short	31675
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	30647
-	.short	30583
-	.short	30651
-	.short	30583
-	.short	30651
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30590
-	.short	30583
-	.short	30590
-	.short	30583
-	.short	30590
-	.short	30583
-	.short	30590
-	.short	-6281
-	.short	30583
-	.short	32375
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30695
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-4489
 	.short	-4370
-	.short	-4489
+	.short	-7646
 	.short	-4370
-	.short	-4377
+	.short	-4574
 	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-4377
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-6169
-	.short	-4370
-	.short	30583
-	.short	-4377
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4370
+	.short	-4382
 	.short	-4370
 	.short	-4370
 	.short	-4370
@@ -5594,211 +5072,813 @@ shield_instructionsTiles:
 	.short	-4370
 	.short	-4370
 	.short	32494
-	.short	-4370
-	.short	30702
-	.short	-4370
-	.short	30702
-	.short	-4370
-	.short	30702
-	.short	-4370
-	.short	32494
-	.short	-4370
-	.short	30702
 	.short	-4370
 	.short	30702
 	.short	-4370
 	.short	-6274
-	.short	30695
-	.short	30583
-	.short	30695
-	.short	30583
-	.short	30583
-	.short	-6281
+	.short	32494
 	.short	-4489
-	.short	-6281
-	.short	-6281
+	.short	30702
+	.short	-4370
+	.short	30702
+	.short	30695
+	.short	30590
+	.short	30590
+	.short	-6274
+	.short	30590
+	.short	-4489
+	.short	30583
+	.short	-4377
+	.short	30583
+	.short	-6162
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	-4370
+	.short	-4489
+	.short	30702
+	.short	-4489
+	.short	30590
+	.short	-4489
+	.short	30583
+	.short	32375
+	.short	30583
+	.short	30590
+	.short	30590
 	.short	-6281
 	.short	30590
+	.short	-4377
+	.short	30590
+	.short	-4370
+	.short	30590
+	.short	-4489
+	.short	30583
+	.short	32375
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-20754
+	.short	30583
+	.short	-20873
+	.short	30579
+	.short	-22665
+	.short	30522
+	.short	14199
+	.short	-21846
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-23689
+	.short	15827
+	.short	-21897
+	.short	15837
+	.short	-9555
+	.short	15837
+	.short	-8902
+	.short	15837
+	.short	-8745
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8902
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	-9555
+	.short	-8739
+	.short	14909
+	.short	-8739
+	.short	-21955
+	.short	-8902
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	32221
+	.short	-8739
+	.short	32221
+	.short	-8739
+	.short	-8739
+	.short	-8790
+	.short	-23689
+	.short	32170
+	.short	-23689
+	.short	-8790
+	.short	-21795
+	.short	-8790
+	.short	15069
+	.short	-8739
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8749
+	.short	-21027
+	.short	-8739
+	.short	-23587
+	.short	-21846
+	.short	-21846
+	.short	13107
+	.short	15018
+	.short	32221
+	.short	-8739
+	.short	32221
+	.short	-8745
+	.short	-8739
+	.short	-8841
+	.short	-8745
+	.short	-8841
+	.short	15837
+	.short	30522
+	.short	15837
+	.short	30682
+	.short	-22563
+	.short	-21846
+	.short	-22563
+	.short	13114
+	.short	30685
+	.short	-6281
+	.short	30589
+	.short	32375
+	.short	30589
+	.short	32487
+	.short	30583
+	.short	30695
+	.short	-6281
+	.short	15994
+	.short	16103
+	.short	16106
+	.short	-21846
+	.short	14202
+	.short	-21846
+	.short	-22659
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30685
+	.short	30583
+	.short	-6342
+	.short	30590
+	.short	30522
+	.short	-10377
+	.short	30522
+	.short	-23593
+	.short	-21853
+	.short	-11350
+	.short	30583
+	.short	-6281
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-7251
+	.short	-4370
+	.short	30634
+	.short	-4370
+	.short	30579
+	.short	-4370
+	.short	-4489
+	.short	-4370
+	.short	30583
+	.short	-4370
+	.short	30583
+	.short	-6169
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	30702
+	.short	-4377
+	.short	-4370
+	.short	30583
+	.short	-6274
+	.short	-4370
+	.short	-6274
+	.short	-4370
+	.short	-6274
+	.short	-4482
+	.short	-4482
+	.short	-6281
+	.short	-4482
+	.short	30590
+	.short	-6274
+	.short	30702
+	.short	-6274
+	.short	30695
+	.short	-4370
+	.short	-4377
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8942
+	.short	-19934
+	.short	8750
+	.short	-19934
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	12014
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-17477
+	.short	-17477
+	.short	-17621
+	.short	-17477
+	.short	-19934
+	.short	-17477
+	.short	8738
+	.short	-1093
+	.short	8738
+	.short	-17486
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-17630
+	.short	8738
+	.short	-17630
+	.short	-5
+	.short	-1
+	.short	-5
+	.short	-1
+	.short	-1025
+	.short	-1
+	.short	-17477
+	.short	-1
+	.short	-17477
+	.short	26363
+	.short	-17477
+	.short	26363
+	.short	-69
+	.short	-1
+	.short	-17477
+	.short	-17473
+	.short	-2305
+	.short	28518
+	.short	-2305
+	.short	26367
+	.short	-2458
+	.short	26367
+	.short	-145
+	.short	26367
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	26367
+	.short	-1
+	.short	26367
+	.short	-1
+	.short	28671
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26223
+	.short	-2449
+	.short	-2305
+	.short	-154
+	.short	-1
+	.short	28662
+	.short	-154
+	.short	28662
+	.short	-154
+	.short	27030
+	.short	26214
+	.short	26214
+	.short	-26218
+	.short	26214
+	.short	-27034
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26223
+	.short	26214
+	.short	26367
+	.short	-27034
+	.short	26223
+	.short	26214
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26266
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	26265
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	26265
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	26217
+	.short	26265
+	.short	-2458
+	.short	26265
+	.short	26358
+	.short	26265
+	.short	26367
+	.short	26217
+	.short	-10
+	.short	-2458
+	.short	-1
+	.short	-2458
+	.short	26367
+	.short	-2458
+	.short	26214
+	.short	26214
+	.short	-2458
+	.short	-1
+	.short	-17409
+	.short	-1
+	.short	-17409
+	.short	-10
+	.short	-17477
+	.short	-1
+	.short	-17477
+	.short	-16385
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17477
+	.short	8738
+	.short	11195
+	.short	8738
+	.short	11195
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-17477
+	.short	-17630
+	.short	-17477
+	.short	-17477
+	.short	-4370
+	.short	-4370
+	.short	8738
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-4574
+	.short	-4562
+	.short	8738
+	.short	8738
+	.short	11186
+	.short	-7646
+	.short	8891
+	.short	-4382
+	.short	8738
 	.short	-4370
 	.short	-6162
 	.short	-4370
 	.short	-4370
 	.short	-4370
-	.short	32375
-	.short	32487
-	.short	-4377
+	.short	-4562
+	.short	-4370
+	.short	-4370
 	.short	32494
 	.short	-4370
-	.short	30702
+	.short	-6162
 	.short	-4370
-	.short	30702
+	.short	-4489
 	.short	-4370
-	.short	30702
 	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	32494
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	30583
+	.short	32494
+	.short	30583
 	.short	30590
-	.short	-4370
+	.short	30583
 	.short	30590
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30702
+	.short	30583
+	.short	30590
+	.short	30583
+	.short	30590
+	.short	30583
+	.short	-10377
+	.short	30583
+	.short	30589
+	.short	-10377
+	.short	30589
+	.short	-8841
+	.short	30589
+	.short	-8841
+	.short	30589
+	.short	-8745
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	32215
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30685
+	.short	30583
+	.short	30685
+	.short	30583
+	.short	30589
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-10377
+	.short	30583
+	.short	-8841
+	.short	-8841
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8745
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	30589
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	-10275
+	.short	-8739
+	.short	-10275
+	.short	32221
+	.short	-8841
+	.short	32215
+	.short	-8841
+	.short	32215
+	.short	-10377
+	.short	-8841
+	.short	-10377
+	.short	-8745
+	.short	-8835
+	.short	-10275
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8745
+	.short	32221
+	.short	-8739
+	.short	32221
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	-10275
+	.short	-8739
+	.short	-10371
+	.short	-8739
+	.short	30589
+	.short	30583
+	.short	-10377
+	.short	30583
+	.short	-8841
+	.short	30583
+	.short	-8745
+	.short	-10377
+	.short	32221
+	.short	-10377
+	.short	32221
+	.short	32215
+	.short	-8739
+	.short	32221
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	30589
+	.short	30583
+	.short	30589
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-8739
+	.short	30589
+	.short	-8739
+	.short	30589
+	.short	-8739
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-6281
+	.short	-6281
+	.short	-4489
 	.short	-4370
+	.short	-4489
+	.short	-4370
+	.short	-4489
+	.short	-4370
+	.short	-4377
+	.short	-4370
+	.short	-4377
+	.short	32494
+	.short	-4489
+	.short	32494
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30702
+	.short	30583
+	.short	30702
+	.short	30583
 	.short	30590
 	.short	30583
 	.short	-6281
 	.short	30583
 	.short	-4489
 	.short	30583
-	.short	-4489
+	.short	-6169
 	.short	30583
-	.short	32494
 	.short	-6281
-	.short	30702
+	.short	-6162
+	.short	-6281
+	.short	-4370
+	.short	30590
+	.short	-4370
+	.short	30590
+	.short	-4370
 	.short	30583
 	.short	-4370
-	.short	32487
+	.short	-4489
+	.short	-4370
+	.short	-4489
+	.short	-4370
+	.short	-4489
+	.short	-4370
 	.short	-4377
-	.short	30695
-	.short	-4377
-	.short	30590
-	.short	30583
-	.short	30590
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30702
-	.short	30583
-	.short	30702
-	.short	30583
-	.short	32494
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17545
-	.short	-17541
-	.short	-17545
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	30583
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	31675
-	.short	30583
-	.short	-17477
-	.short	-18569
-	.short	-18501
-	.short	30583
-	.short	-17545
-	.short	30647
-	.short	-17545
-	.short	30587
-	.short	-17477
-	.short	30587
-	.short	-18569
-	.short	-17477
-	.short	-17541
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-18565
-	.short	-17477
-	.short	-18569
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	8747
-	.short	-17477
-	.short	11195
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	8882
-	.short	11195
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-7442
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	12014
+	.short	12014
 	.short	8738
-	.short	11195
+	.short	12014
+	.short	8738
+	.short	12002
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
+	.short	-17486
 	.short	8738
+	.short	-17486
 	.short	8738
-	.short	-13118
+	.short	-17486
 	.short	8738
-	.short	-13118
-	.short	8738
-	.short	-13118
-	.short	8738
-	.short	-13118
-	.short	-13278
-	.short	-13268
-	.short	-15838
-	.short	11298
+	.short	-17486
+	.short	-17630
+	.short	-17621
+	.short	-19934
+	.short	11042
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-69
+	.short	-17477
+	.short	-69
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-1
 	.short	28671
 	.short	-1
 	.short	26367
-	.short	-12292
+	.short	-16389
 	.short	26367
-	.short	-12340
+	.short	-16453
 	.short	26367
-	.short	-52
+	.short	-69
 	.short	26367
-	.short	-52
+	.short	-69
 	.short	28671
-	.short	-13108
+	.short	-17477
 	.short	28671
-	.short	-820
+	.short	-1093
 	.short	28671
 	.short	28662
 	.short	-154
@@ -5817,471 +5897,487 @@ shield_instructionsTiles:
 	.short	-10
 	.short	-1
 	.short	26223
-	.short	-27034
+	.short	26214
 	.short	26223
-	.short	-27034
 	.short	26214
-	.short	-26218
-	.short	26214
-	.short	26265
-	.short	-26890
-	.short	-26263
 	.short	26214
 	.short	26214
 	.short	26214
 	.short	26262
+	.short	26358
+	.short	-27034
 	.short	26214
 	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-26218
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
+	.short	-26983
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26218
 	.short	-26215
+	.short	-26266
+	.short	-26215
 	.short	-27034
 	.short	-26215
 	.short	-26266
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26263
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-27031
 	.short	-26215
-	.short	-26266
+	.short	-27034
 	.short	27033
 	.short	26982
 	.short	-26215
-	.short	6502
+	.short	26982
+	.short	-26215
+	.short	27033
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
+	.short	-27031
 	.short	26214
 	.short	-2458
 	.short	26217
 	.short	-154
 	.short	26214
 	.short	-2458
-	.short	17480
-	.short	-2332
-	.short	-6591
-	.short	-124
-	.short	26177
-	.short	-120
-	.short	-10623
-	.short	17428
-	.short	17473
-	.short	20065
-	.short	-12289
-	.short	-13108
-	.short	-12289
-	.short	-13108
-	.short	-12289
-	.short	-13108
-	.short	-1
-	.short	-820
-	.short	-1
-	.short	-12289
-	.short	-145
-	.short	-13105
-	.short	29774
-	.short	-7096
-	.short	-29208
-	.short	-11027
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-13108
-	.short	8738
-	.short	-15828
-	.short	8748
-	.short	5192
-	.short	17486
-	.short	7624
-	.short	4625
-	.short	8738
-	.short	-19934
-	.short	8738
-	.short	-17630
-	.short	8738
-	.short	-17630
-	.short	29218
-	.short	21845
-	.short	8738
-	.short	-17577
-	.short	8738
-	.short	-17577
-	.short	8749
-	.short	23387
-	.short	8749
-	.short	21847
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	11195
-	.short	8747
-	.short	-17477
-	.short	-17547
-	.short	16827
-	.short	-17579
-	.short	4539
-	.short	-17579
-	.short	6331
-	.short	-19787
-	.short	17435
-	.short	-19851
-	.short	5307
-	.short	-17486
-	.short	-17477
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	30587
-	.short	31675
-	.short	30583
-	.short	30651
-	.short	30583
-	.short	16852
-	.short	30596
-	.short	-6949
-	.short	32065
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-29065
-	.short	16708
-	.short	6327
-	.short	7499
-	.short	30583
-	.short	31607
-	.short	30583
-	.short	-17481
-	.short	30583
-	.short	30647
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30647
-	.short	30583
-	.short	-31528
-	.short	-31679
-	.short	-9336
-	.short	18548
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	20087
-	.short	30583
-	.short	19831
-	.short	30583
-	.short	-32393
-	.short	17543
-	.short	17425
-	.short	5953
-	.short	-30600
-	.short	30583
-	.short	-6169
-	.short	30583
-	.short	-6281
-	.short	30583
-	.short	30583
-	.short	30590
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-29164
-	.short	32068
-	.short	6263
-	.short	29005
-	.short	-4370
-	.short	-4370
-	.short	-4482
-	.short	-4370
-	.short	-6281
-	.short	-4370
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	16759
-	.short	30596
-	.short	-11049
-	.short	30541
-	.short	-4370
-	.short	-4370
-	.short	-4370
-	.short	-4377
-	.short	32494
-	.short	30583
-	.short	30702
-	.short	30583
-	.short	30583
-	.short	-6281
-	.short	30583
-	.short	30583
-	.short	17623
-	.short	-7091
-	.short	19831
-	.short	-31528
-	.short	-4377
-	.short	-4370
-	.short	-4377
-	.short	32494
-	.short	-4370
-	.short	-18450
-	.short	-4370
-	.short	-17426
-	.short	-6162
-	.short	31614
-	.short	-6169
-	.short	30583
-	.short	29000
-	.short	17485
-	.short	30849
-	.short	18196
-	.short	-4370
-	.short	-6281
-	.short	-4489
-	.short	30583
-	.short	-4485
-	.short	30590
-	.short	30583
-	.short	30590
-	.short	30590
-	.short	30590
-	.short	30702
-	.short	30583
-	.short	16766
-	.short	5188
-	.short	-11043
-	.short	29005
-	.short	30583
-	.short	-4370
-	.short	30583
-	.short	-6162
-	.short	30583
-	.short	-4370
-	.short	30600
-	.short	-4377
-	.short	30583
-	.short	-4370
-	.short	30583
-	.short	-4377
-	.short	-10476
-	.short	29764
-	.short	20180
-	.short	-11043
-	.short	30590
-	.short	30583
-	.short	30702
-	.short	5239
-	.short	30590
-	.short	5239
-	.short	-4370
-	.short	-11145
-	.short	32494
-	.short	-11145
-	.short	30583
-	.short	-7049
-	.short	-31679
-	.short	29927
-	.short	19924
-	.short	29911
-	.short	-17545
-	.short	-17477
-	.short	-17545
-	.short	31700
-	.short	-9353
-	.short	31716
-	.short	-5257
-	.short	30644
-	.short	-10377
-	.short	30580
-	.short	-10377
-	.short	-18572
-	.short	6007
-	.short	17640
-	.short	6007
-	.short	-29304
-	.short	30587
-	.short	30583
-	.short	30583
-	.short	-18569
-	.short	-18569
-	.short	-17541
-	.short	-17545
-	.short	-17541
-	.short	-17477
-	.short	30651
-	.short	-17477
-	.short	30651
-	.short	16753
-	.short	19844
-	.short	-11048
-	.short	-5299
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	17636
-	.short	18456
-	.short	-8572
-	.short	-20088
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-20149
-	.short	8891
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	8891
-	.short	-16819
-	.short	-31679
-	.short	-9394
-	.short	18468
-	.short	-17477
-	.short	8747
-	.short	8882
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8747
-	.short	8738
-	.short	-29368
-	.short	11236
-	.short	-10174
-	.short	-5331
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-19934
-	.short	8738
-	.short	11042
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-31679
-	.short	-11122
-	.short	19940
-	.short	-31710
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-15838
-	.short	20040
-	.short	7492
-	.short	6365
-	.short	-14270
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-820
-	.short	-9196
-	.short	18548
-	.short	7192
-	.short	20420
-	.short	-52
-	.short	-2305
+	.short	-31530
+	.short	-2452
+	.short	-31130
+	.short	-159
+	.short	-31130
+	.short	-15
+	.short	-31130
 	.short	-4
-	.short	-1
-	.short	-52
-	.short	-1
-	.short	26364
-	.short	-1
+	.short	-31130
+	.short	-30584
+	.short	-16385
+	.short	-17477
+	.short	-16385
+	.short	-17477
+	.short	-16385
+	.short	-17477
+	.short	-188
+	.short	-1093
+	.short	-236
+	.short	-16385
+	.short	-236
+	.short	-17473
+	.short	-236
+	.short	6276
+	.short	7960
+	.short	-32332
+	.short	-17477
+	.short	8891
+	.short	-19429
+	.short	8747
+	.short	-19381
+	.short	8738
+	.short	-20149
+	.short	8738
+	.short	-20149
+	.short	8738
+	.short	-17333
+	.short	8747
+	.short	-17333
+	.short	-30702
+	.short	11399
+	.short	11585
+	.short	8738
+	.short	-4562
+	.short	8769
+	.short	-4574
+	.short	8724
+	.short	21842
+	.short	8724
+	.short	21986
+	.short	8724
+	.short	21998
+	.short	-7484
+	.short	21998
+	.short	-7480
+	.short	21998
+	.short	11992
+	.short	21986
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-10923
+	.short	-4370
+	.short	21886
+	.short	-4370
+	.short	21998
+	.short	-4370
+	.short	21998
+	.short	-4370
+	.short	30046
+	.short	-4370
+	.short	21845
+	.short	-6162
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	32494
+	.short	-6114
+	.short	30583
+	.short	-7138
+	.short	30583
+	.short	29006
+	.short	30583
+	.short	29006
+	.short	30583
+	.short	-30588
+	.short	-31551
+	.short	29070
+	.short	28999
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30488
+	.short	-31545
+	.short	31876
+	.short	-30857
+	.short	30583
+	.short	32375
+	.short	30583
+	.short	30695
+	.short	30583
+	.short	30695
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-30516
+	.short	18449
+	.short	19777
+	.short	16756
+	.short	30583
+	.short	30679
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30860
+	.short	18564
+	.short	6084
+	.short	-32396
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8745
+	.short	16759
+	.short	-10377
+	.short	5239
+	.short	-10377
+	.short	6263
+	.short	30583
+	.short	-14217
+	.short	30583
+	.short	-30580
+	.short	19656
+	.short	-10047
+	.short	-15161
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8835
+	.short	-8739
+	.short	30589
+	.short	-10275
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	31880
+	.short	18561
+	.short	4492
+	.short	-29496
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8745
+	.short	-14115
+	.short	-8745
+	.short	30925
+	.short	30583
+	.short	29719
+	.short	-10377
+	.short	29719
+	.short	-10377
+	.short	-30588
+	.short	19828
+	.short	29004
+	.short	30583
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	32221
+	.short	-8739
+	.short	-4643
+	.short	-8739
+	.short	-6179
+	.short	-8739
+	.short	32381
+	.short	-8739
+	.short	-10377
+	.short	-8936
+	.short	19524
+	.short	-10428
+	.short	5336
+	.short	-8739
+	.short	-10371
+	.short	-8745
+	.short	-10377
+	.short	-8834
+	.short	30589
+	.short	-10377
+	.short	30685
+	.short	-10275
+	.short	-10275
+	.short	30685
+	.short	-10275
+	.short	-15992
+	.short	31876
+	.short	-14265
+	.short	31885
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	30583
+	.short	-8739
+	.short	7308
+	.short	-29624
+	.short	-10367
+	.short	-15295
+	.short	-8739
+	.short	32119
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	30685
+	.short	-8739
+	.short	30589
+	.short	-8739
+	.short	30583
+	.short	32221
+	.short	30583
+	.short	-30696
+	.short	6088
+	.short	31885
+	.short	16833
+	.short	-6281
+	.short	32385
+	.short	-6281
+	.short	32385
+	.short	-4489
+	.short	32321
+	.short	-4489
+	.short	30529
+	.short	30583
+	.short	30532
+	.short	30583
+	.short	-6380
+	.short	-11128
+	.short	-29676
+	.short	-10217
+	.short	32276
+	.short	-30521
+	.short	30664
+	.short	31884
+	.short	-6376
+	.short	30529
+	.short	-6281
+	.short	-6380
+	.short	-6281
+	.short	-4584
+	.short	-14354
+	.short	-4584
+	.short	-14354
+	.short	6280
+	.short	-32393
+	.short	30488
+	.short	-12681
+	.short	-30690
+	.short	-4396
+	.short	-13183
+	.short	-4408
+	.short	32276
+	.short	-4370
+	.short	-4584
+	.short	-4370
+	.short	-4408
+	.short	-4370
+	.short	-4408
+	.short	-4372
+	.short	-30584
+	.short	18628
+	.short	20184
+	.short	-12991
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	-7442
+	.short	-4370
+	.short	12014
+	.short	-30642
+	.short	-31532
+	.short	7745
+	.short	16920
+	.short	-4370
+	.short	8942
+	.short	-4382
+	.short	8942
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8942
+	.short	11810
+	.short	-30703
+	.short	18498
+	.short	-29375
+	.short	-32495
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-4574
+	.short	8738
+	.short	-4574
+	.short	8738
+	.short	8930
+	.short	8930
+	.short	12002
+	.short	-15231
+	.short	8750
+	.short	17426
+	.short	8738
+	.short	-19934
+	.short	8738
+	.short	-19934
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-19934
+	.short	7560
+	.short	-18552
+	.short	16716
+	.short	-17267
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-30643
+	.short	19633
+	.short	19220
+	.short	5336
+	.short	-69
 	.short	-2305
-	.short	26367
+	.short	-5
+	.short	-1
+	.short	-69
+	.short	-116
+	.short	26363
+	.short	-191
+	.short	-2305
+	.short	26132
+	.short	-1
+	.short	28436
+	.short	16776
+	.short	6280
+	.short	24863
+	.short	-2360
 	.short	-1
 	.short	28671
-	.short	5261
-	.short	16751
-	.short	19729
-	.short	-11041
-	.short	-1
 	.short	28671
-	.short	25823
 	.short	26214
-	.short	25631
+	.short	28671
 	.short	26214
-	.short	26655
+	.short	26223
 	.short	26214
-	.short	26646
 	.short	26214
-	.short	24854
 	.short	26214
-	.short	24900
 	.short	26214
-	.short	24975
+	.short	26214
+	.short	26223
+	.short	26214
+	.short	26223
 	.short	28662
 	.short	26214
-	.short	-27034
+	.short	26214
 	.short	26214
 	.short	-27034
 	.short	-2458
@@ -6291,10 +6387,19 @@ shield_instructionsTiles:
 	.short	26214
 	.short	-27034
 	.short	26223
-	.short	-26986
+	.short	26262
 	.short	26358
-	.short	-27031
 	.short	-27034
+	.short	-27034
+	.short	-26263
+	.short	-26215
+	.short	-26215
+	.short	-26983
+	.short	-26215
+	.short	-26263
+	.short	-26215
+	.short	-26266
+	.short	-26215
 	.short	-26263
 	.short	-26215
 	.short	-26215
@@ -6302,360 +6407,383 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26983
+	.short	-26215
 	.short	-26266
 	.short	-26215
 	.short	-26215
+	.short	-26218
+	.short	-26215
+	.short	-26215
+	.short	-26263
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
-	.short	-26239
-	.short	19814
-	.short	-26239
-	.short	19814
-	.short	-26239
-	.short	19814
-	.short	27016
-	.short	19814
+	.short	-30311
+	.short	26220
+	.short	-30311
+	.short	26220
+	.short	-29082
+	.short	26221
+	.short	-29338
+	.short	26221
 	.short	27033
 	.short	26214
 	.short	26265
 	.short	-2458
-	.short	26265
+	.short	26217
 	.short	-154
 	.short	26265
 	.short	-1
-	.short	18417
-	.short	28996
-	.short	19821
-	.short	-13108
-	.short	18431
-	.short	7617
-	.short	8191
-	.short	-10172
+	.short	20248
+	.short	-30788
+	.short	-31208
+	.short	-30788
+	.short	20248
+	.short	16820
+	.short	-15228
+	.short	29832
 	.short	-1
-	.short	-12340
+	.short	-16453
 	.short	-1
-	.short	-13057
+	.short	-17409
 	.short	28671
-	.short	-13057
+	.short	-17409
 	.short	-1
-	.short	-13105
-	.short	11652
-	.short	30797
-	.short	-11129
-	.short	18652
-	.short	-32319
-	.short	-29487
-	.short	-11196
-	.short	-31679
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	-15668
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
+	.short	-17473
+	.short	11661
+	.short	-15672
+	.short	-8825
+	.short	19416
+	.short	-13173
+	.short	-15928
+	.short	-15285
+	.short	8580
+	.short	-17477
+	.short	8891
+	.short	-17477
+	.short	-19781
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11195
+	.short	8920
+	.short	21794
+	.short	8920
+	.short	21794
+	.short	8920
+	.short	21794
+	.short	11336
+	.short	21794
 	.short	8738
-	.short	8791
-	.short	8750
-	.short	8791
-	.short	8737
-	.short	8791
-	.short	8743
+	.short	8738
+	.short	8738
+	.short	-7646
+	.short	8738
+	.short	-7646
+	.short	8738
+	.short	11810
+	.short	21794
+	.short	-6283
+	.short	24098
+	.short	-4491
+	.short	21986
+	.short	-4379
 	.short	21845
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17579
-	.short	-11077
-	.short	-18597
-	.short	-11077
-	.short	-17579
-	.short	5307
-	.short	-17547
-	.short	16827
-	.short	-17630
-	.short	-17477
-	.short	-17621
-	.short	-17477
-	.short	-17630
-	.short	-19925
-	.short	11042
-	.short	8738
-	.short	30747
-	.short	29003
-	.short	-20085
-	.short	-20149
-	.short	-7138
-	.short	-17587
-	.short	17640
-	.short	-17452
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17621
-	.short	-17477
-	.short	-6933
-	.short	7099
-	.short	-19237
-	.short	7099
-	.short	5355
-	.short	7451
-	.short	16827
-	.short	6932
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-29932
-	.short	-10172
-	.short	-30796
-	.short	30577
-	.short	7096
-	.short	6100
-	.short	-5199
-	.short	-11196
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	17543
-	.short	6264
-	.short	7489
-	.short	6264
-	.short	19736
-	.short	-30600
-	.short	-10175
-	.short	16772
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17486
-	.short	-17477
-	.short	17639
-	.short	30484
-	.short	29915
-	.short	30583
-	.short	5339
-	.short	32215
-	.short	16852
-	.short	30596
-	.short	31671
-	.short	30583
-	.short	-17477
-	.short	30583
-	.short	-17477
-	.short	31675
-	.short	-17477
-	.short	-17477
-	.short	16759
-	.short	30532
-	.short	-11049
-	.short	30529
-	.short	-11241
-	.short	32324
-	.short	17623
-	.short	-11187
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	-17541
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	19831
-	.short	17528
-	.short	19831
-	.short	-31619
-	.short	19899
-	.short	5239
-	.short	16827
-	.short	-11145
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	30743
-	.short	17485
-	.short	-7801
-	.short	19988
-	.short	-11897
-	.short	18660
-	.short	5255
-	.short	-29372
-	.short	-17545
-	.short	-17477
-	.short	-17545
-	.short	-18565
-	.short	-17481
-	.short	-18565
-	.short	-17477
-	.short	-17545
-	.short	-11043
-	.short	29006
-	.short	16765
-	.short	30596
-	.short	-11139
-	.short	30583
-	.short	18644
-	.short	30488
-	.short	30935
-	.short	29768
-	.short	32075
-	.short	29911
-	.short	30795
-	.short	30798
-	.short	17435
-	.short	30596
-	.short	16852
-	.short	30590
-	.short	-32300
-	.short	-10370
-	.short	16852
-	.short	4589
-	.short	-29372
-	.short	-11964
-	.short	-4489
-	.short	30583
-	.short	32487
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	17473
-	.short	29911
-	.short	16852
-	.short	29911
-	.short	17620
-	.short	-6946
-	.short	19780
-	.short	-31532
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	6007
-	.short	6932
-	.short	6007
-	.short	-30860
-	.short	-30851
-	.short	19896
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4562
+	.short	-4370
+	.short	-4382
+	.short	-7442
+	.short	-4574
+	.short	-7646
+	.short	31886
+	.short	30604
+	.short	-4978
+	.short	-6271
+	.short	-7794
+	.short	-7807
+	.short	18510
+	.short	-30692
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-7795
+	.short	-30857
+	.short	-4979
+	.short	-29202
+	.short	-4543
+	.short	-29458
+	.short	-4396
+	.short	-29458
+	.short	-4370
+	.short	-29458
+	.short	-4370
+	.short	-29458
+	.short	-4370
+	.short	-32274
+	.short	-4370
+	.short	16878
+	.short	6116
+	.short	-32396
+	.short	18401
+	.short	-32399
+	.short	-32276
+	.short	17532
+	.short	-15224
+	.short	5358
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	-6162
+	.short	-4370
+	.short	-4370
+	.short	-30863
+	.short	18300
+	.short	-29571
+	.short	18300
 	.short	-30850
-	.short	5192
+	.short	-32396
+	.short	-12562
+	.short	-15224
+	.short	-4370
+	.short	32494
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30916
+	.short	-30697
+	.short	30913
+	.short	29767
+	.short	-14131
+	.short	-14308
+	.short	-30505
+	.short	-31628
 	.short	30583
-	.short	-18569
 	.short	30583
-	.short	-18569
+	.short	-6281
 	.short	30583
-	.short	-18569
+	.short	-4370
+	.short	30590
+	.short	-4370
+	.short	-4370
+	.short	18196
+	.short	30577
+	.short	-30857
+	.short	30577
+	.short	19655
+	.short	6088
+	.short	-14568
+	.short	6276
 	.short	30583
-	.short	-18569
-	.short	16760
-	.short	-9404
-	.short	-11048
-	.short	-9407
-	.short	-11235
-	.short	-8636
-	.short	17623
-	.short	5197
-	.short	-17541
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17621
-	.short	-19781
-	.short	-17621
-	.short	-19781
-	.short	-17644
-	.short	-16824
-	.short	-17452
-	.short	-17528
-	.short	-17484
-	.short	-17644
-	.short	-17628
-	.short	-17452
-	.short	-17630
-	.short	-17477
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	-17477
-	.short	11195
-	.short	-17486
-	.short	6990
-	.short	-6076
-	.short	-29875
-	.short	8737
-	.short	6989
-	.short	4836
-	.short	-10162
-	.short	-11196
-	.short	8891
-	.short	-17477
-	.short	-17486
-	.short	11195
-	.short	-17477
-	.short	8891
-	.short	-17477
-	.short	8891
-	.short	10306
-	.short	11042
+	.short	30583
+	.short	30583
+	.short	-6281
+	.short	32375
+	.short	-4482
+	.short	-4370
+	.short	-4370
+	.short	28999
+	.short	30583
+	.short	28999
+	.short	30583
+	.short	29767
+	.short	30577
+	.short	-30690
+	.short	30588
+	.short	-4370
+	.short	30583
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	30702
+	.short	-4370
+	.short	-29458
+	.short	7297
+	.short	30913
+	.short	16775
+	.short	30749
+	.short	6167
+	.short	6343
+	.short	-14313
+	.short	-32393
+	.short	-6969
+	.short	32494
+	.short	-5049
+	.short	30590
+	.short	-4532
+	.short	-6274
+	.short	-4408
+	.short	-4489
+	.short	6359
+	.short	31884
+	.short	-14121
+	.short	-10356
+	.short	29719
+	.short	19852
+	.short	32072
+	.short	6285
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30590
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	-10364
+	.short	29057
+	.short	-10360
+	.short	32129
+	.short	-13183
+	.short	32068
+	.short	-14195
+	.short	32020
+	.short	-8841
+	.short	30685
+	.short	-8745
+	.short	30583
+	.short	32215
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	6215
+	.short	-31625
+	.short	16759
+	.short	6344
+	.short	32076
+	.short	-31724
+	.short	-30644
+	.short	19668
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	31816
+	.short	30484
+	.short	30583
+	.short	-14568
+	.short	-11908
+	.short	-13288
+	.short	29064
+	.short	-15996
+	.short	30583
+	.short	6007
+	.short	30583
+	.short	6007
+	.short	-10377
+	.short	-29500
+	.short	30583
+	.short	-14204
+	.short	30664
+	.short	-12569
+	.short	30664
+	.short	7918
+	.short	-6184
+	.short	7918
+	.short	-4488
+	.short	7918
+	.short	-4492
+	.short	7918
+	.short	-4383
+	.short	20206
+	.short	-12755
+	.short	16868
+	.short	-12754
+	.short	-11128
+	.short	20200
+	.short	-4408
+	.short	20200
+	.short	-12568
+	.short	20200
+	.short	-4383
+	.short	-28956
+	.short	-4383
+	.short	-4383
+	.short	-4370
+	.short	-4372
+	.short	12014
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	-4408
+	.short	16964
+	.short	-4408
+	.short	16916
+	.short	7752
+	.short	-28968
+	.short	18572
+	.short	-28948
+	.short	8942
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8942
+	.short	-32040
+	.short	-32476
+	.short	-29404
+	.short	16673
+	.short	-29663
+	.short	16684
+	.short	-29460
+	.short	-32286
+	.short	8942
+	.short	12014
+	.short	8942
+	.short	8738
+	.short	8750
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	6162
+	.short	8750
+	.short	-10222
+	.short	8750
+	.short	9282
+	.short	8916
 	.short	8514
-	.short	-11742
-	.short	11595
-	.short	4642
-	.short	11854
-	.short	-11742
-	.short	8882
-	.short	8891
-	.short	8747
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	17473
-	.short	-31710
-	.short	16852
-	.short	5154
-	.short	17636
-	.short	-11218
-	.short	19780
-	.short	29908
 	.short	8738
 	.short	8738
 	.short	8738
@@ -6664,68 +6792,68 @@ shield_instructionsTiles:
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	-6942
-	.short	9426
-	.short	-6942
-	.short	-15150
-	.short	5346
-	.short	-15998
-	.short	16674
-	.short	-13292
+	.short	-10174
+	.short	-12915
+	.short	9346
+	.short	6029
+	.short	8578
+	.short	-14452
+	.short	11394
+	.short	-15219
 	.short	8738
-	.short	-830
-	.short	-15838
-	.short	-52
-	.short	-13118
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-29672
-	.short	19704
-	.short	18388
-	.short	19652
-	.short	4564
-	.short	20196
-	.short	29000
-	.short	18244
+	.short	-1102
+	.short	-19934
+	.short	-69
+	.short	-17486
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	31672
+	.short	-32488
+	.short	31672
+	.short	-13368
+	.short	7960
+	.short	-15948
+	.short	18561
+	.short	-31561
 	.short	-154
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13108
-	.short	-820
-	.short	-13108
-	.short	-13108
-	.short	-29196
-	.short	-3706
-	.short	-32271
-	.short	27983
-	.short	-32259
-	.short	-11955
-	.short	19959
-	.short	-31727
+	.short	-17477
+	.short	-17473
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-17477
+	.short	-17477
+	.short	28628
+	.short	-56
+	.short	-3708
+	.short	28616
+	.short	-3041
+	.short	-12520
+	.short	27720
+	.short	-11132
 	.short	28671
 	.short	26367
-	.short	28668
+	.short	28667
 	.short	26367
-	.short	-4
+	.short	-5
 	.short	26367
 	.short	-1
 	.short	28671
-	.short	-3765
+	.short	-2458
 	.short	26367
-	.short	24897
+	.short	26265
 	.short	26214
-	.short	-3711
+	.short	-154
 	.short	26367
-	.short	5254
+	.short	28662
 	.short	-2458
 	.short	26358
 	.short	28518
 	.short	26214
-	.short	-27034
+	.short	26214
 	.short	26358
-	.short	-26218
+	.short	-26266
 	.short	26214
 	.short	27030
 	.short	-26266
@@ -6736,15 +6864,15 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26266
 	.short	-26215
+	.short	27030
 	.short	-26218
+	.short	27030
 	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	-26983
+	.short	-26986
 	.short	-26215
 	.short	-27034
 	.short	-26215
-	.short	-26215
+	.short	27033
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -6762,11 +6890,11 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-27031
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	27033
-	.short	-26215
+	.short	-26218
+	.short	-27031
+	.short	-27034
+	.short	26265
+	.short	-26986
 	.short	26265
 	.short	-26215
 	.short	26265
@@ -6775,10 +6903,10 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	26217
 	.short	-26215
-	.short	26265
+	.short	26217
 	.short	26265
 	.short	-1
-	.short	28521
+	.short	28518
 	.short	-10
 	.short	-154
 	.short	-10
@@ -6793,108 +6921,109 @@ shield_instructionsTiles:
 	.short	-10
 	.short	-1
 	.short	-1
-	.short	-13105
+	.short	-17473
 	.short	-1
-	.short	-13057
+	.short	-17409
 	.short	-1
-	.short	-12289
+	.short	-16385
 	.short	-10
 	.short	-1
 	.short	-154
 	.short	-1
 	.short	-1
-	.short	-12289
+	.short	-16385
 	.short	-1
-	.short	-13057
+	.short	-17409
 	.short	-1
-	.short	-769
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-32308
-	.short	-12292
-	.short	-30516
-	.short	-13057
-	.short	6348
-	.short	-13105
-	.short	6348
-	.short	8738
-	.short	8738
-	.short	8748
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-15828
-	.short	-13108
-	.short	19906
-	.short	-14524
-	.short	-11150
-	.short	-12729
-	.short	-15140
-	.short	-13108
-	.short	-14308
-	.short	-13108
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8898
-	.short	8738
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	-11732
-	.short	-13108
-	.short	7372
-	.short	-13108
-	.short	7372
-	.short	-12340
-	.short	4812
-	.short	-17630
+	.short	-1025
 	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	-17486
 	.short	11195
-	.short	-17484
-	.short	8747
-	.short	8740
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	11195
+	.short	-16389
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17473
+	.short	-17477
 	.short	8738
-	.short	8744
-	.short	5154
-	.short	8744
-	.short	8738
-	.short	8891
 	.short	8738
 	.short	8747
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	5154
-	.short	8738
-	.short	5154
-	.short	8898
-	.short	-11230
-	.short	-13108
-	.short	-11230
+	.short	-19925
+	.short	-17477
 	.short	-17486
-	.short	11195
-	.short	-19934
-	.short	8891
+	.short	-17477
+	.short	-17630
+	.short	-17477
+	.short	-17477
+	.short	-19381
+	.short	-17477
+	.short	-19381
+	.short	8738
+	.short	8738
+	.short	8738
 	.short	8738
 	.short	8882
 	.short	8738
+	.short	-17477
+	.short	8747
+	.short	-17477
+	.short	8747
+	.short	-17477
+	.short	11195
+	.short	-17477
+	.short	11195
+	.short	-16453
+	.short	8891
+	.short	-4574
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	8942
+	.short	12002
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-4370
+	.short	8750
+	.short	8942
+	.short	8738
+	.short	8750
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8882
+	.short	8738
+	.short	-17477
+	.short	8738
+	.short	-4382
+	.short	12014
+	.short	-4574
+	.short	12014
+	.short	8738
+	.short	12002
+	.short	8738
+	.short	-7634
 	.short	8738
 	.short	8738
 	.short	8738
@@ -6903,263 +7032,262 @@ shield_instructionsTiles:
 	.short	8738
 	.short	8738
 	.short	8738
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	-7634
+	.short	-4562
+	.short	8738
+	.short	-4574
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-7442
+	.short	-4370
+	.short	-4562
+	.short	-4370
+	.short	-4562
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	-4370
+	.short	-6162
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	-4489
+	.short	32494
+	.short	-4377
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-7442
+	.short	-4370
+	.short	8930
+	.short	-4370
+	.short	30583
+	.short	30583
+	.short	32494
+	.short	30583
+	.short	32494
+	.short	30583
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	32382
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	30583
+	.short	32375
+	.short	-4482
+	.short	-4482
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	30583
+	.short	-6281
+	.short	30583
+	.short	-4489
+	.short	30583
+	.short	12007
+	.short	30583
+	.short	-4370
+	.short	-6281
+	.short	-4370
+	.short	-6281
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	12014
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	12014
+	.short	-4382
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	8942
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	12014
+	.short	-4370
+	.short	8942
+	.short	8750
+	.short	-4370
+	.short	-7646
+	.short	-4370
+	.short	-4574
+	.short	8942
+	.short	-4370
+	.short	8942
+	.short	-7442
+	.short	12014
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-4370
+	.short	8738
+	.short	12014
+	.short	8738
+	.short	8942
+	.short	8738
+	.short	8942
+	.short	-19934
 	.short	8738
 	.short	-17630
-	.short	-17477
-	.short	-19934
-	.short	-19925
-	.short	-19934
+	.short	8738
+	.short	-17630
+	.short	8738
+	.short	11042
+	.short	8738
+	.short	11042
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
+	.short	11195
+	.short	11042
+	.short	-17621
 	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
+	.short	-17621
+	.short	8747
 	.short	-17486
-	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	-17630
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
 	.short	-19781
 	.short	-17477
-	.short	-19925
 	.short	-17477
+	.short	8738
 	.short	-17630
-	.short	-17477
-	.short	-17486
-	.short	11195
-	.short	19387
-	.short	11195
-	.short	19387
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17487
-	.short	8891
-	.short	-17474
-	.short	8891
-	.short	-17477
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-19781
-	.short	-17477
-	.short	-19925
-	.short	-17477
 	.short	8738
-	.short	-17477
-	.short	30647
-	.short	30583
-	.short	31675
-	.short	30583
-	.short	-17477
-	.short	-17545
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30587
-	.short	30583
-	.short	-18565
-	.short	-17541
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30583
-	.short	30587
-	.short	-17481
-	.short	-17477
-	.short	-17477
-	.short	7099
-	.short	-17484
-	.short	7099
-	.short	-17487
-	.short	30583
-	.short	-17545
-	.short	30583
-	.short	11127
-	.short	30583
-	.short	11191
-	.short	30583
-	.short	11195
-	.short	-18569
-	.short	-17477
-	.short	-17541
-	.short	-17486
-	.short	-17477
-	.short	-9294
-	.short	11195
-	.short	-9285
-	.short	11195
-	.short	-19934
-	.short	11195
-	.short	11186
-	.short	11195
-	.short	-17486
 	.short	-17630
-	.short	11195
-	.short	-17477
-	.short	8891
-	.short	-9285
-	.short	8894
-	.short	19380
-	.short	11197
-	.short	19380
-	.short	8894
-	.short	8747
-	.short	-17477
+	.short	8738
+	.short	8738
+	.short	8738
 	.short	-19934
+	.short	-17630
+	.short	-17630
+	.short	-17486
 	.short	-17477
-	.short	8738
-	.short	8891
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
+	.short	-17486
 	.short	-17477
-	.short	8738
-	.short	11051
-	.short	8738
+	.short	-17477
+	.short	-17477
 	.short	8747
-	.short	8738
-	.short	8747
-	.short	-15838
-	.short	10258
-	.short	-13278
-	.short	10370
-	.short	-13278
-	.short	8578
-	.short	11298
-	.short	8578
-	.short	11298
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	11468
-	.short	11298
-	.short	-13268
-	.short	8738
-	.short	-13268
-	.short	8748
-	.short	-13118
-	.short	-15668
-	.short	-13108
-	.short	-13108
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	-13278
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-15838
-	.short	-13278
-	.short	-13278
-	.short	-13118
-	.short	-13108
-	.short	-16056
-	.short	-11028
-	.short	-15220
-	.short	-15988
-	.short	8748
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13118
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-12292
-	.short	-13108
-	.short	-52
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-4
-	.short	-52
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17486
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-16389
+	.short	-17477
+	.short	-69
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-5
+	.short	-69
 	.short	-1
-	.short	-52
+	.short	-69
 	.short	28662
 	.short	-1
-	.short	-27034
+	.short	26214
 	.short	-1
 	.short	28662
 	.short	-1
@@ -7169,565 +7297,533 @@ shield_instructionsTiles:
 	.short	28671
 	.short	26358
 	.short	26367
-	.short	-26890
+	.short	26358
 	.short	26214
 	.short	26214
-	.short	26262
+	.short	26214
 	.short	-2458
-	.short	27033
+	.short	26265
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-26266
+	.short	26214
+	.short	-26266
 	.short	26214
 	.short	26982
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	-26266
-	.short	26214
-	.short	-26266
-	.short	26214
-	.short	27030
-	.short	-27617
-	.short	27033
-	.short	-26266
+	.short	26367
 	.short	26265
 	.short	-26266
-	.short	-26215
+	.short	26265
 	.short	-26266
 	.short	-26263
-	.short	27033
+	.short	-26266
+	.short	-26266
+	.short	27030
 	.short	-26218
-	.short	-26215
+	.short	27030
 	.short	-26218
 	.short	26262
 	.short	-26218
+	.short	26214
+	.short	-26215
 	.short	27030
 	.short	-26215
-	.short	27030
+	.short	-27034
 	.short	-26215
-	.short	-26986
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-11127
-	.short	-26215
-	.short	5273
-	.short	-26215
-	.short	-32359
-	.short	-26215
-	.short	20121
-	.short	-26215
-	.short	-30311
-	.short	-26215
-	.short	6553
-	.short	-26215
-	.short	6553
 	.short	-26215
 	.short	27033
-	.short	-19239
-	.short	-11192
-	.short	-32487
-	.short	-30575
-	.short	19273
-	.short	19867
-	.short	19985
-	.short	19867
-	.short	19428
-	.short	6289
-	.short	6552
-	.short	-28348
-	.short	-26223
 	.short	-26215
-	.short	26214
-	.short	-154
-	.short	24897
-	.short	-30899
-	.short	24969
-	.short	26177
-	.short	24969
-	.short	26248
-	.short	-17015
-	.short	26180
-	.short	7494
-	.short	-4543
-	.short	5254
-	.short	29771
-	.short	26214
-	.short	-151
-	.short	26214
-	.short	-10
-	.short	18644
-	.short	17485
-	.short	-8828
-	.short	8152
-	.short	26244
-	.short	-16063
-	.short	-236
-	.short	17436
-	.short	32724
-	.short	20456
-	.short	-13196
-	.short	5192
-	.short	-12289
-	.short	26364
-	.short	-13108
-	.short	-10036
-	.short	17623
-	.short	-11020
-	.short	7751
-	.short	-11148
-	.short	-31667
-	.short	-7059
-	.short	-127
-	.short	-7066
-	.short	-703
-	.short	-11167
-	.short	17551
-	.short	17649
-	.short	28662
-	.short	-817
-	.short	-14196
-	.short	-820
-	.short	17480
-	.short	16833
-	.short	-15988
-	.short	8188
-	.short	-3700
-	.short	-8193
-	.short	-3700
-	.short	32767
-	.short	-3699
-	.short	-1
-	.short	-691
-	.short	-2305
-	.short	-2225
-	.short	-12289
-	.short	-769
-	.short	7372
-	.short	-15
-	.short	4492
-	.short	6388
-	.short	-32484
-	.short	-30620
-	.short	-29044
-	.short	17620
-	.short	-29554
-	.short	20036
-	.short	-29576
-	.short	19480
-	.short	19661
-	.short	-13108
-	.short	-13108
-	.short	-13279
-	.short	-15828
-	.short	17617
-	.short	29932
-	.short	20033
-	.short	-15122
-	.short	18404
-	.short	-15124
-	.short	20168
-	.short	-15140
-	.short	20161
-	.short	-15140
-	.short	18381
-	.short	-31528
-	.short	-13060
-	.short	-13108
-	.short	-13108
-	.short	29740
-	.short	17628
-	.short	-15244
-	.short	-4793
-	.short	5332
-	.short	-13235
-	.short	5340
-	.short	-13183
-	.short	-11044
-	.short	-12979
-	.short	-15151
-	.short	17550
-	.short	-15343
-	.short	-13108
-	.short	-13108
-	.short	8738
-	.short	8738
-	.short	-12984
-	.short	16684
-	.short	-14319
-	.short	4812
-	.short	-16110
-	.short	7372
-	.short	-15988
-	.short	7372
-	.short	-15988
-	.short	7372
-	.short	5148
-	.short	7372
-	.short	-13108
-	.short	-13108
-	.short	8738
-	.short	8738
-	.short	17624
-	.short	19758
-	.short	20104
-	.short	-6943
-	.short	16916
-	.short	17629
-	.short	17012
-	.short	10269
-	.short	19656
-	.short	-11235
-	.short	19489
-	.short	18644
-	.short	-13108
-	.short	-13108
-	.short	8891
-	.short	-17477
-	.short	4676
-	.short	17476
-	.short	19777
-	.short	5358
-	.short	19928
-	.short	-11027
-	.short	4642
-	.short	8516
-	.short	16914
-	.short	8749
-	.short	-32236
-	.short	8580
-	.short	-29236
-	.short	17426
-	.short	-17477
-	.short	19899
-	.short	17537
-	.short	17617
-	.short	6977
-	.short	16824
-	.short	17426
-	.short	-32328
-	.short	7745
-	.short	-32472
-	.short	19736
-	.short	16680
-	.short	-10175
-	.short	20100
-	.short	8738
-	.short	8738
-	.short	8891
-	.short	8738
-	.short	-29052
-	.short	7748
-	.short	-10206
-	.short	19790
-	.short	17634
-	.short	-32236
-	.short	9426
-	.short	-13278
-	.short	5330
-	.short	7634
-	.short	16660
-	.short	20100
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-17477
-	.short	-18364
-	.short	18667
-	.short	-19989
-	.short	17083
-	.short	8724
-	.short	16939
-	.short	8513
-	.short	16930
-	.short	9426
-	.short	16930
-	.short	8516
-	.short	20002
-	.short	8748
-	.short	8738
-	.short	11195
-	.short	-17477
-	.short	-11123
-	.short	-18367
-	.short	-30703
-	.short	-19432
-	.short	18612
-	.short	-19234
-	.short	18465
-	.short	-18405
-	.short	6189
-	.short	-18405
-	.short	6190
-	.short	-31717
-	.short	-19934
-	.short	-17477
-	.short	-17477
-	.short	-17477
-	.short	17547
-	.short	16817
-	.short	7041
-	.short	-19228
-	.short	-5356
-	.short	18660
-	.short	-5356
-	.short	4836
-	.short	7048
-	.short	8664
-	.short	-31667
-	.short	17646
-	.short	8738
-	.short	8738
-	.short	-29765
-	.short	-17487
-	.short	16772
-	.short	-16828
-	.short	19230
-	.short	-17487
-	.short	19377
-	.short	-17475
-	.short	16916
-	.short	8893
-	.short	16973
-	.short	12001
-	.short	4628
-	.short	11908
-	.short	-13278
-	.short	8748
-	.short	8891
-	.short	7090
-	.short	18667
-	.short	16852
-	.short	10379
-	.short	4632
-	.short	18658
-	.short	-32236
-	.short	10370
-	.short	-32236
-	.short	7490
-	.short	-32236
-	.short	5250
-	.short	-11967
-	.short	8738
-	.short	-15838
-	.short	20152
-	.short	8891
-	.short	17476
-	.short	-29052
-	.short	16673
-	.short	-30686
-	.short	-32479
-	.short	-29150
-	.short	-32479
-	.short	-30686
-	.short	16680
-	.short	-11044
-	.short	19780
-	.short	18452
-	.short	-15668
-	.short	-13108
-	.short	8738
-	.short	-13118
-	.short	-12988
-	.short	17543
-	.short	8578
-	.short	19480
-	.short	28996
-	.short	-13196
-	.short	-11956
-	.short	-13116
-	.short	28993
-	.short	7188
-	.short	5137
-	.short	5185
-	.short	-52
-	.short	-13057
-	.short	-12916
-	.short	-13108
-	.short	7502
-	.short	7236
-	.short	-32435
-	.short	19534
-	.short	-7092
-	.short	-29480
-	.short	18508
-	.short	-819
-	.short	-29362
-	.short	7652
-	.short	30542
-	.short	16708
-	.short	-1
-	.short	-2305
-	.short	-13108
-	.short	-13108
-	.short	-1980
-	.short	-13105
-	.short	-15892
-	.short	-13108
-	.short	-13292
-	.short	-13108
-	.short	-16063
-	.short	-13108
-	.short	-15137
-	.short	-13108
-	.short	-3772
-	.short	-13100
-	.short	-145
-	.short	-1
-	.short	-11028
-	.short	-13234
-	.short	-30516
-	.short	7377
-	.short	19916
-	.short	20168
-	.short	19660
-	.short	4545
-	.short	19660
-	.short	6337
-	.short	19660
-	.short	16893
-	.short	20479
-	.short	18381
-	.short	-13105
-	.short	-52
-	.short	-13108
-	.short	-52
-	.short	6212
-	.short	-124
-	.short	-11049
-	.short	-4223
-	.short	5372
-	.short	5761
-	.short	-11012
-	.short	-31215
-	.short	-2850
-	.short	7448
-	.short	27972
-	.short	-1983
-	.short	-10
-	.short	-1
-	.short	-1
-	.short	-27025
-	.short	-28
-	.short	18543
-	.short	26228
-	.short	25631
-	.short	26212
-	.short	29718
-	.short	26228
-	.short	18534
-	.short	28116
-	.short	-2842
-	.short	27976
-	.short	17599
-	.short	-1
-	.short	-7905
-	.short	26217
-	.short	26214
-	.short	-7100
-	.short	-11192
-	.short	-30899
-	.short	6248
-	.short	-6323
-	.short	5192
-	.short	-31212
-	.short	5224
-	.short	18022
-	.short	5149
-	.short	-31016
-	.short	16660
-	.short	-3768
-	.short	-1
 	.short	27033
-	.short	26223
-	.short	-11895
-	.short	-29884
-	.short	-3706
-	.short	-11954
-	.short	24975
-	.short	26701
-	.short	24966
-	.short	27981
-	.short	24966
-	.short	26189
-	.short	5137
-	.short	-26291
-	.short	26223
-	.short	-26266
-	.short	-26986
-	.short	-26215
-	.short	-26156
-	.short	-26215
-	.short	26241
-	.short	-26215
-	.short	-26351
-	.short	-26215
-	.short	-26344
-	.short	-26215
-	.short	-25320
-	.short	-26215
-	.short	-28351
 	.short	-26215
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-30311
-	.short	-26215
-	.short	4505
-	.short	-26215
-	.short	-18357
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26213
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-27031
 	.short	-26215
 	.short	26982
 	.short	-26215
-	.short	27033
+	.short	26214
 	.short	-26215
+	.short	26214
 	.short	-26215
+	.short	26214
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	27033
+	.short	-26263
+	.short	26214
+	.short	-154
+	.short	26214
 	.short	28518
-	.short	28518
-	.short	26217
-	.short	28518
+	.short	26214
+	.short	26214
 	.short	26265
+	.short	26214
+	.short	19606
+	.short	24968
+	.short	5222
+	.short	-2026
+	.short	19814
+	.short	-2936
+	.short	18550
+	.short	-3002
+	.short	26214
+	.short	-826
+	.short	25622
+	.short	-20145
+	.short	25670
+	.short	-881
+	.short	24902
+	.short	-17011
+	.short	-30588
+	.short	-30584
+	.short	-17265
+	.short	-116
+	.short	-17265
+	.short	26241
+	.short	-17265
+	.short	26241
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-16389
+	.short	-1093
+	.short	-16385
+	.short	28671
+	.short	-16538
+	.short	-30697
+	.short	-17544
+	.short	32652
+	.short	6936
+	.short	-30689
+	.short	-30776
+	.short	-9087
+	.short	-29240
+	.short	-19781
+	.short	-3765
+	.short	-17477
+	.short	-3765
+	.short	-17477
+	.short	-3701
+	.short	-69
+	.short	-881
+	.short	18564
+	.short	-13169
+	.short	16884
+	.short	19599
+	.short	-4
+	.short	-11123
+	.short	-4
+	.short	-31603
+	.short	-1025
+	.short	11195
+	.short	-1
+	.short	-17477
+	.short	-16385
+	.short	-17477
+	.short	-16538
+	.short	-17477
+	.short	31880
+	.short	18564
+	.short	7239
+	.short	7348
+	.short	-13551
+	.short	-17336
+	.short	-17487
+	.short	18503
+	.short	-17630
+	.short	-19925
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-9285
+	.short	-17477
+	.short	19387
+	.short	-17477
+	.short	-29509
+	.short	-17413
+	.short	-32325
+	.short	-17477
+	.short	8747
+	.short	-17477
+	.short	-19781
+	.short	-17621
+	.short	-17477
+	.short	-17621
+	.short	-17477
+	.short	6276
+	.short	-30693
+	.short	5297
+	.short	-12916
+	.short	-17477
+	.short	-17644
+	.short	-17477
+	.short	-17640
+	.short	8738
+	.short	8738
+	.short	-19934
+	.short	8747
+	.short	-19934
+	.short	-19781
+	.short	-17630
+	.short	-17477
+	.short	-32396
+	.short	-31628
+	.short	6984
+	.short	7236
+	.short	7041
+	.short	6936
+	.short	6977
+	.short	7032
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8747
+	.short	8738
+	.short	19889
+	.short	17544
+	.short	16820
+	.short	8642
+	.short	-29660
+	.short	-17468
+	.short	31668
+	.short	-19324
+	.short	-4370
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-4574
+	.short	-4370
+	.short	-7646
+	.short	8942
+	.short	-7656
+	.short	16664
+	.short	-11756
+	.short	-15672
+	.short	4632
+	.short	-15672
+	.short	17096
+	.short	4808
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	8942
+	.short	-31528
+	.short	-30527
+	.short	4424
+	.short	19780
+	.short	4680
+	.short	16920
+	.short	17096
+	.short	-32040
+	.short	-29202
+	.short	8929
+	.short	-29394
+	.short	8737
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-29652
+	.short	18461
+	.short	-29663
+	.short	16674
+	.short	-32479
+	.short	-32478
+	.short	-32479
+	.short	-32478
+	.short	-4574
+	.short	-4370
+	.short	-4382
+	.short	12014
+	.short	-4562
+	.short	12014
+	.short	-7646
+	.short	8942
+	.short	6221
+	.short	-32466
+	.short	16836
+	.short	-10222
+	.short	16817
+	.short	-14318
+	.short	16679
+	.short	-31710
+	.short	-4370
+	.short	19950
+	.short	-4382
+	.short	-4370
+	.short	-4382
+	.short	-4370
+	.short	19938
+	.short	-4370
+	.short	-30584
+	.short	-4370
+	.short	-7102
+	.short	-4370
+	.short	-7102
+	.short	-4370
+	.short	-4792
+	.short	-12562
+	.short	-4472
+	.short	-12562
+	.short	-7804
+	.short	20206
+	.short	-7036
+	.short	-29202
+	.short	-10220
+	.short	5166
+	.short	6356
+	.short	5342
+	.short	17640
+	.short	7198
+	.short	-32280
+	.short	4684
+	.short	-29208
+	.short	4632
+	.short	-4408
+	.short	-4370
+	.short	-4408
+	.short	-4370
+	.short	-4392
+	.short	-4370
+	.short	-4376
+	.short	-4370
+	.short	-12568
+	.short	6276
+	.short	16936
+	.short	-32287
+	.short	-11736
+	.short	18564
+	.short	-30936
+	.short	17444
+	.short	8942
+	.short	-4382
+	.short	12014
+	.short	-4574
+	.short	12014
+	.short	8738
+	.short	8750
+	.short	8738
+	.short	-14260
+	.short	-10111
+	.short	6178
+	.short	-14124
+	.short	18466
+	.short	-14291
+	.short	6354
+	.short	-10030
+	.short	-4370
+	.short	-4370
+	.short	-4574
+	.short	12002
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	-31550
+	.short	8728
+	.short	8514
+	.short	-17535
+	.short	-31534
+	.short	-17592
+	.short	-19321
+	.short	-17596
+	.short	8738
+	.short	-17486
+	.short	-17630
+	.short	-17477
+	.short	11042
+	.short	-17477
+	.short	11186
+	.short	-17477
+	.short	-9285
+	.short	6276
+	.short	19387
+	.short	-31567
+	.short	-29509
+	.short	-30789
+	.short	-32325
+	.short	-30721
+	.short	-17477
+	.short	-17477
+	.short	8891
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-20092
+	.short	-8820
+	.short	-19379
+	.short	19599
+	.short	30913
+	.short	-29620
+	.short	-14212
+	.short	-32300
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-17473
+	.short	-17477
+	.short	-17477
+	.short	-17473
+	.short	-17477
+	.short	6276
+	.short	19588
+	.short	6268
+	.short	4491
+	.short	-3768
+	.short	-19317
+	.short	-145
+	.short	-3705
+	.short	-17477
+	.short	-18229
+	.short	-17477
+	.short	-19429
+	.short	-17477
+	.short	-20149
+	.short	-17477
+	.short	-20149
+	.short	-17640
+	.short	-30588
+	.short	-17477
+	.short	-17269
+	.short	-16385
+	.short	-885
+	.short	-17473
+	.short	-885
+	.short	-18405
+	.short	-69
+	.short	-18405
+	.short	-1
+	.short	-5
+	.short	28671
+	.short	-5
+	.short	26367
+	.short	-16063
+	.short	19588
+	.short	-3765
+	.short	16774
+	.short	24911
+	.short	-2938
+	.short	-3706
+	.short	-3705
+	.short	-1
+	.short	26223
+	.short	-154
+	.short	26223
+	.short	26214
+	.short	26223
+	.short	26214
+	.short	26214
+	.short	18248
+	.short	-232
+	.short	-15220
+	.short	-10687
+	.short	25740
+	.short	5697
+	.short	-895
+	.short	17940
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-154
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-30644
+	.short	26220
+	.short	-29484
+	.short	26220
+	.short	5256
+	.short	26214
+	.short	-12
+	.short	-1
+	.short	27033
+	.short	26223
+	.short	-2410
+	.short	26223
+	.short	-154
+	.short	-27034
+	.short	26223
+	.short	26223
+	.short	26214
+	.short	26214
+	.short	26358
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26223
+	.short	-26266
+	.short	-27034
+	.short	-26215
+	.short	-27034
+	.short	-26215
+	.short	26265
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26263
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26983
+	.short	-26263
+	.short	-26215
+	.short	-27034
+	.short	-26215
+	.short	26214
+	.short	-26215
+	.short	27033
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	27033
+	.short	-14138
+	.short	25729
+	.short	-31639
+	.short	-30524
+	.short	26217
 	.short	28671
 	.short	27033
 	.short	-1
 	.short	27030
 	.short	-2314
-	.short	-26215
+	.short	26985
+	.short	26214
+	.short	26214
+	.short	26214
 	.short	26214
 	.short	26217
-	.short	26217
-	.short	26214
-	.short	-27031
-	.short	-1
-	.short	26223
+	.short	-3697
+	.short	-12924
+	.short	18509
+	.short	6284
 	.short	-10
-	.short	-778
-	.short	-10
-	.short	-13057
+	.short	-17409
 	.short	-2305
-	.short	-12433
+	.short	-16529
 	.short	26367
 	.short	-1
 	.short	26367
@@ -7736,79 +7832,79 @@ shield_instructionsTiles:
 	.short	26214
 	.short	28662
 	.short	-2458
-	.short	28518
-	.short	-49
-	.short	-154
-	.short	-1834
+	.short	18244
+	.short	-30776
+	.short	-14196
+	.short	-15996
 	.short	-145
-	.short	17638
+	.short	-154
 	.short	-145
 	.short	-2458
 	.short	26223
 	.short	-2458
 	.short	-26266
 	.short	-151
-	.short	-26218
+	.short	-26266
 	.short	26217
 	.short	-26218
 	.short	26265
-	.short	-179
-	.short	-13057
-	.short	28440
-	.short	-13105
-	.short	26216
-	.short	-13105
+	.short	6132
+	.short	7308
+	.short	-15224
+	.short	-17524
+	.short	26223
+	.short	-17473
 	.short	-2449
-	.short	-13105
+	.short	-17473
 	.short	-2449
-	.short	-13105
+	.short	-17473
 	.short	-2458
-	.short	-13057
+	.short	-17409
 	.short	-154
 	.short	-1
 	.short	28662
 	.short	-145
-	.short	-12340
-	.short	-52
-	.short	-12340
-	.short	-12292
-	.short	-52
-	.short	-12289
-	.short	-52
-	.short	-13057
-	.short	-4
-	.short	-13066
-	.short	-820
-	.short	-13057
-	.short	-13108
-	.short	-13105
-	.short	-769
-	.short	-32257
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13057
-	.short	-52
+	.short	5912
+	.short	-29519
+	.short	5252
+	.short	6280
+	.short	-69
+	.short	-16385
+	.short	-69
+	.short	-17409
+	.short	-5
+	.short	-17418
+	.short	-1093
+	.short	-17409
+	.short	-17477
+	.short	-17473
+	.short	-1025
+	.short	-1025
+	.short	-19317
+	.short	-29509
+	.short	-19429
+	.short	7099
+	.short	-20197
+	.short	-17477
+	.short	-17588
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17409
+	.short	-69
 	.short	-1
 	.short	-1
 	.short	-2449
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-13135
+	.short	-8828
+	.short	29832
+	.short	-30643
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-1
-	.short	-49
+	.short	-65
 	.short	-2305
 	.short	-1
 	.short	26223
@@ -7816,186 +7912,186 @@ shield_instructionsTiles:
 	.short	-145
 	.short	-1
 	.short	-145
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-12289
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-13105
+	.short	19400
+	.short	19380
+	.short	19377
+	.short	7089
+	.short	-16385
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-17473
 	.short	-1
-	.short	-13105
+	.short	-17473
 	.short	-1
-	.short	-820
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-15988
-	.short	-13108
-	.short	-6964
-	.short	19746
-	.short	-31540
-	.short	-31630
-	.short	16844
-	.short	8516
-	.short	-13108
+	.short	-1093
+	.short	4564
+	.short	-18229
+	.short	-32440
+	.short	-20088
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	4552
+	.short	7192
+	.short	-19324
+	.short	4484
+	.short	-17477
+	.short	8747
+	.short	-17477
 	.short	8738
-	.short	-13108
-	.short	-15838
-	.short	-13108
-	.short	-15828
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8748
-	.short	-13118
-	.short	8748
-	.short	-13108
-	.short	-15668
-	.short	-13108
-	.short	11468
-	.short	19916
-	.short	8738
-	.short	-15838
-	.short	8738
-	.short	-12350
-	.short	-13278
-	.short	-12292
-	.short	-820
-	.short	-13057
-	.short	-4
-	.short	-13108
-	.short	-12433
-	.short	-820
-	.short	-13105
-	.short	-820
-	.short	-13108
-	.short	-52
-	.short	8748
-	.short	8738
-	.short	8908
-	.short	8738
-	.short	-13108
-	.short	8908
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-13105
-	.short	-13108
-	.short	-52
-	.short	-13105
+	.short	-17477
+	.short	-19934
+	.short	-17477
+	.short	-19925
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	16936
+	.short	-32220
+	.short	16932
+	.short	16929
 	.short	8738
 	.short	8738
 	.short	8738
 	.short	8738
+	.short	8747
+	.short	-17486
+	.short	8747
+	.short	-17477
+	.short	-19781
+	.short	-17477
+	.short	11195
+	.short	-17477
+	.short	-32479
+	.short	17442
+	.short	-29672
+	.short	5316
+	.short	-17630
+	.short	-16389
+	.short	-1093
+	.short	-17409
+	.short	-5
+	.short	-17477
+	.short	-16529
+	.short	-1093
+	.short	-17473
+	.short	-1093
+	.short	-17477
+	.short	-69
+	.short	17451
+	.short	-10019
+	.short	-32325
+	.short	-31708
+	.short	-17477
+	.short	-15333
+	.short	-17477
+	.short	-17523
+	.short	-17477
+	.short	-20084
+	.short	-17473
+	.short	-30693
+	.short	-17473
+	.short	-17477
+	.short	-69
+	.short	-17473
 	.short	8738
+	.short	4846
+	.short	8724
+	.short	17134
+	.short	-14268
 	.short	8738
+	.short	6178
 	.short	8738
+	.short	-10222
 	.short	8738
+	.short	-17080
+	.short	-19934
+	.short	-17477
+	.short	-17477
+	.short	-17413
+	.short	-17477
+	.short	16932
+	.short	4648
+	.short	4641
+	.short	-11743
 	.short	8738
-	.short	8738
-	.short	-13108
-	.short	-15838
-	.short	-13108
-	.short	-13108
-	.short	-13060
-	.short	-13108
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	-13118
-	.short	-15838
-	.short	-13108
-	.short	-13118
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13060
-	.short	-13108
-	.short	-13108
-	.short	-13118
-	.short	8748
-	.short	-13108
-	.short	8748
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	11468
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	8738
-	.short	-13278
-	.short	-15838
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	19660
-	.short	-13268
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-820
-	.short	-13108
-	.short	-52
-	.short	-13108
+	.short	-17486
+	.short	-19934
+	.short	-17477
+	.short	-17486
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17413
+	.short	-17477
+	.short	-17477
+	.short	-29576
+	.short	18460
+	.short	16776
+	.short	-29624
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	11195
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-14126
+	.short	-14126
+	.short	30920
+	.short	18555
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	7308
+	.short	-17592
+	.short	18508
+	.short	-10100
+	.short	-17477
+	.short	-1093
+	.short	-17477
+	.short	-69
+	.short	-17477
 	.short	-1
-	.short	-820
+	.short	-1093
 	.short	-154
-	.short	-52
+	.short	-69
 	.short	26223
-	.short	-15
+	.short	-5
 	.short	26214
-	.short	26364
-	.short	-12289
-	.short	-2449
-	.short	-1
+	.short	-29445
+	.short	16881
+	.short	5743
+	.short	29832
 	.short	-2458
 	.short	26223
 	.short	26214
@@ -8008,10 +8104,10 @@ shield_instructionsTiles:
 	.short	28662
 	.short	26214
 	.short	28662
-	.short	26223
-	.short	26367
-	.short	-10
-	.short	-1
+	.short	17519
+	.short	-29455
+	.short	5366
+	.short	8191
 	.short	-10
 	.short	-1
 	.short	26214
@@ -8024,10 +8120,10 @@ shield_instructionsTiles:
 	.short	26214
 	.short	26214
 	.short	26214
-	.short	26367
-	.short	-1
-	.short	26223
-	.short	-1
+	.short	7665
+	.short	-883
+	.short	29832
+	.short	-2164
 	.short	28671
 	.short	28518
 	.short	-1
@@ -8038,12 +8134,12 @@ shield_instructionsTiles:
 	.short	26358
 	.short	26214
 	.short	26358
-	.short	5734
-	.short	26216
-	.short	-12289
-	.short	26364
+	.short	26214
+	.short	26214
+	.short	-16385
+	.short	24971
 	.short	-1
-	.short	-1
+	.short	18511
 	.short	28671
 	.short	-10
 	.short	26367
@@ -8056,10 +8152,10 @@ shield_instructionsTiles:
 	.short	-145
 	.short	26214
 	.short	-2458
-	.short	-1
-	.short	-1
-	.short	-154
-	.short	-1
+	.short	-3764
+	.short	-883
+	.short	6221
+	.short	-116
 	.short	-1
 	.short	-1
 	.short	-1
@@ -8070,14 +8166,14 @@ shield_instructionsTiles:
 	.short	26223
 	.short	26223
 	.short	26214
-	.short	-32410
+	.short	26214
 	.short	-1
+	.short	-127
+	.short	5652
+	.short	-2495
+	.short	25729
 	.short	-1
-	.short	26190
-	.short	-2449
-	.short	24909
-	.short	-1
-	.short	17439
+	.short	26223
 	.short	-154
 	.short	-2458
 	.short	26214
@@ -8088,11 +8184,11 @@ shield_instructionsTiles:
 	.short	26223
 	.short	26367
 	.short	28527
-	.short	-2026
+	.short	-12344
+	.short	-2996
+	.short	6276
+	.short	25679
 	.short	-1
-	.short	-3763
-	.short	26367
-	.short	-236
 	.short	26223
 	.short	-1
 	.short	26223
@@ -8102,896 +8198,849 @@ shield_instructionsTiles:
 	.short	26214
 	.short	26214
 	.short	26214
-	.short	24902
-	.short	-18026
+	.short	26214
+	.short	-26218
 	.short	26214
 	.short	-26266
 	.short	26214
 	.short	-26215
-	.short	-27034
+	.short	26214
 	.short	-26215
-	.short	-27034
+	.short	26214
+	.short	-26263
+	.short	26214
+	.short	27030
+	.short	26214
 	.short	-26215
-	.short	-27034
-	.short	-26215
-	.short	-27034
-	.short	-26215
-	.short	-27034
-	.short	-26215
-	.short	-26156
+	.short	26214
+	.short	-26266
+	.short	-26266
 	.short	-26215
 	.short	-26215
 	.short	27033
 	.short	-26215
-	.short	16793
+	.short	27033
 	.short	-26215
-	.short	6553
 	.short	-26215
-	.short	6553
 	.short	-26215
-	.short	6553
 	.short	-26215
-	.short	6553
 	.short	-26215
-	.short	-30311
 	.short	-26215
-	.short	-30311
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
 	.short	26214
+	.short	-26218
+	.short	26265
+	.short	-26218
+	.short	26265
+	.short	26214
+	.short	-26266
+	.short	26214
+	.short	26982
+	.short	-26983
+	.short	26265
+	.short	26217
+	.short	-26983
+	.short	-26983
 	.short	-26215
-	.short	26340
-	.short	6294
-	.short	26132
-	.short	5334
-	.short	-26236
-	.short	5254
-	.short	-25279
-	.short	5262
-	.short	24973
-	.short	5352
-	.short	-19427
-	.short	5272
-	.short	-31554
-	.short	5277
+	.short	-26215
 	.short	28518
 	.short	26214
-	.short	26217
+	.short	26214
 	.short	26214
 	.short	26217
 	.short	26214
 	.short	-26266
+	.short	-27031
+	.short	-27034
 	.short	-26215
-	.short	18646
-	.short	16820
-	.short	-28343
-	.short	-30252
-	.short	18649
-	.short	-30252
-	.short	-20149
-	.short	-30236
+	.short	-31722
+	.short	-14200
+	.short	-32359
+	.short	-31527
+	.short	-32359
+	.short	-32359
 	.short	-26218
 	.short	26265
 	.short	-26215
 	.short	-2455
 	.short	-26215
 	.short	28521
-	.short	-26215
+	.short	17561
 	.short	26217
-	.short	-31727
-	.short	16793
-	.short	19329
-	.short	-6930
-	.short	19428
-	.short	16793
-	.short	20120
-	.short	-11047
-	.short	26223
-	.short	-2458
-	.short	26214
-	.short	-2314
-	.short	26214
-	.short	28662
-	.short	27033
-	.short	26214
-	.short	27012
-	.short	-11130
-	.short	26189
-	.short	5222
-	.short	26180
-	.short	-32410
-	.short	26189
-	.short	19958
-	.short	-145
-	.short	-30465
-	.short	-154
-	.short	6399
-	.short	-154
-	.short	6399
-	.short	28662
-	.short	-10138
-	.short	30463
-	.short	-11036
-	.short	27983
-	.short	5336
-	.short	24902
-	.short	-31644
-	.short	6221
-	.short	5217
-	.short	-1
-	.short	-2305
-	.short	-1
-	.short	28671
-	.short	28518
-	.short	28671
-	.short	26214
-	.short	26214
-	.short	24897
-	.short	17430
-	.short	25816
-	.short	17937
-	.short	26847
-	.short	5188
-	.short	26655
-	.short	26324
-	.short	-1
-	.short	28671
-	.short	-1
-	.short	28671
-	.short	28671
-	.short	28671
-	.short	-2458
-	.short	28671
-	.short	29761
-	.short	-700
-	.short	5345
-	.short	-2019
-	.short	-31530
-	.short	-3809
-	.short	-11050
-	.short	-3697
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	-2449
-	.short	-1
-	.short	-10641
-	.short	29764
-	.short	18022
-	.short	-11167
-	.short	-10650
-	.short	-11196
-	.short	18431
-	.short	-7055
-	.short	-16049
-	.short	-13108
-	.short	-12977
-	.short	-13108
-	.short	-689
-	.short	-13105
-	.short	-433
-	.short	-13105
-	.short	-28857
-	.short	7956
-	.short	4430
-	.short	19521
-	.short	-1970
-	.short	-28850
-	.short	-435
-	.short	-12467
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-14268
-	.short	-31679
-	.short	-7700
-	.short	19828
-	.short	7188
-	.short	19697
-	.short	-32447
-	.short	19697
-	.short	-13108
-	.short	16844
-	.short	-13108
-	.short	-32308
-	.short	-13108
-	.short	-32308
-	.short	-13108
-	.short	-32308
-	.short	-7091
-	.short	4420
-	.short	-31507
-	.short	6366
-	.short	5329
-	.short	18687
-	.short	-11043
-	.short	-30465
-	.short	-13108
-	.short	-12340
-	.short	-13108
-	.short	-16052
-	.short	-13108
-	.short	-820
-	.short	-12292
-	.short	-1
-	.short	-7091
-	.short	-30898
-	.short	5236
-	.short	-178
-	.short	6398
-	.short	28494
-	.short	5375
-	.short	28493
-	.short	-4
-	.short	-13057
-	.short	-1
-	.short	-1
-	.short	-1
-	.short	26367
-	.short	28671
-	.short	-10
-	.short	18644
-	.short	20209
-	.short	-12012
-	.short	6388
-	.short	-8380
-	.short	-30616
-	.short	7956
-	.short	20216
-	.short	-13057
-	.short	-13108
-	.short	-13057
-	.short	-12289
-	.short	-145
-	.short	-2314
-	.short	26214
-	.short	-12298
-	.short	17476
-	.short	-4241
-	.short	25622
-	.short	-28673
-	.short	25631
-	.short	-4145
-	.short	27972
-	.short	-28673
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-14308
-	.short	-13105
-	.short	-16100
-	.short	-13108
-	.short	-15988
-	.short	-11192
-	.short	17473
-	.short	6344
-	.short	-12980
-	.short	5192
-	.short	-692
-	.short	5320
-	.short	-689
-	.short	-13092
-	.short	-13108
-	.short	-13234
-	.short	-13108
-	.short	-13235
-	.short	-13108
-	.short	-12415
-	.short	-820
-	.short	5188
-	.short	17485
-	.short	-1007
-	.short	20244
-	.short	28440
-	.short	17485
-	.short	32536
-	.short	19220
-	.short	-13108
-	.short	19660
-	.short	-13108
-	.short	19660
-	.short	-13108
-	.short	20479
-	.short	-817
-	.short	18175
-	.short	19959
-	.short	18244
-	.short	-11139
-	.short	19790
-	.short	-2851
-	.short	19814
-	.short	26654
-	.short	19814
-	.short	28657
-	.short	26214
-	.short	-2451
-	.short	26223
-	.short	-2451
-	.short	26223
-	.short	26215
-	.short	26214
-	.short	-31610
-	.short	17542
-	.short	-32495
-	.short	-10611
-	.short	-18216
-	.short	-10165
-	.short	-25784
-	.short	18617
-	.short	26214
-	.short	28662
-	.short	26214
-	.short	26358
-	.short	26214
-	.short	26214
-	.short	27030
-	.short	-27034
-	.short	-30319
-	.short	-26156
-	.short	-26271
-	.short	18712
-	.short	-26266
-	.short	18817
-	.short	-26259
-	.short	19789
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	-10616
-	.short	26214
-	.short	5734
-	.short	26214
-	.short	-31130
-	.short	-6986
-	.short	16852
-	.short	-10131
-	.short	-31020
-	.short	-26479
-	.short	18148
-	.short	-28392
-	.short	18148
-	.short	-31130
-	.short	26216
-	.short	-31132
-	.short	26209
-	.short	-31135
-	.short	26209
-	.short	-30991
-	.short	-2451
-	.short	20036
-	.short	5149
-	.short	18029
-	.short	19841
-	.short	18029
-	.short	-29336
-	.short	18029
-	.short	-32415
-	.short	-154
-	.short	26214
-	.short	-10
-	.short	17551
-	.short	-2449
-	.short	30344
-	.short	-1
-	.short	-2348
-	.short	-1
-	.short	27976
-	.short	-1
-	.short	-31713
-	.short	-1
-	.short	-29697
-	.short	-2449
-	.short	-26883
-	.short	-30474
-	.short	-2305
-	.short	6388
-	.short	28671
-	.short	6388
-	.short	-2305
-	.short	-9999
-	.short	26223
-	.short	-11009
-	.short	24897
-	.short	5229
-	.short	-27432
-	.short	-31564
-	.short	-26410
-	.short	5348
-	.short	-26599
-	.short	28671
-	.short	28518
-	.short	24902
-	.short	-26890
-	.short	-26266
-	.short	26214
-	.short	-26218
-	.short	26214
-	.short	27470
-	.short	5185
-	.short	-10674
-	.short	18532
-	.short	5710
-	.short	-6076
-	.short	-31155
-	.short	-27039
-	.short	24905
-	.short	-5786
-	.short	27977
-	.short	-10650
-	.short	-25018
-	.short	-10650
-	.short	-25777
-	.short	-10599
-	.short	-26297
-	.short	17549
-	.short	-18098
-	.short	6420
-	.short	6478
-	.short	-30312
-	.short	-30387
-	.short	19857
-	.short	-26188
+	.short	17561
 	.short	-26215
-	.short	-26220
-	.short	-26215
-	.short	-26220
-	.short	-26215
-	.short	-26216
-	.short	-26215
-	.short	-26216
-	.short	-26215
-	.short	-26216
-	.short	-26215
-	.short	-26216
-	.short	-26215
-	.short	-26216
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	2457
-	.short	153
-	.short	2457
-	.short	2457
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	18841
-	.short	-26215
-	.short	19865
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	18587
 	.short	5273
-	.short	4505
-	.short	18585
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-29875
-	.short	-30252
-	.short	-11192
-	.short	-29368
-	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	27033
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	27033
-	.short	19857
-	.short	-6117
-	.short	19357
-	.short	17624
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
+	.short	5273
 	.short	26265
-	.short	-27034
-	.short	26217
-	.short	27464
-	.short	18278
-	.short	-7091
-	.short	18022
-	.short	26217
+	.short	6297
+	.short	27033
+	.short	26223
+	.short	-2458
+	.short	26214
+	.short	-2314
+	.short	26214
 	.short	28662
-	.short	26217
+	.short	26214
+	.short	26214
+	.short	26265
+	.short	26214
+	.short	26265
+	.short	-2458
+	.short	26214
+	.short	-2458
+	.short	26214
+	.short	-2314
+	.short	-145
+	.short	-1
+	.short	-154
+	.short	-1
+	.short	-154
+	.short	28671
+	.short	-14122
+	.short	28518
+	.short	-10033
+	.short	-154
+	.short	30927
+	.short	-1
+	.short	26822
+	.short	-154
+	.short	-2026
+	.short	-2458
+	.short	-1
+	.short	-2305
+	.short	-1
+	.short	28671
+	.short	28518
+	.short	28671
+	.short	26214
+	.short	26214
+	.short	26367
+	.short	-2458
+	.short	28044
+	.short	-2458
+	.short	28044
+	.short	26214
+	.short	26223
+	.short	26214
+	.short	-1
+	.short	28671
+	.short	-1
+	.short	28671
+	.short	28671
+	.short	28671
+	.short	-2458
+	.short	28671
+	.short	-154
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-10
+	.short	-1
+	.short	-2458
+	.short	-2305
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	-2449
+	.short	-1
+	.short	26223
+	.short	-1
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	28671
+	.short	26214
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-1025
+	.short	-17473
+	.short	-1
+	.short	-17473
+	.short	-154
+	.short	-16385
+	.short	26214
+	.short	-17473
+	.short	-154
+	.short	-10
+	.short	-10
+	.short	-16538
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-16389
+	.short	-17477
+	.short	-17477
+	.short	-17413
+	.short	-17477
+	.short	-17409
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1089
+	.short	-17477
+	.short	30927
+	.short	-69
+	.short	-2017
+	.short	-17477
+	.short	-16453
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-16389
+	.short	-1
+	.short	-69
+	.short	-1
+	.short	-3617
+	.short	-1
+	.short	-3041
+	.short	28671
+	.short	-3761
+	.short	28662
+	.short	-5
+	.short	-17409
+	.short	-1
+	.short	-1
+	.short	-1
+	.short	26367
+	.short	28671
+	.short	-10
+	.short	26367
+	.short	-10
+	.short	-2305
+	.short	28671
+	.short	-10
+	.short	-154
+	.short	-154
+	.short	-1
+	.short	-17409
+	.short	-17477
+	.short	-17409
+	.short	-16385
+	.short	-145
+	.short	-2314
+	.short	26646
+	.short	-16394
+	.short	-2017
+	.short	-16529
+	.short	25622
+	.short	-16385
+	.short	25631
+	.short	-65
+	.short	25670
+	.short	-1
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17473
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17630
+	.short	-17477
+	.short	-17477
+	.short	-16453
+	.short	-17477
+	.short	-5
+	.short	-1089
+	.short	-1
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-16453
+	.short	-1093
+	.short	-5
+	.short	-65
+	.short	-1093
+	.short	28671
+	.short	28671
+	.short	26214
+	.short	28671
+	.short	26214
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-1093
+	.short	-17477
+	.short	28671
+	.short	-1089
+	.short	26367
+	.short	-1
+	.short	26214
+	.short	30310
+	.short	26328
+	.short	-14746
+	.short	26216
+	.short	5734
+	.short	26212
+	.short	28671
+	.short	26214
+	.short	-2449
+	.short	26223
+	.short	-2458
+	.short	26223
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-27034
+	.short	-27034
+	.short	26214
+	.short	28662
+	.short	26214
 	.short	26358
 	.short	26214
-	.short	-2305
+	.short	26214
+	.short	26982
 	.short	26214
 	.short	26214
 	.short	-27034
-	.short	26214
+	.short	26982
+	.short	-26215
+	.short	-26266
+	.short	-26215
+	.short	-26266
 	.short	-26215
 	.short	26214
-	.short	-31528
-	.short	-11009
-	.short	-6979
-	.short	29935
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-27031
+	.short	26217
+	.short	-26215
+	.short	26217
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26358
 	.short	-2458
-	.short	28671
+	.short	26214
 	.short	-2458
-	.short	28671
+	.short	-10111
 	.short	-2449
-	.short	26214
-	.short	26214
-	.short	26262
-	.short	-26266
-	.short	26214
-	.short	-26266
-	.short	26217
-	.short	-26602
-	.short	-6520
-	.short	-31530
-	.short	17485
-	.short	-26266
-	.short	26217
-	.short	-26218
-	.short	26217
-	.short	-26218
-	.short	26265
-	.short	-26218
-	.short	27033
-	.short	-26218
-	.short	27033
-	.short	-26266
-	.short	-26215
-	.short	25821
-	.short	-11889
-	.short	25819
-	.short	5142
-	.short	26214
-	.short	-2458
-	.short	26214
-	.short	-2458
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	-27025
-	.short	26214
-	.short	-27025
-	.short	26217
-	.short	26214
-	.short	19823
-	.short	-11129
-	.short	18287
-	.short	18644
-	.short	26223
-	.short	26214
-	.short	26214
-	.short	26223
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26265
-	.short	-27034
-	.short	26265
-	.short	-26218
-	.short	26265
-	.short	30541
-	.short	7444
-	.short	17537
-	.short	20209
-	.short	-2458
-	.short	26367
-	.short	26214
-	.short	26223
+	.short	6166
+	.short	-154
+	.short	-30698
+	.short	28527
+	.short	-154
 	.short	26214
 	.short	-10
-	.short	26214
-	.short	-1
-	.short	26214
 	.short	26223
-	.short	26214
-	.short	-26218
-	.short	5343
-	.short	19940
-	.short	28996
-	.short	-11196
-	.short	26214
+	.short	-2449
+	.short	-2449
 	.short	-1
+	.short	-2449
+	.short	-1
+	.short	26367
+	.short	-3705
+	.short	26367
+	.short	-3711
+	.short	-26881
+	.short	-892
+	.short	-26881
+	.short	-10
+	.short	-2305
+	.short	28671
+	.short	28671
+	.short	26367
 	.short	-2305
 	.short	-1
-	.short	-1
-	.short	-10
-	.short	-154
-	.short	-154
-	.short	-154
-	.short	-145
-	.short	26217
-	.short	26367
-	.short	-2852
-	.short	5375
-	.short	-2849
-	.short	18534
-	.short	-1
-	.short	26214
-	.short	-2305
 	.short	26223
-	.short	26367
-	.short	-154
-	.short	28671
-	.short	26214
-	.short	28671
-	.short	26214
-	.short	28671
-	.short	26217
-	.short	29727
-	.short	-179
-	.short	27972
-	.short	-10169
-	.short	-2458
 	.short	-1
-	.short	-154
-	.short	28671
-	.short	-10
-	.short	26367
-	.short	-2458
-	.short	26367
-	.short	26214
-	.short	26367
-	.short	26214
-	.short	26214
-	.short	8148
-	.short	-32296
-	.short	-8332
-	.short	19732
-	.short	28671
-	.short	-10138
 	.short	26223
-	.short	26646
-	.short	26223
-	.short	-11242
 	.short	26214
-	.short	18550
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	20470
-	.short	28296
-	.short	-28826
-	.short	-11123
-	.short	26214
-	.short	6297
 	.short	-27034
-	.short	-7143
-	.short	-26263
-	.short	-25212
+	.short	26214
 	.short	-26218
+	.short	26214
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26218
-	.short	5149
-	.short	28998
-	.short	16660
-	.short	-31727
+	.short	28671
+	.short	28518
+	.short	26358
+	.short	26358
+	.short	-27034
 	.short	26214
-	.short	26214
-	.short	26217
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26214
-	.short	26262
-	.short	27033
-	.short	26265
-	.short	5768
-	.short	18612
-	.short	-11199
-	.short	-29372
-	.short	26262
-	.short	26214
-	.short	26265
-	.short	26214
-	.short	26217
 	.short	-26266
+	.short	26214
 	.short	27030
-	.short	-26266
-	.short	26214
-	.short	-26266
-	.short	26214
-	.short	-26266
-	.short	-11043
-	.short	19734
-	.short	18644
-	.short	-32492
-	.short	26214
-	.short	-26983
-	.short	26214
-	.short	-26215
-	.short	-27034
-	.short	-26215
-	.short	-27031
-	.short	-26983
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-26215
-	.short	-26549
-	.short	6417
-	.short	-31527
-	.short	-31679
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26216
-	.short	-10165
-	.short	-26211
-	.short	-17079
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	27012
-	.short	18132
-	.short	27108
-	.short	7560
-	.short	27033
-	.short	27033
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	20145
-	.short	-32403
-	.short	19844
-	.short	19815
-	.short	26262
 	.short	26214
 	.short	26265
 	.short	26214
+	.short	26217
 	.short	26214
+	.short	26214
+	.short	-27034
+	.short	26217
 	.short	-26266
+	.short	26214
+	.short	-27034
+	.short	26214
+	.short	-27034
+	.short	-27025
 	.short	-27031
+	.short	-26266
+	.short	-26215
+	.short	-27034
 	.short	-26215
 	.short	-26266
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
 	.short	-26215
 	.short	-26218
 	.short	-26215
-	.short	28662
-	.short	5748
-	.short	28520
-	.short	17476
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-32359
+	.short	16793
+	.short	-32359
+	.short	-11239
+	.short	-32359
+	.short	5256
+	.short	16793
+	.short	-31591
+	.short	17561
+	.short	-30311
+	.short	17561
+	.short	-32359
+	.short	-31591
+	.short	5256
+	.short	-26215
+	.short	27033
+	.short	-14183
+	.short	27033
+	.short	-14183
+	.short	-31591
+	.short	-10087
+	.short	-27623
+	.short	-10015
+	.short	-25463
+	.short	-10028
+	.short	27789
+	.short	-14127
+	.short	-27508
+	.short	18534
+	.short	-30516
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26184
+	.short	-30644
+	.short	-11903
+	.short	-28728
+	.short	5193
+	.short	26356
+	.short	16710
+	.short	-2316
+	.short	6028
+	.short	5832
+	.short	26308
+	.short	6276
+	.short	-26215
+	.short	26214
+	.short	-3050
+	.short	-1
+	.short	-3044
+	.short	25732
+	.short	5148
+	.short	25793
+	.short	17478
+	.short	27980
+	.short	6223
+	.short	26344
+	.short	29773
+	.short	-12728
+	.short	-28346
+	.short	6284
+	.short	-27034
+	.short	26217
+	.short	-27034
+	.short	26214
+	.short	19521
+	.short	-32312
+	.short	-26303
+	.short	-7144
+	.short	-26303
+	.short	28232
+	.short	-5820
+	.short	30232
+	.short	-9919
+	.short	-10552
+	.short	-15231
+	.short	-6424
+	.short	-26266
+	.short	-26215
+	.short	26214
 	.short	26223
-	.short	26262
-	.short	-26218
-	.short	-26983
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-11164
-	.short	-26599
-	.short	-19219
-	.short	-31527
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	26217
-	.short	6477
-	.short	5860
-	.short	-10165
-	.short	-11192
-	.short	-26218
-	.short	-26266
-	.short	-27031
-	.short	-26266
-	.short	-26215
+	.short	-14616
+	.short	-30588
+	.short	-31032
+	.short	-29599
+	.short	-31032
+	.short	-29596
+	.short	-14632
+	.short	6280
+	.short	7368
+	.short	26212
+	.short	-13240
+	.short	-15288
+	.short	20073
+	.short	-31727
+	.short	26305
+	.short	26358
+	.short	26136
+	.short	-31546
+	.short	26220
+	.short	24902
+	.short	26220
+	.short	-31521
 	.short	26214
-	.short	-26215
-	.short	-26266
+	.short	25735
+	.short	26214
+	.short	7308
+	.short	-27034
+	.short	18505
+	.short	-26220
+	.short	26265
+	.short	-1
+	.short	-154
+	.short	18200
+	.short	-29672
+	.short	-2431
+	.short	-11244
+	.short	26184
+	.short	27780
+	.short	26180
+	.short	-188
+	.short	26184
+	.short	-232
+	.short	-10100
+	.short	26312
+	.short	26214
+	.short	-26218
+	.short	-1
+	.short	-17409
+	.short	26312
+	.short	18422
+	.short	26132
+	.short	16895
+	.short	-2540
+	.short	20479
+	.short	-236
+	.short	17654
+	.short	-1000
+	.short	6246
+	.short	-3708
+	.short	-32401
 	.short	26217
+	.short	26367
+	.short	-5
+	.short	-3041
+	.short	-2936
+	.short	-30591
+	.short	-10033
+	.short	24902
+	.short	-1912
+	.short	24911
+	.short	26653
+	.short	-3770
+	.short	30860
+	.short	25670
+	.short	-30508
+	.short	-30692
+	.short	28671
+	.short	26214
+	.short	24975
+	.short	-10
+	.short	-30584
+	.short	-30692
+	.short	-890
+	.short	-881
+	.short	-627
+	.short	-30513
+	.short	-627
+	.short	24972
+	.short	31873
+	.short	18049
+	.short	18508
+	.short	6284
+	.short	26214
+	.short	26214
+	.short	-1
+	.short	26223
+	.short	28616
+	.short	18561
+	.short	-12476
+	.short	-29224
+	.short	17944
+	.short	26209
+	.short	-31208
+	.short	26209
+	.short	17944
+	.short	5848
+	.short	-11135
+	.short	6276
+	.short	26214
+	.short	26214
+	.short	24902
+	.short	-10
+	.short	-11961
+	.short	-3708
+	.short	16717
+	.short	24860
+	.short	5257
+	.short	-27071
+	.short	18566
+	.short	-26268
+	.short	-15994
+	.short	-14008
+	.short	27782
+	.short	-15231
+	.short	-26215
+	.short	-26218
+	.short	-10
+	.short	-154
+	.short	-32410
+	.short	-30524
+	.short	5734
+	.short	27972
+	.short	5734
+	.short	30232
+	.short	5734
+	.short	-10632
+	.short	18022
+	.short	30308
+	.short	18022
+	.short	26257
+	.short	26214
+	.short	26265
+	.short	26367
+	.short	26214
+	.short	-30650
+	.short	-31516
+	.short	17937
+	.short	25620
+	.short	18568
+	.short	18637
+	.short	26312
+	.short	20070
+	.short	26952
+	.short	-28399
+	.short	18572
+	.short	-30692
+	.short	26214
+	.short	-26266
+	.short	5734
+	.short	26212
+	.short	-32440
+	.short	-27512
+	.short	17948
+	.short	5729
+	.short	18028
+	.short	-31087
+	.short	17992
+	.short	-29295
+	.short	18060
+	.short	-29548
+	.short	5656
+	.short	-13176
+	.short	-27034
+	.short	-26215
+	.short	-27034
+	.short	26982
+	.short	18564
+	.short	6222
+	.short	-32364
+	.short	5265
+	.short	18844
+	.short	-31596
+	.short	18844
+	.short	17553
+	.short	-29548
+	.short	6302
+	.short	-15224
+	.short	-14186
+	.short	-26215
 	.short	-26215
 	.short	-26266
+	.short	27033
+	.short	-15231
+	.short	-14204
+	.short	19860
+	.short	-14131
+	.short	-32355
+	.short	-28344
+	.short	17513
 	.short	-26215
-	.short	-29875
-	.short	6376
-	.short	-10165
-	.short	7812
+	.short	-32359
+	.short	-13156
+	.short	18841
+	.short	-11896
+	.short	-26263
+	.short	-26215
+	.short	26265
+	.short	26214
+	.short	-30591
+	.short	27036
+	.short	6600
+	.short	27036
+	.short	-28284
+	.short	27033
+	.short	-31719
+	.short	27036
+	.short	18916
+	.short	26257
+	.short	18564
+	.short	27038
+	.short	-26215
+	.short	27033
+	.short	-32490
+	.short	8044
+	.short	19478
+	.short	18020
+	.short	7238
+	.short	7400
+	.short	-9143
+	.short	-11240
+	.short	28038
+	.short	-27516
+	.short	26254
+	.short	-25471
+	.short	-26303
+	.short	-26290
+	.short	-26266
+	.short	-26215
+	.short	27777
+	.short	-27034
+	.short	27788
+	.short	-30644
+	.short	27789
+	.short	5652
+	.short	-25203
+	.short	-30643
+	.short	-4723
+	.short	18760
+	.short	-13171
+	.short	-32312
+	.short	18569
+	.short	-15228
+	.short	-26263
+	.short	-26215
+	.short	-27034
+	.short	-26215
+	.short	-31519
+	.short	-30527
+	.short	18840
+	.short	19777
+	.short	18836
+	.short	18120
+	.short	18836
+	.short	18068
+	.short	-30316
+	.short	-30319
+	.short	-29304
+	.short	18844
+	.short	-26215
+	.short	26217
+	.short	27033
+	.short	26214
+	.short	20124
+	.short	-27512
+	.short	16737
+	.short	-10042
+	.short	18017
+	.short	-26488
+	.short	17553
+	.short	26653
+	.short	6337
+	.short	-6004
+	.short	-32488
+	.short	-30508
+	.short	-27034
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26218
 	.short	-26215
+	.short	-25459
+	.short	-26215
+	.short	-25471
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26216
-	.short	-26215
-	.short	-32492
 	.short	-26215
 	.short	27033
 	.short	-26215
 	.short	-26215
 	.short	-26215
+	.short	-26983
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -9007,7 +9056,6 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26224
 	.short	-26215
 	.short	-26224
 	.short	-26215
@@ -9047,35 +9095,35 @@ shield_instructionsTiles:
 	.short	2457
 	.short	-26215
 	.short	0
-	.short	2448
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	2457
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
 	.short	-26224
 	.short	0
 	.short	-26368
 	.short	-26215
 	.short	26265
+	.short	27033
+	.short	26214
 	.short	-26215
-	.short	26217
-	.short	-26215
-	.short	-27031
+	.short	-27034
 	.short	26265
 	.short	26214
-	.short	26217
 	.short	26214
-	.short	-26263
-	.short	26217
+	.short	26214
+	.short	-26266
+	.short	26214
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -9084,35 +9132,35 @@ shield_instructionsTiles:
 	.short	-27034
 	.short	-2458
 	.short	-26266
-	.short	26217
+	.short	26214
 	.short	-26218
-	.short	-26218
+	.short	-26266
 	.short	27033
 	.short	26214
-	.short	-26215
+	.short	-26218
 	.short	-27034
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	9
 	.short	-26368
+	.short	27033
+	.short	26214
 	.short	27033
 	.short	26982
 	.short	27033
-	.short	-26218
-	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-26215
+	.short	26265
 	.short	-26215
 	.short	-26263
+	.short	-26215
+	.short	-26266
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26359
-	.short	9
+	.short	-26359
 	.short	0
-	.short	-26218
+	.short	-26266
 	.short	27033
 	.short	-26215
 	.short	-26215
@@ -9127,60 +9175,60 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26224
-	.short	144
+	.short	2457
 	.short	-26266
 	.short	-26215
 	.short	-27031
-	.short	-26215
+	.short	27033
 	.short	-27031
-	.short	-26215
+	.short	26265
 	.short	-26215
 	.short	27033
+	.short	-26218
+	.short	27033
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	2457
+	.short	-26215
+	.short	2457
+	.short	5225
+	.short	5734
+	.short	17558
+	.short	19613
+	.short	19558
+	.short	6280
+	.short	26982
+	.short	-26218
 	.short	-26218
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	2457
 	.short	-26215
-	.short	2457
+	.short	-26224
+	.short	-26215
+	.short	-26216
+	.short	26265
+	.short	-26223
+	.short	26265
+	.short	27033
+	.short	26262
+	.short	27033
 	.short	26217
+	.short	-26215
+	.short	26217
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
 	.short	26214
-	.short	26262
 	.short	-26215
-	.short	27030
-	.short	-26218
-	.short	27030
+	.short	26214
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26224
-	.short	-26215
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	27033
-	.short	-26215
-	.short	26217
-	.short	-26215
-	.short	26265
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26224
-	.short	-26215
-	.short	26262
-	.short	-26215
-	.short	26262
-	.short	-26215
-	.short	26265
+	.short	26214
 	.short	-26215
 	.short	-26983
 	.short	-26215
@@ -9208,13 +9256,13 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-28663
 	.short	9
-	.short	-27034
+	.short	26214
 	.short	26217
 	.short	-26218
 	.short	26217
 	.short	-26215
 	.short	26217
-	.short	-26215
+	.short	26214
 	.short	26265
 	.short	-26215
 	.short	26265
@@ -9223,33 +9271,33 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	153
+	.short	2457
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-26266
+	.short	26214
+	.short	26214
+	.short	-27034
+	.short	-27034
+	.short	26214
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26359
 	.short	153
 	.short	26214
-	.short	26214
 	.short	-27034
-	.short	26214
-	.short	-26266
-	.short	-27034
-	.short	26214
-	.short	-27034
-	.short	-27034
-	.short	-27034
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-28663
-	.short	9
-	.short	26214
-	.short	-26266
 	.short	-26218
 	.short	-26215
 	.short	-26983
-	.short	-26215
-	.short	-26215
 	.short	-26215
 	.short	27033
 	.short	-26218
+	.short	27033
+	.short	-26266
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -9257,27 +9305,27 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	-26215
+	.short	-26218
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
+	.short	26265
 	.short	-26215
-	.short	-26983
-	.short	-26215
-	.short	-26215
-	.short	-26215
+	.short	-26218
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	153
+	.short	-26215
+	.short	-28519
 	.short	0
 	.short	-28672
-	.short	27033
-	.short	27033
+	.short	27030
+	.short	27030
 	.short	-26215
-	.short	27033
+	.short	27030
 	.short	-26215
-	.short	-26215
+	.short	26265
 	.short	-26215
 	.short	26265
 	.short	-26215
@@ -9296,23 +9344,23 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26218
 	.short	-26215
-	.short	-26218
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	-26266
 	.short	-26215
-	.short	27030
-	.short	-26218
-	.short	27033
-	.short	-26986
-	.short	27033
 	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	26214
 	.short	-26218
+	.short	26982
+	.short	-26266
+	.short	26214
+	.short	26214
+	.short	26214
+	.short	-26218
+	.short	-26266
 	.short	-26983
 	.short	-26215
 	.short	-26215
@@ -9321,7 +9369,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
+	.short	-26983
 	.short	-26215
 	.short	26265
 	.short	-26215
@@ -9336,22 +9384,6 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	2457
-	.short	-26215
-	.short	2457
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -9382,7 +9414,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	-28672
+	.short	-26359
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -9392,11 +9424,11 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-26215
+	.short	27033
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	2457
 	.short	-26215
 	.short	153
 	.short	-26215
@@ -9421,7 +9453,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-28663
 	.short	-26215
-	.short	-28672
+	.short	-26368
 	.short	-26215
 	.short	-26224
 	.short	-26215
@@ -9449,9 +9481,9 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-28672
 	.short	-26215
-	.short	-26359
 	.short	-26215
-	.short	-26359
+	.short	-26215
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
@@ -9481,7 +9513,7 @@ shield_instructionsTiles:
 	.short	-26224
 	.short	0
 	.short	0
-	.short	0
+	.short	-28672
 	.short	-26368
 	.short	-26215
 	.short	0
@@ -9514,11 +9546,11 @@ shield_instructionsTiles:
 	.short	0
 	.short	153
 	.short	-28663
-	.short	153
+	.short	2457
 	.short	-26215
 	.short	0
 	.short	0
-	.short	-28663
+	.short	-26215
 	.short	153
 	.short	-26215
 	.short	-26215
@@ -9529,9 +9561,9 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	2457
-	.short	0
+	.short	9
 	.short	-26215
-	.short	144
+	.short	-28528
 	.short	0
 	.short	0
 	.short	-26215
@@ -9539,7 +9571,7 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-1690
 	.short	-2458
-	.short	-12289
+	.short	-16385
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -9554,14 +9586,14 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	26223
 	.short	26214
-	.short	-14737
-	.short	-148
+	.short	-18833
+	.short	-149
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	153
-	.short	153
+	.short	2457
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -9569,9 +9601,9 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-10
-	.short	-13108
-	.short	-13105
-	.short	-13108
+	.short	-17477
+	.short	-17473
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -9584,10 +9616,10 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -9600,14 +9632,14 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
-	.short	0
-	.short	-26224
+	.short	2304
+	.short	-26215
 	.short	-28672
 	.short	-26215
 	.short	-26215
@@ -9618,8 +9650,8 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	8738
 	.short	8738
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-17477
 	.short	-28663
 	.short	-26215
 	.short	-26215
@@ -9634,43 +9666,43 @@ shield_instructionsTiles:
 	.short	-26218
 	.short	8738
 	.short	8738
-	.short	-980
-	.short	-13268
+	.short	-1237
+	.short	-17621
 	.short	153
 	.short	-26224
 	.short	-26215
 	.short	-26215
 	.short	-26215
-	.short	153
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	8738
-	.short	8738
-	.short	11468
-	.short	8898
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26224
 	.short	2457
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	-26215
+	.short	-26215
+	.short	8738
+	.short	8738
+	.short	11195
+	.short	8882
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-26215
 	.short	-26263
-	.short	-17630
-	.short	-17477
+	.short	-4574
+	.short	-4370
 	.short	8738
 	.short	8738
 	.short	-26215
-	.short	-26359
-	.short	-26224
+	.short	-26215
+	.short	-26215
 	.short	-26215
 	.short	153
 	.short	-26215
@@ -9680,8 +9712,8 @@ shield_instructionsTiles:
 	.short	0
 	.short	26265
 	.short	-26218
-	.short	-17477
-	.short	-17477
+	.short	-4370
+	.short	-4370
 	.short	8738
 	.short	8738
 	.short	-26215
@@ -9696,31 +9728,31 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	11195
+	.short	12014
 	.short	8738
 	.short	8738
 	.short	8738
-	.short	-26224
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	9
 	.short	0
-	.short	2457
+	.short	-26215
 	.short	2457
 	.short	0
 	.short	0
 	.short	-26215
 	.short	-26215
 	.short	8738
-	.short	-17477
+	.short	-4370
 	.short	8738
 	.short	8738
 	.short	-26215
 	.short	-28663
 	.short	-26215
 	.short	-26215
-	.short	2304
+	.short	-26368
 	.short	-26215
 	.short	-28672
 	.short	-26215
@@ -9728,27 +9760,11 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-17477
-	.short	8747
+	.short	-4370
+	.short	8750
 	.short	8738
-	.short	-13278
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-17486
-	.short	8747
-	.short	8738
-	.short	8738
-	.short	0
+	.short	-17630
+	.short	-28672
 	.short	0
 	.short	-26215
 	.short	-26215
@@ -9760,45 +9776,61 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
+	.short	-4382
+	.short	8750
 	.short	8738
 	.short	8738
-	.short	8908
-	.short	11458
 	.short	0
+	.short	-28672
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	8738
+	.short	8738
+	.short	8891
+	.short	11186
+	.short	2457
 	.short	-26368
 	.short	-26215
 	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	11195
+	.short	-26215
+	.short	-28663
+	.short	9
+	.short	-26215
+	.short	9
+	.short	2457
 	.short	2457
 	.short	-26215
-	.short	-26215
-	.short	-26215
 	.short	0
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	11468
-	.short	-26215
-	.short	-28672
-	.short	9
-	.short	-26224
-	.short	9
-	.short	0
-	.short	2313
-	.short	-26215
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26224
-	.short	-15838
-	.short	-13108
-	.short	-13278
-	.short	-13108
+	.short	-19934
+	.short	-17477
+	.short	-17630
+	.short	-17477
 	.short	-26215
 	.short	-26215
-	.short	2304
+	.short	-26215
 	.short	0
 	.short	-26224
 	.short	-26215
@@ -9808,26 +9840,26 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-13108
-	.short	-13108
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-17477
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	-26215
-	.short	2457
+	.short	-26215
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	153
 	.short	0
-	.short	-13108
-	.short	-12340
-	.short	-13108
-	.short	-13108
+	.short	-17477
+	.short	-16453
+	.short	-17477
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	9
@@ -9840,17 +9872,17 @@ shield_instructionsTiles:
 	.short	0
 	.short	0
 	.short	0
-	.short	-2308
+	.short	-2309
 	.short	-27025
-	.short	-13108
-	.short	-820
+	.short	-17477
+	.short	-1093
 	.short	-26215
 	.short	-26215
 	.short	0
 	.short	0
 	.short	-28663
 	.short	-26215
-	.short	-28672
+	.short	-26368
 	.short	-26215
 	.short	2304
 	.short	0
@@ -9860,9 +9892,9 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	26214
 	.short	26214
-	.short	-26359
 	.short	-26215
-	.short	153
+	.short	-26215
+	.short	-26215
 	.short	9
 	.short	-26359
 	.short	9
@@ -9875,13 +9907,13 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26887
 	.short	26214
-	.short	-26164
+	.short	-26949
 	.short	-26215
 	.short	153
-	.short	2457
+	.short	-26215
 	.short	-26224
 	.short	-26215
-	.short	153
+	.short	2457
 	.short	-26215
 	.short	2457
 	.short	0
@@ -9891,12 +9923,12 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	26214
-	.short	-14698
+	.short	-18794
 	.short	-26215
 	.short	-26215
-	.short	0
-	.short	2448
-	.short	144
+	.short	2304
+	.short	2457
+	.short	153
 	.short	0
 	.short	0
 	.short	-28519
@@ -9906,7 +9938,7 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	28668
+	.short	28667
 	.short	-154
 	.short	-26215
 	.short	-26215
@@ -9922,8 +9954,8 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	26217
-	.short	-13057
-	.short	-13108
+	.short	-17409
+	.short	-17477
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -9938,8 +9970,8 @@ shield_instructionsTiles:
 	.short	2304
 	.short	26214
 	.short	26214
-	.short	-4
-	.short	-13057
+	.short	-5
+	.short	-17409
 	.short	-26215
 	.short	-26215
 	.short	0
@@ -9950,19 +9982,19 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	0
 	.short	0
-	.short	0
+	.short	9
 	.short	0
 	.short	-26218
 	.short	0
 	.short	-26209
 	.short	2457
 	.short	-26215
-	.short	-26215
+	.short	27033
 	.short	0
-	.short	-14080
+	.short	-18176
 	.short	6
 	.short	-26266
-	.short	159
+	.short	-28513
 	.short	-27031
 	.short	-26215
 	.short	-26215
@@ -9993,59 +10025,27 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	-10
-	.short	-13108
+	.short	-17477
 	.short	-10
 	.short	-1
-	.short	0
-	.short	-28519
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	8908
-	.short	8908
-	.short	-13108
-	.short	-13108
-	.short	-26215
-	.short	2457
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	8738
-	.short	8738
-	.short	11468
-	.short	8738
-	.short	-26215
-	.short	-28672
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	8738
-	.short	2313
 	.short	-26368
+	.short	-26215
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	8891
+	.short	8891
+	.short	-17477
+	.short	-17477
+	.short	-26215
+	.short	-26215
 	.short	0
 	.short	0
 	.short	0
@@ -10057,7 +10057,39 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	8738
-	.short	-19934
+	.short	8738
+	.short	11195
+	.short	8738
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	8738
+	.short	2457
+	.short	-26215
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	8738
+	.short	-7646
 	.short	8738
 	.short	8738
 	.short	-26359
@@ -10072,11 +10104,11 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-17486
-	.short	30651
+	.short	-4382
+	.short	30702
 	.short	8738
 	.short	8738
-	.short	-28663
+	.short	-26359
 	.short	2304
 	.short	0
 	.short	0
@@ -10090,10 +10122,26 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	30583
 	.short	30583
+	.short	11810
+	.short	11810
+	.short	2457
+	.short	-26368
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	30679
+	.short	30583
+	.short	12002
 	.short	8738
-	.short	11042
-	.short	2313
-	.short	2304
+	.short	-26215
+	.short	-28672
 	.short	0
 	.short	0
 	.short	0
@@ -10105,25 +10153,9 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	30583
-	.short	30583
-	.short	11186
-	.short	8738
-	.short	-26215
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	30583
-	.short	-17477
-	.short	-15838
-	.short	-13060
+	.short	-4370
+	.short	-19934
+	.short	-17413
 	.short	0
 	.short	153
 	.short	0
@@ -10136,10 +10168,10 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-18565
+	.short	30590
 	.short	30583
-	.short	-13278
-	.short	-13268
+	.short	-17630
+	.short	-17621
 	.short	0
 	.short	0
 	.short	0
@@ -10153,10 +10185,10 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	-26215
 	.short	30583
-	.short	30583
+	.short	32221
 	.short	8738
-	.short	11195
-	.short	-28519
+	.short	12014
+	.short	-26215
 	.short	2457
 	.short	0
 	.short	0
@@ -10170,10 +10202,42 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	30583
 	.short	30583
-	.short	8738
+	.short	8930
 	.short	8738
 	.short	-26224
-	.short	-28663
+	.short	-26215
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	30583
+	.short	32215
+	.short	8738
+	.short	-4382
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-8739
+	.short	30589
+	.short	-6274
+	.short	12014
+	.short	-26215
+	.short	-26215
 	.short	0
 	.short	0
 	.short	0
@@ -10186,57 +10250,25 @@ shield_instructionsTiles:
 	.short	-26215
 	.short	30583
 	.short	30583
+	.short	-4370
+	.short	8738
+	.short	-26215
+	.short	-26215
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	30583
+	.short	-4377
 	.short	8738
 	.short	-17486
-	.short	2457
-	.short	-26215
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	32487
-	.short	30583
-	.short	-18501
-	.short	11195
-	.short	-26215
-	.short	-26215
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	30583
-	.short	30583
-	.short	-17477
-	.short	8738
-	.short	-26215
-	.short	2448
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	30583
-	.short	-17481
-	.short	8738
-	.short	-13118
-	.short	0
+	.short	-26368
 	.short	0
 	.short	0
 	.short	0
@@ -10248,122 +10280,106 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	11458
-	.short	-17486
-	.short	26262
-	.short	-13108
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-17477
-	.short	8891
-	.short	-13108
-	.short	-13118
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-19934
-	.short	-17486
-	.short	-13108
-	.short	-13108
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-19781
-	.short	8747
-	.short	11298
-	.short	-13278
-	.short	-28672
-	.short	9
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	8738
-	.short	8738
-	.short	-13268
-	.short	11458
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-17486
-	.short	8738
-	.short	-13108
-	.short	-13108
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	-17477
-	.short	-17477
-	.short	-13108
-	.short	-15838
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	0
-	.short	-26215
-	.short	-26215
-	.short	11042
 	.short	11186
-	.short	-15828
-	.short	-15828
+	.short	-4382
+	.short	26262
+	.short	-17477
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-4370
+	.short	8942
+	.short	-17477
+	.short	-17486
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-7646
+	.short	-4382
+	.short	-17477
+	.short	-17477
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-7442
+	.short	8750
+	.short	11042
+	.short	-17630
+	.short	-28672
+	.short	153
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	8738
+	.short	8738
+	.short	-17621
+	.short	11186
+	.short	0
+	.short	-28672
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-4382
+	.short	8738
+	.short	-17477
+	.short	-17477
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-4382
+	.short	-4370
+	.short	-17477
+	.short	-19934
 	.short	0
 	.short	144
 	.short	0
@@ -10376,10 +10392,26 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-17630
+	.short	11810
 	.short	8738
-	.short	8908
-	.short	-13108
+	.short	-19925
+	.short	-19925
+	.short	0
+	.short	144
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	0
+	.short	-26215
+	.short	-26215
+	.short	-7646
+	.short	8738
+	.short	8891
+	.short	-17477
 	.short	0
 	.short	0
 	.short	0
@@ -10392,9 +10424,9 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-13278
-	.short	-13108
-	.short	-52
+	.short	-17630
+	.short	-17477
+	.short	-69
 	.short	26367
 	.short	0
 	.short	0
@@ -10408,8 +10440,8 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	-13108
-	.short	2412
+	.short	-17477
+	.short	2411
 	.short	26214
 	.short	-26218
 	.short	0
@@ -10424,10 +10456,10 @@ shield_instructionsTiles:
 	.short	0
 	.short	-26215
 	.short	-26215
-	.short	2505
-	.short	-12544
+	.short	2489
+	.short	-16640
 	.short	-26266
-	.short	27792
+	.short	27536
 	.short	27030
 	.short	-26266
 	.short	-26215

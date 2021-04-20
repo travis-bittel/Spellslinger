@@ -56,6 +56,7 @@ enum {BOLT, SHIELD, LEVITATE};
 int spellsUnlocked = 2;
 
 int durationShielded = 0; // Ticks up as player holds down Shield button, increasing Mana cost
+int recentlyShieldedAttackTicks = 0;
 
 int globalCooldown = 0; // Prevents all spellcasts while >0
 int boltCooldown = 0;
@@ -69,6 +70,11 @@ int playerMovementStep = 0;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
     hOff = encounters[currentEncounter].startCol;
+
+    if (currentPlayerHealth < PLAYER_MAX_HEALTH - 1) {
+        currentPlayerHealth++;
+    }
+    currentPlayerMana = PLAYER_MAX_MANA;
 
     // Spawn Monsters
     for (int i = 0; i < encounters[currentEncounter].numStartingEnemies; i++) {
@@ -102,10 +108,7 @@ void startEncounter() {
 
 void damagePlayer(int amount, int pierceShield) {
     if (!pierceShield && durationShielded > 0) {
-        // Change shield sprite to blocked version
-        shadowOAM[1].attr0 = (player.screenRow - 8) | ATTR0_SQUARE;
-        shadowOAM[1].attr1 = player.screenCol | ATTR1_TINY;
-        shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(5, 1);
+        recentlyShieldedAttackTicks = 30;
 
         currentPlayerMana += SHIELD_MANA_REFUND;
         if (currentPlayerMana > PLAYER_MAX_MANA) {
@@ -378,6 +381,9 @@ void updateGame() {
     if (shieldCooldown > 0) {
         shieldCooldown--;
     }
+    if (recentlyShieldedAttackTicks > 0) {
+        recentlyShieldedAttackTicks--;
+    }
     if (BUTTON_HELD(BUTTON_RIGHT)) {
         playerFacingDirection = 1;
         // Stop player from moving into next encounter's region
@@ -443,7 +449,7 @@ void updateGame() {
     // Shield
     if (BUTTON_HELD(BUTTON_B) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
         durationShielded++;
-        shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(4, 1);
+        playerManaStep = 0;
         playerManaDrainStep += SHIELD_MANA_COST_BASE + (durationShielded * SHIELD_MANA_COST_GROWTH);
         if (playerManaDrainStep >= 1000) {
             playerManaDrainStep -= 1000;
@@ -468,7 +474,7 @@ void updateGame() {
             player.worldRow--;
             levitateHeightStep = 0;
         }
-        levitateManaConsumptionStep++;
+        //levitateManaConsumptionStep++;
         if (levitateManaConsumptionStep >= LEVITATE_STEPS_PER_MANA_DRAIN) {
             currentPlayerMana--;
             levitateManaConsumptionStep = 0;
@@ -503,7 +509,7 @@ void updateGame() {
         playerManaStep++;
         if (playerManaStep >= PLAYER_TICKS_PER_MANA_REGEN) {
             currentPlayerMana++;
-            playerManaStep = 0;
+            playerManaStep -= PLAYER_TICKS_PER_MANA_REGEN;
         }
     }
 }
@@ -729,9 +735,14 @@ void drawGame() {
     shadowOAM[0].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(1, 0);
 
     // Shield
+    shadowOAM[1].attr0 = (player.screenRow - 10) | ATTR0_SQUARE;
+    shadowOAM[1].attr1 = player.screenCol | ATTR1_TINY;
     if (durationShielded > 0) {
-        shadowOAM[1].attr0 = (player.screenRow - 10) | ATTR0_SQUARE;
-        shadowOAM[1].attr1 = player.screenCol | ATTR1_TINY;
+        if (recentlyShieldedAttackTicks > 0) {
+            shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(5, 1);
+        } else {
+            shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(4, 1);
+        }
     } else {
         shadowOAM[1].attr0 |= ATTR0_HIDE;
     }

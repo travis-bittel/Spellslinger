@@ -123,7 +123,7 @@ void drawEnemies();
 void drawUI();
 int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
-# 84 "game.h"
+# 82 "game.h"
 enum {WALKER, SHOOTER, WRAITH};
 
 typedef struct {
@@ -1124,6 +1124,7 @@ enum {BOLT, SHIELD, LEVITATE};
 int spellsUnlocked = 2;
 
 int durationShielded = 0;
+int recentlyShieldedAttackTicks = 0;
 
 int globalCooldown = 0;
 int boltCooldown = 0;
@@ -1137,6 +1138,11 @@ int playerMovementStep = 0;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
     hOff = encounters[currentEncounter].startCol;
+
+    if (currentPlayerHealth < 10 - 1) {
+        currentPlayerHealth++;
+    }
+    currentPlayerMana = 10;
 
 
     for (int i = 0; i < encounters[currentEncounter].numStartingEnemies; i++) {
@@ -1170,12 +1176,9 @@ void startEncounter() {
 
 void damagePlayer(int amount, int pierceShield) {
     if (!pierceShield && durationShielded > 0) {
+        recentlyShieldedAttackTicks = 30;
 
-        shadowOAM[1].attr0 = (player.screenRow - 8) | (0 << 14);
-        shadowOAM[1].attr1 = player.screenCol | (0 << 14);
-        shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (5));
-
-        currentPlayerMana += 0;
+        currentPlayerMana += 1;
         if (currentPlayerMana > 10) {
             currentPlayerMana = 10;
         }
@@ -1446,6 +1449,9 @@ void updateGame() {
     if (shieldCooldown > 0) {
         shieldCooldown--;
     }
+    if (recentlyShieldedAttackTicks > 0) {
+        recentlyShieldedAttackTicks--;
+    }
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4)))) {
         playerFacingDirection = 1;
 
@@ -1501,7 +1507,7 @@ void updateGame() {
             return;
         }
         spawnPlayerBolt();
-        currentPlayerMana -= 1;
+        currentPlayerMana -= 2;
         globalCooldown = 10;
         boltCooldown = 0;
         if (currentPlayerMana <= 0) {
@@ -1511,8 +1517,8 @@ void updateGame() {
 
     if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 1))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
         durationShielded++;
-        shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
-        playerManaDrainStep += 30 + (durationShielded * 5);
+        playerManaStep = 0;
+        playerManaDrainStep += 25 + (durationShielded * 4);
         if (playerManaDrainStep >= 1000) {
             playerManaDrainStep -= 1000;
             currentPlayerMana--;
@@ -1536,8 +1542,8 @@ void updateGame() {
             player.worldRow--;
             levitateHeightStep = 0;
         }
-        levitateManaConsumptionStep++;
-        if (levitateManaConsumptionStep >= 30) {
+
+        if (levitateManaConsumptionStep >= 50) {
             currentPlayerMana--;
             levitateManaConsumptionStep = 0;
         }
@@ -1571,7 +1577,7 @@ void updateGame() {
         playerManaStep++;
         if (playerManaStep >= 30) {
             currentPlayerMana++;
-            playerManaStep = 0;
+            playerManaStep -= 30;
         }
     }
 }
@@ -1696,7 +1702,7 @@ void updateProjectiles() {
 
     for (int i = 0; i < 5; i++) {
         if (playerBolts[i].active) {
-            playerBolts[i].colStep += playerBolts[i].direction * 15;
+            playerBolts[i].colStep += playerBolts[i].direction * 20;
             while (playerBolts[i].colStep >= 10 && playerBolts[i].direction == 1) {
                 playerBolts[i].worldCol++;
                 playerBolts[i].colStep -= 10;
@@ -1797,9 +1803,14 @@ void drawGame() {
     shadowOAM[0].attr2 = ((0) << 12) | ((0)*32 + (1));
 
 
+    shadowOAM[1].attr0 = (player.screenRow - 10) | (0 << 14);
+    shadowOAM[1].attr1 = player.screenCol | (0 << 14);
     if (durationShielded > 0) {
-        shadowOAM[1].attr0 = (player.screenRow - 10) | (0 << 14);
-        shadowOAM[1].attr1 = player.screenCol | (0 << 14);
+        if (recentlyShieldedAttackTicks > 0) {
+            shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (5));
+        } else {
+            shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
+        }
     } else {
         shadowOAM[1].attr0 |= (2 << 8);
     }
