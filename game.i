@@ -1135,9 +1135,14 @@ int levitateHeightStep = 0;
 
 int playerMovementStep = 0;
 
+
+int currentSBB = 16;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
     hOff = encounters[currentEncounter].startCol;
+
+    currentSBB++;
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((currentSBB) << 8) | (0 << 7) | (0 << 14);
 
     if (currentPlayerHealth < 10 - 1) {
         currentPlayerHealth++;
@@ -1383,6 +1388,7 @@ void initGame() {
     currentEncounter = 0;
     spellsUnlocked = -1;
 
+    currentSBB = 15;
     startEncounter();
 }
 
@@ -1794,8 +1800,8 @@ void drawGame() {
         return;
     }
 
-    (*(volatile unsigned short *)0x04000010) = hOff;
-    (*(volatile unsigned short *)0x04000012) = vOff;
+
+
 
 
     shadowOAM[0].attr0 = player.screenRow | (2 << 14);
@@ -1822,6 +1828,8 @@ void drawGame() {
     drawUI();
 
     DMANow(3, shadowOAM, ((OBJ_ATTR *)(0x7000000)), 512);
+
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((currentSBB) << 8) | (0 << 7) | (0 << 14);
 }
 
 void drawEnemies() {

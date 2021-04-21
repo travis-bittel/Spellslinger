@@ -105,7 +105,7 @@ void initialize()
 {
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
 
-    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_WIDE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     buttons = BUTTONS;
     oldButtons = 0;
@@ -123,6 +123,7 @@ void goToStart() {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = START;
 
@@ -144,6 +145,7 @@ void goToInstructions() {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = INSTRUCTIONS;
     DMANow(3, instructionsPal, PALETTE, instructionsPalLen / 2);
@@ -168,6 +170,7 @@ void goToNewSpell(int spell) {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = NEW_SPELL;
 
@@ -207,6 +210,7 @@ void goToNewEnemy(int enemy) {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = NEW_ENEMY;
 
@@ -273,6 +277,7 @@ void goToPause() {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = PAUSE;
     DMANow(3, pausedPal, PALETTE, pausedPalLen / 2);
@@ -296,6 +301,7 @@ void goToWin() {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = WIN;
     DMANow(3, winPal, PALETTE, winPalLen / 2);
@@ -316,6 +322,7 @@ void goToLose() {
     REG_BG0HOFF = 0;
     REG_BG0VOFF = 0;
     REG_DISPCTL = MODE0 | BG0_ENABLE;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
     
     state = LOSE;
     DMANow(3, losePal, PALETTE, losePalLen / 2);

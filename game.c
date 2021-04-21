@@ -67,9 +67,14 @@ int levitateHeightStep = 0;
 
 int playerMovementStep = 0;
 
+
+int currentSBB = 16;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
     hOff = encounters[currentEncounter].startCol;
+
+    currentSBB++;
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(currentSBB) | BG_4BPP | BG_SIZE_SMALL;
 
     if (currentPlayerHealth < PLAYER_MAX_HEALTH - 1) {
         currentPlayerHealth++;
@@ -315,6 +320,7 @@ void initGame() {
     currentEncounter = 0;
     spellsUnlocked = -1;
 
+    currentSBB = 15;
     startEncounter();
 }
 
@@ -726,8 +732,8 @@ void drawGame() {
         return;
     }
 
-    REG_BG0HOFF = hOff;
-    REG_BG0VOFF = vOff;
+    //REG_BG0HOFF = hOff;
+    //REG_BG0VOFF = vOff;
 
     // Draw Player
     shadowOAM[0].attr0 = player.screenRow | ATTR0_TALL;
@@ -754,6 +760,8 @@ void drawGame() {
     drawUI();
 
     DMANow(3, shadowOAM, OAM, 512);
+
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(currentSBB) | BG_4BPP | BG_SIZE_SMALL;
 }
 
 void drawEnemies() {

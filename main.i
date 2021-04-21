@@ -1377,10 +1377,10 @@ extern const unsigned short pausedPal[256];
 # 9 "main.c" 2
 # 1 "background.h" 1
 # 22 "background.h"
-extern const unsigned short backgroundTiles[8784];
+extern const unsigned short backgroundTiles[7952];
 
 
-extern const unsigned short backgroundMap[2048];
+extern const unsigned short backgroundMap[1024];
 
 
 extern const unsigned short backgroundPal[256];
@@ -1405,7 +1405,7 @@ void drawEnemies();
 void drawUI();
 int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
-# 84 "game.h"
+# 82 "game.h"
 enum {WALKER, SHOOTER, WRAITH};
 
 typedef struct {
@@ -1573,7 +1573,7 @@ extern const unsigned short levitate_instructionsPal[256];
 # 15 "main.c" 2
 # 1 "shield_instructions.h" 1
 # 22 "shield_instructions.h"
-extern const unsigned short shield_instructionsTiles[9136];
+extern const unsigned short shield_instructionsTiles[9168];
 
 
 extern const unsigned short shield_instructionsMap[1024];
@@ -1700,7 +1700,7 @@ void initialize()
 {
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
 
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (1 << 14);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     buttons = (*(volatile unsigned short *)0x04000130);
     oldButtons = 0;
@@ -1718,6 +1718,7 @@ void goToStart() {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = START;
 
@@ -1739,6 +1740,7 @@ void goToInstructions() {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = INSTRUCTIONS;
     DMANow(3, instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1763,6 +1765,7 @@ void goToNewSpell(int spell) {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = NEW_SPELL;
 
@@ -1774,7 +1777,7 @@ void goToNewSpell(int spell) {
             break;
         case 1:
             DMANow(3, shield_instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
-            DMANow(3, shield_instructionsTiles, &((charblock *)0x6000000)[0], 18272 / 2);
+            DMANow(3, shield_instructionsTiles, &((charblock *)0x6000000)[0], 18336 / 2);
             DMANow(3, shield_instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
             break;
         case 2:
@@ -1802,6 +1805,7 @@ void goToNewEnemy(int enemy) {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = NEW_ENEMY;
 
@@ -1842,8 +1846,8 @@ void goToGame() {
 
     state = GAME;
     DMANow(3, backgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, backgroundTiles, &((charblock *)0x6000000)[0], 17568 / 2);
-    DMANow(3, backgroundMap, &((screenblock *)0x6000000)[16], 4096 / 2);
+    DMANow(3, backgroundTiles, &((charblock *)0x6000000)[0], 15904 / 2);
+    DMANow(3, backgroundMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 
 
@@ -1868,6 +1872,7 @@ void goToPause() {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = PAUSE;
     DMANow(3, pausedPal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1891,6 +1896,7 @@ void goToWin() {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = WIN;
     DMANow(3, winPal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1911,6 +1917,7 @@ void goToLose() {
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = LOSE;
     DMANow(3, losePal, ((unsigned short *)0x5000000), 512 / 2);

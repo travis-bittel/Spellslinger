@@ -24,6 +24,7 @@ goToStart:
 	mov	ip, #0
 	mov	r2, #67108864
 	mov	r3, #256
+	mov	r1, #4096
 	push	{r4, lr}
 	ldr	lr, .L4
 	strh	ip, [r2, #16]	@ movhi
@@ -31,8 +32,9 @@ goToStart:
 	strh	ip, [r2, #18]	@ movhi
 	mov	r0, #3
 	strh	r3, [r2]	@ movhi
-	ldr	r1, .L4+8
+	strh	r1, [r2, #8]	@ movhi
 	mov	r2, #83886080
+	ldr	r1, .L4+8
 	str	ip, [lr]
 	mov	lr, pc
 	bx	r4
@@ -72,7 +74,7 @@ initialize:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	mov	r3, #67108864
 	mov	r2, #4352
-	mov	r1, #20480
+	mov	r1, #4096
 	push	{r4, lr}
 	mov	lr, #0
 	strh	r2, [r3]	@ movhi
@@ -144,16 +146,18 @@ goToInstructions:
 	mov	r2, #67108864
 	mov	r1, #0
 	mov	r3, #256
+	mov	r0, #4096
 	push	{r4, lr}
 	mov	lr, #1
 	ldr	ip, .L16
 	strh	r1, [r2, #16]	@ movhi
 	ldr	r4, .L16+4
 	strh	r1, [r2, #18]	@ movhi
-	mov	r0, #3
 	strh	r3, [r2]	@ movhi
 	ldr	r1, .L16+8
+	strh	r0, [r2, #8]	@ movhi
 	mov	r2, #83886080
+	mov	r0, #3
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
@@ -217,16 +221,18 @@ goToNewSpell:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	mov	r2, #67108864
 	push	{r4, lr}
+	mov	r2, #67108864
 	mov	r1, #0
 	mov	r3, #256
+	mov	r4, #4096
 	mov	lr, #6
 	ldr	ip, .L30
 	cmp	r0, #1
 	strh	r1, [r2, #16]	@ movhi
 	strh	r1, [r2, #18]	@ movhi
 	strh	r3, [r2]	@ movhi
+	strh	r4, [r2, #8]	@ movhi
 	mov	r2, #83886080
 	str	lr, [ip]
 	beq	.L26
@@ -302,7 +308,7 @@ goToNewSpell:
 	.word	100696064
 	.word	bolt_instructionsMap
 	.word	shield_instructionsPal
-	.word	9136
+	.word	9168
 	.word	shield_instructionsTiles
 	.word	shield_instructionsMap
 	.word	levitate_instructionsPal
@@ -367,16 +373,18 @@ goToNewEnemy:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	mov	r2, #67108864
 	push	{r4, lr}
+	mov	r2, #67108864
 	mov	r1, #0
 	mov	r3, #256
+	mov	r4, #4096
 	mov	lr, #7
 	ldr	ip, .L53
 	cmp	r0, #1
 	strh	r1, [r2, #16]	@ movhi
 	strh	r1, [r2, #18]	@ movhi
 	strh	r3, [r2]	@ movhi
+	strh	r4, [r2, #8]	@ movhi
 	mov	r2, #83886080
 	str	lr, [ip]
 	beq	.L47
@@ -515,7 +523,7 @@ goToGame:
 	ldr	r1, .L57+16
 	mov	lr, pc
 	bx	r4
-	mov	r3, #2048
+	mov	r3, #1024
 	mov	r0, #3
 	ldr	r2, .L57+20
 	ldr	r1, .L57+24
@@ -529,7 +537,7 @@ goToGame:
 	.word	state
 	.word	DMANow
 	.word	backgroundPal
-	.word	8784
+	.word	7952
 	.word	backgroundTiles
 	.word	100696064
 	.word	backgroundMap
@@ -601,6 +609,7 @@ goToPause:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}
 	mov	r2, #67108864
+	mov	lr, #4096
 	mov	r4, #3
 	mov	r1, #0
 	mov	r3, #256
@@ -611,6 +620,7 @@ goToPause:
 	mov	r0, r4
 	strh	r3, [r2]	@ movhi
 	ldr	r1, .L70+8
+	strh	lr, [r2, #8]	@ movhi
 	mov	r2, #83886080
 	str	r4, [ip]
 	mov	lr, pc
@@ -694,16 +704,18 @@ goToWin:
 	mov	r2, #67108864
 	mov	r1, #0
 	mov	r3, #256
+	mov	r0, #4096
 	push	{r4, lr}
 	mov	lr, #4
 	ldr	ip, .L88
 	strh	r1, [r2, #16]	@ movhi
 	ldr	r4, .L88+4
 	strh	r1, [r2, #18]	@ movhi
-	mov	r0, #3
 	strh	r3, [r2]	@ movhi
 	ldr	r1, .L88+8
+	strh	r0, [r2, #8]	@ movhi
 	mov	r2, #83886080
+	mov	r0, #3
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
@@ -944,16 +956,18 @@ goToLose:
 	mov	r2, #67108864
 	mov	r1, #0
 	mov	r3, #256
+	mov	r0, #4096
 	push	{r4, lr}
 	mov	lr, #5
 	ldr	ip, .L135
 	strh	r1, [r2, #16]	@ movhi
 	ldr	r4, .L135+4
 	strh	r1, [r2, #18]	@ movhi
-	mov	r0, #3
 	strh	r3, [r2]	@ movhi
 	ldr	r1, .L135+8
+	strh	r0, [r2, #8]	@ movhi
 	mov	r2, #83886080
+	mov	r0, #3
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
