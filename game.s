@@ -583,7 +583,7 @@ initEnemies:
 	mov	r4, #8
 	mov	lr, #16
 	mov	ip, #200
-	mov	r0, #209
+	mov	r0, #208
 	ldr	r3, .L107
 	add	r1, r3, #320
 .L100:
@@ -603,7 +603,7 @@ initEnemies:
 	mov	r4, #8
 	mov	lr, #16
 	mov	ip, #200
-	mov	r0, #209
+	mov	r0, #208
 	ldr	r3, .L107+4
 	add	r1, r3, #360
 .L101:
@@ -622,7 +622,7 @@ initEnemies:
 	mov	r4, #8
 	mov	lr, #16
 	mov	ip, #200
-	mov	r0, #209
+	mov	r0, #208
 	ldr	r3, .L107+8
 	add	r1, r3, #400
 .L102:
@@ -742,7 +742,7 @@ initGame:
 	str	r1, [r0, #24]
 	mov	r1, #16
 	str	r1, [r0, #28]
-	mov	r1, #209
+	mov	r1, #208
 	mov	r9, #180
 	str	r1, [r0, #8]
 	mvn	r1, #0
@@ -907,7 +907,7 @@ updateEnemies:
 	bne	.L130
 	mvn	r2, #9
 	ldr	r3, [r4, #20]
-	rsb	r3, r3, #223
+	rsb	r3, r3, #222
 	str	r7, [r4, #52]
 	str	r3, [r4, #8]
 	str	r2, [r4, #60]
@@ -951,7 +951,7 @@ updateEnemies:
 	ldr	r1, [r4, #20]
 .L149:
 	ldr	r2, [r4, #8]
-	rsb	r3, r1, #225
+	rsb	r3, r1, #224
 	cmp	r2, r3
 	blt	.L154
 	ldr	r3, [r4, #72]
@@ -970,7 +970,7 @@ updateEnemies:
 	add	r2, r2, #1
 	add	r1, r1, r2
 	add	r3, r3, #10
-	cmp	r1, #224
+	cmp	r1, #223
 	str	r2, [r4, #8]
 	str	r3, [r4, #56]
 	strgt	r9, [r4, #56]
@@ -997,7 +997,7 @@ updateEnemies:
 	sub	r2, r2, #1
 	add	r1, r1, r2
 	sub	r3, r3, #10
-	cmp	r1, #215
+	cmp	r1, #214
 	str	r2, [r4, #8]
 	str	r3, [r4, #56]
 	strle	r9, [r4, #56]
@@ -1005,7 +1005,7 @@ updateEnemies:
 	b	.L162
 .L154:
 	add	r3, r2, r1
-	cmp	r3, #215
+	cmp	r3, #214
 	bgt	.L179
 	ldr	r3, [r4, #68]
 	add	r3, r3, #1
@@ -1056,7 +1056,7 @@ updateEnemies:
 	ldr	r2, [r4, #48]
 	ldr	r3, [r4, #20]
 	sub	r1, r2, #4
-	rsb	r3, r3, #225
+	rsb	r3, r3, #224
 	cmp	r1, #0
 	str	r1, [r4, #48]
 	str	r3, [r4, #8]
@@ -1594,7 +1594,7 @@ updateGame:
 	ldr	r2, [r5, #28]
 	blt	.L327
 	add	lr, ip, r2
-	cmp	lr, #213
+	cmp	lr, #212
 	str	r3, [r4, #32]
 	ble	.L305
 .L303:
@@ -1646,7 +1646,7 @@ updateGame:
 	ldr	r1, [r5, #8]
 	ldr	r2, [r5, #28]
 	add	r3, r1, r2
-	cmp	r3, #224
+	cmp	r3, #223
 	bgt	.L309
 	ldr	r3, [r4, #40]
 	sub	r3, r3, #1
@@ -1667,7 +1667,7 @@ updateGame:
 .L318:
 	ldr	r1, [r5, #8]
 	add	r2, r1, r2
-	cmp	r2, #224
+	cmp	r2, #223
 	bgt	.L312
 	ldr	r3, [r4, #40]
 	sub	r3, r3, #3
@@ -1719,7 +1719,7 @@ updateGame:
 	ldr	r1, [r5, #8]
 	add	r1, r1, r3
 	ldr	r3, [r4, #28]
-	cmp	r1, #224
+	cmp	r1, #223
 	and	r3, r3, r3, asr #31
 	suble	r3, r3, #4
 	subgt	r3, r3, #8
@@ -1751,7 +1751,7 @@ updateGame:
 	ldr	r2, [r5, #8]
 	add	r2, r2, r3
 	ldr	r3, [r4, #28]
-	cmp	r2, #224
+	cmp	r2, #223
 	bic	r3, r3, r3, asr #31
 	addle	r3, r3, #4
 	addgt	r3, r3, #8
@@ -1802,7 +1802,7 @@ updateGame:
 	b	.L299
 .L327:
 	add	r0, r2, ip
-	cmp	r0, #213
+	cmp	r0, #212
 	str	r3, [r4, #40]
 	str	r3, [r4, #32]
 	ble	.L304
@@ -2191,7 +2191,7 @@ playerFacingDirection:
 	.type	currentSBB, %object
 	.size	currentSBB, 4
 currentSBB:
-	.word	16
+	.word	15
 	.type	spellsUnlocked, %object
 	.size	spellsUnlocked, 4
 spellsUnlocked:

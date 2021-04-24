@@ -248,6 +248,7 @@ void newEnemy() {
 // Sets up the game state
 void goToGame() {
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE; // Enable sprites
+    REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = GAME;
     DMANow(3, backgroundPal, PALETTE, backgroundPalLen / 2);

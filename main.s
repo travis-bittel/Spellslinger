@@ -503,13 +503,15 @@ goToGame:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
-	mov	r3, #67108864
-	mov	r2, #4352
+	mov	r2, #67108864
+	mov	r3, #4352
+	mov	r1, #4096
 	push	{r4, lr}
 	mov	lr, #2
 	ldr	ip, .L57
-	strh	r2, [r3]	@ movhi
+	strh	r3, [r2]	@ movhi
 	ldr	r4, .L57+4
+	strh	r1, [r2, #8]	@ movhi
 	mov	r3, #256
 	mov	r2, #83886080
 	mov	r0, #3
@@ -517,16 +519,16 @@ goToGame:
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
+	mov	r3, #416
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r3, .L57+12
-	ldr	r1, .L57+16
+	ldr	r1, .L57+12
 	mov	lr, pc
 	bx	r4
-	mov	r3, #1024
+	mov	r3, #10240
 	mov	r0, #3
-	ldr	r2, .L57+20
-	ldr	r1, .L57+24
+	ldr	r2, .L57+16
+	ldr	r1, .L57+20
 	mov	lr, pc
 	bx	r4
 	pop	{r4, lr}
@@ -537,7 +539,6 @@ goToGame:
 	.word	state
 	.word	DMANow
 	.word	backgroundPal
-	.word	7952
 	.word	backgroundTiles
 	.word	100696064
 	.word	backgroundMap

@@ -1136,7 +1136,7 @@ int levitateHeightStep = 0;
 int playerMovementStep = 0;
 
 
-int currentSBB = 16;
+int currentSBB = 15;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
     hOff = encounters[currentEncounter].startCol;
@@ -1382,7 +1382,7 @@ void initGame() {
     player.worldCol = 20;
     player.width = 8;
     player.height = 16;
-    player.worldRow = 225 - player.height;
+    player.worldRow = 224 - player.height;
     currentPlayerHealth = 10;
     currentPlayerMana = 10;
     currentEncounter = 0;
@@ -1400,7 +1400,7 @@ void initEnemies() {
         walkers[i].width = 8;
         walkers[i].height = 16;
         walkers[i].worldCol = 200;
-        walkers[i].worldRow = 225 - walkers[i].height;
+        walkers[i].worldRow = 224 - walkers[i].height;
         walkers[i].attackStep = 0;
         walkers[i].colStep = 0;
     }
@@ -1411,7 +1411,7 @@ void initEnemies() {
         shooters[i].width = 8;
         shooters[i].height = 16;
         shooters[i].worldCol = 200;
-        shooters[i].worldRow = 225 - shooters[i].height;
+        shooters[i].worldRow = 224 - shooters[i].height;
         shooters[i].attackStep = 0;
     }
 
@@ -1421,7 +1421,7 @@ void initEnemies() {
         wraiths[i].width = 8;
         wraiths[i].height = 16;
         wraiths[i].worldCol = 200;
-        wraiths[i].worldRow = 225 - wraiths[i].height;
+        wraiths[i].worldRow = 224 - wraiths[i].height;
         wraiths[i].attackStep = 0;
     }
 }
@@ -1465,7 +1465,7 @@ void updateGame() {
             if (playerMovementStep < 0) {
                 playerMovementStep = 0;
             }
-            if (player.worldRow + player.height < 225) {
+            if (player.worldRow + player.height < 224) {
                 playerMovementStep += 4;
             } else {
                 playerMovementStep += 8;
@@ -1494,7 +1494,7 @@ void updateGame() {
             if (playerMovementStep > 0) {
                 playerMovementStep = 0;
             }
-            if (player.worldRow + player.height < 225) {
+            if (player.worldRow + player.height < 224) {
                 playerMovementStep -= 4;
             } else {
                 playerMovementStep -= 8;
@@ -1541,7 +1541,7 @@ void updateGame() {
             levitateHeightStep = 0;
         }
         playerManaStep = 0;
-        if (player.worldRow + player.height > 225 - 12) {
+        if (player.worldRow + player.height > 224 - 12) {
             levitateHeightStep++;
         }
         if (levitateHeightStep >= 2) {
@@ -1557,7 +1557,7 @@ void updateGame() {
             playerManaStep -= 45;
         }
     } else {
-        if (player.worldRow + player.height < 225) {
+        if (player.worldRow + player.height < 224) {
             levitateHeightStep--;
             if (levitateHeightStep < 0 && abs(levitateHeightStep) >= 3) {
                 player.worldRow++;
@@ -1565,7 +1565,7 @@ void updateGame() {
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))) && spellsUnlocked >= LEVITATE && player.worldRow + player.height < 225) {
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))) && spellsUnlocked >= LEVITATE && player.worldRow + player.height < 224) {
         levitateHeightStep -= 3;
         if (levitateHeightStep < 0 && abs(levitateHeightStep) >= 3) {
             player.worldRow++;
@@ -1607,12 +1607,12 @@ void updateEnemies() {
             case ENEMYSTATE_MOVING:
 
                 if (temp == 0) {
-                    walkers[i].worldRow = 225 - walkers[i].height - 2;
+                    walkers[i].worldRow = 224 - walkers[i].height - 2;
                     walkers[i].state = ENEMYSTATE_ATTACKING;
                     walkers[i].attackStep = -10;
 
                 } else if (temp == -1) {
-                    walkers[i].worldRow = 225 - walkers[i].height;
+                    walkers[i].worldRow = 224 - walkers[i].height;
                     walkers[i].colStep -= 4;
                     if (walkers[i].colStep <= 0) {
                         walkers[i].worldCol--;
@@ -1670,13 +1670,13 @@ void updateEnemies() {
             }
 
 
-            if (wraiths[i].worldRow >= 225 - wraiths[i].height) {
+            if (wraiths[i].worldRow >= 224 - wraiths[i].height) {
                 wraiths[i].framesOnGround++;
                 if (wraiths[i].framesOnGround >= 120) {
                     wraiths[i].framesOnGround = 0;
                     wraiths[i].rowVelocity = 1;
                 }
-            } else if (wraiths[i].worldRow + wraiths[i].height <= 225 - 10) {
+            } else if (wraiths[i].worldRow + wraiths[i].height <= 224 - 10) {
                 wraiths[i].framesInAir++;
                 if (wraiths[i].framesInAir >= 120) {
                     wraiths[i].framesInAir = 0;
@@ -1687,7 +1687,7 @@ void updateEnemies() {
             if (wraiths[i].rowStep <= -10) {
                 wraiths[i].rowStep += 10;
                 wraiths[i].worldRow++;
-                if (wraiths[i].worldRow + wraiths[i].height >= 225) {
+                if (wraiths[i].worldRow + wraiths[i].height >= 224) {
                     wraiths[i].rowStep = 0;
                     wraiths[i].rowVelocity = 0;
                 }
@@ -1695,7 +1695,7 @@ void updateEnemies() {
             if (wraiths[i].rowStep >= 10) {
                 wraiths[i].rowStep -= 10;
                 wraiths[i].worldRow--;
-                if (wraiths[i].worldRow + wraiths[i].height <= 225 - 10) {
+                if (wraiths[i].worldRow + wraiths[i].height <= 224 - 10) {
                     wraiths[i].rowStep = 0;
                     wraiths[i].rowVelocity = 0;
                 }

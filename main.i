@@ -1377,10 +1377,10 @@ extern const unsigned short pausedPal[256];
 # 9 "main.c" 2
 # 1 "background.h" 1
 # 22 "background.h"
-extern const unsigned short backgroundTiles[7952];
+extern const unsigned short backgroundTiles[416];
 
 
-extern const unsigned short backgroundMap[1024];
+extern const unsigned short backgroundMap[10240];
 
 
 extern const unsigned short backgroundPal[256];
@@ -1843,11 +1843,12 @@ void newEnemy() {
 
 void goToGame() {
     (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
+    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
 
     state = GAME;
     DMANow(3, backgroundPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, backgroundTiles, &((charblock *)0x6000000)[0], 15904 / 2);
-    DMANow(3, backgroundMap, &((screenblock *)0x6000000)[16], 2048 / 2);
+    DMANow(3, backgroundTiles, &((charblock *)0x6000000)[0], 832 / 2);
+    DMANow(3, backgroundMap, &((screenblock *)0x6000000)[16], 20480 / 2);
 }
 
 

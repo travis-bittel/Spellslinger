@@ -53,7 +53,7 @@ int playerManaDrainStep = 0;
 int playerFacingDirection = 1; // -1 = Left, 1 = Right
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = 2;
+int spellsUnlocked = 0;
 
 int durationShielded = 0; // Ticks up as player holds down Shield button, increasing Mana cost
 int recentlyShieldedAttackTicks = 0;
@@ -68,7 +68,7 @@ int levitateHeightStep = 0;
 int playerMovementStep = 0;
 
 
-int currentSBB = 16;
+int currentSBB = 15;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
     hOff = encounters[currentEncounter].startCol;

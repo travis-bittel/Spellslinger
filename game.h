@@ -20,7 +20,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 
 #define BACKGROUND_WIDTH 512
 #define NUMBER_OF_ENCOUNTERS 7
-#define GROUND_LEVEL 225
+#define GROUND_LEVEL 224
 
 // Player Stats
 #define PLAYER_MAX_HEALTH 10
