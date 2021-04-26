@@ -1337,7 +1337,7 @@ extern const unsigned short startPal[256];
 # 5 "main.c" 2
 # 1 "instructions.h" 1
 # 22 "instructions.h"
-extern const unsigned short instructionsTiles[2016];
+extern const unsigned short instructionsTiles[9616];
 
 
 extern const unsigned short instructionsMap[1024];
@@ -1745,7 +1745,7 @@ void goToInstructions() {
 
     state = INSTRUCTIONS;
     DMANow(3, instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, instructionsTiles, &((charblock *)0x6000000)[0], 4032 / 2);
+    DMANow(3, instructionsTiles, &((charblock *)0x6000000)[0], 19232 / 2);
     DMANow(3, instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 

@@ -1,3 +1,18 @@
+/*
+  Milestone 4
+---------------
+- All instructions are specified on the various instructions screens in the game!
+- All sprites and background are implemented!
+    - This includes the animated sprites and XL background requirements
+- Lots of bugs have been found and squashed!
+
+- ...I didn't have time to work on sound yet :(
+- The final enemy type I was going to implement was annoying to deal with and a pain to
+  implement as well, so I scrapped it.
+- The final boss is fully planned out and shouldn't be hard to implement, but as of right
+  now I have a placeholder encounter in the final spot just in case I can't get it working.
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 #include "myLib.h"

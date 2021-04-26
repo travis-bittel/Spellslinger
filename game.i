@@ -1136,7 +1136,6 @@ int levitateHeightStep = 0;
 
 int playerMovementStep = 0;
 
-
 int currentSBB = 15;
 void startEncounter() {
     player.worldCol = encounters[currentEncounter].startCol + 1;
@@ -1237,7 +1236,7 @@ void spawnPlayerBolt() {
         if (!playerBolts[i].active) {
             playerBolts[i].active = 1;
             playerBolts[i].colStep = 0;
-            playerBolts[i].worldRow = player.worldRow + 10;
+            playerBolts[i].worldRow = player.worldRow + 14;
             playerBolts[i].direction = playerFacingDirection;
             if (playerFacingDirection == -1) {
                 playerBolts[i].worldCol = player.worldCol - playerBolts[i].width;

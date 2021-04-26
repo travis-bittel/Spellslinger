@@ -161,16 +161,16 @@ goToInstructions:
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
-	mov	r3, #2016
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L16+12
+	ldr	r3, .L16+12
+	ldr	r1, .L16+16
 	mov	lr, pc
 	bx	r4
 	mov	r3, #1024
 	mov	r0, #3
-	ldr	r2, .L16+16
-	ldr	r1, .L16+20
+	ldr	r2, .L16+20
+	ldr	r1, .L16+24
 	mov	lr, pc
 	bx	r4
 	pop	{r4, lr}
@@ -181,6 +181,7 @@ goToInstructions:
 	.word	state
 	.word	DMANow
 	.word	instructionsPal
+	.word	9616
 	.word	instructionsTiles
 	.word	100696064
 	.word	instructionsMap

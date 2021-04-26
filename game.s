@@ -200,7 +200,7 @@ spawnPlayerBolt:
 	ldr	r2, [ip, #8]
 	add	r3, r3, r3, lsl #3
 	add	r3, r0, r3, lsl #2
-	add	r2, r2, #10
+	add	r2, r2, #14
 	cmn	lr, #1
 	str	r2, [r3, #8]
 	str	r1, [r3, #28]
