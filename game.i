@@ -147,6 +147,8 @@ typedef struct {
 
     int attackStep;
 
+    int recentAttack;
+
 } Walker;
 
 typedef struct {
@@ -217,6 +219,8 @@ typedef struct {
     int framesOnGround;
 
     int rowVelocity;
+
+    int animStep;
 } Wraith;
 
 typedef struct {
@@ -1059,13 +1063,10 @@ extern long double strtold (const char *restrict, char **restrict);
 
 # 4 "game.c" 2
 # 1 "spritesheet.h" 1
-# 22 "spritesheet.h"
+# 21 "spritesheet.h"
 
-# 22 "spritesheet.h"
+# 21 "spritesheet.h"
 extern const unsigned short spritesheetTiles[16384];
-
-
-extern const unsigned short spritesheetMap[1024];
 
 
 extern const unsigned short spritesheetPal[256];
@@ -1090,7 +1091,7 @@ extern int state;
 
 ANISPRITE player;
 
-Encounter encounters[7];
+Encounter encounters[10];
 
 Walker walkers[5];
 
@@ -1121,7 +1122,7 @@ int playerManaDrainStep = 0;
 int playerFacingDirection = 1;
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = 2;
+int spellsUnlocked = 0;
 
 int durationShielded = 0;
 int recentlyShieldedAttackTicks = 0;
@@ -1170,10 +1171,10 @@ void startEncounter() {
     if (currentEncounter == 3) {
         goToNewEnemy(1);
     }
-    if (currentEncounter == 5) {
+    if (currentEncounter == 6) {
         goToNewEnemy(2);
     }
-    if (currentEncounter == 6) {
+    if (currentEncounter == 7) {
         goToNewSpell(2);
         spellsUnlocked = 2;
     }
@@ -1236,7 +1237,7 @@ void spawnPlayerBolt() {
         if (!playerBolts[i].active) {
             playerBolts[i].active = 1;
             playerBolts[i].colStep = 0;
-            playerBolts[i].worldRow = player.worldRow + player.height / 2;
+            playerBolts[i].worldRow = player.worldRow + 10;
             playerBolts[i].direction = playerFacingDirection;
             if (playerFacingDirection == -1) {
                 playerBolts[i].worldCol = player.worldCol - playerBolts[i].width;
@@ -1340,9 +1341,9 @@ void initGame() {
 
     encounters[3].startCol = 240 * 3;
     encounters[3].state = 0;
-    encounters[3].startingEnemies[0].spawnCol = 60;
+    encounters[3].startingEnemies[0].spawnCol = 80;
     encounters[3].startingEnemies[0].type = WALKER;
-    encounters[3].startingEnemies[1].spawnCol = 100;
+    encounters[3].startingEnemies[1].spawnCol = 120;
     encounters[3].startingEnemies[1].type = SHOOTER;
     encounters[3].startingEnemies[2].spawnCol = 160;
     encounters[3].startingEnemies[2].type = WALKER;
@@ -1350,7 +1351,7 @@ void initGame() {
 
     encounters[4].startCol = 240 * 4;
     encounters[4].state = 0;
-    encounters[4].startingEnemies[0].spawnCol = 60;
+    encounters[4].startingEnemies[0].spawnCol = 90;
     encounters[4].startingEnemies[0].type = SHOOTER;
     encounters[4].startingEnemies[1].spawnCol = 140;
     encounters[4].startingEnemies[1].type = SHOOTER;
@@ -1361,27 +1362,55 @@ void initGame() {
     encounters[5].startingEnemies[0].spawnCol = 60;
     encounters[5].startingEnemies[0].type = WALKER;
     encounters[5].startingEnemies[1].spawnCol = 100;
-    encounters[5].startingEnemies[1].type = WALKER;
+    encounters[5].startingEnemies[1].type = SHOOTER;
     encounters[5].startingEnemies[2].spawnCol = 180;
-    encounters[5].startingEnemies[2].type = WRAITH;
+    encounters[5].startingEnemies[2].type = SHOOTER;
     encounters[5].numStartingEnemies = 3;
 
     encounters[6].startCol = 240 * 6;
     encounters[6].state = 0;
-    encounters[6].startingEnemies[0].spawnCol = 60;
-    encounters[6].startingEnemies[0].type = WRAITH;
-    encounters[6].startingEnemies[1].spawnCol = 100;
+    encounters[6].startingEnemies[0].spawnCol = 100;
+    encounters[6].startingEnemies[0].type = WALKER;
+    encounters[6].startingEnemies[1].spawnCol = 140;
     encounters[6].startingEnemies[1].type = WALKER;
-    encounters[6].startingEnemies[2].spawnCol = 140;
-    encounters[6].startingEnemies[2].type = WALKER;
-    encounters[6].startingEnemies[3].spawnCol = 180;
-    encounters[6].startingEnemies[3].type = WRAITH;
-    encounters[6].numStartingEnemies = 4;
+    encounters[6].startingEnemies[2].spawnCol = 180;
+    encounters[6].startingEnemies[2].type = WRAITH;
+    encounters[6].numStartingEnemies = 3;
+
+    encounters[7].startCol = 240 * 7;
+    encounters[7].state = 0;
+    encounters[7].startingEnemies[0].spawnCol = 100;
+    encounters[7].startingEnemies[0].type = SHOOTER;
+    encounters[7].startingEnemies[1].spawnCol = 180;
+    encounters[7].startingEnemies[1].type = WRAITH;
+    encounters[7].numStartingEnemies = 2;
+
+    encounters[8].startCol = 240 * 8;
+    encounters[8].state = 0;
+    encounters[8].startingEnemies[0].spawnCol = 60;
+    encounters[8].startingEnemies[0].type = WRAITH;
+    encounters[8].startingEnemies[1].spawnCol = 100;
+    encounters[8].startingEnemies[1].type = SHOOTER;
+    encounters[8].startingEnemies[2].spawnCol = 140;
+    encounters[8].startingEnemies[2].type = SHOOTER;
+    encounters[8].numStartingEnemies = 3;
+
+    encounters[9].startCol = 240 * 9;
+    encounters[9].state = 0;
+    encounters[9].startingEnemies[0].spawnCol = 60;
+    encounters[9].startingEnemies[0].type = WALKER;
+    encounters[9].startingEnemies[1].spawnCol = 80;
+    encounters[9].startingEnemies[1].type = WALKER;
+    encounters[9].startingEnemies[2].spawnCol = 100;
+    encounters[9].startingEnemies[2].type = WRAITH;
+    encounters[9].startingEnemies[3].spawnCol = 140;
+    encounters[9].startingEnemies[3].type = WRAITH;
+    encounters[9].numStartingEnemies = 4;
 
 
     player.worldCol = 20;
-    player.width = 8;
-    player.height = 16;
+    player.width = 16;
+    player.height = 32;
     player.worldRow = 224 - player.height;
     currentPlayerHealth = 10;
     currentPlayerMana = 10;
@@ -1397,8 +1426,8 @@ void initEnemies() {
     for (int i = 0; i < 5; i++) {
         walkers[i].health = 10;
         walkers[i].state = ENEMYSTATE_INACTIVE;
-        walkers[i].width = 8;
-        walkers[i].height = 16;
+        walkers[i].width = 16;
+        walkers[i].height = 32;
         walkers[i].worldCol = 200;
         walkers[i].worldRow = 224 - walkers[i].height;
         walkers[i].attackStep = 0;
@@ -1408,8 +1437,8 @@ void initEnemies() {
     for (int i = 0; i < 5; i++) {
         shooters[i].health = 15;
         shooters[i].state = ENEMYSTATE_INACTIVE;
-        shooters[i].width = 8;
-        shooters[i].height = 16;
+        shooters[i].width = 16;
+        shooters[i].height = 32;
         shooters[i].worldCol = 200;
         shooters[i].worldRow = 224 - shooters[i].height;
         shooters[i].attackStep = 0;
@@ -1418,8 +1447,8 @@ void initEnemies() {
     for (int i = 0; i < 5; i++) {
         wraiths[i].health = 15;
         wraiths[i].state = ENEMYSTATE_INACTIVE;
-        wraiths[i].width = 8;
-        wraiths[i].height = 16;
+        wraiths[i].width = 16;
+        wraiths[i].height = 32;
         wraiths[i].worldCol = 200;
         wraiths[i].worldRow = 224 - wraiths[i].height;
         wraiths[i].attackStep = 0;
@@ -1431,14 +1460,14 @@ void initProjectiles() {
     for (int i = 0; i < 5; i++) {
         playerBolts[i].active = 0;
         playerBolts[i].height = 8;
-        playerBolts[i].width = 8;
+        playerBolts[i].width = 12;
         playerBolts[i].colStep = 0;
     }
 
     for (int i = 0; i < 5; i++) {
         shooterProjectiles[i].active = 0;
         shooterProjectiles[i].height = 8;
-        shooterProjectiles[i].width = 8;
+        shooterProjectiles[i].width = 12;
         shooterProjectiles[i].colStep = 0;
     }
 }
@@ -1478,7 +1507,7 @@ void updateGame() {
             if (encounters[currentEncounter].state == ENCOUNTER_COMPLETE) {
 
                 currentEncounter++;
-                if (currentEncounter >= 7) {
+                if (currentEncounter >= 10) {
                     goToWin();
                 } else {
                     startEncounter();
@@ -1541,7 +1570,7 @@ void updateGame() {
             levitateHeightStep = 0;
         }
         playerManaStep = 0;
-        if (player.worldRow + player.height > 224 - 12) {
+        if (player.worldRow + player.height > 224 - 16) {
             levitateHeightStep++;
         }
         if (levitateHeightStep >= 2) {
@@ -1598,8 +1627,9 @@ void updateEnemies() {
                     walkers[i].state = ENEMYSTATE_MOVING;
                 } else {
                     walkers[i].attackStep++;
-                    if (walkers[i].attackStep > 20) {
+                    if (walkers[i].attackStep > 40) {
                         damagePlayer(3, 0);
+                        walkers[i].recentAttack = 15;
                         walkers[i].attackStep = 0;
                     }
                 }
@@ -1607,7 +1637,7 @@ void updateEnemies() {
             case ENEMYSTATE_MOVING:
 
                 if (temp == 0) {
-                    walkers[i].worldRow = 224 - walkers[i].height - 2;
+                    walkers[i].worldRow = 224 - walkers[i].height;
                     walkers[i].state = ENEMYSTATE_ATTACKING;
                     walkers[i].attackStep = -10;
 
@@ -1619,7 +1649,7 @@ void updateEnemies() {
                         walkers[i].colStep += 10;
                     }
                 } else {
-                    walkers[i].worldRow = 217;
+                    walkers[i].worldRow = 224 - walkers[i].height;
                     walkers[i].colStep += 4;
                     if (walkers[i].colStep >= 10) {
                         walkers[i].worldCol++;
@@ -1676,7 +1706,7 @@ void updateEnemies() {
                     wraiths[i].framesOnGround = 0;
                     wraiths[i].rowVelocity = 1;
                 }
-            } else if (wraiths[i].worldRow + wraiths[i].height <= 224 - 10) {
+            } else if (wraiths[i].worldRow + wraiths[i].height <= 224 - 14) {
                 wraiths[i].framesInAir++;
                 if (wraiths[i].framesInAir >= 120) {
                     wraiths[i].framesInAir = 0;
@@ -1695,7 +1725,7 @@ void updateEnemies() {
             if (wraiths[i].rowStep >= 10) {
                 wraiths[i].rowStep -= 10;
                 wraiths[i].worldRow--;
-                if (wraiths[i].worldRow + wraiths[i].height <= 224 - 10) {
+                if (wraiths[i].worldRow + wraiths[i].height <= 224 - 14) {
                     wraiths[i].rowStep = 0;
                     wraiths[i].rowVelocity = 0;
                 }
@@ -1805,17 +1835,21 @@ void drawGame() {
 
 
     shadowOAM[0].attr0 = player.screenRow | (2 << 14);
-    shadowOAM[0].attr1 = player.screenCol | (0 << 14);
+    shadowOAM[0].attr1 = player.screenCol | (2 << 14);
     shadowOAM[0].attr2 = ((0) << 12) | ((0)*32 + (1));
 
+    if (playerFacingDirection == -1) {
+        shadowOAM[0].attr1 |= (1 << 12);
+    }
 
-    shadowOAM[1].attr0 = (player.screenRow - 10) | (0 << 14);
-    shadowOAM[1].attr1 = player.screenCol | (0 << 14);
+
+    shadowOAM[1].attr0 = (player.screenRow) | (0 << 14);
+    shadowOAM[1].attr1 = (player.screenCol - 8) | (2 << 14);
     if (durationShielded > 0) {
         if (recentlyShieldedAttackTicks > 0) {
-            shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (5));
+            shadowOAM[1].attr2 = ((0) << 12) | ((4)*32 + (9));
         } else {
-            shadowOAM[1].attr2 = ((0) << 12) | ((1)*32 + (4));
+            shadowOAM[1].attr2 = ((0) << 12) | ((0)*32 + (9));
         }
     } else {
         shadowOAM[1].attr0 |= (2 << 8);
@@ -1836,12 +1870,26 @@ void drawEnemies() {
 
     for (int i = 0; i < 5; i++) {
         if (walkers[i].state != ENEMYSTATE_INACTIVE) {
+            if (walkers[i].recentAttack > 0) {
+                walkers[i].recentAttack--;
+            }
             walkers[i].screenCol = walkers[i].worldCol - hOff;
             walkers[i].screenRow = walkers[i].worldRow - vOff;
 
             shadowOAM[shadowOAMIndex].attr0 = walkers[i].screenRow | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = walkers[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (2));
+            shadowOAM[shadowOAMIndex].attr1 = walkers[i].screenCol | (2 << 14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12);
+            if (walkers[i].recentAttack > 0) {
+                shadowOAM[shadowOAMIndex].attr2 |= ((8)*32 + (3));
+            } else if (walkers[i].state == ENEMYSTATE_ATTACKING) {
+                shadowOAM[shadowOAMIndex].attr2 |= ((4)*32 + (3));
+            } else {
+                shadowOAM[shadowOAMIndex].attr2 |= ((0)*32 + (3));
+            }
+
+            if (player.worldCol > walkers[i].worldCol) {
+                shadowOAM[shadowOAMIndex].attr1 |= (1 << 12);
+            }
         } else {
             shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
         }
@@ -1855,11 +1903,11 @@ void drawEnemies() {
             shooters[i].screenRow = shooters[i].worldRow - vOff;
 
             shadowOAM[shadowOAMIndex].attr0 = shooters[i].screenRow | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = shooters[i].screenCol | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr1 = shooters[i].screenCol | (2 << 14);
             if (shooters[i].state == ENEMYSTATE_ATTACKING) {
-                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (7));
+                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((4)*32 + (13));
             } else {
-                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (6));
+                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (13));
             }
         } else {
             shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
@@ -1870,15 +1918,21 @@ void drawEnemies() {
 
     for (int i = 0; i < 5; i++) {
         if (wraiths[i].state != ENEMYSTATE_INACTIVE) {
+            wraiths[i].animStep++;
             wraiths[i].screenCol = wraiths[i].worldCol - hOff;
             wraiths[i].screenRow = wraiths[i].worldRow - vOff;
 
             shadowOAM[shadowOAMIndex].attr0 = wraiths[i].screenRow | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = wraiths[i].screenCol | (0 << 14);
-            if (wraiths[i].state == ENEMYSTATE_ATTACKING) {
-                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (7));
-            } else {
-                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (6));
+            shadowOAM[shadowOAMIndex].attr1 = wraiths[i].screenCol | (2 << 14);
+
+            if (wraiths[i].animStep >= 30) {
+                wraiths[i].animStep = 0;
+                wraiths[i].aniState = (wraiths[i].aniState + 1) % 3;
+            }
+
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((4 * wraiths[i].aniState)*32 + (15));
+            if (wraiths[i].facingDirection == 1) {
+                shadowOAM[shadowOAMIndex].attr1 |= (1 << 12);
             }
         } else {
             shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
@@ -1891,9 +1945,9 @@ void drawProjectiles() {
 
     for (int i = 0; i < 5; i++) {
         if (playerBolts[i].active) {
-            shadowOAM[shadowOAMIndex].attr0 = playerBolts[i].screenRow | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr0 = playerBolts[i].screenRow | (1 << 14);
             shadowOAM[shadowOAMIndex].attr1 = playerBolts[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (3));
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (5));
         } else {
             shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
         }
@@ -1902,9 +1956,9 @@ void drawProjectiles() {
 
     for (int i = 0; i < 5; i++) {
         if (shooterProjectiles[i].active) {
-            shadowOAM[shadowOAMIndex].attr0 = shooterProjectiles[i].screenRow | (0 << 14);
+            shadowOAM[shadowOAMIndex].attr0 = shooterProjectiles[i].screenRow | (1 << 14);
             shadowOAM[shadowOAMIndex].attr1 = shooterProjectiles[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((1)*32 + (3));
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((1)*32 + (5));
         } else {
             shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
         }
@@ -1920,7 +1974,7 @@ void drawUI() {
         if (i < currentPlayerHealth) {
             shadowOAM[shadowOAMIndex].attr0 = row | (0 << 14);
             shadowOAM[shadowOAMIndex].attr1 = col | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (5));
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (7));
         } else {
             shadowOAM[shadowOAMIndex].attr0 |= (2 << 8);
         }
@@ -1934,7 +1988,7 @@ void drawUI() {
         if (i < currentPlayerMana) {
             shadowOAM[shadowOAMIndex].attr0 = row | (0 << 14);
             shadowOAM[shadowOAMIndex].attr1 = col | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (4));
+            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((1)*32 + (7));
         } else {
             shadowOAM[shadowOAMIndex].attr0 |= (2 << 8);
         }

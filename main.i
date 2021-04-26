@@ -1327,7 +1327,7 @@ int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, i
 # 4 "main.c" 2
 # 1 "start.h" 1
 # 22 "start.h"
-extern const unsigned short startTiles[1008];
+extern const unsigned short startTiles[8512];
 
 
 extern const unsigned short startMap[1024];
@@ -1347,7 +1347,7 @@ extern const unsigned short instructionsPal[256];
 # 6 "main.c" 2
 # 1 "win.h" 1
 # 22 "win.h"
-extern const unsigned short winTiles[1392];
+extern const unsigned short winTiles[8400];
 
 
 extern const unsigned short winMap[1024];
@@ -1357,7 +1357,7 @@ extern const unsigned short winPal[256];
 # 7 "main.c" 2
 # 1 "lose.h" 1
 # 22 "lose.h"
-extern const unsigned short loseTiles[1344];
+extern const unsigned short loseTiles[8240];
 
 
 extern const unsigned short loseMap[1024];
@@ -1367,7 +1367,7 @@ extern const unsigned short losePal[256];
 # 8 "main.c" 2
 # 1 "paused.h" 1
 # 22 "paused.h"
-extern const unsigned short pausedTiles[1984];
+extern const unsigned short pausedTiles[8016];
 
 
 extern const unsigned short pausedMap[1024];
@@ -1428,6 +1428,8 @@ typedef struct {
     int health;
 
     int attackStep;
+
+    int recentAttack;
 
 } Walker;
 
@@ -1499,6 +1501,8 @@ typedef struct {
     int framesOnGround;
 
     int rowVelocity;
+
+    int animStep;
 } Wraith;
 
 typedef struct {
@@ -1542,11 +1546,8 @@ extern const unsigned short playerMap[1024];
 extern const unsigned short playerPal[256];
 # 12 "main.c" 2
 # 1 "spritesheet.h" 1
-# 22 "spritesheet.h"
+# 21 "spritesheet.h"
 extern const unsigned short spritesheetTiles[16384];
-
-
-extern const unsigned short spritesheetMap[1024];
 
 
 extern const unsigned short spritesheetPal[256];
@@ -1723,7 +1724,7 @@ void goToStart() {
     state = START;
 
     DMANow(3, startPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, startTiles, &((charblock *)0x6000000)[0], 2016 / 2);
+    DMANow(3, startTiles, &((charblock *)0x6000000)[0], 17024 / 2);
     DMANow(3, startMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 
@@ -1877,7 +1878,7 @@ void goToPause() {
 
     state = PAUSE;
     DMANow(3, pausedPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, pausedTiles, &((charblock *)0x6000000)[0], 3968 / 2);
+    DMANow(3, pausedTiles, &((charblock *)0x6000000)[0], 16032 / 2);
     DMANow(3, pausedMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 
@@ -1901,7 +1902,7 @@ void goToWin() {
 
     state = WIN;
     DMANow(3, winPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, winTiles, &((charblock *)0x6000000)[0], 2784 / 2);
+    DMANow(3, winTiles, &((charblock *)0x6000000)[0], 16800 / 2);
     DMANow(3, winMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 
@@ -1922,7 +1923,7 @@ void goToLose() {
 
     state = LOSE;
     DMANow(3, losePal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, loseTiles, &((charblock *)0x6000000)[0], 2688 / 2);
+    DMANow(3, loseTiles, &((charblock *)0x6000000)[0], 16480 / 2);
     DMANow(3, loseMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 

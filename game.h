@@ -19,7 +19,7 @@ int playerIsAtSameElevation(int row, int range);
 void spawnShooterProjectile(int col, int row, int direction, int height, int width);
 
 #define BACKGROUND_WIDTH 512
-#define NUMBER_OF_ENCOUNTERS 7
+#define NUMBER_OF_ENCOUNTERS 10
 #define GROUND_LEVEL 224
 
 // Player Stats
@@ -47,7 +47,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 #define LEVITATE_STEPS_PER_MOVE_DOWN 3
 #define LEVITATE_STEPS_PER_MANA_DRAIN 50
 #define LEVITATE_FALL_ACCELERATED_RATE 3
-#define LEVITATE_MAX_HEIGHT 12
+#define LEVITATE_MAX_HEIGHT 16
 
 // Walkers
 #define MAX_WALKERS 5
@@ -57,7 +57,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 #define WALKER_SWING_RANGE 6
 #define WALKER_HIT_RANGE 8
 #define WALKER_ATTACK_WINDUP 10 // Time between entering swing range and performing the attack
-#define WALKER_ATTACK_COOLDOWN 20 // Time between attacks after the first one
+#define WALKER_ATTACK_COOLDOWN 40 // Time between attacks after the first one
 
 // Shooters
 #define MAX_SHOOTERS 5
@@ -77,7 +77,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 #define WRAITH_AIRBORNE_DURATION 120
 #define WRAITH_GROUND_DURATION 120
 #define WRAITH_SPEED 4
-#define WRAITH_MAX_HEIGHT 10
+#define WRAITH_MAX_HEIGHT 14
 
 enum {WALKER, SHOOTER, WRAITH};
 
@@ -101,6 +101,8 @@ typedef struct {
     int health;
 
     int attackStep; // Used to create a delay between attacks
+
+    int recentAttack;
 
 } Walker;
 
@@ -172,6 +174,8 @@ typedef struct {
     int framesOnGround;
 
     int rowVelocity; // 1 means moving up, -1 means moving down
+
+    int animStep;
 } Wraith;
 
 typedef struct {

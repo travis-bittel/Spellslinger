@@ -38,7 +38,7 @@ goToStart:
 	str	ip, [lr]
 	mov	lr, pc
 	bx	r4
-	mov	r3, #1008
+	mov	r3, #8512
 	mov	r2, #100663296
 	mov	r0, #3
 	ldr	r1, .L4+12
@@ -627,15 +627,15 @@ goToPause:
 	mov	lr, pc
 	bx	r5
 	mov	r0, r4
-	mov	r3, #1984
 	mov	r2, #100663296
-	ldr	r1, .L70+12
+	ldr	r3, .L70+12
+	ldr	r1, .L70+16
 	mov	lr, pc
 	bx	r5
 	mov	r0, r4
 	mov	r3, #1024
-	ldr	r2, .L70+16
-	ldr	r1, .L70+20
+	ldr	r2, .L70+20
+	ldr	r1, .L70+24
 	mov	lr, pc
 	bx	r5
 	pop	{r4, r5, r6, lr}
@@ -646,6 +646,7 @@ goToPause:
 	.word	state
 	.word	DMANow
 	.word	pausedPal
+	.word	8016
 	.word	pausedTiles
 	.word	100696064
 	.word	pausedMap
@@ -720,16 +721,16 @@ goToWin:
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
-	mov	r3, #1392
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L88+12
+	ldr	r3, .L88+12
+	ldr	r1, .L88+16
 	mov	lr, pc
 	bx	r4
 	mov	r3, #1024
 	mov	r0, #3
-	ldr	r2, .L88+16
-	ldr	r1, .L88+20
+	ldr	r2, .L88+20
+	ldr	r1, .L88+24
 	mov	lr, pc
 	bx	r4
 	pop	{r4, lr}
@@ -740,6 +741,7 @@ goToWin:
 	.word	state
 	.word	DMANow
 	.word	winPal
+	.word	8400
 	.word	winTiles
 	.word	100696064
 	.word	winMap
@@ -972,16 +974,16 @@ goToLose:
 	str	lr, [ip]
 	mov	lr, pc
 	bx	r4
-	mov	r3, #1344
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L135+12
+	ldr	r3, .L135+12
+	ldr	r1, .L135+16
 	mov	lr, pc
 	bx	r4
 	mov	r3, #1024
 	mov	r0, #3
-	ldr	r2, .L135+16
-	ldr	r1, .L135+20
+	ldr	r2, .L135+20
+	ldr	r1, .L135+24
 	mov	lr, pc
 	bx	r4
 	pop	{r4, lr}
@@ -992,6 +994,7 @@ goToLose:
 	.word	state
 	.word	DMANow
 	.word	losePal
+	.word	8240
 	.word	loseTiles
 	.word	100696064
 	.word	loseMap
