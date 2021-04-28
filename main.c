@@ -67,6 +67,8 @@ enum
 };
 int state;
 
+int cheatEnabled;
+
 // Button Variables
 unsigned short buttons;
 unsigned short oldButtons;
@@ -151,6 +153,13 @@ void goToStart() {
 void start() {
     if (BUTTON_PRESSED(BUTTON_START)) {
         goToInstructions();
+    }
+    if (BUTTON_PRESSED(BUTTON_A) && BUTTON_PRESSED(BUTTON_B)) {
+        if (cheatEnabled) {
+            cheatEnabled = 0;
+        } else {
+            cheatEnabled = 1;
+        }
     }
 }
 

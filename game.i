@@ -13,15 +13,13 @@ typedef unsigned int u32;
 # 64 "myLib.h"
 extern volatile unsigned short *videoBuffer;
 # 85 "myLib.h"
-typedef struct
-{
-    u16 tileimg[8192];
+typedef struct {
+ u16 tileimg[8192];
 } charblock;
 
 
-typedef struct
-{
-    u16 tilemap[1024];
+typedef struct {
+ u16 tilemap[1024];
 } screenblock;
 
 
@@ -46,8 +44,8 @@ void flipPage();
 
 
 
-typedef struct
-{
+
+typedef struct {
     unsigned short attr0;
     unsigned short attr1;
     unsigned short attr2;
@@ -57,7 +55,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 159 "myLib.h"
+# 157 "myLib.h"
 void hideSprites();
 
 
@@ -65,12 +63,11 @@ void hideSprites();
 
 
 
-typedef struct
-{
-    int screenRow;
-    int screenCol;
+typedef struct {
     int worldRow;
     int worldCol;
+    int screenRow;
+    int screenCol;
     int rdel;
     int cdel;
     int width;
@@ -82,12 +79,11 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 202 "myLib.h"
+# 200 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 212 "myLib.h"
-typedef volatile struct
-{
+# 211 "myLib.h"
+typedef volatile struct {
     volatile const void *src;
     volatile void *dst;
     volatile unsigned int cnt;
@@ -95,12 +91,11 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 253 "myLib.h"
+# 251 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-
-
-
-
+# 287 "myLib.h"
+typedef void (*ihp)(void);
+# 307 "myLib.h"
 int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, int widthB, int heightB);
 # 2 "game.c" 2
 # 1 "game.h" 1
@@ -1111,6 +1106,8 @@ int currentEncounter = 0;
 
 int shadowOAMIndex = 0;
 
+extern int cheatEnabled;
+
 int hOff = 0;
 int vOff = 95;
 
@@ -1122,7 +1119,7 @@ int playerManaDrainStep = 0;
 int playerFacingDirection = 1;
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = 0;
+int spellsUnlocked;
 
 int durationShielded = 0;
 int recentlyShieldedAttackTicks = 0;
@@ -1142,7 +1139,7 @@ void startEncounter() {
     hOff = encounters[currentEncounter].startCol;
 
     currentSBB++;
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((currentSBB) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((currentSBB)<<8) | (0<<7) | (0<<14);
 
     if (currentPlayerHealth < 10 - 1) {
         currentPlayerHealth++;
@@ -1158,7 +1155,7 @@ void startEncounter() {
 
     if (currentEncounter == 0) {
         goToNewSpell(0);
-        spellsUnlocked = 2;
+        spellsUnlocked = 0;
     }
     if (currentEncounter == 1) {
         goToNewEnemy(0);
@@ -1414,7 +1411,7 @@ void initGame() {
     currentPlayerHealth = 10;
     currentPlayerMana = 10;
     currentEncounter = 0;
-    spellsUnlocked = -1;
+    spellsUnlocked = 0;
 
     currentSBB = 15;
     startEncounter();
@@ -1486,7 +1483,12 @@ void updateGame() {
     if (recentlyShieldedAttackTicks > 0) {
         recentlyShieldedAttackTicks--;
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 4)))) {
+
+    if (cheatEnabled) {
+        currentPlayerMana = 10;
+    }
+
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<4)))) {
         playerFacingDirection = 1;
 
         if (player.worldCol + player.width + 1 < encounters[currentEncounter].startCol + 240) {
@@ -1514,7 +1516,7 @@ void updateGame() {
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 5)))) {
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<5)))) {
         playerFacingDirection = -1;
 
 
@@ -1536,7 +1538,7 @@ void updateGame() {
 
 
 
-    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && spellsUnlocked >= BOLT && globalCooldown <= 0 && boltCooldown <= 0 && currentPlayerMana > 0) {
+    if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))) && spellsUnlocked >= BOLT && globalCooldown <= 0 && boltCooldown <= 0 && currentPlayerMana > 0) {
         if (currentPlayerMana <= 0) {
             return;
         }
@@ -1549,7 +1551,7 @@ void updateGame() {
         }
     }
 
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 1))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<1))) && spellsUnlocked >= SHIELD && globalCooldown <= 0 && shieldCooldown <= 0 && currentPlayerMana > 0) {
         durationShielded++;
         playerManaStep = 0;
         playerManaDrainStep += 25 + (durationShielded * 4);
@@ -1564,7 +1566,7 @@ void updateGame() {
         durationShielded = 0;
     }
 
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 6))) && spellsUnlocked >= LEVITATE && currentPlayerMana > 0) {
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<6))) && spellsUnlocked >= LEVITATE && currentPlayerMana > 0) {
         if (levitateHeightStep < 0) {
             levitateHeightStep = 0;
         }
@@ -1593,7 +1595,7 @@ void updateGame() {
             }
         }
     }
-    if ((~((*(volatile unsigned short *)0x04000130)) & ((1 << 7))) && spellsUnlocked >= LEVITATE && player.worldRow + player.height < 224) {
+    if ((~((*(volatile unsigned short *)0x04000130)) & ((1<<7))) && spellsUnlocked >= LEVITATE && player.worldRow + player.height < 224) {
         levitateHeightStep -= 3;
         if (levitateHeightStep < 0 && abs(levitateHeightStep) >= 3) {
             player.worldRow++;
@@ -1705,7 +1707,7 @@ void updateEnemies() {
                     wraiths[i].framesOnGround = 0;
                     wraiths[i].rowVelocity = 1;
                 }
-            } else if (wraiths[i].worldRow + wraiths[i].height <= 224 - 14) {
+            } else if (wraiths[i].worldRow + wraiths[i].height <= 224 - 18) {
                 wraiths[i].framesInAir++;
                 if (wraiths[i].framesInAir >= 120) {
                     wraiths[i].framesInAir = 0;
@@ -1724,7 +1726,7 @@ void updateEnemies() {
             if (wraiths[i].rowStep >= 10) {
                 wraiths[i].rowStep -= 10;
                 wraiths[i].worldRow--;
-                if (wraiths[i].worldRow + wraiths[i].height <= 224 - 14) {
+                if (wraiths[i].worldRow + wraiths[i].height <= 224 - 18) {
                     wraiths[i].rowStep = 0;
                     wraiths[i].rowVelocity = 0;
                 }
@@ -1833,25 +1835,29 @@ void drawGame() {
 
 
 
-    shadowOAM[0].attr0 = player.screenRow | (2 << 14);
-    shadowOAM[0].attr1 = player.screenCol | (2 << 14);
-    shadowOAM[0].attr2 = ((0) << 12) | ((0)*32 + (1));
+    shadowOAM[0].attr0 = player.screenRow | (2<<14);
+    shadowOAM[0].attr1 = player.screenCol | (2<<14);
+    shadowOAM[0].attr2 = ((0)<<12) | ((0)*32+(1));
 
     if (playerFacingDirection == -1) {
-        shadowOAM[0].attr1 |= (1 << 12);
+        shadowOAM[0].attr1 |= (1<<12);
     }
 
 
-    shadowOAM[1].attr0 = (player.screenRow) | (0 << 14);
-    shadowOAM[1].attr1 = (player.screenCol - 8) | (2 << 14);
+    shadowOAM[1].attr0 = (player.screenRow) | (0<<14);
+    if (player.screenCol < 8) {
+        shadowOAM[1].attr1 = 0 | (2<<14);
+    } else {
+        shadowOAM[1].attr1 = (player.screenCol - 8) | (2<<14);
+    }
     if (durationShielded > 0) {
         if (recentlyShieldedAttackTicks > 0) {
-            shadowOAM[1].attr2 = ((0) << 12) | ((4)*32 + (9));
+            shadowOAM[1].attr2 = ((0)<<12) | ((4)*32+(9));
         } else {
-            shadowOAM[1].attr2 = ((0) << 12) | ((0)*32 + (9));
+            shadowOAM[1].attr2 = ((0)<<12) | ((0)*32+(9));
         }
     } else {
-        shadowOAM[1].attr0 |= (2 << 8);
+        shadowOAM[1].attr0 |= (2<<8);
     }
 
     shadowOAMIndex = 2;
@@ -1860,9 +1866,9 @@ void drawGame() {
     drawProjectiles();
     drawUI();
 
-    DMANow(3, shadowOAM, ((OBJ_ATTR *)(0x7000000)), 512);
+    DMANow(3, shadowOAM, ((OBJ_ATTR*)(0x7000000)), 512);
 
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((currentSBB) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((currentSBB)<<8) | (0<<7) | (0<<14);
 }
 
 void drawEnemies() {
@@ -1875,22 +1881,22 @@ void drawEnemies() {
             walkers[i].screenCol = walkers[i].worldCol - hOff;
             walkers[i].screenRow = walkers[i].worldRow - vOff;
 
-            shadowOAM[shadowOAMIndex].attr0 = walkers[i].screenRow | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = walkers[i].screenCol | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12);
+            shadowOAM[shadowOAMIndex].attr0 = walkers[i].screenRow | (2<<14);
+            shadowOAM[shadowOAMIndex].attr1 = walkers[i].screenCol | (2<<14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0)<<12);
             if (walkers[i].recentAttack > 0) {
-                shadowOAM[shadowOAMIndex].attr2 |= ((8)*32 + (3));
+                shadowOAM[shadowOAMIndex].attr2 |= ((8)*32+(3));
             } else if (walkers[i].state == ENEMYSTATE_ATTACKING) {
-                shadowOAM[shadowOAMIndex].attr2 |= ((4)*32 + (3));
+                shadowOAM[shadowOAMIndex].attr2 |= ((4)*32+(3));
             } else {
-                shadowOAM[shadowOAMIndex].attr2 |= ((0)*32 + (3));
+                shadowOAM[shadowOAMIndex].attr2 |= ((0)*32+(3));
             }
 
             if (player.worldCol > walkers[i].worldCol) {
-                shadowOAM[shadowOAMIndex].attr1 |= (1 << 12);
+                shadowOAM[shadowOAMIndex].attr1 |= (1<<12);
             }
         } else {
-            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 = (2<<8);
         }
         shadowOAMIndex++;
     }
@@ -1901,15 +1907,15 @@ void drawEnemies() {
             shooters[i].screenCol = shooters[i].worldCol - hOff;
             shooters[i].screenRow = shooters[i].worldRow - vOff;
 
-            shadowOAM[shadowOAMIndex].attr0 = shooters[i].screenRow | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = shooters[i].screenCol | (2 << 14);
+            shadowOAM[shadowOAMIndex].attr0 = shooters[i].screenRow | (2<<14);
+            shadowOAM[shadowOAMIndex].attr1 = shooters[i].screenCol | (2<<14);
             if (shooters[i].state == ENEMYSTATE_ATTACKING) {
-                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((4)*32 + (13));
+                shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((4)*32+(13));
             } else {
-                shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (13));
+                shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((0)*32+(13));
             }
         } else {
-            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 = (2<<8);
         }
         shadowOAMIndex++;
     }
@@ -1921,20 +1927,20 @@ void drawEnemies() {
             wraiths[i].screenCol = wraiths[i].worldCol - hOff;
             wraiths[i].screenRow = wraiths[i].worldRow - vOff;
 
-            shadowOAM[shadowOAMIndex].attr0 = wraiths[i].screenRow | (2 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = wraiths[i].screenCol | (2 << 14);
+            shadowOAM[shadowOAMIndex].attr0 = wraiths[i].screenRow | (2<<14);
+            shadowOAM[shadowOAMIndex].attr1 = wraiths[i].screenCol | (2<<14);
 
             if (wraiths[i].animStep >= 30) {
                 wraiths[i].animStep = 0;
                 wraiths[i].aniState = (wraiths[i].aniState + 1) % 3;
             }
 
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((4 * wraiths[i].aniState)*32 + (15));
+            shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((4 * wraiths[i].aniState)*32+(15));
             if (wraiths[i].facingDirection == 1) {
-                shadowOAM[shadowOAMIndex].attr1 |= (1 << 12);
+                shadowOAM[shadowOAMIndex].attr1 |= (1<<12);
             }
         } else {
-            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 = (2<<8);
         }
         shadowOAMIndex++;
     }
@@ -1944,22 +1950,22 @@ void drawProjectiles() {
 
     for (int i = 0; i < 5; i++) {
         if (playerBolts[i].active) {
-            shadowOAM[shadowOAMIndex].attr0 = playerBolts[i].screenRow | (1 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = playerBolts[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (5));
+            shadowOAM[shadowOAMIndex].attr0 = playerBolts[i].screenRow | (1<<14);
+            shadowOAM[shadowOAMIndex].attr1 = playerBolts[i].screenCol | (0<<14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((0)*32+(5));
         } else {
-            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 = (2<<8);
         }
         shadowOAMIndex++;
     }
 
     for (int i = 0; i < 5; i++) {
         if (shooterProjectiles[i].active) {
-            shadowOAM[shadowOAMIndex].attr0 = shooterProjectiles[i].screenRow | (1 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = shooterProjectiles[i].screenCol | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((1)*32 + (5));
+            shadowOAM[shadowOAMIndex].attr0 = shooterProjectiles[i].screenRow | (1<<14);
+            shadowOAM[shadowOAMIndex].attr1 = shooterProjectiles[i].screenCol | (0<<14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((1)*32+(5));
         } else {
-            shadowOAM[shadowOAMIndex].attr0 = (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 = (2<<8);
         }
         shadowOAMIndex++;
     }
@@ -1971,11 +1977,11 @@ void drawUI() {
     int row = 4;
     for (int i = 0; i < 10; i++) {
         if (i < currentPlayerHealth) {
-            shadowOAM[shadowOAMIndex].attr0 = row | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = col | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((0)*32 + (7));
+            shadowOAM[shadowOAMIndex].attr0 = row | (0<<14);
+            shadowOAM[shadowOAMIndex].attr1 = col | (0<<14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((0)*32+(7));
         } else {
-            shadowOAM[shadowOAMIndex].attr0 |= (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 |= (2<<8);
         }
         shadowOAMIndex++;
         col += 7;
@@ -1985,11 +1991,11 @@ void drawUI() {
     col = 240 - 7 * 10 - 4;
     for (int i = 0; i < 10; i++) {
         if (i < currentPlayerMana) {
-            shadowOAM[shadowOAMIndex].attr0 = row | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr1 = col | (0 << 14);
-            shadowOAM[shadowOAMIndex].attr2 = ((0) << 12) | ((1)*32 + (7));
+            shadowOAM[shadowOAMIndex].attr0 = row | (0<<14);
+            shadowOAM[shadowOAMIndex].attr1 = col | (0<<14);
+            shadowOAM[shadowOAMIndex].attr2 = ((0)<<12) | ((1)*32+(7));
         } else {
-            shadowOAM[shadowOAMIndex].attr0 |= (2 << 8);
+            shadowOAM[shadowOAMIndex].attr0 |= (2<<8);
         }
         shadowOAMIndex++;
         col += 7;

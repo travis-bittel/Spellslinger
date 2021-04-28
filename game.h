@@ -77,7 +77,7 @@ void spawnShooterProjectile(int col, int row, int direction, int height, int wid
 #define WRAITH_AIRBORNE_DURATION 120
 #define WRAITH_GROUND_DURATION 120
 #define WRAITH_SPEED 4
-#define WRAITH_MAX_HEIGHT 14
+#define WRAITH_MAX_HEIGHT 18
 
 enum {WALKER, SHOOTER, WRAITH};
 

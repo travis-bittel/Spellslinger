@@ -42,6 +42,8 @@ int currentEncounter = 0; // The index of the encounter the player is currently 
 
 int shadowOAMIndex = 0; // Used to keep track of where we are in the shadowOAM. Updated in the draw functions
 
+extern int cheatEnabled;
+
 int hOff = 0;
 int vOff = 95;
 
@@ -53,7 +55,7 @@ int playerManaDrainStep = 0;
 int playerFacingDirection = 1; // -1 = Left, 1 = Right
 
 enum {BOLT, SHIELD, LEVITATE};
-int spellsUnlocked = 0;
+int spellsUnlocked;
 
 int durationShielded = 0; // Ticks up as player holds down Shield button, increasing Mana cost
 int recentlyShieldedAttackTicks = 0;
@@ -89,7 +91,7 @@ void startEncounter() {
     // Show Instructions
     if (currentEncounter == 0) { // Bolt
         goToNewSpell(0);
-        spellsUnlocked = 2;
+        spellsUnlocked = 0;
     }
     if (currentEncounter == 1) { // Walker
         goToNewEnemy(0);
@@ -345,7 +347,7 @@ void initGame() {
     currentPlayerHealth = PLAYER_MAX_HEALTH;
     currentPlayerMana = PLAYER_MAX_MANA;
     currentEncounter = 0;
-    spellsUnlocked = -1;
+    spellsUnlocked = 0;
 
     currentSBB = 15;
     startEncounter();
@@ -417,6 +419,11 @@ void updateGame() {
     if (recentlyShieldedAttackTicks > 0) {
         recentlyShieldedAttackTicks--;
     }
+
+    if (cheatEnabled) { // Cheat gives unlimitted Mana
+        currentPlayerMana = 10;
+    }
+
     if (BUTTON_HELD(BUTTON_RIGHT)) {
         playerFacingDirection = 1;
         // Stop player from moving into next encounter's region
@@ -774,7 +781,11 @@ void drawGame() {
 
     // Shield
     shadowOAM[1].attr0 = (player.screenRow) | ATTR0_SQUARE;
-    shadowOAM[1].attr1 = (player.screenCol - 8) | ATTR1_MEDIUM;
+    if (player.screenCol < 8) {
+        shadowOAM[1].attr1 = 0 | ATTR1_MEDIUM;
+    } else {
+        shadowOAM[1].attr1 = (player.screenCol - 8) | ATTR1_MEDIUM;
+    }
     if (durationShielded > 0) {
         if (recentlyShieldedAttackTicks > 0) {
             shadowOAM[1].attr2 = ATTR2_PALROW(0) | ATTR2_TILEID(9, 4);

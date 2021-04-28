@@ -2,6 +2,7 @@
 # 1 "<built-in>"
 # 1 "<command-line>"
 # 1 "main.c"
+# 16 "main.c"
 # 1 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 1 3
 # 10 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 3
 # 1 "/opt/devkitpro/devkitARM/arm-none-eabi/include/machine/ieeefp.h" 1 3
@@ -810,7 +811,7 @@ extern long double _strtold_r (struct _reent *, const char *restrict, char **res
 extern long double strtold (const char *restrict, char **restrict);
 # 336 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdlib.h" 3
 
-# 2 "main.c" 2
+# 17 "main.c" 2
 # 1 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdio.h" 1 3
 # 36 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdio.h" 3
 # 1 "/opt/devkitpro/devkitARM/lib/gcc/arm-none-eabi/9.1.0/include/stddef.h" 1 3 4
@@ -1221,7 +1222,7 @@ _putchar_unlocked(int _c)
 }
 # 797 "/opt/devkitpro/devkitARM/arm-none-eabi/include/stdio.h" 3
 
-# 3 "main.c" 2
+# 18 "main.c" 2
 # 1 "myLib.h" 1
 
 
@@ -1324,7 +1325,7 @@ void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned 
 
 
 int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, int widthB, int heightB);
-# 4 "main.c" 2
+# 19 "main.c" 2
 # 1 "start.h" 1
 # 22 "start.h"
 extern const unsigned short startTiles[8512];
@@ -1334,17 +1335,17 @@ extern const unsigned short startMap[1024];
 
 
 extern const unsigned short startPal[256];
-# 5 "main.c" 2
+# 20 "main.c" 2
 # 1 "instructions.h" 1
 # 22 "instructions.h"
-extern const unsigned short instructionsTiles[9616];
+extern const unsigned short instructionsTiles[9152];
 
 
 extern const unsigned short instructionsMap[1024];
 
 
 extern const unsigned short instructionsPal[256];
-# 6 "main.c" 2
+# 21 "main.c" 2
 # 1 "win.h" 1
 # 22 "win.h"
 extern const unsigned short winTiles[8400];
@@ -1354,7 +1355,7 @@ extern const unsigned short winMap[1024];
 
 
 extern const unsigned short winPal[256];
-# 7 "main.c" 2
+# 22 "main.c" 2
 # 1 "lose.h" 1
 # 22 "lose.h"
 extern const unsigned short loseTiles[8240];
@@ -1364,7 +1365,7 @@ extern const unsigned short loseMap[1024];
 
 
 extern const unsigned short losePal[256];
-# 8 "main.c" 2
+# 23 "main.c" 2
 # 1 "paused.h" 1
 # 22 "paused.h"
 extern const unsigned short pausedTiles[8016];
@@ -1374,7 +1375,7 @@ extern const unsigned short pausedMap[1024];
 
 
 extern const unsigned short pausedPal[256];
-# 9 "main.c" 2
+# 24 "main.c" 2
 # 1 "background.h" 1
 # 22 "background.h"
 extern const unsigned short backgroundTiles[416];
@@ -1384,7 +1385,7 @@ extern const unsigned short backgroundMap[10240];
 
 
 extern const unsigned short backgroundPal[256];
-# 10 "main.c" 2
+# 25 "main.c" 2
 # 1 "game.h" 1
 
 void updateGame();
@@ -1534,7 +1535,7 @@ typedef struct {
     EnemySpawn startingEnemies[10];
     EnemySpawn additionalEnemies[10];
 } Encounter;
-# 11 "main.c" 2
+# 26 "main.c" 2
 # 1 "player.h" 1
 # 22 "player.h"
 extern const unsigned short playerTiles[32];
@@ -1544,14 +1545,14 @@ extern const unsigned short playerMap[1024];
 
 
 extern const unsigned short playerPal[256];
-# 12 "main.c" 2
+# 27 "main.c" 2
 # 1 "spritesheet.h" 1
 # 21 "spritesheet.h"
 extern const unsigned short spritesheetTiles[16384];
 
 
 extern const unsigned short spritesheetPal[256];
-# 13 "main.c" 2
+# 28 "main.c" 2
 # 1 "bolt_instructions.h" 1
 # 22 "bolt_instructions.h"
 extern const unsigned short bolt_instructionsTiles[9488];
@@ -1561,7 +1562,7 @@ extern const unsigned short bolt_instructionsMap[1024];
 
 
 extern const unsigned short bolt_instructionsPal[256];
-# 14 "main.c" 2
+# 29 "main.c" 2
 # 1 "levitate_instructions.h" 1
 # 22 "levitate_instructions.h"
 extern const unsigned short levitate_instructionsTiles[9008];
@@ -1571,7 +1572,7 @@ extern const unsigned short levitate_instructionsMap[1024];
 
 
 extern const unsigned short levitate_instructionsPal[256];
-# 15 "main.c" 2
+# 30 "main.c" 2
 # 1 "shield_instructions.h" 1
 # 22 "shield_instructions.h"
 extern const unsigned short shield_instructionsTiles[9168];
@@ -1581,7 +1582,7 @@ extern const unsigned short shield_instructionsMap[1024];
 
 
 extern const unsigned short shield_instructionsPal[256];
-# 16 "main.c" 2
+# 31 "main.c" 2
 # 1 "walker_instructions.h" 1
 # 22 "walker_instructions.h"
 extern const unsigned short walker_instructionsTiles[8896];
@@ -1591,7 +1592,7 @@ extern const unsigned short walker_instructionsMap[1024];
 
 
 extern const unsigned short walker_instructionsPal[256];
-# 17 "main.c" 2
+# 32 "main.c" 2
 # 1 "shooter_instructions.h" 1
 # 22 "shooter_instructions.h"
 extern const unsigned short shooter_instructionsTiles[9504];
@@ -1601,7 +1602,7 @@ extern const unsigned short shooter_instructionsMap[1024];
 
 
 extern const unsigned short shooter_instructionsPal[256];
-# 18 "main.c" 2
+# 33 "main.c" 2
 # 1 "wraith_instructions.h" 1
 # 22 "wraith_instructions.h"
 extern const unsigned short wraith_instructionsTiles[9552];
@@ -1611,7 +1612,7 @@ extern const unsigned short wraith_instructionsMap[1024];
 
 
 extern const unsigned short wraith_instructionsPal[256];
-# 19 "main.c" 2
+# 34 "main.c" 2
 
 
 void initialize();
@@ -1647,6 +1648,8 @@ enum
     NEW_ENEMY
 };
 int state;
+
+int cheatEnabled;
 
 
 unsigned short buttons;
@@ -1733,6 +1736,13 @@ void start() {
     if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
         goToInstructions();
     }
+    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && (!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1))))) {
+        if (cheatEnabled) {
+            cheatEnabled = 0;
+        } else {
+            cheatEnabled = 1;
+        }
+    }
 }
 
 
@@ -1745,7 +1755,7 @@ void goToInstructions() {
 
     state = INSTRUCTIONS;
     DMANow(3, instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
-    DMANow(3, instructionsTiles, &((charblock *)0x6000000)[0], 19232 / 2);
+    DMANow(3, instructionsTiles, &((charblock *)0x6000000)[0], 18304 / 2);
     DMANow(3, instructionsMap, &((screenblock *)0x6000000)[16], 2048 / 2);
 }
 
