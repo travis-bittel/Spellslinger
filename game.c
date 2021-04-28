@@ -2,6 +2,8 @@
 #include "game.h"
 #include <stdlib.h>
 #include "spritesheet.h"
+#include "sound.h"
+#include "bolt_sound.h"
 
 extern void goToLose();
 extern void goToWin();
@@ -479,6 +481,7 @@ void updateGame() {
             return;
         }
         spawnPlayerBolt();
+        playSoundB(bolt_sound_data, bolt_sound_length, 0);
         currentPlayerMana -= BOLT_MANA_COST;
         globalCooldown = GLOBAL_CAST_COOLDOWN;
         boltCooldown = BOLT_COOLDOWN;

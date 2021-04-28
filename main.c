@@ -31,6 +31,8 @@
 #include "walker_instructions.h"
 #include "shooter_instructions.h"
 #include "wraith_instructions.h"
+#include "sound.h"
+#include "background_music.h"
 
 // Prototypes
 void initialize();
@@ -76,12 +78,10 @@ unsigned short oldButtons;
 // Shadow OAM
 OBJ_ATTR shadowOAM[128];
 
-int main()
-{
+int main() {
     initialize();
 
-    while (1)
-    {
+    while (1) {
         // Update button variables
         oldButtons = buttons;
         buttons = BUTTONS;
@@ -118,8 +118,7 @@ int main()
 }
 
 // Sets up GBA
-void initialize()
-{
+void initialize() {
     REG_DISPCTL = MODE0 | BG0_ENABLE | SPRITE_ENABLE;
 
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
@@ -131,6 +130,8 @@ void initialize()
     DMANow(3, spritesheetPal, SPRITEPALETTE, spritesheetPalLen / 2);
     DMANow(3, spritesheetTiles, &CHARBLOCK[4], spritesheetTilesLen / 2);
 
+    setupSounds();
+	setupInterrupts();
     goToStart();
 }
 
@@ -143,6 +144,8 @@ void goToStart() {
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = START;
+
+    playSoundA(background_music_data, background_music_length, 1);
 
     DMANow(3, startPal, PALETTE, startPalLen / 2);
     DMANow(3, startTiles, &CHARBLOCK[0], startTilesLen / 2);
@@ -305,6 +308,9 @@ void goToPause() {
     REG_BG0CNT = BG_CHARBLOCK(0) | BG_SCREENBLOCK(16) | BG_4BPP | BG_SIZE_SMALL;
 
     state = PAUSE;
+
+    pauseSound();
+
     DMANow(3, pausedPal, PALETTE, pausedPalLen / 2);
     DMANow(3, pausedTiles, &CHARBLOCK[0], pausedTilesLen / 2);
     DMANow(3, pausedMap, &SCREENBLOCK[16], pausedMapLen / 2);
@@ -313,6 +319,7 @@ void goToPause() {
 // Runs every frame of the pause state
 void pause() {
     if (BUTTON_PRESSED(BUTTON_START)) {
+        unpauseSound();
         goToGame();
     }
     if (BUTTON_PRESSED(BUTTON_SELECT)) {

@@ -1066,6 +1066,39 @@ extern const unsigned short spritesheetTiles[16384];
 
 extern const unsigned short spritesheetPal[256];
 # 5 "game.c" 2
+# 1 "sound.h" 1
+void setupSounds();
+void playSoundA(const signed char* sound, int length, int loops);
+void playSoundB(const signed char* sound, int length, int loops);
+
+void setupInterrupts();
+void interruptHandler();
+
+void pauseSound();
+void unpauseSound();
+void stopSound();
+# 49 "sound.h"
+typedef struct{
+    const signed char* data;
+    int length;
+    int frequency;
+    int isPlaying;
+    int loops;
+    int duration;
+    int priority;
+    int vBlankCount;
+} SOUND;
+
+SOUND soundA;
+SOUND soundB;
+# 6 "game.c" 2
+# 1 "bolt_sound.h" 1
+
+
+extern const unsigned int bolt_sound_sampleRate;
+extern const unsigned int bolt_sound_length;
+extern const signed char bolt_sound_data[];
+# 7 "game.c" 2
 
 extern void goToLose();
 extern void goToWin();
@@ -1543,6 +1576,7 @@ void updateGame() {
             return;
         }
         spawnPlayerBolt();
+        playSoundB(bolt_sound_data, bolt_sound_length, 0);
         currentPlayerMana -= 2;
         globalCooldown = 10;
         boltCooldown = 0;

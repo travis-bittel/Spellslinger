@@ -21,33 +21,41 @@ goToStart:
 	@ Function supports interworking.
 	@ args = 0, pretend = 0, frame = 0
 	@ frame_needed = 0, uses_anonymous_args = 0
+	push	{r4, lr}
 	mov	ip, #0
 	mov	r2, #67108864
-	mov	r3, #256
-	mov	r1, #4096
-	push	{r4, lr}
-	ldr	lr, .L4
+	mov	r4, #256
+	mov	r0, #4096
+	ldr	r3, .L4
+	ldr	r1, .L4+4
 	strh	ip, [r2, #16]	@ movhi
-	ldr	r4, .L4+4
+	ldr	r1, [r1]
 	strh	ip, [r2, #18]	@ movhi
-	mov	r0, #3
-	strh	r3, [r2]	@ movhi
-	strh	r1, [r2, #8]	@ movhi
+	strh	r4, [r2]	@ movhi
+	strh	r0, [r2, #8]	@ movhi
+	str	ip, [r3]
+	mov	r2, #1
+	ldr	r0, .L4+8
+	ldr	r3, .L4+12
+	mov	lr, pc
+	bx	r3
+	mov	r3, r4
 	mov	r2, #83886080
-	ldr	r1, .L4+8
-	str	ip, [lr]
+	ldr	r4, .L4+16
+	mov	r0, #3
+	ldr	r1, .L4+20
 	mov	lr, pc
 	bx	r4
 	mov	r3, #8512
 	mov	r2, #100663296
 	mov	r0, #3
-	ldr	r1, .L4+12
+	ldr	r1, .L4+24
 	mov	lr, pc
 	bx	r4
 	mov	r3, #1024
 	mov	r0, #3
-	ldr	r2, .L4+16
-	ldr	r1, .L4+20
+	ldr	r2, .L4+28
+	ldr	r1, .L4+32
 	mov	lr, pc
 	bx	r4
 	pop	{r4, lr}
@@ -56,6 +64,9 @@ goToStart:
 	.align	2
 .L4:
 	.word	state
+	.word	background_music_length
+	.word	background_music_data
+	.word	playSoundA
 	.word	DMANow
 	.word	startPal
 	.word	startTiles
@@ -92,12 +103,18 @@ initialize:
 	strh	lr, [ip]	@ movhi
 	mov	lr, pc
 	bx	r4
-	mov	r3, #16384
 	mov	r0, #3
 	ldr	r2, .L8+24
 	ldr	r1, .L8+28
+	mov	r3, #16384
 	mov	lr, pc
 	bx	r4
+	ldr	r3, .L8+32
+	mov	lr, pc
+	bx	r3
+	ldr	r3, .L8+36
+	mov	lr, pc
+	bx	r3
 	pop	{r4, lr}
 	b	goToStart
 .L9:
@@ -111,6 +128,8 @@ initialize:
 	.word	spritesheetPal
 	.word	100728832
 	.word	spritesheetTiles
+	.word	setupSounds
+	.word	setupInterrupts
 	.size	initialize, .-initialize
 	.align	2
 	.syntax unified
@@ -631,32 +650,36 @@ goToPause:
 	@ frame_needed = 0, uses_anonymous_args = 0
 	push	{r4, r5, r6, lr}
 	mov	r2, #67108864
-	mov	lr, #4096
+	mov	r3, #0
+	mov	r6, #256
+	mov	r0, #4096
 	mov	r4, #3
-	mov	r1, #0
-	mov	r3, #256
-	ldr	ip, .L81
-	strh	r1, [r2, #16]	@ movhi
-	ldr	r5, .L81+4
-	strh	r1, [r2, #18]	@ movhi
+	ldr	r1, .L81
+	strh	r3, [r2, #16]	@ movhi
+	strh	r3, [r2, #18]	@ movhi
+	strh	r6, [r2]	@ movhi
+	ldr	r3, .L81+4
+	strh	r0, [r2, #8]	@ movhi
+	ldr	r5, .L81+8
+	str	r4, [r1]
+	mov	lr, pc
+	bx	r3
+	mov	r3, r6
 	mov	r0, r4
-	strh	r3, [r2]	@ movhi
-	ldr	r1, .L81+8
-	strh	lr, [r2, #8]	@ movhi
 	mov	r2, #83886080
-	str	r4, [ip]
+	ldr	r1, .L81+12
 	mov	lr, pc
 	bx	r5
 	mov	r0, r4
 	mov	r2, #100663296
-	ldr	r3, .L81+12
-	ldr	r1, .L81+16
+	ldr	r3, .L81+16
+	ldr	r1, .L81+20
 	mov	lr, pc
 	bx	r5
 	mov	r0, r4
 	mov	r3, #1024
-	ldr	r2, .L81+20
-	ldr	r1, .L81+24
+	ldr	r2, .L81+24
+	ldr	r1, .L81+28
 	mov	lr, pc
 	bx	r5
 	pop	{r4, r5, r6, lr}
@@ -665,6 +688,7 @@ goToPause:
 	.align	2
 .L81:
 	.word	state
+	.word	pauseSound
 	.word	DMANow
 	.word	pausedPal
 	.word	8016
@@ -705,6 +729,9 @@ pause:
 	pop	{r4, lr}
 	b	goToStart
 .L93:
+	ldr	r3, .L95+8
+	mov	lr, pc
+	bx	r3
 	bl	goToGame
 	ldrh	r3, [r4]
 	b	.L84
@@ -713,6 +740,7 @@ pause:
 .L95:
 	.word	oldButtons
 	.word	buttons
+	.word	unpauseSound
 	.size	pause, .-pause
 	.align	2
 	.global	goToWin
@@ -1033,4 +1061,6 @@ lose:
 	.comm	buttons,2,2
 	.comm	cheatEnabled,4,4
 	.comm	state,4,4
+	.comm	soundB,32,4
+	.comm	soundA,32,4
 	.ident	"GCC: (devkitARM release 53) 9.1.0"

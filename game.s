@@ -1601,8 +1601,8 @@ updateGame:
 	tst	r3, #1
 	beq	.L296
 	ldr	r3, .L332+28
-	ldrh	r3, [r3]
-	ands	r7, r3, #1
+	ldrh	r2, [r3]
+	ands	r7, r2, #1
 	beq	.L329
 .L296:
 	ldr	r3, .L332+12
@@ -1748,6 +1748,13 @@ updateGame:
 	cmp	r3, #0
 	ble	.L296
 	bl	spawnPlayerBolt
+	ldr	r3, .L332+36
+	mov	r2, r7
+	ldr	r1, [r3]
+	ldr	r0, .L332+40
+	ldr	r3, .L332+44
+	mov	lr, pc
+	bx	r3
 	mov	r2, #10
 	ldr	r3, [r6]
 	sub	r3, r3, #2
@@ -1814,7 +1821,7 @@ updateGame:
 	cmp	r2, #9
 	str	r2, [r4, #8]
 	ble	.L289
-	ldr	r3, .L332+36
+	ldr	r3, .L332+48
 	mov	lr, pc
 	bx	r3
 	b	.L284
@@ -1867,6 +1874,9 @@ updateGame:
 	.word	oldButtons
 	.word	buttons
 	.word	spellsUnlocked
+	.word	bolt_sound_length
+	.word	bolt_sound_data
+	.word	playSoundB
 	.word	goToWin
 	.size	updateGame, .-updateGame
 	.align	2
@@ -2283,6 +2293,8 @@ drawGame:
 	.comm	walkers,340,4
 	.comm	encounters,1760,4
 	.comm	player,56,4
+	.comm	soundB,32,4
+	.comm	soundA,32,4
 	.data
 	.align	2
 	.set	.LANCHOR1,. + 0

@@ -1236,15 +1236,13 @@ typedef unsigned int u32;
 # 64 "myLib.h"
 extern volatile unsigned short *videoBuffer;
 # 85 "myLib.h"
-typedef struct
-{
-    u16 tileimg[8192];
+typedef struct {
+ u16 tileimg[8192];
 } charblock;
 
 
-typedef struct
-{
-    u16 tilemap[1024];
+typedef struct {
+ u16 tilemap[1024];
 } screenblock;
 
 
@@ -1269,8 +1267,8 @@ void flipPage();
 
 
 
-typedef struct
-{
+
+typedef struct {
     unsigned short attr0;
     unsigned short attr1;
     unsigned short attr2;
@@ -1280,7 +1278,7 @@ typedef struct
 
 
 extern OBJ_ATTR shadowOAM[];
-# 159 "myLib.h"
+# 157 "myLib.h"
 void hideSprites();
 
 
@@ -1288,12 +1286,11 @@ void hideSprites();
 
 
 
-typedef struct
-{
-    int screenRow;
-    int screenCol;
+typedef struct {
     int worldRow;
     int worldCol;
+    int screenRow;
+    int screenCol;
     int rdel;
     int cdel;
     int width;
@@ -1305,12 +1302,11 @@ typedef struct
     int numFrames;
     int hide;
 } ANISPRITE;
-# 202 "myLib.h"
+# 200 "myLib.h"
 extern unsigned short oldButtons;
 extern unsigned short buttons;
-# 212 "myLib.h"
-typedef volatile struct
-{
+# 211 "myLib.h"
+typedef volatile struct {
     volatile const void *src;
     volatile void *dst;
     volatile unsigned int cnt;
@@ -1318,12 +1314,11 @@ typedef volatile struct
 
 
 extern DMA *dma;
-# 253 "myLib.h"
+# 251 "myLib.h"
 void DMANow(int channel, volatile const void *src, volatile void *dst, unsigned int cnt);
-
-
-
-
+# 287 "myLib.h"
+typedef void (*ihp)(void);
+# 307 "myLib.h"
 int collision(int colA, int rowA, int widthA, int heightA, int colB, int rowB, int widthB, int heightB);
 # 19 "main.c" 2
 # 1 "start.h" 1
@@ -1613,6 +1608,39 @@ extern const unsigned short wraith_instructionsMap[1024];
 
 extern const unsigned short wraith_instructionsPal[256];
 # 34 "main.c" 2
+# 1 "sound.h" 1
+void setupSounds();
+void playSoundA(const signed char* sound, int length, int loops);
+void playSoundB(const signed char* sound, int length, int loops);
+
+void setupInterrupts();
+void interruptHandler();
+
+void pauseSound();
+void unpauseSound();
+void stopSound();
+# 49 "sound.h"
+typedef struct{
+    const signed char* data;
+    int length;
+    int frequency;
+    int isPlaying;
+    int loops;
+    int duration;
+    int priority;
+    int vBlankCount;
+} SOUND;
+
+SOUND soundA;
+SOUND soundB;
+# 35 "main.c" 2
+# 1 "background_music.h" 1
+
+
+extern const unsigned int background_music_sampleRate;
+extern const unsigned int background_music_length;
+extern const signed char background_music_data[];
+# 36 "main.c" 2
 
 
 void initialize();
@@ -1658,12 +1686,10 @@ unsigned short oldButtons;
 
 OBJ_ATTR shadowOAM[128];
 
-int main()
-{
+int main() {
     initialize();
 
-    while (1)
-    {
+    while (1) {
 
         oldButtons = buttons;
         buttons = (*(volatile unsigned short *)0x04000130);
@@ -1700,11 +1726,10 @@ int main()
 }
 
 
-void initialize()
-{
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
+void initialize() {
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8) | (1<<12);
 
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     buttons = (*(volatile unsigned short *)0x04000130);
     oldButtons = 0;
@@ -1713,6 +1738,8 @@ void initialize()
     DMANow(3, spritesheetPal, ((unsigned short *)0x5000200), 512 / 2);
     DMANow(3, spritesheetTiles, &((charblock *)0x6000000)[4], 32768 / 2);
 
+    setupSounds();
+ setupInterrupts();
     goToStart();
 }
 
@@ -1721,10 +1748,12 @@ void goToStart() {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = START;
+
+    playSoundA(background_music_data, background_music_length, 1);
 
     DMANow(3, startPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, startTiles, &((charblock *)0x6000000)[0], 17024 / 2);
@@ -1733,10 +1762,10 @@ void goToStart() {
 
 
 void start() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToInstructions();
     }
-    if ((!(~(oldButtons) & ((1 << 0))) && (~buttons & ((1 << 0)))) && (!(~(oldButtons) & ((1 << 1))) && (~buttons & ((1 << 1))))) {
+    if ((!(~(oldButtons)&((1<<0))) && (~buttons & ((1<<0)))) && (!(~(oldButtons)&((1<<1))) && (~buttons & ((1<<1))))) {
         if (cheatEnabled) {
             cheatEnabled = 0;
         } else {
@@ -1750,8 +1779,8 @@ void goToInstructions() {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = INSTRUCTIONS;
     DMANow(3, instructionsPal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1761,12 +1790,12 @@ void goToInstructions() {
 
 
 void instructions() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         initGame();
 
         goToNewSpell(0);
     }
-    if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2))))) {
+    if ((!(~(oldButtons)&((1<<2))) && (~buttons & ((1<<2))))) {
         goToStart();
     }
 }
@@ -1775,8 +1804,8 @@ void goToNewSpell(int spell) {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = NEW_SPELL;
 
@@ -1805,7 +1834,7 @@ void goToNewSpell(int spell) {
 }
 
 void newSpell() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToGame();
         return;
     }
@@ -1815,8 +1844,8 @@ void goToNewEnemy(int enemy) {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = NEW_ENEMY;
 
@@ -1845,7 +1874,7 @@ void goToNewEnemy(int enemy) {
 }
 
 void newEnemy() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToGame();
         return;
     }
@@ -1853,8 +1882,8 @@ void newEnemy() {
 
 
 void goToGame() {
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8) | (1 << 12);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8) | (1<<12);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = GAME;
     DMANow(3, backgroundPal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1864,11 +1893,11 @@ void goToGame() {
 
 
 void game() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToPause();
         return;
     }
-    if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2))))) {
+    if ((!(~(oldButtons)&((1<<2))) && (~buttons & ((1<<2))))) {
         goToWin();
         return;
     }
@@ -1883,10 +1912,13 @@ void goToPause() {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = PAUSE;
+
+    pauseSound();
+
     DMANow(3, pausedPal, ((unsigned short *)0x5000000), 512 / 2);
     DMANow(3, pausedTiles, &((charblock *)0x6000000)[0], 16032 / 2);
     DMANow(3, pausedMap, &((screenblock *)0x6000000)[16], 2048 / 2);
@@ -1894,10 +1926,11 @@ void goToPause() {
 
 
 void pause() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
+        unpauseSound();
         goToGame();
     }
-    if ((!(~(oldButtons) & ((1 << 2))) && (~buttons & ((1 << 2))))) {
+    if ((!(~(oldButtons)&((1<<2))) && (~buttons & ((1<<2))))) {
         goToStart();
     }
 }
@@ -1907,8 +1940,8 @@ void goToWin() {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = WIN;
     DMANow(3, winPal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1918,7 +1951,7 @@ void goToWin() {
 
 
 void win() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToStart();
     }
 }
@@ -1928,8 +1961,8 @@ void goToLose() {
 
     (*(volatile unsigned short *)0x04000010) = 0;
     (*(volatile unsigned short *)0x04000012) = 0;
-    (*(volatile unsigned short *)0x4000000) = 0 | (1 << 8);
-    (*(volatile unsigned short *)0x4000008) = ((0) << 2) | ((16) << 8) | (0 << 7) | (0 << 14);
+    (*(volatile unsigned short *)0x4000000) = 0 | (1<<8);
+    (*(volatile unsigned short*)0x4000008) = ((0)<<2) | ((16)<<8) | (0<<7) | (0<<14);
 
     state = LOSE;
     DMANow(3, losePal, ((unsigned short *)0x5000000), 512 / 2);
@@ -1939,7 +1972,7 @@ void goToLose() {
 
 
 void lose() {
-    if ((!(~(oldButtons) & ((1 << 3))) && (~buttons & ((1 << 3))))) {
+    if ((!(~(oldButtons)&((1<<3))) && (~buttons & ((1<<3))))) {
         goToStart();
     }
 }
