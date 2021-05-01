@@ -1897,10 +1897,6 @@ void game() {
         goToPause();
         return;
     }
-    if ((!(~(oldButtons)&((1<<2))) && (~buttons & ((1<<2))))) {
-        goToWin();
-        return;
-    }
 
     updateGame();
     waitForVBlank();

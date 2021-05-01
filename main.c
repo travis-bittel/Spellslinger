@@ -289,10 +289,6 @@ void game() {
         goToPause();
         return;
     }
-    if (BUTTON_PRESSED(BUTTON_SELECT)) {
-        goToWin();
-        return;
-    }
 
     updateGame();
     waitForVBlank();
